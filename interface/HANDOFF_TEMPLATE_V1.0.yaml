@@ -1,0 +1,42 @@
+# 模板文件：复制到 tasks/<task_id>/handoff_*.yaml，填写真实来源，不要把本模板当成实际交接证据。
+schema_version: "1.0"
+handoff:
+  handoff_id: "REPLACE_WITH_UNIQUE_ID"
+  task_id: "REPLACE_WITH_TASK_ID"
+  from: "ART_EXPERIENCE"
+  to: "DEV_INTEGRATION"
+  owner_completed_task: "REPLACE_WITH_ATOMIC_TASK_ID"
+  objective: "REPLACE_WITH_ONE_CLEAR_GOAL"
+  in_scope: []
+  out_of_scope: []
+  contracts:
+    art_contract: "docs/contracts/ART_STYLE_V1.4.md"
+    pipeline_contract: "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md"
+    project_manifest: "manifest/PROJECT_MANIFEST.yaml"
+    shape_contract: "UNVERIFIED"
+    style_kit: "NOT_APPROVED"
+  completed: []
+  current_state: "DRAFT"
+  artifacts: []
+  # 每个真实素材引用需提供 role、repo_path、版本及sha256；缺失项标UNVERIFIED。
+  repository_state: "UNVERIFIED_COMMIT_SHA"
+  locked_decisions: {}
+  unresolved: []
+  next_action: "REPLACE_WITH_ONE_ATOMIC_ACTION"
+  acceptance:
+    technical: ["G1", "G2"]
+    visual: "PENDING_HUMAN_VISUAL_APPROVAL"
+  evidence: []
+  result: "DRAFT"
+qa_feedback:
+  verdict: "NOT_RUN"
+  machine_checks:
+    G1: "NOT_RUN"
+    G2: "NOT_RUN"
+    G4: "NOT_RUN"
+  failure_codes: []
+  evidence_refs: []
+  change_owner_required: "NONE"
+  repro_steps: "NOT_RUN"
+  affected_asset_version: "UNVERIFIED"
+  next_owner_action: "NOT_SET"
