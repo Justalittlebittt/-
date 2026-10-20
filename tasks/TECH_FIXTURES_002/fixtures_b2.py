@@ -38,9 +38,9 @@ def draw(cells,pad=1):
 def png(p,w,h,path):
  assert len(p)==w*h and w>1 and h>1
  def chunk(t,b):return struct.pack(">I",len(b))+t+b+struct.pack(">I",zlib.crc32(t+b)&0xffffffff)
- data=b"".join(b"\\x00"+bytes(v for px in p[y*w:(y+1)*w] for v in px) for y in range(h))
+ data=b"".join(b"\x00"+bytes(v for px in p[y*w:(y+1)*w] for v in px) for y in range(h))
  hdr=struct.pack(">IIBBBBB",w,h,8,6,0,0,0)
- path.write_bytes(b"\\x89PNG\\r\\n\\x1a\\n"+chunk(b"IHDR",hdr)+chunk(b"IDAT",zlib.compress(data))+chunk(b"IEND",b""))
+ path.write_bytes(b"\x89PNG\r\n\x1a\n"+chunk(b"IHDR",hdr)+chunk(b"IDAT",zlib.compress(data))+chunk(b"IEND",b""))
 def correct(samples):
  sa=sum(p[3] for p in samples);return tuple(round(sum(p[i]*p[3] for p in samples)/sa) if sa else 0 for i in range(3))+(round(sa/len(samples)),)
 def wrong(samples):return tuple(round(sum(p[i] for p in samples)/len(samples)) for i in range(4))
@@ -78,6 +78,6 @@ def run():
    pixels=[(*over(fg,(245,245,245) if (x//8+y//8)%2==0 else bg),255) for y in range(32) for x in range(48)]
    path=OUT/(bgname+"_"+mode+".png");png(pixels,48,32,path);manifest.append(path.name)
  report={"task":"TECH_FIXTURES_002","status":"PASS_SYNTHETIC_B2_ONLY","passed":len(tests),"png_count":len(manifest),"tests":tests,"png_files":manifest,"coordinate_contract":"screen x right/y down; clockwise 90: (h-1-y,x); rotation about pixel/grid bounding rectangle; normalize min to 0; apply grid origin after rotation; 8 pixels per synthetic cell only","sampling":{"correct":good,"incorrect":bad},"limits":["Transparent RGB is not a reliable background contamination classifier","No real asset or perceptual matting quality asserted","Only exact 90-degree integer rotations; scaling/interpolation of actual sprites not validated","G1/G2/G4 NOT_RUN; no game engine or real animals"]}
- (OUT/"test_report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\\n")
+ (OUT/"test_report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps({"status":report["status"],"passed":len(tests),"pngs":len(manifest)}))
 if __name__=="__main__":run()
