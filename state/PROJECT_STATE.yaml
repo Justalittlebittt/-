@@ -1,0 +1,58 @@
+schema_version: "1.0"
+last_updated: "2026-10-20"
+project_id: "animal-puzzle-zoo"
+repo:
+  full_name: "Justalittlebittt/-"
+  default_branch: "main"
+  verified_in_this_session: true
+  intended_project_label: "动物拼图"
+  path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
+phase: "协作基础设施与通用美术生产流程设计"
+current_goal: "验证两个独立AI工作页使用同一GitHub仓库进行合同和Handoff交接"
+source_of_truth:
+  current_repository: "GitHub main"
+  art_contract: "docs/contracts/ART_STYLE_V1.4.md"
+  collaboration_protocol: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
+  pipeline_proposal: "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md"
+  project_manifest: "manifest/PROJECT_MANIFEST.yaml"
+  handoff_template: "interface/HANDOFF_TEMPLATE_V1.0.yaml"
+contracts:
+  art_style_v1_4: "TEXT_REVISED_G0_OWNER_CONFIRMATION_PENDING"
+  pipeline_v0_3: "PROPOSED_GATE_A_PENDING"
+  universal_v1_0: "REFERENCE_IMPORTED"
+visual:
+  style_mother: "NOT_APPROVED"
+  giraffe: "INITIAL_AESTHETIC_FEEDBACK_POSITIVE_ONLY"
+  lion: "INITIAL_AESTHETIC_FEEDBACK_POSITIVE_ONLY"
+  panda: "NOT_RUN"
+  thin_shape_family: "NOT_RUN"
+  official_asset_batch: "NOT_STARTED"
+qa:
+  G0: "PENDING"
+  G1: "NOT_RUN_FOR_CURRENT_PIPELINE"
+  G2: "NOT_RUN_FOR_CURRENT_PIPELINE"
+  G3: "PENDING_HUMAN_VISUAL_APPROVAL"
+  G4: "NOT_RUN"
+  G5: "NOT_RUN_NOT_APPLICABLE_YET"
+  pipeline_gate_A: "PENDING_USER_REVIEW"
+  pipeline_gate_B: "NOT_RUN"
+  pipeline_gate_C: "NOT_RUN"
+  pipeline_gate_D: "NOT_RUN"
+handoff_transport:
+  shared_repo_access_this_session: "READ_WRITE_VERIFIED"
+  art_page_access: "UNVERIFIED"
+  dev_page_access: "UNVERIFIED"
+  autonomous_cross_chat_delivery: "NOT_ESTABLISHED"
+  mode: "repository_file_exchange_when_both_pages_verified"
+  rule: "不得将仓库共享误称为两个聊天会话会自动主动读取或持续后台工作"
+owner_boundaries:
+  ART_EXPERIENCE: "视觉方案、Style Kit、视觉候选与用户视觉验收包"
+  DEV_INTEGRATION: "二维逻辑形状、Alpha技术处理、旋转、自动G1/G2/G4和技术修复"
+  HUMAN: "视觉审美确认与重大范围/合同决策"
+next_actions:
+  - "在美术与开发两个独立工作页分别验证读取仓库合同及写入Handoff能力"
+  - "审查双AI协作V0.3合同并决定是否LOCKED"
+  - "使用合成测试夹具验证通用Alpha、二维旋转和数据接口；不生产正式动物"
+assumptions_and_unknowns:
+  - "游戏引擎、分辨率、cell_px、形状库尚未冻结"
+  - "两个工作页的真实自动交接未测试"
