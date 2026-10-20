@@ -8,18 +8,19 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "ART已独立审查Gate A并提交V0.4 PROPOSED供用户审核；下一技术任务为BINARY_PNG_PROBE_001"
+current_goal: "Gate A V0.4.1修复V0.4正式资产Schema继承缺口，提案待批准；BINARY_PNG_PROBE_001仍待DEV执行"
 source_of_truth:
   current_repository: "GitHub main"
   art_contract: "docs/contracts/ART_STYLE_V1.4.md"
   collaboration_protocol: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
-  pipeline_proposal: "docs/contracts/ASSET_PIPELINE_V0.4_PROPOSED.md"
+  pipeline_proposal: "docs/contracts/ASSET_PIPELINE_V0.4.1_PROPOSED.md"
   project_manifest: "manifest/PROJECT_MANIFEST.yaml"
   handoff_template: "interface/HANDOFF_TEMPLATE_V1.0.yaml"
 contracts:
   art_style_v1_4: "TEXT_REVISED_G0_OWNER_CONFIRMATION_PENDING"
   pipeline_v0_3: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
-  pipeline_v0_4: "PROPOSED_USER_REVIEW_READY_NOT_LOCKED"
+  pipeline_v0_4: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
+  pipeline_v0_4_1: "PROPOSED_USER_REVIEW_READY_NOT_LOCKED_SCHEMA_RESTORED"
   universal_v1_0: "REFERENCE_IMPORTED"
 visual:
   style_mother: "NOT_APPROVED"
@@ -89,10 +90,11 @@ owner_boundaries:
   DEV_INTEGRATION: "二维逻辑形状、Alpha技术处理、旋转、自动G1/G2/G4和技术修复"
   HUMAN: "视觉审美确认与重大范围/合同决策"
 next_actions:
-  - "用户审核 docs/contracts/ASSET_PIPELINE_V0.4_PROPOSED.md；当前不LOCK"
+  - "用户仅需确认通用架构方向；docs/contracts/ASSET_PIPELINE_V0.4.1_PROPOSED.md已补足输入/输出Schema，仍非LOCKED"
   - "DEV执行 tasks/BINARY_PNG_PROBE_001/request_to_dev.json；ART独立校验接收二进制"
   - "二进制路径确认后再执行真实生成器的有界非动物探测；B1/B2仅合成PASS，完整Gate B/C/D和正式G1/G2/G4未运行"
 assumptions_and_unknowns:
   - "游戏引擎、分辨率、cell_px、形状库尚未冻结"
   - "双方GitHub文件级交接通过；跨聊天自动触发、通知和后台执行未建立"
   - "PNG真实二进制上传与跨工作页原始字节读回未验证；真实生成器能力未验证"
+  - "BINARY_PNG_PROBE_001任务编制于V0.4时，传输协议未变，当前任务仍有效；不得误认为该任务测试了V0.4.1其他未实证能力"
