@@ -1,0 +1,22 @@
+name: Synthetic B1 fixtures
+on:
+  push:
+    paths:
+      - 'tasks/TECH_FIXTURES_001/fixtures.py'
+      - '.github/workflows/tech-fixtures-b1.yml'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run synthetic fixtures
+        run: python tasks/TECH_FIXTURES_001/fixtures.py
+      - name: Upload fixture evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: tech-fixtures-b1-evidence
+          path: tasks/TECH_FIXTURES_001/evidence/
