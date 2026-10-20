@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FIRST_PLAYABLE_001",
+  "title": "动物拼图首个可玩闭环（占位素材）",
+  "status": "READY_FOR_DEV",
+  "owner": "DEV_INTEGRATION",
+  "from": "DESIGN_DIRECTOR",
+  "to": "DEV_INTEGRATION",
+  "contract_refs": {
+    "production": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md",
+    "collaboration": "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md",
+    "project_manifest": "manifest/PROJECT_MANIFEST.yaml",
+    "project_state": "state/PROJECT_STATE.yaml"
+  },
+  "objective": "以最少代码与程序占位拼块实现可操作、可运行、可重复验证的二维动物拼图玩法闭环；在正式确定关卡数和美术资产规模前排除核心技术及交互风险。",
+  "task_class": "EXPERIMENT_FIRST_PLAYABLE_NOT_RELEASE",
+  "scope": {
+    "in": [
+      "启动画面进入可玩关卡",
+      "固定棋盘与托盘，鼠标拖拽拼块并按R键进行90度旋转",
+      "仅以occupied_cells为二维放置碰撞真值，旋转保持锚点一致，不使用图像alpha推导碰撞",
+      "合法位置吸附放下；越界、覆盖其他已放置拼块时给出清晰非法反馈并退回原先合法位置或托盘",
+      "已放置拼块可再次拖拽以调整位置；支持一键重置当前关",
+      "占格预览，非法提示不单靠颜色",
+      "正确填满棋盘后有完成反馈、下一关，最后提供完成画面和重玩入口",
+      "至少两关来自下方验证样本，不作正式关卡或形状库冻结",
+      "自动验证关卡存在合法全覆盖解；测试旋转、移动、碰撞、通关、重置等基本用例",
+      "留下真实运行方法、测试记录与可核实证据；如运行/自动化验证受限，明确标记BLOCKED或NOT_RUN"
+    ],
+    "out": [
+      "正式动物生成、美术Style Kit、透明PNG管线或任何新的B1/B2合成夹具测试",
+      "正式关卡规模、动物物种映射、正式棋盘分辨率和cell_px锁定",
+      "动物园经营、动画骨骼、经济系统、道具、提示搜索器、随机生成关卡",
+      "Steam发行包或正式G1/G2/G3/G4全项通过宣称",
+      "修改已锁定制作合同、覆盖历史任务或将该任务冒充七天内完整可发布游戏"
+    ]
+  },
+  "temporary_sample_levels": [
+    {
+      "id": "FP_L01",
+      "board": {
+        "width": 3,
+        "height": 2,
+        "valid_cells": "full_rectangle"
+      },
+      "pieces": [
+        {
+          "id": "A",
+          "occupied_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "initial_rotation_deg": 0
+        },
+        {
+          "id": "B",
+          "occupied_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "initial_rotation_deg": 0
+        }
+      ],
+      "proof_example": [
+        {
+          "piece_id": "A",
+          "final_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "piece_id": "B",
+          "final_cells": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "learning_target": "旋转、拖拽和贴格；进入棋盘前需将竖条转为横条"
+    },
+    {
+      "id": "FP_L02",
+      "board": {
+        "width": 4,
+        "height": 3,
+        "valid_cells": "full_rectangle"
+      },
+      "pieces": [
+        {
+          "id": "A",
+          "occupied_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "initial_rotation_deg": 0
+        },
+        {
+          "id": "B",
+          "occupied_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "initial_rotation_deg": 0
+        },
+        {
+          "id": "C",
+          "occupied_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "initial_rotation_deg": 0
+        },
+        {
+          "id": "D",
+          "occupied_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "initial_rotation_deg": 0
+        }
+      ],
+      "proof_example": [
+        {
+          "piece_id": "A",
+          "final_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "piece_id": "B",
+          "final_cells": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "piece_id": "C",
+          "final_cells": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "piece_id": "D",
+          "final_cells": [
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "learning_target": "先规划复杂形状、再填充剩余空间"
+    }
+  ],
+  "implementation_boundaries": {
+    "temporary_visuals": "仅程序化不同颜色的网格形状及简短文字ID，不需要实际动物素材；测试用颜色不代表最终美术。",
+    "engine_choice": "由DEV根据仓库现有代码与本地/CI可运行条件选择最小可重复运行实现，说明为什么有利于后续完整游戏及迁移成本；不在本任务锁定正式引擎。",
+    "anchor_rotation": "DEV自行选择正确且可重复验证的坐标和锚点实现；90度旋转、对齐、回退前后不得丢格或生成镜像。",
+    "format": "新实验文件集中在清晰命名的独立目录；不得破坏现有状态或其他任务。",
+    "timebox": "只做两关闭环，禁止以架构泛化为由无限扩展；超出合理任务预算须停下来报告，不得把长期前期准备排除在七天成本以外。",
+    "art_role": "本任务不要求ART生产任何正式素材。",
+    "human_approval": "当前仅授权占位玩法实验；任何正式关卡/动物数量、首发引擎或七天正式制作计时起点均未获本任务批准。"
+  },
+  "acceptance": [
+    "有用户可实际操作的启动方式与可运行游戏，而非只有代码/测试声明",
+    "标题→FP_L01→FP_L02→完成→重新开始全链路可运行",
+    "两关至少有一条合法全覆盖解，实际逻辑通关正确且非法状态不会误通关",
+    "支持鼠标拖拽、R旋转、非法回退、已放置拼块重新拿起和一键重置",
+    "提供可复现的运行命令、自动测试报告以及一条真实运行验证证据",
+    "明确区分FIRST_PLAYABLE_001任务PASS与正式G4/正式游戏发行PASS"
+  ],
+  "handoff": {
+    "report_path": "tasks/FIRST_PLAYABLE_001/handoff_dev_to_design.json",
+    "required": [
+      "result",
+      "code_paths",
+      "run_instructions",
+      "tests_and_evidence",
+      "known_issues",
+      "actual_commit_sha",
+      "engine_choice_reason",
+      "next_action"
+    ],
+    "result_values": [
+      "PASS",
+      "FAIL",
+      "BLOCKED"
+    ]
+  }
+}
