@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "handoff": {
+    "handoff_id": "ART-TO-DEV-TRANSPORT_SMOKE_001-20261020",
+    "task_id": "TRANSPORT_SMOKE_001",
+    "from": "ART_EXPERIENCE",
+    "to": "DEV_INTEGRATION",
+    "owner_completed_task": "ART_PREPARE_HANDOFF_001",
+    "objective": "验证独立开发AI工作页能否从同一GitHub仓库准确读取合同与交接文件，并写回一份真实ACK；不制作动物素材、不实现技术管线。",
+    "in_scope": [
+      "由DEV读取本handoff及合同和项目状态",
+      "校验合同/状态与本handoff版本一致且字段完整",
+      "在指定路径写入具证据的ACK JSON并读回核验"
+    ],
+    "out_of_scope": [
+      "制作、生成或修改正式动物素材",
+      "执行G1/G2/G4或伪造PASS",
+      "改写已获批视觉合同及玩法规则",
+      "构建或重构正式引擎"
+    ],
+    "contracts": {
+      "art_contract": "docs/contracts/ART_STYLE_V1.4.md",
+      "pipeline_contract": "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md",
+      "collaboration_protocol": "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md",
+      "project_manifest": "manifest/PROJECT_MANIFEST.yaml",
+      "project_state": "state/PROJECT_STATE.yaml",
+      "handoff_template": "interface/HANDOFF_TEMPLATE_V1.0.yaml",
+      "shape_contract": "NOT_LOCKED",
+      "style_kit": "NOT_APPROVED"
+    },
+    "completed": [
+      "当前会话GitHub连接具有读取和写入仓库权限",
+      "仓库八个初始化文件均经远端读取验证",
+      "三份合同原文与远端文件内容逐字对照一致"
+    ],
+    "current_state": "READY_FOR_DEV",
+    "artifacts": [
+      {
+        "role": "handoff_request",
+        "repo_path": "tasks/TRANSPORT_SMOKE_001/handoff_art_to_dev.json",
+        "version": "1.0",
+        "sha256": "TO_BE_VERIFIED_FROM_FILE_BYTES"
+      },
+      {
+        "role": "contract",
+        "repo_path": "docs/contracts/ART_STYLE_V1.4.md",
+        "version": "V1.4"
+      },
+      {
+        "role": "contract",
+        "repo_path": "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md",
+        "version": "V0.3_PROPOSED"
+      }
+    ],
+    "repository_state": {
+      "repository_full_name": "Justalittlebittt/-",
+      "default_branch": "main",
+      "base_commit_sha": "05af992a326dc1227c5e07cd9194cec6084c8192",
+      "repo_id": "1426495843"
+    },
+    "locked_decisions": {
+      "occupied_cells": "二维逻辑格，不来自地面投影或Alpha",
+      "art_style": "偏真实动画电影CG内部毛发保真，外缘干净，视角姿态自由",
+      "human_role": "主要验收视觉效果",
+      "game_development_limit": "首版完整可发布游戏最多7天（暂时性硬约束）"
+    },
+    "unresolved": [
+      "开发AI工作页能否直接读取并写入同一仓库尚未实测",
+      "不同聊天页不会因本文件出现就自动发送或主动执行任务"
+    ],
+    "next_action": "DEV读取本JSON和它引用的合同、Project State；只对交接传输进行验证，写入ACK并核验远端读回。",
+    "acceptance": {
+      "technical": [
+        "能准确读取本handoff及三个合同文件",
+        "写入tasks/TRANSPORT_SMOKE_001/handoff_dev_to_art.json，ACK包含实际读取文件的Git blob SHA和commit SHA及真实结果",
+        "DEV成功读回ACK且ACK的状态与实际检查相符"
+      ],
+      "visual": "NOT_REQUIRED_FOR_TRANSPORT_SMOKE"
+    },
+    "evidence": [],
+    "result": "READY_FOR_DEV"
+  },
+  "expected_ack": {
+    "schema_version": "1.0",
+    "handoff_id": "ART-TO-DEV-TRANSPORT_SMOKE_001-20261020",
+    "from": "DEV_INTEGRATION",
+    "to": "ART_EXPERIENCE",
+    "task_id": "TRANSPORT_SMOKE_001",
+    "verdict": "PASS | FAIL | BLOCKED",
+    "read_receipts": "actual GitHub path, blob SHA, and check result",
+    "write_commit_sha": "actual commit SHA, only after successful write",
+    "source_revision_sha": "actual validated head or commit SHA",
+    "open_issues": [],
+    "next_action": "Record observed limitations and pass technical work request only after transport ACK",
+    "note": "Never claim autonomous notifications/background delivery from simple GitHub file access."
+  }
+}
