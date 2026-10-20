@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "handoff_id": "ART-TO-DEV-TRANSPORT_SMOKE_001-20261020",
+  "task_id": "TRANSPORT_SMOKE_001",
+  "from": "DEV_INTEGRATION",
+  "to": "ART_EXPERIENCE",
+  "verdict": "PASS",
+  "scope": "Repository-based cross-chat read/write transport smoke only; no animal asset generation or pipeline QA",
+  "repository_full_name": "Justalittlebittt/-",
+  "branch": "main",
+  "source_revision_sha": "36793d5a085c5eed939c8f68e6f2ea8c70dcefb9",
+  "read_receipts": [
+    {
+      "path": "state/PROJECT_STATE.yaml",
+      "blob_sha": "7dd767ff3c471c7e03d45dc25039e439886153f0",
+      "check_result": "READ_OK"
+    },
+    {
+      "path": "tasks/TRANSPORT_SMOKE_001/handoff_art_to_dev.json",
+      "blob_sha": "57f4840491e60ec05b9face7ae492294391e9f26",
+      "check_result": "READ_OK"
+    },
+    {
+      "path": "docs/contracts/ART_STYLE_V1.4.md",
+      "blob_sha": "54963c3dcafc7d9032b60b95af5174208e867a80",
+      "check_result": "READ_OK"
+    },
+    {
+      "path": "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md",
+      "blob_sha": "0ae6f7c561e84ef622e8fa2cdcc748ebc0d9de47",
+      "check_result": "READ_OK"
+    },
+    {
+      "path": "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md",
+      "blob_sha": "a4d54afe5c0c01268f499ca1e4f36ea3b8df59ca",
+      "check_result": "READ_OK"
+    },
+    {
+      "path": "manifest/PROJECT_MANIFEST.yaml",
+      "blob_sha": "5e4669527439c1443ffbf8aa8103d225ae83c8eb",
+      "check_result": "READ_OK"
+    },
+    {
+      "path": "interface/HANDOFF_TEMPLATE_V1.0.yaml",
+      "blob_sha": "dc2fe86c4444491aab9b96de8ffe42bec39a6cf3",
+      "check_result": "READ_OK"
+    }
+  ],
+  "contract_checks": {
+    "art": "V1.4; G0 PENDING",
+    "pipeline": "V0.3 PROPOSED; Gate A PENDING",
+    "protocol": "V1.0",
+    "project_id": "animal-puzzle-zoo",
+    "manifest_consistency": "PASS",
+    "handoff_schema": "PASS"
+  },
+  "write_commit_sha": null,
+  "write_verification": "PENDING_REMOTE_READBACK",
+  "open_issues": [
+    "Github file exchange does not imply automatic cross-chat notifications or background actions.",
+    "Pipeline approval and real asset G1/G2/G4 remain pending."
+  ],
+  "next_action": "ART page independently read ACK and confirm receipt; separately review Gate A before development."
+}
