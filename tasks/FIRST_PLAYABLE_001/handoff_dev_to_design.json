@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FIRST_PLAYABLE_001",
+  "owner": "DEV_INTEGRATION",
+  "to": "DESIGN_DIRECTOR",
+  "result": "BLOCKED",
+  "result_detail": "Implementation submitted; local logic and browser prototype passed; exact committed HTML browser run and remote GitHub CI remain unverified.",
+  "code_paths": [
+    "experiments/first_playable_001/core.js",
+    "experiments/first_playable_001/index.html",
+    "experiments/first_playable_001/test.js",
+    ".github/workflows/first-playable.yml"
+  ],
+  "run_instructions": {
+    "user": "Download experiments/first_playable_001/index.html and core.js into same folder, then open index.html in a browser. No dependencies.",
+    "logic": "node experiments/first_playable_001/test.js",
+    "interaction": "Mouse drag tiles, R key rotation, reset, next level, replay."
+  },
+  "tests_and_evidence": {
+    "local_node": {
+      "result": "PASS",
+      "suite_count": 9,
+      "command": "node /mnt/data/first_playable/test.js",
+      "note": "Local checked files were used when developing repository equivalents; final committed test has not been independently executed via remote CI."
+    },
+    "local_chromium": {
+      "result": "PASS_FOR_DEVELOPMENT_VERSION",
+      "method": "Playwright set_content combined local HTML+core because file/localhost navigation was blocked in the environment",
+      "tested_flow": "title->L01 drag+rotate->L02 drag+rotate->end->replay",
+      "page_errors": 0,
+      "scope_note": "Development HTML differs from committed HTML; do not count this as committed HTML/browser PASS."
+    },
+    "github": {
+      "remote_content_readback": "PASS",
+      "ci_run_id": null,
+      "ci_artifact": null,
+      "ci_result": "UNVERIFIED",
+      "observation": "fetch_commit_workflow_runs returned empty list for workflow commit (PR-filtered connector cannot establish push-run result)."
+    }
+  },
+  "known_issues": [
+    "Exact committed HTML browser execution not yet verified; visual UI regression and accessibility checks remain.",
+    "GitHub Actions run ID/job logs not confirmed.",
+    "No full engine runtime G4 or release evidence.",
+    "No permanent hosted playable URL; user must obtain both files."
+  ],
+  "actual_commit_sha": {
+    "core": "c329cddb79155ff731eae1897f4a39438e0405dd",
+    "page": "14635463e141f57fd3b0a580fec87a6d7be4bd54",
+    "tests": "1c7e976598a1a5f5d4e70b552a523ae3bf6e21a4",
+    "workflow": "532f9b71c83a9299bfda593dc7d5149c3019eada"
+  },
+  "engine_choice_reason": "Minimal HTML/CSS/vanilla JavaScript; desktop browser can run locally without installs, independent grid engine aids later porting; not a decision for final game engine.",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md unchanged",
+  "scope": "EXPERIMENT_FIRST_PLAYABLE_NOT_RELEASE",
+  "next_action": "DEV verify final committed HTML via browser and CI job logs, fix any failures, then DESIGN independently review actual playable UX."
+}
