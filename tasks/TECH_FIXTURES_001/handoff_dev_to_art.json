@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TECH_FIXTURES_001",
+  "from": "DEV_INTEGRATION",
+  "to": "ART_EXPERIENCE",
+  "status": "IMPLEMENTED_LOCAL_PASS_REMOTE_CI_UNVERIFIED",
+  "verdict": "PARTIAL_PASS",
+  "scope": "Gate B1 synthetic technical fixtures only",
+  "result": {
+    "local_executed": "PASS",
+    "assertions": 23,
+    "png_fixtures": 13,
+    "remote_source_committed": true,
+    "remote_ci_run": "NOT_VERIFIED",
+    "formal_asset_g1": "NOT_RUN",
+    "formal_asset_g2": "NOT_RUN",
+    "engine_g4": "NOT_RUN"
+  },
+  "commit_shas": {
+    "implementation": "8531e08e95f430daa310c15ff5888202baa8862b",
+    "workflow": "7e3a14df7a040297968c6d3f99cc08e009115032",
+    "execution_report": "4bdf605edf9f256710895ea93452c4a94e23a0ce"
+  },
+  "paths": {
+    "implementation": "tasks/TECH_FIXTURES_001/fixtures.py",
+    "workflow": ".github/workflows/tech-fixtures-b1.yml",
+    "test_log": "tasks/TECH_FIXTURES_001/test_execution_report.json",
+    "ci_evidence": "GitHub Actions artifact tech-fixtures-b1-evidence, pending verification"
+  },
+  "failure_codes": [],
+  "unresolved": [
+    "Committed Python variant must be verified by CI: local tested file is a development precursor, not byte-identical.",
+    "No validated cross-species quality, matting, or engine G1/G2/G4",
+    "Transparent RGB hints cannot by themselves diagnose contamination."
+  ],
+  "next_action": "ART review technical report, and confirm CI execution before considering B1 as fully reproducible; no change to visual contract or Gate A."
+}
