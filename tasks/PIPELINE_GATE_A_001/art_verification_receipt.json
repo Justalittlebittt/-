@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "task_id": "PIPELINE_GATE_A_001",
+  "reviewer_role": "ART_EXPERIENCE",
+  "date": "2026-10-20",
+  "verdict": "PASS_CROSS_OWNER_DESIGN_REVIEW_ONLY",
+  "dev_verdict": "PASS_DESIGN_REVIEW",
+  "reviewed_handoff_sha": "096191fad5dbce3890b285f1aa09c187b141cbe4",
+  "dev_report_commit": "0b1d1c36b6403cbaba548cac7c8a3c9b65b82bbd",
+  "dev_state_commit": "395f5ca252108a955e3a9dc6e0d3338f8fc373ab",
+  "verified_input_blobs": {
+    "gate_a_audit": "76c6b940630d670394b4a926b9d4df18da675362",
+    "v0_3": "0ae6f7c561e84ef622e8fa2cdcc748ebc0d9de47",
+    "art_v1_4": "54963c3dcafc7d9032b60b95af5174208e867a80",
+    "manifest": "5e4669527439c1443ffbf8aa8103d225ae83c8eb",
+    "request": "42fbf225ffa8ec1e2ceb0dfb59a9aad29b7ae444"
+  },
+  "verification": "Source files re-fetched; DEV references and commit history checked. Historical state SHA differs from latest as expected.",
+  "accepted": [
+    "A-02 actual generator probe required",
+    "A-04 binary PNG handoff requires byte-level receiver readback",
+    "A-05 one path first and bounded fallback",
+    "A-06 G3 candidate approval precedes G4 runtime; no circular prerequisite",
+    "A-01/A-03/A-07/A-08 evidence and responsibility limits"
+  ],
+  "corrected": [
+    "Historical V0.3 status never treated as live status",
+    "Git object SHA distinct from file SHA256",
+    "No unsupported claim that connector can read back PNG bytes",
+    "No synthetic B1/B2 escalation into full Gate B/G1-G4",
+    "No creation of parallel platform or pre-emptive animal masks"
+  ],
+  "artifact": "docs/contracts/ASSET_PIPELINE_V0.4_PROPOSED.md",
+  "artifact_commit": "ea96a2c6385f6097a2daa01a8293df749be6fb85",
+  "remaining_risks": [
+    "Binary upload/readback channel not independently verified",
+    "Actual generator transparency, control, rights and consistency unverified",
+    "Real hair/fur material, scale sampling, silhouette legibility unverified",
+    "Engine/render profile and shape contracts unfrozen",
+    "Gate A user decision and G3 visual approval pending"
+  ],
+  "release_status": "NOT_AUTHORIZED",
+  "next_task": "BINARY_PNG_PROBE_001"
+}
