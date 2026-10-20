@@ -1,0 +1,17 @@
+name: First Playable Logic
+on:
+  push:
+    paths:
+      - 'experiments/first_playable_001/**'
+      - '.github/workflows/first-playable.yml'
+  workflow_dispatch:
+jobs:
+  logic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify committed playable logic and two solvable levels
+        run: node experiments/first_playable_001/test.js
