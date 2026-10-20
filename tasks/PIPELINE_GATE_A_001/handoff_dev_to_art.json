@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "task_id": "PIPELINE_GATE_A_001",
+  "owner": "DEV_INTEGRATION",
+  "from": "DEV_INTEGRATION",
+  "to": "ART_EXPERIENCE",
+  "verdict": "PASS_DESIGN_REVIEW",
+  "review_scope": "Technical feasibility and interface audit only. Not production, not Gate A approval.",
+  "inputs_verified": [
+    {
+      "path": "state/PROJECT_STATE.yaml",
+      "blob_sha": "27fead472a6443ca98cc08139d6c65a87864b6cf"
+    },
+    {
+      "path": "tasks/PIPELINE_GATE_A_001/request_to_dev.json",
+      "blob_sha": "42fbf225ffa8ec1e2ceb0dfb59a9aad29b7ae444"
+    },
+    {
+      "path": "docs/reviews/PIPELINE_GATE_A_AUDIT_2026-10-20.md",
+      "blob_sha": "76c6b940630d670394b4a926b9d4df18da675362"
+    },
+    {
+      "path": "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md",
+      "blob_sha": "0ae6f7c561e84ef622e8fa2cdcc748ebc0d9de47"
+    },
+    {
+      "path": "docs/contracts/ART_STYLE_V1.4.md",
+      "blob_sha": "54963c3dcafc7d9032b60b95af5174208e867a80"
+    },
+    {
+      "path": "tasks/TECH_FIXTURES_002/art_verification_receipt.json",
+      "blob_sha": "33de7f865192dde0d269a13904fb65640f61942c"
+    },
+    {
+      "path": "manifest/PROJECT_MANIFEST.yaml",
+      "blob_sha": "5e4669527439c1443ffbf8aa8103d225ae83c8eb"
+    }
+  ],
+  "findings": [
+    {
+      "id": "A-02",
+      "verdict": "FEASIBLE_CONDITIONAL",
+      "observation": "No real generator capability evidence. Synthetic PNG QA does not prove RGBA/single-subject/shape controllability.",
+      "minimal_interface": {
+        "input": [
+          "generator_id",
+          "generator_version",
+          "prompt_hash",
+          "seed_if_supported",
+          "silhouette_guide_optional",
+          "requested_output_mode",
+          "budget_limit"
+        ],
+        "output": [
+          "raw_asset_path_or_ref",
+          "raw_sha256",
+          "actual_mime",
+          "width",
+          "height",
+          "channels",
+          "alpha_min_max",
+          "single_subject_assessment_with_method",
+          "silhouette_control_supported_observed",
+          "reproducibility_level",
+          "failure_code",
+          "tool_license_and_provenance"
+        ]
+      },
+      "probe": "Run a bounded non-animal synthetic-object probe with real target generator using small predeclared sample set; decode actual returned bytes; compare source and hashes; one retry per failure category maximum; no universal guarantee.",
+      "state": "CAPABILITY_UNVERIFIED"
+    },
+    {
+      "id": "A-04",
+      "verdict": "UNVERIFIED_BUT_FEASIBLE",
+      "observation": "Text/JSON repository handoff proven; binary upload via available GitHub connector not tested.",
+      "recommended_channel": "GitHub blob base64 upload or GitHub Contents API with verified binary bytes; no text encoding of raw PNG as UTF-8; alternatively artifact/file storage with both roles read+write verified.",
+      "binary_contract": [
+        "asset_id/version immutable",
+        "source/owner/tool/license/provenance",
+        "relative repo path and commit/blob_sha",
+        "SHA256 computed on exact original binary bytes and compared after independent download",
+        "PNG magic bytes, IHDR dimensions, RGBA decode, alpha statistics",
+        "size and retention limits checked",
+        "file existence is not delivery until receiving role independently downloads and validates"
+      ],
+      "probe": "Create one tiny procedurally generated RGBA PNG, upload as true binary via allowed connector/API, fetch exact bytes in a separate work page and compare SHA-256; record artifact commit and both receipts. If connector cannot handle bytes, mark BINARY_TRANSPORT_BLOCKED and select alternative storage. No animals.",
+      "state": "BINARY_TRANSPORT_UNVERIFIED"
+    },
+    {
+      "id": "A-05",
+      "verdict": "FEASIBLE_WITH_SCOPE_GUARD",
+      "minimal_plan": [
+        "No multi-adapter platform; probe first available capable generator, prefer native alpha if actual output proves it",
+        "Only if probe fails and within explicit budget, evaluate simple neutral background plus one general-purpose cutout route",
+        "Keep same output/QA schema and bounded retries; stop if repeated source failures; never species-specific hacks",
+        "Do not set cell_px/engine render profile before product decision; use EXPERIMENT outputs until frozen"
+      ],
+      "seven_day_rule": "Seven days covers whole releasable first game, not a technical prototype. Gate A alone does not authorize pipeline expansion."
+    },
+    {
+      "id": "A-06",
+      "verdict": "NO_HARD_CIRCULAR_DEPENDENCY",
+      "sequence": "T1/T2 ART candidate → T3 DEV G1/G2 preliminary technical preflight → T4 ART/user G3 candidate version approval → T5 DEV integration and real G4 → release gates. G4 not prerequisite to G3; G3 not evidence of G4.",
+      "status": "DESIGN_PASS"
+    },
+    {
+      "id": "A-01/A-03/A-07/A-08",
+      "verdict": "CLARIFICATIONS_REQUIRED",
+      "notes": [
+        "V0.3 section 10 repository UNVERIFIED is historical, not current. Project state and verified receipts are authoritative.",
+        "RGBA and shape math cannot prove species fidelity, visual silhouette readability or background spill perceptually.",
+        "Synthetic B1/B2 PASS does not close full Gate B or species/material Gate C.",
+        "Only HUMAN approves visuals, while DEV owns technical logs, retries and resolution."
+      ]
+    }
+  ],
+  "interface_conflicts": [
+    {
+      "code": "PATH_DRIFT",
+      "detail": "V0.3 illustrative animal-puzzle/contracts/... tree does not match actual docs/contracts/... and JSON tasks; use repository manifest paths as operational; illustrations non-normative."
+    },
+    {
+      "code": "HARD_CODED_STALE_STATUS",
+      "detail": "V0.3 §10 historical UNVERIFIED and NOT_RUN statements now conflict with verified project transport and B1/B2 receipts; maintain in historical document, reference live PROJECT_STATE in V0.4."
+    },
+    {
+      "code": "PIVOT_SPEC_UNFROZEN",
+      "detail": "cell_px, engine, render profile and art_bbox handling are not frozen; keep experiment-only and require shape contracts before production."
+    },
+    {
+      "code": "APPROVAL_SCOPE_AMBIGUITY",
+      "detail": "Distinguish candidate G3 visual approval from release approval needing actual G4."
+    },
+    {
+      "code": "RIGHTS_AND_BYTES_UNDEFINED",
+      "detail": "A text handoff may carry paths but not raw PNG bytes; include verified original SHA256 and source rights."
+    }
+  ],
+  "change_requests": [
+    {
+      "id": "CR-GATEA-001",
+      "target": "next proposed pipeline V0.4",
+      "owner": "ART_EXPERIENCE",
+      "status": "PROPOSED_NOT_APPLIED",
+      "requests": [
+        "Add generator capability_probe contract and bounded fallback",
+        "Define binary transfer contract with independently verified readback and provenance/sha256",
+        "Align canonical actual paths with manifest and distinguish historical vs live statuses",
+        "Explicitly separate preliminary G3 approval from full release G4",
+        "Keep synthetic_B1_B2 vs real generator/matting/material coverage distinct"
+      ],
+      "requires_user_decision": "Only if altering approved visual/gameplay/7-day constraints or choosing materially irreversible architecture; no automatic LOCK."
+    }
+  ],
+  "qa": {
+    "design_review": "PASS_DESIGN_REVIEW",
+    "generator_execution": "NOT_RUN",
+    "binary_png_exchange": "UNVERIFIED",
+    "b1_b2": "PASS_SCOPED_FROM_ART_VERIFICATION_RECEIPTS",
+    "full_gate_b": "NOT_RUN",
+    "gate_a_final_approval": "PENDING",
+    "g1": "NOT_RUN",
+    "g2": "NOT_RUN",
+    "g3": "PENDING_HUMAN_VISUAL_APPROVAL",
+    "g4": "NOT_RUN"
+  },
+  "risk_priority": [
+    "A-04 binary handoff; next minimal probe",
+    "A-02 generator capability; model-specific bounded probe when generator accessible",
+    "Avoid multi-path tooling until one route demonstrated"
+  ],
+  "next_owner_action": "ART_EXPERIENCE independently reads and reviews this ACK, incorporates CR-GATEA-001 in V0.4 PROPOSED without locking, then assigns narrow binary PNG probe to DEV if necessary."
+}
