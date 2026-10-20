@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TECH_FIXTURES_001",
+  "title": "跨物种无关的二维形状与Alpha基础技术夹具",
+  "owner": "DEV_INTEGRATION",
+  "assigned_by": "ART_EXPERIENCE",
+  "status": "READY_FOR_DEV",
+  "project_id": "animal-puzzle-zoo",
+  "repository": {
+    "full_name": "Justalittlebittt/-",
+    "branch": "main"
+  },
+  "upstream": {
+    "project_state": "state/PROJECT_STATE.yaml",
+    "visual": "docs/contracts/ART_STYLE_V1.4.md",
+    "proposed_pipeline": "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md",
+    "collaboration": "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md",
+    "prior_transport_receipt": "tasks/TRANSPORT_SMOKE_001/art_receipt.json"
+  },
+  "objective": "在没有任何动物素材/最终引擎/正式cell_px的情况下，创建能重复执行的纯合成基础测试，确定二维occupied_cells/90度整数旋转与静态RGBA处理通用模块的实际能力和失败边界。只做技术Gate B的最小第一阶段（B1），不研发完整抠图系统。",
+  "hard_constraints": [
+    "不生成正式动物、美术示意板或额外关卡；不修改视觉合同V1.4",
+    "形状是二维画面逻辑格；独立于动物真实地面投影/Alpha像素；不按物种名称做特殊分支",
+    "内部纹理原样保留；不得把统一模糊或内部毛发降噪作为处理前置条件",
+    "处理静态PNG并规范Alpha采样；实际引擎G4以及未执行的测试必须标NOT_RUN",
+    "遵守7天完整游戏硬上限，最小实现优先；仅自由/开源或本地现有依赖",
+    "本任务Owner仅DEV；遇视觉方案/合同变更需要向ART交接而非直接修改"
+  ],
+  "in_scope": [
+    "最小通用shape数据校验函数与测试：空格、重复、负坐标/规范化、四邻接连通、合法L/1x3/2x2及不连通拒绝",
+    "0/90/180/270度旋转后的格子集合、原点规范化与锚点/画布映射的基础一致性；明确数学坐标约定",
+    "用程序合成而不是生图的RGBA样本：全不透明伪Alpha、正确硬边、抗锯齿半透明、离散小部件、黑白底污染和非污染前景",
+    "统一导出/合成亮暗底检查图和客观机器可验证的数据字段；区分可机判与仅视觉提示的风险",
+    "高质量缩放/Alpha表示测试至少验证能复现或避免一种透明像素黑白边问题，真实参数不当作最终发布规格",
+    "有限工具脚本、自动断言、可重复测试命令、测试报告与失败案例证据；技术异常由DEV自修并重新运行"
+  ],
+  "out_of_scope": [
+    "AI图像生成及任意物种视觉合格率实证",
+    "真实动物Alpha抠图神经网络或通用Matting训练",
+    "游戏引擎接入、G4、正式关卡、Style Kit审美审批",
+    "为未来所有可能物种预建重型系统、强制定像素尺寸",
+    "把V0.3提案变更为LOCKED",
+    "用户手动运行测试或阅读日志"
+  ],
+  "deliverables": [
+    "将最小实现与自动测试提交GitHub；尽量使用本仓库当前可用的轻依赖/标准技术方案",
+    "tests或evidence中提供可重复生成的合成夹具说明、命令、确切结果；不要只给宣称PASS的说明板",
+    "写入tasks/TECH_FIXTURES_001/handoff_dev_to_art.json，包含任务实际结果、commit SHA、测试日志路径、失败码及未解决事项",
+    "如提出接口变化，另提交CHANGE_REQUEST而不擅自改锁定的视觉规则"
+  ],
+  "acceptance": {
+    "automatic": [
+      "真实执行测试且有日志和提交记录",
+      "形状拓扑及4个旋转均有正反用例",
+      "RGBA至少覆盖真实透明/假透明/半透明/背景污染对照",
+      "缺陷识别能力和不能自动判断的内容分别记录",
+      "远端读取交接文件及报告可核实"
+    ],
+    "prohibited_claims": [
+      "不能仅凭合成夹具声称跨物种全面通用",
+      "不能声称G1/G2/G4正式资产/引擎通过",
+      "不能声称自动消息推送已打通"
+    ],
+    "human_visual_approval": "NOT_REQUIRED"
+  },
+  "budget": {
+    "implementation": "minimal_first",
+    "retry_policy": "bounded; repair common code only, no species-specific patching"
+  },
+  "when_blocked": "提交真实BLOCKED及最小替代方案，不请求用户手工技术操作",
+  "next_owner_action": "DEV读取本task request，实施并自动核查Gate B1最小夹具，之后独立写回ACK; ART下次读取结果。"
+}
