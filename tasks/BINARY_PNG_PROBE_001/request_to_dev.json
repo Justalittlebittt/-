@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "task_id": "BINARY_PNG_PROBE_001",
+  "owner": "DEV_INTEGRATION",
+  "from": "ART_EXPERIENCE",
+  "to": "DEV_INTEGRATION",
+  "status": "READY_FOR_DEV",
+  "contract": "docs/contracts/ASSET_PIPELINE_V0.4_PROPOSED.md",
+  "goal": "Prove original RGBA PNG binary bytes can be transferred through a GitHub/shared channel with independent downstream readback; no animal art.",
+  "scope": [
+    "Generate exactly one tiny synthetic RGBA PNG in code",
+    "Compute raw SHA256, byte size, PNG signature, IHDR, channel/alpha data",
+    "Upload true binary via available API (NOT UTF-8 text create_file) and commit immutable reference if feasible",
+    "Publish machine-readable receipt including channel, commit, Git blob SHA, true binary SHA256 and exact download route",
+    "If connector cannot provide receiver-downloadable binary bytes, mark BINARY_TRANSPORT_BLOCKED and record evidence/feasible alternative without claiming PASS"
+  ],
+  "out_of_scope": [
+    "No generator probe yet",
+    "No B1/B2 reruns",
+    "No real animal assets",
+    "No heavy platform",
+    "No G1/G2/G4 production PASS"
+  ],
+  "acceptance": "ART in independent work page independently retrieves and hashes/decodes same original bytes before marking PASS_BINARY_EXCHANGE. DEV-only upload is not PASS.",
+  "max_probe_images": 1,
+  "handback": "tasks/BINARY_PNG_PROBE_001/handoff_dev_to_art.json"
+}
