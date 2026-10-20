@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "优先启动FIRST_PLAYABLE_001占位可玩闭环；BINARY_PNG_PROBE_001作为独立既有技术任务保留；正式关卡和美术规模继续待定"
+current_goal: "FIRST_PLAYABLE_001两关占位闭环已提交，本地逻辑/开发版浏览器PASS；待核验远端CI及最终提交版浏览器"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md"
@@ -57,7 +57,7 @@ handoff_transport:
 active_tasks:
   FIRST_PLAYABLE_001:
     owner: "DEV_INTEGRATION"
-    status: "READY_FOR_DEV_NOT_EXECUTED"
+    status: "IMPLEMENTED_LOCAL_TEST_PASS_REMOTE_CI_AND_COMMITTED_UI_UNVERIFIED"
     request: "tasks/FIRST_PLAYABLE_001/request_to_dev.json"
     expected_report: "tasks/FIRST_PLAYABLE_001/handoff_dev_to_design.json"
     note: "DESIGN提出两关占位拼图可玩闭环验证；仅技术实验，不冻结正式动物/关卡规模；跨聊天不能自动唤醒DEV"
