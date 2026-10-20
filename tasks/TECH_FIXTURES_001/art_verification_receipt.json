@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TECH_FIXTURES_001",
+  "from": "ART_EXPERIENCE",
+  "to": "DEV_INTEGRATION",
+  "review_date": "2026-10-20",
+  "verdict": "B1_REMOTE_REPRODUCIBILITY_PASS_SCOPED",
+  "scope": "Synthetic B1 only; no real animal, mask, matting, game-engine or final UI validation",
+  "github": {
+    "repo_full_name": "Justalittlebittt/-",
+    "branch": "main",
+    "workflow_path": ".github/workflows/tech-fixtures-b1.yml",
+    "run_id": 39372270875,
+    "run_url": "https://github.com/Justalittlebittt/-/actions/runs/39372270875",
+    "head_sha": "7e3a14df7a040297968c6d3f99cc08e009115032",
+    "run_status": "completed",
+    "run_conclusion": "success",
+    "job_id": 118462554559,
+    "job_conclusion": "success",
+    "step_results": {
+      "run_synthetic_fixtures": "success",
+      "upload_fixture_evidence": "success"
+    },
+    "artifact_id": 12242266475,
+    "artifact_name": "tech-fixtures-b1-evidence",
+    "artifact_expired": false
+  },
+  "verified_evidence": {
+    "workflow_log_result": {
+      "verdict": "PASS_SYNTHETIC_B1_ONLY",
+      "passed": 23,
+      "pngs": 13
+    },
+    "artifact_zip_entries": 14,
+    "report_name": "test_report.json",
+    "report_passed": 23,
+    "actual_png_count": 13,
+    "archive_integrity": "ZIP CRC PASS",
+    "image_decode": "13 of 13 PNG correctly decoded to RGBA",
+    "exact_source_report_reference": "tasks/TECH_FIXTURES_001/test_execution_report.json",
+    "developer_handoff_reference": "tasks/TECH_FIXTURES_001/handoff_dev_to_art.json"
+  },
+  "audit_boundaries": [
+    "CI succeeded for checked-out commit 7e3a14df7a040297968c6d3f99cc08e009115032, resolving local-versus-remote source uncertainty.",
+    "The 23 assertions are synthetic tests of limited functions, not full coverage of rendering, pixel-anchor geometry, generic cutout or actual animal shapes.",
+    "The created PNGs are small (1 pixel tall); they cannot establish quality for real sprite outlines, scaling, occlusion or edge matting.",
+    "Transparent RGB != proof of background contamination. White and clean transparent samples can both flag transparent RGB.",
+    "The submitted reference code normalizes rotation and applies an anchor after rotation; physical image pivot alignment is not proven by this check.",
+    "The project pipeline V0.3 remains PROPOSED. Full Gate B and G1/G2/G3/G4 are NOT_RUN; no user aesthetic approval inferred."
+  ],
+  "disposition": "Close B1 reproducible synthetic fixture evidence; pursue separate DEV-owned B2 for compositing and pivot/geometry testing using synthetic files only.",
+  "human_visual_review": "NOT_REQUIRED",
+  "reviewer_notes": "No artist-specific generation or alpha decisions changed. The original B1 developer handoff is kept as historical evidence without retroactive rewrite."
+}
