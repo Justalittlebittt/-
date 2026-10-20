@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "B1真实GitHub CI与Artifact已验证PASS（23断言/13 PNG）；准备DEV执行B2二维贴图定位与Alpha合成夹具"
+current_goal: "B2源码与CI工作流已提交；远端运行ID/日志/artifact未取得，不能标PASS"
 source_of_truth:
   current_repository: "GitHub main"
   art_contract: "docs/contracts/ART_STYLE_V1.4.md"
@@ -35,7 +35,7 @@ qa:
   G4: "NOT_RUN"
   G5: "NOT_RUN_NOT_APPLICABLE_YET"
   pipeline_gate_A: "PENDING_USER_REVIEW"
-  pipeline_gate_B: "B1_REMOTE_CI_PASS_B2_READY_FOR_DEV"
+  pipeline_gate_B: "B1_REMOTE_CI_PASS_B2_REMOTE_EXECUTION_UNVERIFIED"
   pipeline_gate_C: "NOT_RUN"
   pipeline_gate_D: "NOT_RUN"
 handoff_transport:
@@ -64,7 +64,7 @@ active_tasks:
     art_verification_receipt: "tasks/TECH_FIXTURES_001/art_verification_receipt.json"
   TECH_FIXTURES_002:
     owner: "DEV_INTEGRATION"
-    status: "READY_FOR_DEV"
+    status: "IMPLEMENTED_CI_VERIFICATION_BLOCKED"
     request: "tasks/TECH_FIXTURES_002/request_to_dev.json"
     expected_report: "tasks/TECH_FIXTURES_002/handoff_dev_to_art.json"
     note: "B2测真实二维合成夹具、图像-格子旋转枢轴/Anchor、Alpha合成；不得产生动物素材"
