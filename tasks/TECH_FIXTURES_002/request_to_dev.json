@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TECH_FIXTURES_002",
+  "title": "B2: 2D sprite-grid transform and RGBA compositing synthetic regression",
+  "owner": "DEV_INTEGRATION",
+  "requested_by": "ART_EXPERIENCE",
+  "status": "READY_FOR_DEV",
+  "project_id": "animal-puzzle-zoo",
+  "repository": {
+    "full_name": "Justalittlebittt/-",
+    "branch": "main"
+  },
+  "dependencies": {
+    "b1_verification": "tasks/TECH_FIXTURES_001/art_verification_receipt.json",
+    "b1_code": "tasks/TECH_FIXTURES_001/fixtures.py",
+    "art_contract": "docs/contracts/ART_STYLE_V1.4.md",
+    "pipeline_proposal": "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md",
+    "project_state": "state/PROJECT_STATE.yaml"
+  },
+  "objective": "将B1只覆盖极小抽象数据的限制收敛到可重复验证的二维贴图/网格变换与透明边缘合成；产出可自动验证的测试和证据，不制作任何动物正式素材或引入真实引擎。",
+  "observed_gaps": [
+    "B1全部13张PNG是1px高合成条带，不代表二维不规则剪影、邻接与实际透明边缘表现。",
+    "B1 anchor()只在归一化后的旋转形状上添加平移，未证实 sprite 像素旋转枢轴与逻辑网格锚点一致。",
+    "B1 premul仅执行一维两像素插值实验，没有验证二维多点采样、不同底色合成和色边案例。",
+    "RGB值在alpha=0的异常/非零不是可靠的背景污染判据。"
+  ],
+  "in_scope": [
+    "沿用B1模块，不重写其已验证的基本四邻接和旋转逻辑；优先增量扩展，而非建立新重型框架。",
+    "构建至少两种多像素、真正二维的非凸和细长透明形状夹具（程序生成，不是动物图像）。",
+    "明确图像像素坐标、逻辑格坐标、形状局部坐标和锚点/枢轴；建立四个90°旋转时相同的整型变换，在不同锚点和非对称形状上验证sprite贴图位置、bbox、逻辑占格的一致性。",
+    "测试至少一种多像素RGBA边缘：半透明像素+含颜色的透明RGB，验证正确合成/预乘空间过滤与错误做法之间的可重现实测差异；输出亮暗棋盘底合成图。",
+    "不要将真假透明、透明RGB标志直接当成自动的真实背景残留判定；输出检测上限及不可自动判断说明。",
+    "所有新增/修改代码必须以仓库提交源码执行测试；GitHub Actions需匹配新增文件触发并提供真实run id、日志、artifact；以CI结果证明远端版，而非本地开发前体。",
+    "使用能实际运行的最小无付费依赖方案；提交自动断言、复现命令、真实生成图证据、机器报告和开发->美术ACK。"
+  ],
+  "out_of_scope": [
+    "任何动物AI生图、物种风格测试、真实毛发Matting/去背景系统或人工抠图。",
+    "修改二维占格概念、物种美术规则或V1.4、将V0.3 pipeline提案擅自变LOCKED。",
+    "正式游戏引擎/拖拽运行/G4、完整真实G1/G2、多章节视觉QA。",
+    "为了CI出现延迟反复让用户人工刷新；先查GitHub工作流实际状态，不得凭猜测PASS。",
+    "为覆盖未来所有物种而提前建完整工具平台。"
+  ],
+  "quality_requirements": {
+    "machine_assertions": [
+      "实际二维PNG，不是只有一像素高度的条带",
+      "非对称占格4向旋转+逆旋转+枢轴/包围盒一致",
+      "图像变换和逻辑旋转坐标能在同一可解释坐标合同下对齐",
+      "透明混合反例与正确例被实际像素断言区分",
+      "最终CI日志列出pass/fail及生成样张数量"
+    ],
+    "reporting": [
+      "分别说明数学PASS、图像合成PASS、视觉适配NOT_RUN、真实引擎G4 NOT_RUN",
+      "实际commit+CI run URL/id+artifact id+远端代码对应关系",
+      "列出不存在证据的主观图像质量评估，不用PASS蒙混"
+    ]
+  },
+  "deliverables": {
+    "task_folder": "tasks/TECH_FIXTURES_002/",
+    "code": "脚本可在GitHub Actions独立运行",
+    "log": "test_execution_report.json or CI artifact equivalent",
+    "response": "tasks/TECH_FIXTURES_002/handoff_dev_to_art.json"
+  },
+  "budget": "技术验证最小化；发现模型或原样本超范围则记录BLOCKED，不耗费正式7天游戏素材生产预算。",
+  "on_success": "美术AI独立核验远端CI与产物，再根据实际证据决定是否可以关闭Gate B基础技术夹具阶段；不得自动批准整套V0.3合同。",
+  "on_failure": "DEV自行定位与修复公共算法，提供失败码/日志和替代方案。只有需要视觉取舍、范围硬约束变更时再升级人类。"
+}
