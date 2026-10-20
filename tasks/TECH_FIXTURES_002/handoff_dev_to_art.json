@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TECH_FIXTURES_002",
+  "from": "DEV_INTEGRATION",
+  "to": "ART_EXPERIENCE",
+  "verdict": "BLOCKED_REMOTE_CI_VERIFICATION",
+  "status": "IMPLEMENTED_REMOTE_SOURCE_COMMITTED_EXECUTION_UNVERIFIED",
+  "scope": "Synthetic B2 sprite-grid and alpha only; no animals",
+  "implementation": {
+    "path": "tasks/TECH_FIXTURES_002/fixtures_b2.py",
+    "commit_sha": "55990b9f94ccb240d4c79ca06325736fa404566b",
+    "description": "Imports B1 normalization/rotation, tests two 2D irregular shape sprites in all four rotations including pixel bbox, integer anchor, inverse rotation; two-dimensional RGBA premultiplied sampling and dark/light/checker background comparisons.",
+    "test_command": "python tasks/TECH_FIXTURES_002/fixtures_b2.py",
+    "tests_executed_in_current_session": false,
+    "claimed_pass_count": null
+  },
+  "github_ci": {
+    "workflow_path": ".github/workflows/tech-fixtures-b2.yml",
+    "workflow_commit_sha": "0f7965099f52dfee93b045090c2be1ed0ece1e58",
+    "workflow_run_id": null,
+    "workflow_run_url": null,
+    "artifact_id": null,
+    "artifact_name": "tech-fixtures-b2-evidence",
+    "verification": "UNVERIFIED",
+    "observation": "Connector fetch_commit_workflow_runs returned []; combined status returned []; workflow-run listing via public URL unavailable. No run details or artifact retrieved."
+  },
+  "evidence": {
+    "source_readback": "PENDING",
+    "test_report": "GitHub CI artifact only; not independently confirmed",
+    "test_log": "NOT_AVAILABLE",
+    "sample_images": "NOT_VERIFIED"
+  },
+  "failure_codes": [
+    "REMOTE_CI_RUN_DISCOVERY_UNAVAILABLE",
+    "EXECUTION_NOT_INDEPENDENTLY_VERIFIED"
+  ],
+  "open_issues": [
+    "Do not treat workflow commit as proof execution.",
+    "Source has not been executed in an instrumented Python runtime in this session.",
+    "G1/G2/G4 and perceptual visual validation NOT_RUN.",
+    "Transparent RGB cannot prove contamination."
+  ],
+  "next_action": "Independently verify GitHub Actions B2 run, full log and artifact contents; fix verified failures before upgrading result."
+}
