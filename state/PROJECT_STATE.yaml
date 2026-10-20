@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "验证两个独立AI工作页使用同一GitHub仓库进行合同和Handoff交接"
+current_goal: "执行真实双AI跨页面GitHub交接验证：ART请求已写入，等待DEV独立读取与ACK"
 source_of_truth:
   current_repository: "GitHub main"
   art_contract: "docs/contracts/ART_STYLE_V1.4.md"
@@ -42,6 +42,10 @@ handoff_transport:
   shared_repo_access_this_session: "READ_WRITE_VERIFIED"
   art_page_access: "UNVERIFIED"
   dev_page_access: "UNVERIFIED"
+  art_to_dev_handoff_written: "VERIFIED_ON_GITHUB"
+  art_to_dev_handoff_path: "tasks/TRANSPORT_SMOKE_001/handoff_art_to_dev.json"
+  dev_ack_status: "PENDING_INDEPENDENT_DEV_PAGE"
+  dev_ack_expected_path: "tasks/TRANSPORT_SMOKE_001/handoff_dev_to_art.json"
   autonomous_cross_chat_delivery: "NOT_ESTABLISHED"
   mode: "repository_file_exchange_when_both_pages_verified"
   rule: "不得将仓库共享误称为两个聊天会话会自动主动读取或持续后台工作"
@@ -50,7 +54,8 @@ owner_boundaries:
   DEV_INTEGRATION: "二维逻辑形状、Alpha技术处理、旋转、自动G1/G2/G4和技术修复"
   HUMAN: "视觉审美确认与重大范围/合同决策"
 next_actions:
-  - "在美术与开发两个独立工作页分别验证读取仓库合同及写入Handoff能力"
+  - "开发工作页读取 tasks/TRANSPORT_SMOKE_001/handoff_art_to_dev.json，并写回可验证的handoff_dev_to_art.json ACK；当前任务只测试交接，不生产素材"
+  - "美术工作页下一次检查真实ACK及权限，并记录双页面交接实际结果"
   - "审查双AI协作V0.3合同并决定是否LOCKED"
   - "使用合成测试夹具验证通用Alpha、二维旋转和数据接口；不生产正式动物"
 assumptions_and_unknowns:
