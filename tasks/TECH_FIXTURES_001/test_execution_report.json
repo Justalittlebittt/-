@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TECH_FIXTURES_001",
+  "owner": "DEV_INTEGRATION",
+  "verdict": "PASS_LOCAL_SYNTHETIC_B1_WITH_REMOTE_EXECUTION_UNVERIFIED",
+  "execution": {
+    "environment": "Local Python 3 standard-library fixture implementation, executed in current session",
+    "command": "python /mnt/data/tech_fixture/fixtures.py",
+    "result": "PASS_SYNTHETIC_B1_ONLY",
+    "passed_assertions": 23,
+    "generated_png_count": 13,
+    "note": "Local execution was of development source; committed fixtures.py is a revised self-contained equivalent and has not been independently executed from GitHub in this session."
+  },
+  "repository": {
+    "branch": "main",
+    "source_code": "tasks/TECH_FIXTURES_001/fixtures.py",
+    "source_commit": "8531e08e95f430daa310c15ff5888202baa8862b",
+    "workflow": ".github/workflows/tech-fixtures-b1.yml",
+    "workflow_commit": "7e3a14df7a040297968c6d3f99cc08e009115032",
+    "ci_run": "UNVERIFIED"
+  },
+  "test_results": {
+    "shape": "PASS_LOCAL",
+    "rotation": "PASS_LOCAL",
+    "rgba": "PASS_LOCAL",
+    "premultiplied_alpha": "PASS_LOCAL",
+    "remote_ci": "NOT_VERIFIED",
+    "g1": "NOT_RUN",
+    "g2": "NOT_RUN",
+    "g4": "NOT_RUN"
+  },
+  "failure_codes": [],
+  "open_issues": [
+    "CI run and generated remote PNG artifact are not yet independently verified.",
+    "Cannot objectively identify actual background contamination from alpha/RGB alone.",
+    "Engine, fixed cell_px, animal images, actual matting and G1/G2/G4 out of scope."
+  ],
+  "next_action": "Verify workflow run and downloaded evidence before upgrading remote reproducibility claim; ART to independently read this report."
+}
