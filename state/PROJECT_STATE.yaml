@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "统一制作合同V1.0已获用户批准；保持BINARY_PNG_PROBE_001当前任务，新增策划层并优先推进最短可玩闭环"
+current_goal: "优先启动FIRST_PLAYABLE_001占位可玩闭环；BINARY_PNG_PROBE_001作为独立既有技术任务保留；正式关卡和美术规模继续待定"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md"
@@ -55,6 +55,12 @@ handoff_transport:
   mode: "repository_file_exchange_when_both_pages_verified"
   rule: "不得将仓库共享误称为两个聊天会话会自动主动读取或持续后台工作"
 active_tasks:
+  FIRST_PLAYABLE_001:
+    owner: "DEV_INTEGRATION"
+    status: "READY_FOR_DEV_NOT_EXECUTED"
+    request: "tasks/FIRST_PLAYABLE_001/request_to_dev.json"
+    expected_report: "tasks/FIRST_PLAYABLE_001/handoff_dev_to_design.json"
+    note: "DESIGN提出两关占位拼图可玩闭环验证；仅技术实验，不冻结正式动物/关卡规模；跨聊天不能自动唤醒DEV"
   TECH_FIXTURES_001:
     owner: "DEV_INTEGRATION"
     status: "B1_REMOTE_CI_PASS_ART_VERIFIED"
@@ -91,6 +97,7 @@ owner_boundaries:
   DEV_INTEGRATION: "二维形状数据、锚点/旋转技术实现、Alpha处理、引擎与G1/G2/G4"
   HUMAN: "正式视觉版本确认、重大范围/预算/合同决定"
 next_actions:
+  - "FIRST_PLAYABLE_001：由DEV独立读取任务、制作两关闭环、自动测试并提交实际运行证据；DESIGN审查体验后再讨论正式关卡设计"
   - "已有 BINARY_PNG_PROBE_001 历史任务不改写，DEV按其原请求执行，ART独立检查真实PNG字节"
   - "DESIGN策划页面讨论并提出首章有限关卡/形状/素材预算；未获用户确认前不锁定参数"
   - "DEV以最小占位棋盘验证核心交互与一条可玩闭环；真实引擎G4仍待执行"
