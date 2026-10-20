@@ -54,8 +54,8 @@
     "manifest_consistency": "PASS",
     "handoff_schema": "PASS"
   },
-  "write_commit_sha": null,
-  "write_verification": "PENDING_REMOTE_READBACK",
+  "write_commit_sha": "1906201ff92551441c72a4d8dbd7c6e1b3e282ce",
+  "write_verification": "INITIAL_ACK_COMMIT_CONFIRMED_BY_REMOTE_READ; FINAL_UPDATE_READBACK_PENDING",
   "open_issues": [
     "Github file exchange does not imply automatic cross-chat notifications or background actions.",
     "Pipeline approval and real asset G1/G2/G4 remain pending."
