@@ -8,7 +8,7 @@ const P=PuzzleCore,$=id=>document.getElementById(id);let s,selected=null,drag=nu
 function show(id){for(const k of ['home','game','end'])$(k).classList.toggle('hidden',k!==id)}
 function note(t){$('status').textContent=t}
 function start(i){s=P.init(i);selected=null;drag=null;show('game');paint();note('选中形状，按 R 旋转，再拖入棋盘')}
-function drawShape(id){let p=s.pieces.find(q=>q.id===id),definition=P.LEVELS[s.index].pieces.find(q=>q.id===id),cells=P.rotate(definition.cells,p.angle),w=Math.max(...cells.map(c=>c[0]))+1,h=Math.max(...cells.map(c=>c[1]))+1,wrap=document.createElement('div');wrap.className='mini';wrap.style.gridTemplateColumns='repeat('+w+',32px)';wrap.style.gridTemplateRows='repeat('+h+',32px)';for(const [x,y] of cells){let t=document.createElement('div');t.className='tile';t.dataset.id=id;t.textContent=id;t.style.gridColumn=x+1;t.style.gridRow=y+1;wrap.appendChild(t)}return wrap}
+function drawShape(id,angleOverride=null){let p=s.pieces.find(q=>q.id===id),definition=P.LEVELS[s.index].pieces.find(q=>q.id===id),cells=P.rotate(definition.cells,angleOverride===null?p.angle:angleOverride),w=Math.max(...cells.map(c=>c[0]))+1,h=Math.max(...cells.map(c=>c[1]))+1,wrap=document.createElement('div');wrap.className='mini';wrap.style.gridTemplateColumns='repeat('+w+',32px)';wrap.style.gridTemplateRows='repeat('+h+',32px)';for(const [x,y] of cells){let t=document.createElement('div');t.className='tile';t.dataset.id=id;t.textContent=id;t.style.gridColumn=x+1;t.style.gridRow=y+1;wrap.appendChild(t)}return wrap}
 function paint(){let l=P.LEVELS[s.index];$('level').textContent='关卡 '+(s.index+1)+' / 2';$('board').style.gridTemplateColumns='repeat('+l.w+',76px)';$('board').innerHTML='';for(let y=0;y<l.h;y++)for(let x=0;x<l.w;x++){let c=document.createElement('div');c.className='cell';c.dataset.x=x;c.dataset.y=y;$('board').appendChild(c)}
 for(const p of s.pieces)if(p.at)for(const [x,y] of P.cellsFor(s,p.id)){let c=$('board').querySelector('.cell[data-x="'+x+'"][data-y="'+y+'"]'),t=document.createElement('div');t.className='tile placed'+(selected===p.id?' selected':'');t.dataset.id=p.id;t.textContent=p.id;c.appendChild(t)}
 $('tray').innerHTML='';for(const p of s.pieces)if(!p.at){let el=document.createElement('div');el.className='piece'+(selected===p.id?' selected':'');el.dataset.id=p.id;el.appendChild(drawShape(p.id));$('tray').appendChild(el)}
@@ -17,22 +17,22 @@ function pos(x,y){let r=$('board').getBoundingClientRect();return [Math.floor((x
 
 const ghost=$('dragGhost');
 function dragPosition(x,y){if(!drag)return;drag.x=x;drag.y=y;ghost.style.transform='translate('+(x-drag.grabX*80)+'px,'+(y-drag.grabY*80)+'px)';}
-function refreshGhost(){if(!drag)return;ghost.innerHTML='';const shape=drawShape(drag.id);const cells=P.rotate(P.LEVELS[s.index].pieces.find(p=>p.id===drag.id).cells,s.pieces.find(p=>p.id===drag.id).angle);
+function refreshGhost(){if(!drag)return;ghost.innerHTML='';const shape=drawShape(drag.id,drag.angle);const cells=P.rotate(P.LEVELS[s.index].pieces.find(p=>p.id===drag.id).cells,drag.angle);
 const w=Math.max(...cells.map(p=>p[0]))+1,h=Math.max(...cells.map(p=>p[1]))+1;shape.style.gridTemplateColumns='repeat('+w+',76px)';shape.style.gridTemplateRows='repeat('+h+',76px)';ghost.appendChild(shape);ghost.style.display='block';dragPosition(drag.x,drag.y);}
 function target(x,y){const rect=$('board').getBoundingClientRect(),bx=Math.floor((x-rect.left-8)/80),by=Math.floor((y-rect.top-8)/80);return [bx-drag.grabX,by-drag.grabY];}
-function highlight(x,y){if(!drag)return;const at=target(x,y),v=P.valid(s,drag.id,at);for(const c of $('board').querySelectorAll('.cell'))c.classList.remove('good','bad');const shape=P.cellsFor(s,drag.id,at);for(const [cx,cy] of shape){const el=$('board').querySelector('.cell[data-x="'+cx+'"][data-y="'+cy+'"]');if(el)el.classList.add(v.ok?'good':'bad');}
+function highlight(x,y){if(!drag)return;const at=target(x,y),v=P.valid(s,drag.id,at,drag.angle);for(const c of $('board').querySelectorAll('.cell'))c.classList.remove('good','bad');const shape=P.cellsFor(s,drag.id,at,drag.angle);for(const [cx,cy] of shape){const el=$('board').querySelector('.cell[data-x="'+cx+'"][data-y="'+cy+'"]');if(el)el.classList.add(v.ok?'good':'bad');}
 note(v.ok?'松开鼠标放置':'❌ 非法位置：'+(v.reason==='OVERLAP'?'与其他拼块重叠':'超出棋盘'));return v;}
 function stopDrag(){drag=null;ghost.style.display='none';ghost.innerHTML='';document.body.classList.remove('drag-active');}
 $('game').addEventListener('pointerdown',e=>{if(e.button!==0||s.completed)return;const hit=e.target.closest('[data-id]');if(!hit)return;selected=hit.dataset.id;const piece=s.pieces.find(p=>p.id===selected);
 let grabX=0,grabY=0;
 if(piece.at){const cell=e.target.closest('.cell');if(cell){grabX=Number(cell.dataset.x)-piece.at[0];grabY=Number(cell.dataset.y)-piece.at[1];}}
-drag={id:selected,grabX,grabY,x:e.clientX,y:e.clientY,pointerId:e.pointerId};
+drag={id:selected,grabX,grabY,x:e.clientX,y:e.clientY,pointerId:e.pointerId,angle:piece.angle};
 document.body.classList.add('drag-active');paint();refreshGhost();highlight(e.clientX,e.clientY);e.preventDefault();});
 document.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.pointerId)return;dragPosition(e.clientX,e.clientY);highlight(e.clientX,e.clientY);});
-document.addEventListener('pointerup',e=>{if(!drag||e.pointerId!==drag.pointerId)return;const at=target(e.clientX,e.clientY),id=drag.id,check=P.move(s,id,at);stopDrag();if(check.ok){s=check.state;paint();note(s.completed?'✅ 完整填满！点击下一关':'已放置 '+id);}else{paint();note('❌ 非法放置，拼块已退回原位或托盘');}});
+document.addEventListener('pointerup',e=>{if(!drag||e.pointerId!==drag.pointerId)return;const at=target(e.clientX,e.clientY),id=drag.id,check=P.move(s,id,at,drag.angle);stopDrag();if(check.ok){s=check.state;paint();note(s.completed?'✅ 完整填满！点击下一关':'已放置 '+id);}else{paint();note('❌ 非法放置，拼块已退回原位或托盘');}});
 document.addEventListener('pointercancel',()=>{if(drag){stopDrag();paint();note('拖动已取消，位置未改变')}});
 function turn(){if(!selected||s.completed)return;const p=s.pieces.find(q=>q.id===selected),angle=(p.angle+90)%360;
-if(drag){s=P.setAngle(s,selected,angle);drag.grabX=0;drag.grabY=0;paint();refreshGhost();highlight(drag.x,drag.y);return;}
+if(drag){drag.angle=(drag.angle+90)%360;drag.grabX=0;drag.grabY=0;refreshGhost();highlight(drag.x,drag.y);return;}
 if(p.at){const result=P.move(s,selected,p.at,angle);if(!result.ok){note('❌ 旋转后越界或重叠，保持原位');return;}s=result.state;}else s=P.setAngle(s,selected,angle);paint();}
 $('turn').onclick=turn;document.addEventListener('keydown',e=>{if(e.key.toLowerCase()==='r'){e.preventDefault();turn();}});
 $('start').onclick=()=>start(0);$('reset').onclick=()=>start(s.index);$('next').onclick=()=>s.index===0?start(1):show('end');$('replay').onclick=()=>start(0);
