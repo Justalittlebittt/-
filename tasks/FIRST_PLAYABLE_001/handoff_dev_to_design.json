@@ -66,5 +66,30 @@
     "workflow_discovery_limitation": "GitHub connector lists PR-associated commit runs and returned empty for latest push; no dispatch/list-workflow endpoint exposed.",
     "closure": "PENDING",
     "note": "No change to release G4 or experimental scope."
+  },
+  "drag_followup": {
+    "verdict": "PASS_LOCAL_EQUIVALENT_BROWSER_NOT_EXACT_REMOTE_BUILD",
+    "fix_commit": "932e5b5135617142f925a7c00566dfe960a3dfea",
+    "fixed_file": "experiments/first_playable_001/index.html",
+    "remote_blob_sha": "b7f2f65898d209855b7c03ec91604c7ce62f2af4",
+    "implementation": "Full piece ghost follows pointer while held; rotate 90 degrees during drag using temporary angle; full-piece placement preview; collision rejection preserves prior position and angle.",
+    "local_browser": {
+      "engine": "Chromium Playwright",
+      "result": "PASS",
+      "verified": [
+        "visible moving full-piece ghost",
+        "L01 completion",
+        "L02 completion",
+        "next level",
+        "end screen",
+        "replay"
+      ],
+      "javascript_page_errors": 0,
+      "evidence": "Local screenshot and test logs available in conversation runtime",
+      "qualification": "Local standalone test HTML was reconstructed from a previously local working version with analogous drag fix, not byte-identical to GitHub committed index.html; therefore does not establish committed build acceptance."
+    },
+    "exact_committed_build_browser": "NOT_VERIFIED",
+    "remote_ci": "UNVERIFIED",
+    "next_action": "Use browser on exact GitHub committed source to close acceptance; DESIGN may review local equivalent demo meanwhile."
   }
 }
