@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "TRANSPORT_SMOKE_001双向文件交接已实证PASS；推进DEV负责的TECH_FIXTURES_001最小合成技术验证"
+current_goal: "TECH_FIXTURES_001已完成本地合成B1验证及代码提交；远端CI执行待核验"
 source_of_truth:
   current_repository: "GitHub main"
   art_contract: "docs/contracts/ART_STYLE_V1.4.md"
@@ -35,7 +35,7 @@ qa:
   G4: "NOT_RUN"
   G5: "NOT_RUN_NOT_APPLICABLE_YET"
   pipeline_gate_A: "PENDING_USER_REVIEW"
-  pipeline_gate_B: "B1_SYNTHETIC_FIXTURES_ASSIGNED_NOT_RUN"
+  pipeline_gate_B: "B1_LOCAL_PASS_REMOTE_CI_UNVERIFIED"
   pipeline_gate_C: "NOT_RUN"
   pipeline_gate_D: "NOT_RUN"
 handoff_transport:
@@ -55,9 +55,11 @@ handoff_transport:
 active_tasks:
   TECH_FIXTURES_001:
     owner: "DEV_INTEGRATION"
-    status: "READY_FOR_DEV"
+    status: "DEV_LOCAL_TESTED_REMOTE_CI_UNVERIFIED"
     request: "tasks/TECH_FIXTURES_001/request_to_dev.json"
     expected_report: "tasks/TECH_FIXTURES_001/handoff_dev_to_art.json"
+    test_log: "tasks/TECH_FIXTURES_001/test_execution_report.json"
+    implementation: "tasks/TECH_FIXTURES_001/fixtures.py"
     note: "测试仅覆盖Gate B1合成夹具，不是G1/G2/G4正式资产验收"
 owner_boundaries:
   ART_EXPERIENCE: "视觉方案、Style Kit、视觉候选与用户视觉验收包"
