@@ -53,5 +53,18 @@
   "engine_choice_reason": "Minimal HTML/CSS/vanilla JavaScript; desktop browser can run locally without installs, independent grid engine aids later porting; not a decision for final game engine.",
   "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md unchanged",
   "scope": "EXPERIMENT_FIRST_PLAYABLE_NOT_RELEASE",
-  "next_action": "DEV verify final committed HTML via browser and CI job logs, fix any failures, then DESIGN independently review actual playable UX."
+  "next_action": "DEV verify final committed HTML via browser and CI job logs, fix any failures, then DESIGN independently review actual playable UX.",
+  "verification_followup": {
+    "date": "2026-10-20",
+    "local_rerun": {
+      "command": "node test.js against current local development files",
+      "result": "PASS",
+      "tests": 9
+    },
+    "remote_commit_browser": "NOT_VERIFIED",
+    "github_workflow_run": "UNVERIFIED",
+    "workflow_discovery_limitation": "GitHub connector lists PR-associated commit runs and returned empty for latest push; no dispatch/list-workflow endpoint exposed.",
+    "closure": "PENDING",
+    "note": "No change to release G4 or experimental scope."
+  }
 }
