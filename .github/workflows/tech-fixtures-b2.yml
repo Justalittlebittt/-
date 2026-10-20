@@ -1,0 +1,25 @@
+name: Synthetic B2 sprite-grid RGBA
+on:
+  push:
+    paths:
+      - 'tasks/TECH_FIXTURES_002/fixtures_b2.py'
+      - 'tasks/TECH_FIXTURES_001/fixtures.py'
+      - '.github/workflows/tech-fixtures-b2.yml'
+  workflow_dispatch:
+jobs:
+  b2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run committed B1 and B2 source tests
+        run: |
+          python tasks/TECH_FIXTURES_001/fixtures.py
+          python tasks/TECH_FIXTURES_002/fixtures_b2.py
+      - name: Upload B2 evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: tech-fixtures-b2-evidence
+          path: tasks/TECH_FIXTURES_002/evidence/
