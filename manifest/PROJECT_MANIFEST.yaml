@@ -1,0 +1,52 @@
+schema_version: "1.0"
+project:
+  id: "animal-puzzle-zoo"
+  name: "动物拼图游戏"
+  version: "preproduction"
+  repository: "Justalittlebittt/-"
+  default_branch: "main"
+intent:
+  project_type: "原创独立二维多格动物拼图"
+  learning_or_commercial: "快速发布并验证是否有真实玩家；利润并非首要目标"
+  target_experience: "可爱动物拼块摆放、空间拼图、轻量动物园章节叙事"
+scope:
+  target_platform: "Steam（长期发布方向，具体发行方案待定）"
+  first_release_chapter: "运输与入园安置"
+  target_content_size: null
+  future_chapters: ["休息窝（构想）", "栖息地（构想）"]
+technology:
+  engine: null
+  language: null
+  asset_pipeline_contract: "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md"
+  asset_pipeline_state: "PROPOSED"
+gameplay:
+  genre: "二维连通多格拼块填充拼图"
+  camera: "动物插画视角不作全局限制"
+  control_model: "拖拽、90度旋转、二维放置判定（设计目标，运行时未验证）"
+  core_loop: "选择动物拼块 → 旋转/放置 → 完成棋盘 → 下一关/章节结束"
+  occupied_cells_semantics: "二维画面格子；不是三维地面投影或脚掌接地面积"
+art:
+  style: "高品质偏真实动画电影CG材质与照明观感的二维静态动物素材"
+  resolution: null
+  visual_reference: "长颈鹿/狮子已获初步认可；完整Style Kit未冻结"
+  animation_model: "静态RGBA图，整体90度旋转"
+  art_contract: "docs/contracts/ART_STYLE_V1.4.md"
+quality_target:
+  asset_approval: "用户确认视觉版本 + G1/G2/G4有实际证据"
+  release_readiness: "完整可发布游戏，不以技术原型替代"
+hard_constraints:
+  - "单款完整可发布实验游戏开发周期最多7天（暂时性硬约束）"
+  - "全部美术原创或有明确可用许可；优先免费资源"
+  - "动物占格只由二维occupied_cells决定"
+  - "美术与开发单Owner任务 + 结构化Handoff"
+  - "人类主要验收视觉；技术验收和修复由AI负责"
+soft_constraints:
+  - "可选择原生Alpha、条件蒙版或通用分割Matting处理"
+  - "实际引擎、显示尺寸与合法形状库尚未确定"
+out_of_scope:
+  - "首版一次性完成长期全部章节"
+  - "首版复杂动物园经济经营、养成系统"
+  - "首版为所有动物建立真实3D模型和骨骼"
+status:
+  manifest: "DRAFT_NOT_LOCKED"
+  current_project_state: "state/PROJECT_STATE.yaml"
