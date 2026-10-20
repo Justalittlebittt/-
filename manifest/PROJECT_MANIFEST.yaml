@@ -17,8 +17,8 @@ scope:
 technology:
   engine: null
   language: null
-  asset_pipeline_contract: "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md"
-  asset_pipeline_state: "PROPOSED"
+  asset_pipeline_contract: "docs/contracts/ASSET_PIPELINE_V0.4_PROPOSED.md"
+  asset_pipeline_state: "PROPOSED_NOT_LOCKED_USER_REVIEW_READY"
 gameplay:
   genre: "二维连通多格拼块填充拼图"
   camera: "动物插画视角不作全局限制"
