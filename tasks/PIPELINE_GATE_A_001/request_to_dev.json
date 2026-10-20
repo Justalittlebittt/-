@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "task_id": "PIPELINE_GATE_A_001",
+  "owner": "DEV_INTEGRATION",
+  "from": "ART_EXPERIENCE",
+  "status": "READY_FOR_DEV",
+  "objective": "独立审查艺术流水线Gate A的技术可实施性，明确最小跨物种生成适配与二进制素材传输机制，避免再做B1/B2相似的数学测试。",
+  "inputs": [
+    "docs/reviews/PIPELINE_GATE_A_AUDIT_2026-10-20.md",
+    "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md",
+    "docs/contracts/ART_STYLE_V1.4.md",
+    "state/PROJECT_STATE.yaml",
+    "tasks/TECH_FIXTURES_002/art_verification_receipt.json"
+  ],
+  "in_scope": [
+    "检查 A-02 生成器能力声明如何真实探测及记录：原生Alpha、单体图、可选剪影控制、复现和失败退出；设计接口即可，不制作任何动物",
+    "检查 A-04 两个AI工作页如何实际交换PNG二进制、校验checksum与来源授权，不把文字Handoff成功误算为可传图；如不能验证，记录UNVERIFIED",
+    "确认 A-05 最小一条路径优先的工程可行性和7天完整发布硬约束",
+    "检查 A-06 分阶段G3视觉审批与G4实际引擎验证不存在循环依赖",
+    "检查V0.3和当前仓库状态是否有接口、路径、Owner冲突；提交具体Change Request建议"
+  ],
+  "out_of_scope": [
+    "不生成正式动物，不做真实动物抠图，不实施大规模通用matting工具",
+    "不建设新平台，不更改玩法/视觉合同，不将Pipeline V0.3设为LOCKED",
+    "不重复B1/B2测试，不因本任务自动进入Gate C/D",
+    "不向用户转嫁技术操作"
+  ],
+  "deliverables": [
+    "tasks/PIPELINE_GATE_A_001/handoff_dev_to_art.json 记录逐项审查意见/风险/最小方案/文件证据；交付后在同页读回核验",
+    "如需要修改协议，写出Change Request草案，未经批准不改锁定合同",
+    "若GitHub二进制能力无法验证，明确未来需要的最小探针，不用假声称PASS"
+  ],
+  "acceptance": "结果有仓库提交与回执；Owner单一、技术建议可执行；美术人审G3仍未开始，Gate A合同待合并审查，不宣称全动物通用。",
+  "status_codes": [
+    "PASS_DESIGN_REVIEW",
+    "BLOCKED",
+    "FAIL"
+  ],
+  "next_action": "DEV读本任务和Gate A审计后审查并回传机器可读报告；ART随后整合下一版候选，不需要用户手工传文件。"
+}
