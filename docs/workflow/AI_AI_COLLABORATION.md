@@ -1,3 +1,5 @@
+> **HISTORY_ONLY**：本文件是双 AI 阶段的候选操作手册，现行新任务以 [统一制作合同 V1.0](../contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md) 和 [当前状态](../../state/PROJECT_STATE.yaml) 为准。下文旧路径/两角色安排仅用于理解历史，不应作为新任务执行规范。已有交接事实不受影响。
+
 # 美术AI ⇄ 开发AI：仓库协作操作手册（V0.1 / PROPOSED）
 
 上游：`docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md`、`docs/contracts/ART_STYLE_V1.4.md`、`docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md`。

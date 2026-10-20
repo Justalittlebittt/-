@@ -5,48 +5,58 @@ project:
   version: "preproduction"
   repository: "Justalittlebittt/-"
   default_branch: "main"
+contracts:
+  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md"
+  collaboration: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
+roles:
+  design: "DESIGN_DIRECTOR"
+  art: "ART_EXPERIENCE"
+  dev: "DEV_INTEGRATION"
+  producer: "HUMAN"
 intent:
   project_type: "原创独立二维多格动物拼图"
-  learning_or_commercial: "快速发布并验证是否有真实玩家；利润并非首要目标"
+  learning_or_commercial: "快速发布并验证真实玩家反馈；利润非首要目标"
   target_experience: "可爱动物拼块摆放、空间拼图、轻量动物园章节叙事"
 scope:
-  target_platform: "Steam（长期发布方向，具体发行方案待定）"
+  target_platform: "Steam（目标；具体上架流程待定）"
   first_release_chapter: "运输与入园安置"
   target_content_size: null
   future_chapters: ["休息窝（构想）", "栖息地（构想）"]
 technology:
   engine: null
   language: null
-  asset_pipeline_contract: "docs/contracts/ASSET_PIPELINE_V0.4.1_PROPOSED.md"
-  asset_pipeline_state: "V0.4.1_PROPOSED_NOT_LOCKED_USER_REVIEW_READY"
+  render_profile: null
 gameplay:
   genre: "二维连通多格拼块填充拼图"
   camera: "动物插画视角不作全局限制"
-  control_model: "拖拽、90度旋转、二维放置判定（设计目标，运行时未验证）"
-  core_loop: "选择动物拼块 → 旋转/放置 → 完成棋盘 → 下一关/章节结束"
-  occupied_cells_semantics: "二维画面格子；不是三维地面投影或脚掌接地面积"
+  control_model: "拖拽、90度旋转、二维放置判定（未实机验证）"
+  core_loop: "选择动物 → 旋转/放置 → 完成棋盘 → 下一关/章节结束"
+  occupied_cells_semantics: "二维逻辑格；不是三维地面投影"
+  shape_catalog: null
+  first_release_levels: null
+  undo_or_retry: null
 art:
-  style: "高品质偏真实动画电影CG材质与照明观感的二维静态动物素材"
+  style: "偏真实材质的动画电影式静态二维CG动物"
   resolution: null
-  visual_reference: "长颈鹿/狮子已获初步认可；完整Style Kit未冻结"
-  animation_model: "静态RGBA图，整体90度旋转"
-  art_contract: "docs/contracts/ART_STYLE_V1.4.md"
+  style_kit: null
+  visual_reference: "长颈鹿/狮子仅初步正面反馈；正式母版待批准"
+  animation_model: "RGBA整图旋转，无骨骼"
 quality_target:
-  asset_approval: "用户确认视觉版本 + G1/G2/G4有实际证据"
-  release_readiness: "完整可发布游戏，不以技术原型替代"
+  release_readiness: "完整可发布构建+G1/G2/G3/G4及关卡体验证据；原型不算"
 hard_constraints:
-  - "单款完整可发布实验游戏开发周期最多7天（暂时性硬约束）"
-  - "全部美术原创或有明确可用许可；优先免费资源"
-  - "动物占格只由二维occupied_cells决定"
-  - "美术与开发单Owner任务 + 结构化Handoff"
-  - "人类主要验收视觉；技术验收和修复由AI负责"
+  - "完整可发布实验游戏开发最多7天，用户批准方可调整"
+  - "原创或权利清晰、免费可获得工具优先"
+  - "occupied_cells为二维碰撞真值"
+  - "策划、美术、开发任务单Owner和结构化Handoff"
+  - "正式视觉需用户批准；AI承担技术检查修复"
 soft_constraints:
-  - "可选择原生Alpha、条件蒙版或通用分割Matting处理"
-  - "实际引擎、显示尺寸与合法形状库尚未确定"
+  - "原生Alpha或一条必要的通用抠图路线"
+  - "数量、引擎、尺寸待策划/开发与用户协商冻结"
 out_of_scope:
-  - "首版一次性完成长期全部章节"
-  - "首版复杂动物园经济经营、养成系统"
-  - "首版为所有动物建立真实3D模型和骨骼"
+  - "首版完成长期全部章节"
+  - "首版复杂经营与养成"
+  - "首版动物实时3D及骨骼"
 status:
-  manifest: "DRAFT_NOT_LOCKED"
+  manifest: "DRAFT_PARAMETERS_UNFROZEN"
+  production_contract: "LOCKED_DESIGN_BASELINE"
   current_project_state: "state/PROJECT_STATE.yaml"

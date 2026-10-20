@@ -1,42 +1,37 @@
-# 模板文件：复制到 tasks/<task_id>/handoff_*.yaml，填写真实来源，不要把本模板当成实际交接证据。
-schema_version: "1.0"
+# 新任务统一交接模板（历史 task 文件保持原样）。
+# TEMPLATE不是实际PASS证据；接收方必须自行读取artifact_refs中的真实资源。
+schema_version: "1.1"
 handoff:
   handoff_id: "REPLACE_WITH_UNIQUE_ID"
   task_id: "REPLACE_WITH_TASK_ID"
-  from: "ART_EXPERIENCE"
-  to: "DEV_INTEGRATION"
-  owner_completed_task: "REPLACE_WITH_ATOMIC_TASK_ID"
-  objective: "REPLACE_WITH_ONE_CLEAR_GOAL"
+  owner: "REPLACE_WITH_SINGLE_OWNER"
+  from: "DESIGN_DIRECTOR | ART_EXPERIENCE | DEV_INTEGRATION"
+  to: "DESIGN_DIRECTOR | ART_EXPERIENCE | DEV_INTEGRATION"
+  objective: "ONE_CLEAR_OBJECTIVE"
   in_scope: []
   out_of_scope: []
   contracts:
-    art_contract: "docs/contracts/ART_STYLE_V1.4.md"
-    pipeline_contract: "docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md"
+    production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md"
+    collaboration_protocol: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
     project_manifest: "manifest/PROJECT_MANIFEST.yaml"
-    shape_contract: "UNVERIFIED"
-    style_kit: "NOT_APPROVED"
+  input_refs: []
   completed: []
   current_state: "DRAFT"
-  artifacts: []
-  # 每个真实素材引用需提供 role、repo_path、版本及sha256；缺失项标UNVERIFIED。
-  repository_state: "UNVERIFIED_COMMIT_SHA"
+  artifact_refs: []
+  # 真实资产记录 path、asset_version 和 原始bytes SHA256；不存在的标UNVERIFIED。
+  repository_commit: "UNVERIFIED_COMMIT_SHA"
   locked_decisions: {}
   unresolved: []
-  next_action: "REPLACE_WITH_ONE_ATOMIC_ACTION"
+  next_owner_action: "ONE_CLEAR_ACTION"
   acceptance:
-    technical: ["G1", "G2"]
-    visual: "PENDING_HUMAN_VISUAL_APPROVAL"
+    technical: "NOT_RUN"
+    visual: "PENDING"
+    experience: "NOT_RUN"
   evidence: []
   result: "DRAFT"
 qa_feedback:
   verdict: "NOT_RUN"
-  machine_checks:
-    G1: "NOT_RUN"
-    G2: "NOT_RUN"
-    G4: "NOT_RUN"
   failure_codes: []
   evidence_refs: []
   change_owner_required: "NONE"
   repro_steps: "NOT_RUN"
-  affected_asset_version: "UNVERIFIED"
-  next_owner_action: "NOT_SET"
