@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "B1/B2远端合成技术验证完成；Gate A静态审计已记录，DEV跨Owner技术审查待执行，不生产正式动物"
+current_goal: "Gate A DEV技术架构审查已完成并交接；等待ART整合V0.4提案与二进制通道探针"
 source_of_truth:
   current_repository: "GitHub main"
   art_contract: "docs/contracts/ART_STYLE_V1.4.md"
@@ -71,7 +71,7 @@ active_tasks:
     art_verification_receipt: "tasks/TECH_FIXTURES_002/art_verification_receipt.json"
   PIPELINE_GATE_A_001:
     owner: "DEV_INTEGRATION"
-    status: "READY_FOR_DEV"
+    status: "DEV_DESIGN_REVIEW_PASS_ART_REVIEW_PENDING"
     request: "tasks/PIPELINE_GATE_A_001/request_to_dev.json"
     expected_report: "tasks/PIPELINE_GATE_A_001/handoff_dev_to_art.json"
     audit: "docs/reviews/PIPELINE_GATE_A_AUDIT_2026-10-20.md"
