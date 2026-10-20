@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "TECH_FIXTURES_001已完成本地合成B1验证及代码提交；远端CI执行待核验"
+current_goal: "B1真实GitHub CI与Artifact已验证PASS（23断言/13 PNG）；准备DEV执行B2二维贴图定位与Alpha合成夹具"
 source_of_truth:
   current_repository: "GitHub main"
   art_contract: "docs/contracts/ART_STYLE_V1.4.md"
@@ -35,7 +35,7 @@ qa:
   G4: "NOT_RUN"
   G5: "NOT_RUN_NOT_APPLICABLE_YET"
   pipeline_gate_A: "PENDING_USER_REVIEW"
-  pipeline_gate_B: "B1_LOCAL_PASS_REMOTE_CI_UNVERIFIED"
+  pipeline_gate_B: "B1_REMOTE_CI_PASS_B2_READY_FOR_DEV"
   pipeline_gate_C: "NOT_RUN"
   pipeline_gate_D: "NOT_RUN"
 handoff_transport:
@@ -55,21 +55,27 @@ handoff_transport:
 active_tasks:
   TECH_FIXTURES_001:
     owner: "DEV_INTEGRATION"
-    status: "DEV_LOCAL_TESTED_REMOTE_CI_UNVERIFIED"
+    status: "B1_REMOTE_CI_PASS_ART_VERIFIED"
     request: "tasks/TECH_FIXTURES_001/request_to_dev.json"
     expected_report: "tasks/TECH_FIXTURES_001/handoff_dev_to_art.json"
     test_log: "tasks/TECH_FIXTURES_001/test_execution_report.json"
     implementation: "tasks/TECH_FIXTURES_001/fixtures.py"
-    note: "测试仅覆盖Gate B1合成夹具，不是G1/G2/G4正式资产验收"
+    note: "远端Actions run 39372270875成功，23断言+13PNG报告/产物核实；仅B1合成夹具，不是G1/G2/G4正式资产验收"
+    art_verification_receipt: "tasks/TECH_FIXTURES_001/art_verification_receipt.json"
+  TECH_FIXTURES_002:
+    owner: "DEV_INTEGRATION"
+    status: "READY_FOR_DEV"
+    request: "tasks/TECH_FIXTURES_002/request_to_dev.json"
+    expected_report: "tasks/TECH_FIXTURES_002/handoff_dev_to_art.json"
+    note: "B2测真实二维合成夹具、图像-格子旋转枢轴/Anchor、Alpha合成；不得产生动物素材"
 owner_boundaries:
   ART_EXPERIENCE: "视觉方案、Style Kit、视觉候选与用户视觉验收包"
   DEV_INTEGRATION: "二维逻辑形状、Alpha技术处理、旋转、自动G1/G2/G4和技术修复"
   HUMAN: "视觉审美确认与重大范围/合同决策"
 next_actions:
-  - "DEV工作页读取 tasks/TECH_FIXTURES_001/request_to_dev.json，开展最小合成形状与RGBA基础测试，不生成动物素材"
-  - "ART工作页后续独立核验TECH_FIXTURES_001报告及commit，再根据实证修订通用管线候选"
-  - "审查双AI协作V0.3合同并决定是否LOCKED"
-  - "使用合成测试夹具验证通用Alpha、二维旋转和数据接口；不生产正式动物"
+  - "DEV工作页读取 tasks/TECH_FIXTURES_002/request_to_dev.json，并以真实GitHub CI验证二维图形、贴图-逻辑旋转枢轴和Alpha合成；不生成动物素材"
+  - "ART工作页下轮核验B2远端日志、产物，并清晰限制Gate B结论"
+  - "双AI协作V0.3仍为PROPOSED；Gate A未获正式锁定，G1/G2/G4仍为NOT_RUN"
 assumptions_and_unknowns:
   - "游戏引擎、分辨率、cell_px、形状库尚未冻结"
   - "双方GitHub文件级交接通过；跨聊天自动触发、通知和后台执行未建立"
