@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "B1+B2合成技术夹具均经真实GitHub CI及远端Artifact核验通过；转入通用素材流水线Gate A合同审查，不生产正式动物"
+current_goal: "B1/B2远端合成技术验证完成；Gate A静态审计已记录，DEV跨Owner技术审查待执行，不生产正式动物"
 source_of_truth:
   current_repository: "GitHub main"
   art_contract: "docs/contracts/ART_STYLE_V1.4.md"
@@ -69,14 +69,21 @@ active_tasks:
     expected_report: "tasks/TECH_FIXTURES_002/handoff_dev_to_art.json"
     note: "CI run 39373312644, 46断言+14有效RGBA PNG; 已验证55990源码修复是CI运行提交0f796的父提交；仅B2合成夹具，不是生产引擎级G1/G2/G4"
     art_verification_receipt: "tasks/TECH_FIXTURES_002/art_verification_receipt.json"
+  PIPELINE_GATE_A_001:
+    owner: "DEV_INTEGRATION"
+    status: "READY_FOR_DEV"
+    request: "tasks/PIPELINE_GATE_A_001/request_to_dev.json"
+    expected_report: "tasks/PIPELINE_GATE_A_001/handoff_dev_to_art.json"
+    audit: "docs/reviews/PIPELINE_GATE_A_AUDIT_2026-10-20.md"
+    note: "架构技术可行性审核；合同仍PROPOSED，不生成正式动物素材"
 owner_boundaries:
   ART_EXPERIENCE: "视觉方案、Style Kit、视觉候选与用户视觉验收包"
   DEV_INTEGRATION: "二维逻辑形状、Alpha技术处理、旋转、自动G1/G2/G4和技术修复"
   HUMAN: "视觉审美确认与重大范围/合同决策"
 next_actions:
-  - "ART继续Gate A：审查通用素材生成流水线V0.3的最小实施架构、输入输出、人工视觉验收点与失败退出机制；不生产动物素材"
-  - "DEV待接收Gate A审查后的结构化变更或技术请求；避免重复制作相同类型合成测试"
-  - "完整Gate B/C/D及G1/G2/G4仍未运行；V0.3仍为PROPOSED，未经批准不得锁定"
+  - "DEV独立审查 tasks/PIPELINE_GATE_A_001/request_to_dev.json，对图像生成器能力探测/二进制素材传输/最小通用流水线回写交接报告"
+  - "ART收到DEV审查后准备V0.4修订提案；用户继续只承担真实视觉样板验收与重大决策"
+  - "B1与B2均已远端实证PASS但仅限合成测试；完整Gate B/C/D和G1/G2/G4未运行；不得提前LOCK Pipeline V0.3"
 assumptions_and_unknowns:
   - "游戏引擎、分辨率、cell_px、形状库尚未冻结"
   - "双方GitHub文件级交接通过；跨聊天自动触发、通知和后台执行未建立"
