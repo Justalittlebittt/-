@@ -1,0 +1,28 @@
+{
+  "task_id": "BINARY_PNG_PROBE_001",
+  "status": "BLOCKED_TOOL_BOUNDARY",
+  "tested": {
+    "create_blob": {
+      "result": "PASS",
+      "encoding": "base64",
+      "git_blob_sha": "6df817ca4f48ed9fb27d62d4ff8a875fb265514c",
+      "scope": "tiny synthetic PNG only, unreferenced Git blob"
+    },
+    "fetch_blob": {
+      "result": "FAIL",
+      "error": "UnicodeDecodeError: utf-8 cannot decode PNG byte 0x89 at position 0",
+      "observation": "Tool appears to coerce returned blob bytes to UTF-8 text."
+    },
+    "python_to_github_connector": {
+      "result": "UNSUPPORTED_IN_THIS_SESSION",
+      "observation": "Local Python filesystem cannot be directly referenced as GitHub connector tool input."
+    },
+    "original_panda": {
+      "available_local_copy_sha256": "8ebf034a8cc3e2ab7c25ec17a6861992f76c880275f5b6ebe07765db417d6f83",
+      "approved_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+      "match": false
+    }
+  },
+  "conclusion": "GitHub is viable free binary storage; current connector is not a proven binary download bridge. Prefer one execution context with filesystem and authenticated GitHub git/CLI upload/download, then hash check. No user-approved panda G1/G2/G4 claimed.",
+  "next_action": "Run same-environment file-to-repo and repo-to-file transport in Work/cloud computer or another runtime with both filesystem and GitHub authentication; independently check sha256 and only then resume panda integration."
+}
