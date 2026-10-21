@@ -6,7 +6,7 @@ project:
   repository: "Justalittlebittt/-"
   default_branch: "main"
 contracts:
-  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md"
+  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.1.md"
   collaboration: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
 roles:
   design: "DESIGN_DIRECTOR"
@@ -36,10 +36,10 @@ gameplay:
   first_release_levels: null
   undo_or_retry: null
 art:
-  style: "偏真实材质的动画电影式静态二维CG动物"
+  style: "夸张二维卡通：深色粗描边、大色块、适度卡通明暗、自由变形与幽默眼神"
   resolution: null
   style_kit: null
-  visual_reference: "长颈鹿/狮子仅初步正面反馈；正式母版待批准"
+  visual_reference: "用户提供的动物卡通参考图用于审美语言，不复刻角色；正式Style Kit待批准"
   animation_model: "RGBA整图旋转，无骨骼"
 quality_target:
   release_readiness: "完整可发布构建+G1/G2/G3/G4及关卡体验证据；原型不算"
