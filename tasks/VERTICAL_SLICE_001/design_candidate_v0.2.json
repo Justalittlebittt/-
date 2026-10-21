@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "document_id": "VERTICAL_SLICE_001_DESIGN_CANDIDATE_V0.2",
+  "owner": "DESIGN_DIRECTOR",
+  "status": "EXPERIMENT_CANDIDATE_NOT_LOCKED",
+  "why": "Replace rejected 7-cell giraffe footprint with user-accepted panda 6-cell 123457; ensure board still tiles exactly.",
+  "context": "Only one real animal candidate (panda) for first material-in-engine test; remaining pieces are developer-generated geometry; no release shape count or species mapping frozen.",
+  "board": {
+    "id": "VS01_4x4_PANDA",
+    "width": 4,
+    "height": 4,
+    "valid_cells": "full_rectangle",
+    "total_area": 16
+  },
+  "pieces": [
+    {
+      "id": "P",
+      "type": "PANDA",
+      "shape_id": "HEX_PANDA_123457",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "area": 6,
+      "art_required": true,
+      "species_id": "panda",
+      "pose_id": "curled_or_reclining_candidate"
+    },
+    {
+      "id": "T",
+      "type": "PLACEHOLDER",
+      "shape_id": "TET_T_001",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "area": 4,
+      "art_required": false
+    },
+    {
+      "id": "C",
+      "type": "PLACEHOLDER",
+      "shape_id": "HEX_CENTER_STEM_001",
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "area": 6,
+      "art_required": false
+    }
+  ],
+  "proof_example": {
+    "rows": [
+      "PPPC",
+      "PPCC",
+      "PTCC",
+      "TTTC"
+    ],
+    "piece_cell_reference": "Character P/T/C maps to piece ids; no hints are shown to players"
+  },
+  "validation": {
+    "rotations_degrees": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "mirrors": false,
+    "areas_sum_to_board": true,
+    "connected_4_neighbor": true,
+    "exact_tiling_solver": {
+      "distinct_solutions": 8,
+      "equivalence": "Piece IDs distinct; rotational duplicate footprints deduplicated; board global symmetry not quotiented",
+      "execution": "Local independent Python enumeration in DESIGN session",
+      "status": "PASS_GEOMETRY_ONLY"
+    },
+    "human_difficulty": "UNVERIFIED",
+    "real_visual_integration": "NOT_RUN"
+  },
+  "user_decisions": {
+    "giraffe_1345689": "REJECTED_FOR_THIS_SLICE",
+    "panda_123457": "SELECTED_AS_EXPERIMENT_CANDIDATE",
+    "panda_pose": "ART_CAN_PROPOSE",
+    "final_visual_approval": "PENDING_HUMAN"
+  },
+  "reuse_constraint": "No original Dogs Organized Neatly level/grid/sprite/program transferred into this original candidate.",
+  "scope_limits": [
+    "No final launch content freeze",
+    "No production art batch",
+    "No change to production contract",
+    "No official full-game 7-day clock inferred from this experiment"
+  ],
+  "contracts": {
+    "production": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md",
+    "collaboration": "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
+  }
+}
