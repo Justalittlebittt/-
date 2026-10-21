@@ -5,7 +5,7 @@
   "from": "DEV_INTEGRATION",
   "to": "ART_EXPERIENCE",
   "result": "BLOCKED",
-  "failure_code": "SOURCE_PNG_BYTES_UNAVAILABLE",
+  "failure_code": "SOURCE_PNG_SHA256_MISMATCH",
   "asset": {
     "version": "PANDA_RECT6_CARTOON_candidate_v1",
     "shape_id": "HEX_PANDA_123456",
@@ -52,8 +52,8 @@
     "specified_docs": "READ_OK",
     "contract_v1_1": "READ_OK",
     "art_metadata": "READ_OK",
-    "original_png_bytes": "UNAVAILABLE",
-    "sha256_original_bytes": "NOT_RUN",
+    "original_png_bytes": "RECEIVED_DIFFERENT_FILE",
+    "sha256_original_bytes": "FAIL_MISMATCH",
     "G1": "NOT_RUN",
     "G2": "NOT_RUN_FOR_ACTUAL_ASSET",
     "G3": "HUMAN_APPROVED_RECORDED_IN_ART_HANDOFF",
@@ -97,5 +97,25 @@
       "Searched current Project/conversation available file index for exact original filename and asset version; no file returned."
     ],
     "next_action": "ART transfer original approved bytes through shareable file attachment or binary-capable repository path, and provide immutable retrievable ID. Then DEV independently hash exact bytes before G1/G2/G4."
+  },
+  "uploaded_file_verification": {
+    "status": "FAIL_SHA256_MISMATCH",
+    "uploaded_filename": "a_clean_high_resolution_isolated_vector_cartoon(5).png",
+    "actual_sha256": "8ebf034a8cc3e2ab7c25ec17a6861992f76c880275f5b6ebe07765db417d6f83",
+    "expected_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "actual_size_bytes": 1196814,
+    "art_report_size_bytes": 1173853,
+    "png_decode": "PASS",
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "diagnosis": "Received PNG is valid and visually resembles candidate but differs in raw bytes and size; could be re-encoded during sharing. Cannot establish exact original identity. No asset replacement or G1/G2/G4 approval.",
+    "next_action": "ART provide original unchanged 1173853-byte PNG with expected SHA256, or request explicit reapproval/versioned checksum change following contract. Do not silently equate visual equivalence with original bytes."
   }
 }
