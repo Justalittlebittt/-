@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "task_id": "VERTICAL_SLICE_001_ART_PANDA_RECT_BINARY_RECOVERY",
+  "owner": "ART_EXPERIENCE",
+  "from": "ART_EXPERIENCE",
+  "to": "DEV_INTEGRATION",
+  "status": "ORIGINAL_RECOVERED_GITHUB_BINARY_TRANSFER_BLOCKED",
+  "asset_version": "PANDA_RECT6_CARTOON_candidate_v1",
+  "original_png_local_path": "/mnt/data/a_clean_high_resolution_isolated_vector_cartoon.png",
+  "original_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+  "byte_size": 1173853,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "png_signature": "89504e470d0a1a0a",
+  "git_blob_sha1_calculated_locally": "7edb97e8cd3df8a544af6c26c11d7c23999c76c7",
+  "git_blob_status": "NOT_UPLOADED_NOT_VERIFIED",
+  "github_asset_path": null,
+  "independent_binary_readback": "NOT_RUN",
+  "evidence": "Recovered exact original file and recomputed SHA256 in current art file runtime; SHA256 equals prior ART handoff and DEV integration report. GitHub connector can create base64 blobs but cannot access local file bytes directly from connector execution; local runtime network to GitHub is unavailable. Do not confuse calculated Git blob object SHA1 with repository-uploaded Git blob.",
+  "gates": {
+    "G1": "NOT_RUN_DEV",
+    "G2": "NOT_RUN_DEV",
+    "G3": "HUMAN_APPROVED_PREVIOUSLY",
+    "G4": "NOT_RUN_DEV"
+  },
+  "prohibitions": [
+    "No re-generation",
+    "No replacement image",
+    "No preview in place of original"
+  ],
+  "next_action": "Transfer exactly recovered local original PNG through binary-readable shared attachment/storage or GitHub upload mechanism; DEV independently download exact bytes and compare original SHA256 before G1/G2/G4."
+}
