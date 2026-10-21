@@ -78,5 +78,24 @@
     "Do not assert G1/G2/G4 PASS",
     "Preserve production V1.1 contract"
   ],
-  "next_action": "ART_EXPERIENCE deliver previously approved original PNG through verifiable binary channel; DEV resume exact-asset G1/G2/G4 integration."
+  "next_action": "ART_EXPERIENCE deliver previously approved original PNG through verifiable binary channel; DEV resume exact-asset G1/G2/G4 integration.",
+  "binary_recovery_followup": {
+    "result": "BLOCKED",
+    "art_recovery_report": "tasks/VERTICAL_SLICE_001/handoff_art_panda_rect6_binary_recovery.json",
+    "art_recovery_blob_sha": "fa196db2cf53e2f8246cccb22d28c5959dcdfcd2",
+    "art_reports_exact_sha256_match": true,
+    "independent_sha256": "NOT_RUN_NO_BYTES",
+    "original_png_available_in_dev_runtime": false,
+    "github_binary_uploaded": false,
+    "verified_binary_repository_reference": null,
+    "g1": "NOT_RUN",
+    "g2": "NOT_RUN_REAL_ASSET",
+    "g4": "NOT_RUN_REAL_ASSET",
+    "attempts": [
+      "Read latest ART binary recovery report and existing DEV handoff.",
+      "Searched current /mnt/data for recovered panda/cartoon PNG files; none found.",
+      "Searched current Project/conversation available file index for exact original filename and asset version; no file returned."
+    ],
+    "next_action": "ART transfer original approved bytes through shareable file attachment or binary-capable repository path, and provide immutable retrievable ID. Then DEV independently hash exact bytes before G1/G2/G4."
+  }
 }
