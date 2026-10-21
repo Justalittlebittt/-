@@ -31,5 +31,22 @@
     "No replacement image",
     "No preview in place of original"
   ],
-  "next_action": "Transfer exactly recovered local original PNG through binary-readable shared attachment/storage or GitHub upload mechanism; DEV independently download exact bytes and compare original SHA256 before G1/G2/G4."
+  "next_action": "Transfer exactly recovered local original PNG through binary-readable shared attachment/storage or GitHub upload mechanism; DEV independently download exact bytes and compare original SHA256 before G1/G2/G4.",
+  "latest_attempt": {
+    "date": "2026-10-21",
+    "original_file": "/mnt/data/a_clean_high_resolution_isolated_vector_cartoon.png",
+    "sha256_verified": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "size_bytes": 1173853,
+    "transport_script": "tools/asset_transport.py",
+    "script_blob_sha": "ffbf5901ca7b0f8ed362a1466e2288a06b75530c",
+    "failed_execution_env": "container: no GH_TOKEN/GITHUB_TOKEN; urllib api.github.com and github.com return URLError [Errno -3] Temporary failure in name resolution",
+    "github_connector_limitation": "GitHub create_blob supports base64 argument but functions executor cannot access local /mnt/data bytes; 1.17 MB raw image cannot be automatically passed through this boundary",
+    "github_binary_uploaded": false,
+    "independent_readback": "NOT_RUN",
+    "alternate_free_paths_checked": [
+      "Connected GitHub create_blob / create_tree / create_commit available but local-byte bridge unavailable",
+      "Existing asset_transport.py requires both local file and network credentials; conditions fail in container"
+    ],
+    "next_minimal_solution": "Run existing script in workspace with original local PNG and authenticated network, or use a file-upload bridge that accepts binary local file paths for connected GitHub actions; verify via independent SHA-256 download."
+  }
 }
