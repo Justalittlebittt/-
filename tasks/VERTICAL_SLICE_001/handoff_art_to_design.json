@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "task_id": "VERTICAL_SLICE_001_ART_PANDA",
+  "owner": "ART_EXPERIENCE",
+  "from": "ART_EXPERIENCE",
+  "to": "DESIGN_DIRECTOR",
+  "result": "BLOCKED",
+  "reason": "Generated visually recognizable panda concept sheets but none is a standalone transparent PNG with visually credible exact 123457 footprint. Do not claim candidate ready for G3 or production.",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md",
+  "request_ref": "tasks/VERTICAL_SLICE_001/request_to_art.json",
+  "shape_id": "HEX_PANDA_123457",
+  "occupied_cells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "anchor_cell": [
+    0,
+    0
+  ],
+  "attempts": [
+    {
+      "version": "concept-01",
+      "result": "FAIL",
+      "reason": "Image sheet instead of sprite; incorrect footprint/alpha unverified"
+    },
+    {
+      "version": "concept-02",
+      "result": "FAIL",
+      "reason": "Another layout sheet; footprint inconsistent; alpha unverified"
+    },
+    {
+      "version": "concept-03",
+      "result": "FAIL",
+      "reason": "Attractive recognizable panda, but large mass protrudes into empty cells; generated presentation sheet rather than isolated sprite"
+    }
+  ],
+  "local_review_preview": "sandbox:/mnt/data/panda_123457_visual_review_v1.png",
+  "preview_sha256": "fda5489ee8089defccb52eac5b8e2c241d6a335c336cd04a05719736024a0c8b",
+  "artifact_transfer": "NOT_DELIVERED_TO_GITHUB_BINARY",
+  "source_provenance": {
+    "tool": "OpenAI image_gen",
+    "tool_version": "UNEXPOSED",
+    "generation_count": 3,
+    "rights": "original generated concepts, no reference-game sprite tracing",
+    "source_sprite_sha256": "UNVERIFIED"
+  },
+  "visual_review": {
+    "species_identification": "PASS_CONCEPT_ONLY",
+    "warm_cg_fur_material": "PASS_CONCEPT_ONLY",
+    "shape_silhouette": "FAIL",
+    "inactive_cell_intrusion": "FAIL",
+    "four_rotations": "NOT_RUN_ON_VALID_SPRITE",
+    "single_subject_transparent_png": "NOT_DELIVERED"
+  },
+  "qa": {
+    "G1": "NOT_RUN",
+    "G2": "NOT_RUN",
+    "G3": "PENDING_HUMAN_NOT_REQUESTED_FOR_INVALID_ASSET",
+    "G4": "NOT_RUN"
+  },
+  "next_owner_action": "ART revise pose so head and horizontal arms span top 3 cells, belly occupies left-middle 2 and one curled paw descends bottom-left; exclude inactive topography; produce genuine standalone RGBA PNG and then issue fresh versioned handoff; keep shape unchanged.",
+  "no_other_animals": true
+}
