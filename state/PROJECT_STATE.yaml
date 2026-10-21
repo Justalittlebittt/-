@@ -8,16 +8,17 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "DEV已收到熊猫PNG附件但实算SHA256及字节大小与ART获批原文件不符；G1/G2/G4仍待原文件一致性解决"
+current_goal: "按V1.2流程由HUMAN视觉批准后单次转发原始PNG给DEV；DEV负责校验、GitHub入库和G1/G2/G4，旧熊猫哈希阻断尚未解除"
 source_of_truth:
   current_repository: "GitHub main"
-  production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.1.md"
+  production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.2.md"
   collaboration_protocol: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
   project_manifest: "manifest/PROJECT_MANIFEST.yaml"
   handoff_template: "interface/HANDOFF_TEMPLATE_V1.0.yaml"
 contracts:
   production_v1_0: "SUPERSEDED_BY_V1_1_HISTORY_PRESERVED"
-  production_v1_1: "LOCKED_USER_APPROVED_STYLE_KIT_PENDING"
+  production_v1_1: "SUPERSEDED_BY_V1_2_HISTORY_PRESERVED"
+  production_v1_2: "LOCKED_HUMAN_APPROVED_SINGLE_MANUAL_ASSET_HANDOFF"
   art_style_v1_4: "SUPERSEDED_FOR_NEW_TASKS_HISTORY_PRESERVED"
   pipeline_v0_3: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
   pipeline_v0_4: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
@@ -53,7 +54,7 @@ handoff_transport:
   art_ack_receipt_path: "tasks/TRANSPORT_SMOKE_001/art_receipt.json"
   smoke_test_result: "PASS_FILE_LEVEL_BIDIRECTIONAL"
   autonomous_cross_chat_delivery: "NOT_ESTABLISHED"
-  mode: "repository_file_exchange_when_both_pages_verified"
+  mode: "HUMAN_SINGLE_HANDOFF_OF_G3_APPROVED_PNG_THEN_DEV_VERIFICATION_AND_REPO_STORAGE"
   rule: "不得将仓库共享误称为两个聊天会话会自动主动读取或持续后台工作"
 active_tasks:
   VERTICAL_SLICE_001_DEV_PANDA_RECT6_INTEGRATION:
