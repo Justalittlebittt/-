@@ -1,0 +1,56 @@
+{
+  "task_id": "VERTICAL_SLICE_001_ART_PANDA_RECT",
+  "owner": "ART_EXPERIENCE",
+  "to": "DESIGN_DIRECTOR",
+  "result": "PASS_CANDIDATE_READY_FOR_HUMAN_VISUAL_ONLY",
+  "style_contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.1.md",
+  "asset_version": "PANDA_RECT6_CARTOON_candidate_v1",
+  "shape_id": "HEX_PANDA_123456",
+  "occupied_cells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "png_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+  "png_size": [
+    1536,
+    1024
+  ],
+  "rgba_verified_locally": true,
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "source_tool": "OpenAI image_gen",
+  "source_png_local": "/mnt/data/a_clean_high_resolution_isolated_vector_cartoon.png",
+  "visual_review_local": "/mnt/data/panda_123456_v11_visual_review.png",
+  "visual_review_sha256": "202c8cd96b39eb4ac76ea9a014bd4f0d94579d3dabc9115cde5013ea66ee8a68",
+  "visual_preflight": "3x2 shape and four rotations checked in review image",
+  "binary_uploaded_to_github": false,
+  "G1": "NOT_RUN",
+  "G2": "NOT_RUN",
+  "G3": "PENDING_HUMAN",
+  "G4": "NOT_RUN",
+  "next_action": "HUMAN review; then DESIGN creates distinct DEV integration task after approval. Binary asset delivery still unresolved."
+}
