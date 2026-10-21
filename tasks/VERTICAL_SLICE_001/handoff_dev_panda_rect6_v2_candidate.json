@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "task_id": "VERTICAL_SLICE_001_DEV_PANDA_RECT6_V2",
+  "owner": "DEV_INTEGRATION",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.2.md",
+  "asset_version": "PANDA_RECT6_CARTOON_v2",
+  "basis": "User-directed adoption of the PNG previously forwarded to development instead of byte-identical reproduction of the historic ART candidate",
+  "source_filename": "a_clean_high_resolution_isolated_vector_cartoon(5).png",
+  "source_sha256": "8ebf034a8cc3e2ab7c25ec17a6861992f76c880275f5b6ebe07765db417d6f83",
+  "source_bytes": 1196814,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "color_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "alpha_bbox": [
+    0,
+    41,
+    1536,
+    1000
+  ],
+  "transparent_corners": true,
+  "shape_id": "HEX_PANDA_123456",
+  "occupied_cells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "anchor_cell": [
+    0,
+    0
+  ],
+  "status": "ACCEPTED_AS_NEW_DEVELOPMENT_CANDIDATE_PENDING_REPO_BINARY_AND_GATES",
+  "historic_candidate_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+  "checks": {
+    "PNG_DECODE": "PASS",
+    "RGBA": "PASS",
+    "ALPHA_PRESENCE": "PASS",
+    "G1": "PARTIAL_PRECHECK_ONLY",
+    "G2": "NOT_RUN",
+    "G3": "REVIEW_REQUIRED_IF_VISUALLY_CHANGED",
+    "G4": "NOT_RUN",
+    "GITHUB_BINARY_UPLOAD": "BLOCKED_TOOL_RUNTIME_BRIDGE",
+    "GITHUB_INDEPENDENT_READBACK": "NOT_RUN"
+  },
+  "notes": [
+    "The SHA mismatch against historic v1 is now a version distinction, not a prohibition against adopting the user-forwarded file.",
+    "The binary is present in this conversation file runtime but cannot be provided directly to the separate GitHub connector; do not claim uploaded.",
+    "Do not change historical G3 approval scope or fabricate release readiness."
+  ]
+}
