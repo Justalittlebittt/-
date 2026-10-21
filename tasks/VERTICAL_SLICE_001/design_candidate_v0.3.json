@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "document_id": "VERTICAL_SLICE_001_DESIGN_CANDIDATE_V0.3",
+  "owner": "DESIGN_DIRECTOR",
+  "status": "EXPERIMENT_CANDIDATE_NOT_LOCKED",
+  "replaces": "tasks/VERTICAL_SLICE_001/design_candidate_v0.2.json",
+  "change_reason": "User questioned 123457 vs 123456 six-cell footprint. Choose 123456 rectangular footprint as simpler first asset-integration candidate; old asset attempt BLOCKED and preserved, not silently overwritten.",
+  "shape_numbering": "3x3 keypad rows 123/456/789; 123456 means two filled rows across three columns. No assumption that any six-cell shape must be sequential.",
+  "board": {
+    "id": "VS01_4x4_PANDA_RECT",
+    "width": 4,
+    "height": 4,
+    "valid_cells": "full_rectangle",
+    "total_area": 16
+  },
+  "pieces": [
+    {
+      "id": "P",
+      "type": "PANDA",
+      "shape_id": "HEX_PANDA_123456",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "area": 6,
+      "art_required": true,
+      "species_id": "panda",
+      "pose_id": "free_abstract_reclining_or_curled_candidate"
+    },
+    {
+      "id": "B",
+      "type": "PLACEHOLDER",
+      "shape_id": "TET_L4_A",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "area": 4,
+      "art_required": false
+    },
+    {
+      "id": "C",
+      "type": "PLACEHOLDER",
+      "shape_id": "HEX_RIM_6_A",
+      "cells": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "area": 6,
+      "art_required": false
+    }
+  ],
+  "proof_example": {
+    "rows": [
+      "PPPC",
+      "PPPC",
+      "BCCC",
+      "BBBC"
+    ],
+    "proof_cells": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "B": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "C": [
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    }
+  },
+  "validation": {
+    "areas_sum_to_board": true,
+    "connected_4_neighbor": true,
+    "rotations_degrees": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "mirrors": false,
+    "exact_tiling_solutions": 4,
+    "method": "Two independent Python exhaustive enumerators, all rotations and translations; pieces distinct; no board symmetry quotient",
+    "geometry_only": true,
+    "human_difficulty": "NOT_RUN",
+    "real_visual_integration": "NOT_RUN"
+  },
+  "scope": "One genuine panda image, remaining 2 shapes are programmatic placeholders. This validates sprite display/drag/alpha first, not irregular-silhouette alignment.",
+  "approval_status": {
+    "panda_123456": "USER_SUGGESTED_EXPERIMENT_CANDIDATE_PENDING_FINAL_VISUAL",
+    "other_animals": "NOT_APPROVED"
+  },
+  "deprecated_candidate": {
+    "shape": "123457",
+    "art_handoff": "tasks/VERTICAL_SLICE_001/handoff_art_to_design.json",
+    "reason": "BLOCKED and user suggests simpler 123456"
+  },
+  "contracts": {
+    "production": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md",
+    "collaboration": "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
+  }
+}
