@@ -117,5 +117,23 @@
     ],
     "diagnosis": "Received PNG is valid and visually resembles candidate but differs in raw bytes and size; could be re-encoded during sharing. Cannot establish exact original identity. No asset replacement or G1/G2/G4 approval.",
     "next_action": "ART provide original unchanged 1173853-byte PNG with expected SHA256, or request explicit reapproval/versioned checksum change following contract. Do not silently equate visual equivalence with original bytes."
+  },
+  "latest_art_handoff_review": {
+    "status": "BLOCKED_NO_GITHUB_BINARY",
+    "art_report_blob_sha": "9a7ecb15bd4c0581c7212a8379559471a8772865",
+    "art_recovered_original_sha256_reported": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "art_uploaded_binary": false,
+    "art_github_path": null,
+    "art_observed_errors": [
+      "no GH_TOKEN/GITHUB_TOKEN in source file container",
+      "github.com and api.github.com DNS resolution failed",
+      "GitHub connector create_blob accepts base64 but cannot read original PNG from separated file runtime"
+    ],
+    "dev_received_exact_original": false,
+    "dev_independent_sha256": "NOT_RUN",
+    "G1": "NOT_RUN",
+    "G2": "NOT_RUN",
+    "G4": "NOT_RUN",
+    "recommendation": "Avoid further attempts to run the same network-restricted script. Require an actually shared byte-capable execution/storage bridge before integration; do not substitute a mismatched user-uploaded image."
   }
 }
