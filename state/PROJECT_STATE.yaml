@@ -8,15 +8,16 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "根据用户提出的123456，将熊猫六格形状从阶梯形调整为3x2矩形并下发单图修订；旧123457美术BLOCKED报告保留"
+current_goal: "已批准统一制作合同V1.1卡通美术方向；继续123456六格熊猫独立透明素材验证，Style Kit与G3尚待批准"
 source_of_truth:
   current_repository: "GitHub main"
-  production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md"
+  production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.1.md"
   collaboration_protocol: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
   project_manifest: "manifest/PROJECT_MANIFEST.yaml"
   handoff_template: "interface/HANDOFF_TEMPLATE_V1.0.yaml"
 contracts:
-  production_v1_0: "LOCKED_DESIGN_BASELINE_RUNTIME_AND_VISUAL_PENDING"
+  production_v1_0: "SUPERSEDED_BY_V1_1_HISTORY_PRESERVED"
+  production_v1_1: "LOCKED_USER_APPROVED_STYLE_KIT_PENDING"
   art_style_v1_4: "SUPERSEDED_FOR_NEW_TASKS_HISTORY_PRESERVED"
   pipeline_v0_3: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
   pipeline_v0_4: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
@@ -114,7 +115,6 @@ owner_boundaries:
   HUMAN: "正式视觉版本确认、重大范围/预算/合同决定"
 next_actions:
   - "美术优先执行VERTICAL_SLICE_001/request_to_art_rect.json的123456单图候选；旧123457失败结果不再要求继续修同一形状。仅候选视觉通过后另行DEV接入，不进行其他动物量产"
-  - "ART按VERTICAL_SLICE_001/request_to_art.json先制作单张六格熊猫候选并提交视觉审查包；HUMAN审核后由DESIGN另行指定DEV接入，禁止提前批量生产"
   - "FIRST_PLAYABLE_001：由DEV独立读取任务、制作两关闭环、自动测试并提交实际运行证据；DESIGN审查体验后再讨论正式关卡设计"
   - "已有 BINARY_PNG_PROBE_001 历史任务不改写，DEV按其原请求执行，ART独立检查真实PNG字节"
   - "DESIGN策划页面讨论并提出首章有限关卡/形状/素材预算；未获用户确认前不锁定参数"
