@@ -26,7 +26,7 @@ visual:
   style_mother: "NOT_APPROVED"
   giraffe: "INITIAL_AESTHETIC_FEEDBACK_POSITIVE_ONLY"
   lion: "INITIAL_AESTHETIC_FEEDBACK_POSITIVE_ONLY"
-  panda: "NOT_RUN"
+  panda: "CONCEPT_VISUAL_GENERATED_EXACT_SPRITE_BLOCKED"
   thin_shape_family: "NOT_RUN"
   official_asset_batch: "NOT_STARTED"
 qa:
@@ -57,10 +57,12 @@ handoff_transport:
 active_tasks:
   VERTICAL_SLICE_001_ART_PANDA:
     owner: "ART_EXPERIENCE"
-    status: "READY_FOR_ART_CANDIDATE_NOT_STARTED"
+    status: "BLOCKED_CONCEPT_ONLY_SHAPE_AND_ALPHA_UNVERIFIED"
     request: "tasks/VERTICAL_SLICE_001/request_to_art.json"
     design_reference: "tasks/VERTICAL_SLICE_001/design_candidate_v0.2.json"
     expected_report: "tasks/VERTICAL_SLICE_001/handoff_art_to_design.json"
+    art_report: "tasks/VERTICAL_SLICE_001/handoff_art_to_design.json"
+    art_report_verdict: "BLOCKED_NO_VALID_RGBA_123457_SPRITE"
     note: "用户选六格熊猫123457取代被拒绝的七格长颈鹿；4x4几何测试改为P6+T4+C6并有8解；仅一张候选，G3待用户审核；PNG交接尚未证实"
   FIRST_PLAYABLE_001:
     owner: "DEV_INTEGRATION"
