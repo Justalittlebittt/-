@@ -48,7 +48,7 @@ def get(path):
     return base64.b64decode(obj["content"], validate=False), obj["sha"]
 
 def ensure_png(raw, expected):
-    if not raw.startswith(b"\\x89PNG\\r\\n\\x1a\\n"):
+    if not raw.startswith(b"\x89PNG\r\n\x1a\n"):
         raise RuntimeError("Input does not have PNG signature")
     actual = digest(raw)
     if actual.lower() != expected.lower():
