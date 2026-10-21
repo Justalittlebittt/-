@@ -50,7 +50,19 @@
   "binary_uploaded_to_github": false,
   "G1": "NOT_RUN",
   "G2": "NOT_RUN",
-  "G3": "PENDING_HUMAN",
+  "G3": "HUMAN_APPROVED_VISUAL_CANDIDATE",
   "G4": "NOT_RUN",
-  "next_action": "HUMAN review; then DESIGN creates distinct DEV integration task after approval. Binary asset delivery still unresolved."
+  "next_action": "DESIGN to issue DEV single-owner integration/technical validation request; original PNG bytes must be delivered and independently verified.",
+  "human_approval": {
+    "status": "APPROVED",
+    "scope": "PANDA_RECT6_CARTOON_candidate_v1 visual appearance, expression and V1.1 cartoon direction",
+    "evidence": "User explicitly stated 我认为符合 in art conversation on 2026-10-21",
+    "exclusions": [
+      "G1",
+      "G2",
+      "G4",
+      "GitHub binary delivery",
+      "release approval"
+    ]
+  }
 }
