@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "VERTICAL_SLICE_001单只六格熊猫美术候选已发起；FIRST_PLAYABLE_001现有运行证据及未核验项保留，不扩大正式生产"
+current_goal: "根据用户提出的123456，将熊猫六格形状从阶梯形调整为3x2矩形并下发单图修订；旧123457美术BLOCKED报告保留"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md"
@@ -55,9 +55,16 @@ handoff_transport:
   mode: "repository_file_exchange_when_both_pages_verified"
   rule: "不得将仓库共享误称为两个聊天会话会自动主动读取或持续后台工作"
 active_tasks:
+  VERTICAL_SLICE_001_ART_PANDA_RECT:
+    owner: "ART_EXPERIENCE"
+    status: "READY_FOR_ART_NOT_EXECUTED"
+    design_ref: "tasks/VERTICAL_SLICE_001/design_candidate_v0.3.json"
+    request: "tasks/VERTICAL_SLICE_001/request_to_art_rect.json"
+    expected_report: "tasks/VERTICAL_SLICE_001/handoff_art_rect_to_design.json"
+    note: "按照用户指出的123456改为3x2六格矩形；旧123457候选保持BLOCKED，保留报告不覆盖；本任务仅生产单只熊猫候选，原生透明PNG未证实"
   VERTICAL_SLICE_001_ART_PANDA:
     owner: "ART_EXPERIENCE"
-    status: "BLOCKED_CONCEPT_ONLY_SHAPE_AND_ALPHA_UNVERIFIED"
+    status: "BLOCKED_CONCEPT_ONLY_SHAPE_AND_ALPHA_UNVERIFIED_SUPERSEDED"
     request: "tasks/VERTICAL_SLICE_001/request_to_art.json"
     design_reference: "tasks/VERTICAL_SLICE_001/design_candidate_v0.2.json"
     expected_report: "tasks/VERTICAL_SLICE_001/handoff_art_to_design.json"
@@ -106,6 +113,7 @@ owner_boundaries:
   DEV_INTEGRATION: "二维形状数据、锚点/旋转技术实现、Alpha处理、引擎与G1/G2/G4"
   HUMAN: "正式视觉版本确认、重大范围/预算/合同决定"
 next_actions:
+  - "美术优先执行VERTICAL_SLICE_001/request_to_art_rect.json的123456单图候选；旧123457失败结果不再要求继续修同一形状。仅候选视觉通过后另行DEV接入，不进行其他动物量产"
   - "ART按VERTICAL_SLICE_001/request_to_art.json先制作单张六格熊猫候选并提交视觉审查包；HUMAN审核后由DESIGN另行指定DEV接入，禁止提前批量生产"
   - "FIRST_PLAYABLE_001：由DEV独立读取任务、制作两关闭环、自动测试并提交实际运行证据；DESIGN审查体验后再讨论正式关卡设计"
   - "已有 BINARY_PNG_PROBE_001 历史任务不改写，DEV按其原请求执行，ART独立检查真实PNG字节"
