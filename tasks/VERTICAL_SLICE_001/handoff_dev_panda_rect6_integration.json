@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "task_id": "VERTICAL_SLICE_001_DEV_PANDA_RECT6_INTEGRATION",
+  "owner": "DEV_INTEGRATION",
+  "from": "DEV_INTEGRATION",
+  "to": "ART_EXPERIENCE",
+  "result": "BLOCKED",
+  "failure_code": "SOURCE_PNG_BYTES_UNAVAILABLE",
+  "asset": {
+    "version": "PANDA_RECT6_CARTOON_candidate_v1",
+    "shape_id": "HEX_PANDA_123456",
+    "occupied_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "anchor_cell": [
+      0,
+      0
+    ],
+    "reported_png_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "reported_dimensions": [
+      1536,
+      1024
+    ],
+    "source_path_art_chat": "/mnt/data/a_clean_high_resolution_isolated_vector_cartoon.png",
+    "github_binary_uploaded": false,
+    "human_g3": "APPROVED_FOR_EXACT_VERSION"
+  },
+  "checks": {
+    "specified_docs": "READ_OK",
+    "contract_v1_1": "READ_OK",
+    "art_metadata": "READ_OK",
+    "original_png_bytes": "UNAVAILABLE",
+    "sha256_original_bytes": "NOT_RUN",
+    "G1": "NOT_RUN",
+    "G2": "NOT_RUN_FOR_ACTUAL_ASSET",
+    "G3": "HUMAN_APPROVED_RECORDED_IN_ART_HANDOFF",
+    "G4": "NOT_RUN_FOR_ACTUAL_ASSET"
+  },
+  "observed": [
+    "ART handoff itself declares binary_uploaded_to_github=false.",
+    "Source file is only a local /mnt/data path in another conversation environment, not a GitHub downloadable binary.",
+    "This session's /mnt/data does not contain source PNG and repository search produced no matching binary path.",
+    "No original bytes means no safe image decode, alpha/edge analysis, SHA256 matching, exact-image rotation integration or G4 validation."
+  ],
+  "minimal_unblock": {
+    "single_owner": "ART_EXPERIENCE",
+    "action": "Deliver the exact previously approved raw PNG, not a regenerated image, to a binary-readable shared channel and record an immutable source path, original SHA-256, Git blob or content ID, license/provenance, and transfer method.",
+    "preferred": "GitHub binary blob/Contents API with base64 binary upload and independent raw-byte retrieval, not UTF-8 text file.",
+    "fallback": "Attach exact original PNG to DEV conversation or supported shared file repository, retaining source bytes and checksum.",
+    "completion": "DEV independently downloads and compares SHA-256 to e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732 before G1/G2/G4."
+  },
+  "constraints": [
+    "No substitute or freshly generated animal image",
+    "Do not modify user-approved visual",
+    "Do not assert G1/G2/G4 PASS",
+    "Preserve production V1.1 contract"
+  ],
+  "next_action": "ART_EXPERIENCE deliver previously approved original PNG through verifiable binary channel; DEV resume exact-asset G1/G2/G4 integration."
+}
