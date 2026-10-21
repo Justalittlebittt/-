@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "协作基础设施与通用美术生产流程设计"
-current_goal: "已批准统一制作合同V1.1卡通美术方向；继续123456六格熊猫独立透明素材验证，Style Kit与G3尚待批准"
+current_goal: "123456六格熊猫候选G3已批准；DEV确认原始PNG二进制未交接，G1/G2/G4受阻"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.1.md"
@@ -56,6 +56,11 @@ handoff_transport:
   mode: "repository_file_exchange_when_both_pages_verified"
   rule: "不得将仓库共享误称为两个聊天会话会自动主动读取或持续后台工作"
 active_tasks:
+  VERTICAL_SLICE_001_DEV_PANDA_RECT6_INTEGRATION:
+    owner: "DEV_INTEGRATION"
+    status: "BLOCKED_SOURCE_PNG_BYTES_UNAVAILABLE"
+    report: "tasks/VERTICAL_SLICE_001/handoff_dev_panda_rect6_integration.json"
+    note: "G3候选已批准；原始PNG仅在ART本地路径且未上传GitHub，禁止替代图；G1/G2/G4未执行"
   VERTICAL_SLICE_001_ART_PANDA_RECT:
     owner: "ART_EXPERIENCE"
     status: "G3_VISUAL_APPROVED_BINARY_DELIVERY_AND_DEV_G1_G2_G4_PENDING"
