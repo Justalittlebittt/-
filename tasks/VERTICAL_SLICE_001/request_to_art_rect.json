@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "task_id": "VERTICAL_SLICE_001_ART_PANDA_RECT",
+  "owner": "ART_EXPERIENCE",
+  "from": "DESIGN_DIRECTOR",
+  "to": "ART_EXPERIENCE",
+  "status": "READY_FOR_ART",
+  "supersedes": "tasks/VERTICAL_SLICE_001/request_to_art.json",
+  "prev_report": "tasks/VERTICAL_SLICE_001/handoff_art_to_design.json",
+  "design_ref": "tasks/VERTICAL_SLICE_001/design_candidate_v0.3.json",
+  "contracts": {
+    "production": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md",
+    "collaboration": "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
+  },
+  "task_class": "EXPERIMENT_SINGLE_ASSET_CANDIDATE",
+  "objective": "Replace previously failed 123457 panda experiment with one isolated panda asset candidate whose 2D logical occupied cells are 123456 (3 columns x 2 rows). No sheet/layout; prepare genuine standalone transparent original sprite for G3 visual approval and later DEV integration.",
+  "asset_request": {
+    "request_id": "VS001_PANDA_RECT_CANDIDATE_01",
+    "species_id": "panda",
+    "pose_id": "ART_FREE_CREATIVE_RECT6",
+    "shape_id": "HEX_PANDA_123456",
+    "occupied_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "anchor_cell": [
+      0,
+      0
+    ],
+    "species_features": [
+      "recognizable panda face and black-white markings",
+      "friendly, humorous, visually round appealing body",
+      "rich but clean short fur texture",
+      "clear alpha edge"
+    ],
+    "abstraction_brief": "No realistic anatomy constraint, no global viewpoint constraint. Choose any playful pose suitable for a wide compact 3x2 silhouette. Logical grid not physical ground projection. Avoid requiring identical occupancy pixel fill.",
+    "pose_view_brief": "ART owns species proportions and camera. Original warm animated-film CG quality. Keep exactly one animal; no panels, labels, mockups, stage, frames, scenery, infographic or tiled presentation in the actual sprite file.",
+    "silhouette_brief": "Two filled rows, 3x2 6-cell rectangle. No inactive holes; moderate contour whitespace within footprint is fine. Do not confuse illustrative grid with output sprite. Review rotations and alpha. Grid overlay belongs in a separate review image, not the sprite.",
+    "style_kit_version": "UNAPPROVED; candidate only",
+    "target_render_profile": "UNVERIFIED_DEV_CONFIRMS_PRIOR_TO_FINAL_INTEGRATION",
+    "source_rights": "Original generation with logged provenance, no copying original Dogs Organized Neatly content",
+    "budget_limit": {
+      "iterations": 2,
+      "cost_class": "FREE_OR_EXISTING_TOOLS_ONLY",
+      "stop_rule": "At most 2 new attempts. If no isolated sprite or usable transparency, BLOCKED; no repeated multi-panel posters."
+    }
+  },
+  "in_scope": [
+    "One original panda visual candidate at 123456 six cells",
+    "Native RGBA/Alpha if tool can deliver it, or honest block status",
+    "Exact candidate version and visual approval package, screenshot or separate grid overlay for review",
+    "Provide byte-level path + checksum only if verifiably available; do not confuse chat sandbox references with GitHub binary delivery"
+  ],
+  "out_of_scope": [
+    "Any other animal",
+    "Modifying occupied_cells or engine implementation",
+    "Production release approval",
+    "Expanding pipeline / CI or generating concept-sheet instead of isolated sprite"
+  ],
+  "result_values": [
+    "PASS_CANDIDATE_READY_FOR_HUMAN",
+    "BLOCKED",
+    "FAIL"
+  ],
+  "handoff_path": "tasks/VERTICAL_SLICE_001/handoff_art_rect_to_design.json",
+  "gate_states": {
+    "G1": "NOT_RUN",
+    "G2": "NOT_RUN",
+    "G3": "PENDING_HUMAN",
+    "G4": "NOT_RUN"
+  },
+  "next_action": "After ART submits visual candidate, HUMAN accepts or rejects exact visual version; only then DESIGN issues DEV integration task."
+}
