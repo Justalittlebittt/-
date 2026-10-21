@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "task_id": "VERTICAL_SLICE_001_ART_PANDA",
+  "title": "首个真实动物候选：六格熊猫",
+  "owner": "ART_EXPERIENCE",
+  "from": "DESIGN_DIRECTOR",
+  "to": "ART_EXPERIENCE",
+  "status": "READY_FOR_ART_CANDIDATE",
+  "task_class": "EXPERIMENT_CANDIDATE_NOT_APPROVED_AS_RELEASE_ASSET",
+  "goal": "Produce one original, visually convincing panda candidate with logical occupied_cells 123457 for a small genuine animal-puzzle vertical slice, to be reviewed by the human before integration.",
+  "context": {
+    "repo": "Justalittlebittt/-",
+    "design_ref": "tasks/VERTICAL_SLICE_001/design_candidate_v0.2.json",
+    "production_contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md",
+    "collaboration_protocol": "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md",
+    "first_playable_ref": "experiments/first_playable_001/index.html"
+  },
+  "asset_request": {
+    "request_id": "VS001_PANDA_CANDIDATE_01",
+    "species_id": "panda",
+    "pose_id": "panda_reclining_or_curled_exploration",
+    "shape_id": "HEX_PANDA_123457",
+    "occupied_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "anchor_cell": [
+      0,
+      0
+    ],
+    "species_features": [
+      "round panda head and ears",
+      "recognizable black-and-white markings",
+      "soft but well-defined silhouette",
+      "visible body mass and limbs"
+    ],
+    "abstraction_brief": "Panda may recline, tuck limbs, roll, curl or use playful exaggerated proportions. NO naturalistic projection or species-to-shape restriction. Preserve panda readability/cuteness and expressive silhouette rather than obeying realistic anatomy.",
+    "pose_view_brief": "ART chooses camera angle and visual orientation, no fixed global viewpoint. Candidate first. Do not copy reference game's dogs, character poses or art.",
+    "silhouette_brief": "3x3 bounding grid with occupied numbers 1 2 3 / 4 5 empty / 7 empty empty. Occupied cells are logic, not physical ground footprints. Main silhouette should make active cells intuitively readable, without treating every pixel of a cell as mandatory fill. Avoid large mass in inactive cells (row2 col3, row3 col2/3); small appendage overhangs are reviewable. All four rotations visually reviewed.",
+    "silhouette_guide": null,
+    "style_kit_version": "UNAPPROVED_PRODUCTION_BASELINE",
+    "target_render_profile": "UNVERIFIED_DEV_TO_CONFIRM",
+    "source_rights": "Original asset creation only; no third-party/game screenshot tracing, no protected character imitation; log tool/model/version and provenance",
+    "budget_limit": {
+      "iterations": 2,
+      "work_budget_minutes": 90,
+      "cost_class": "FREE_OR_EXISTING_TOOLS_ONLY",
+      "stop_rule": "After two materially different tries or time budget, report best candidate or BLOCKED. No heavy custom processing pipeline."
+    }
+  },
+  "in_scope": [
+    "Generate or create a single original panda visual candidate in warm animation-film-style 2D static CG with nuanced fur, clear silhouette, clean Alpha",
+    "Make at most two candidate iterations within budget; if transparency cannot be achieved report honest blocker and evidence rather than fake PNG",
+    "Include a grid-alignment review image for the exact six occupied cells, plus a transparent original sprite when achievable",
+    "Review visual identification, pose cuteness, 4-way rotated appearance and obvious mass intrusions on inactive cells",
+    "Keep specific visual versioning, source/provenance and actual file/hash if bytes transfer can be independently verified",
+    "Present human-facing candidate(s) with version ID, issues, cost, and exact evidence; ask HUMAN for formal G3 visual decision"
+  ],
+  "out_of_scope": [
+    "More than one species or one final panda pose unless expressly approved",
+    "Generation of the other two placeholder pieces' animal art",
+    "Modify occupied_cells, anchors, gameplay code, engine, project contracts or manifest",
+    "Claim G1/G2/G3/G4 PASS without real tests and HUMAN approval",
+    "Build another general art pipeline, extra CI or broad automated image tooling",
+    "Auto-trigger DEV implementation or assume cross-chat autonomous synchronization"
+  ],
+  "deliverable_handoff": "tasks/VERTICAL_SLICE_001/handoff_art_to_design.json",
+  "desired_asset_output": {
+    "image_rgba": "UNVERIFIED_TO_BE_PRODUCED",
+    "master_image": "UNVERIFIED_TO_BE_PRODUCED",
+    "final_alpha": "UNVERIFIED_TO_BE_PRODUCED",
+    "metadata_json": "UNVERIFIED_TO_BE_PRODUCED",
+    "asset_version": "candidate-v1",
+    "source_license": "PROVENANCE_REQUIRED",
+    "qa": {
+      "G1": "NOT_RUN",
+      "G2": "NOT_RUN",
+      "G3": "PENDING_HUMAN",
+      "G4": "NOT_RUN"
+    }
+  },
+  "acceptance": [
+    "At least one visible panda candidate with recognisable species and user-requested cute/abstract stylisation",
+    "Honest comparison against six-cell footprint, including 3 unoccupied bounding cells",
+    "No exact asset accepted without HUMAN visual approval; if not approved next step is ART revise or report BLOCKED",
+    "No true binary delivery PASS without original PNG bytes readback + independent SHA256 verification by recipient DEV",
+    "No formal new game levels or art batch frozen by this probe"
+  ],
+  "next_owner_after_art": "HUMAN visual acceptance via ART; then DESIGN may issue separate one-owner DEV integration task for selected exact asset version",
+  "result_values": [
+    "PASS_CANDIDATE_READY_FOR_HUMAN",
+    "BLOCKED",
+    "FAIL"
+  ],
+  "notes": "User explicitly rejected prior giraffe silhouette and requested panda 123457. Use playful interpretation, do not repeat strict natural species-shape assumptions."
+}
