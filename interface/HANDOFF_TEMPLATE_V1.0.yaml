@@ -1,6 +1,6 @@
 # 新任务统一交接模板（历史 task 文件保持原样）。
 # TEMPLATE不是实际PASS证据；接收方必须自行读取artifact_refs中的真实资源。
-schema_version: "1.1"
+schema_version: "1.2"
 handoff:
   handoff_id: "REPLACE_WITH_UNIQUE_ID"
   task_id: "REPLACE_WITH_TASK_ID"
@@ -11,13 +11,17 @@ handoff:
   in_scope: []
   out_of_scope: []
   contracts:
-    production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md"
+    production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.3.md"
     collaboration_protocol: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
     project_manifest: "manifest/PROJECT_MANIFEST.yaml"
   input_refs: []
   completed: []
   current_state: "DRAFT"
   artifact_refs: []
+  # 如果关联PNG，使用真实本地/仓库路径和原始bytes哈希，不写GPT私有容器绝对路径作为已交付路径。
+  local_binary_status: "NOT_APPLICABLE | LOCAL_ONLY_UNVERIFIED | VERIFIED_BYTES | BLOCKED"
+  approved_asset_version: "NOT_APPLICABLE"
+  original_png_sha256: "NOT_APPLICABLE"
   # 真实资产记录 path、asset_version 和 原始bytes SHA256；不存在的标UNVERIFIED。
   repository_commit: "UNVERIFIED_COMMIT_SHA"
   locked_decisions: {}

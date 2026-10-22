@@ -6,12 +6,14 @@ project:
   repository: "Justalittlebittt/-"
   default_branch: "main"
 contracts:
-  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.2.md"
+  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.3.md"
   collaboration: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
 roles:
   design: "DESIGN_DIRECTOR"
   art: "ART_EXPERIENCE"
   dev: "DEV_INTEGRATION"
+  dev_executor: "CODEX_LOCAL"
+  legacy_dev_chat: "HISTORY_ONLY"
   producer: "HUMAN"
 intent:
   project_type: "原创独立二维多格动物拼图"
@@ -26,6 +28,9 @@ technology:
   engine: null
   language: null
   render_profile: null
+  local_workspace: "Codex实际打开或clone的仓库工作目录（绝对路径未验证）"
+  asset_inbox: "assets/inbox/"
+  asset_commit_policy: "G3获批的正式原始PNG经校验后由Codex提交Git，HUMAN不手动上传"
 gameplay:
   genre: "二维连通多格拼块填充拼图"
   camera: "动物插画视角不作全局限制"
@@ -48,6 +53,8 @@ hard_constraints:
   - "原创或权利清晰、免费可获得工具优先"
   - "occupied_cells为二维碰撞真值"
   - "策划、美术、开发任务单Owner和结构化Handoff"
+  - "本地Codex为唯一开发执行者；不从GPT隔离路径假定文件已经同步"
+  - "合成测试不替代真实运行G4；不得以降额度削减验收"
   - "正式视觉需用户批准；AI承担技术检查修复"
 soft_constraints:
   - "原生Alpha或一条必要的通用抠图路线"
@@ -58,5 +65,6 @@ out_of_scope:
   - "首版动物实时3D及骨骼"
 status:
   manifest: "DRAFT_PARAMETERS_UNFROZEN"
-  production_contract: "LOCKED_DESIGN_BASELINE"
+  production_contract: "LOCKED_V1_3_CODEX_LOCAL"
+  codex_local_setup: "NOT_VERIFIED"
   current_project_state: "state/PROJECT_STATE.yaml"

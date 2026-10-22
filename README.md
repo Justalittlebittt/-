@@ -1,24 +1,31 @@
 # 动物拼图游戏（AI 游戏开发）
 
-原创动物园主题二维多格动物拼图；目标是七天内制作完整可发布首版，验证真实玩家反馈，非营收优先。首版只做运输与入园章节。
+原创动物园主题二维多格动物拼图。首版以「运输与入园安置」为主题；完整可发布开发周期暂定不超过 7 天，重点验证真实玩家评价，而非追逐营收。此仓库 `Justalittlebittt/-` 的默认分支为 `main`。
 
-## 唯一现行规范入口
+## 唯一现行合同
 
-- **[动物拼图统一制作合同 V1.0](docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.0.md)**：已获用户批准并作为项目设计基线。涵盖策划、美术、开发、关卡、资产接口及验收；**不代表真实素材/运行时已通过**。
-- [通用 AI 游戏开发协作协议 V1.0](docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md)：跨游戏的单 Owner、证据、交接与变更控制。
-- [Project Manifest](manifest/PROJECT_MANIFEST.yaml)：待定/冻结的游戏参数；[Project State](state/PROJECT_STATE.yaml)：动态任务、测试与真实状态。
-- [任务交接模板](interface/HANDOFF_TEMPLATE_V1.0.yaml)：新任务只引用当前统一制作合同。
+- **[统一制作合同 V1.3](docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.3.md)**：唯一现行项目制作合同；包括 Codex 本地开发、节省 AI 额度和 G0–G5 验收。
+- [通用协作协议 V1.0](docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md)：单 Owner、证据、问题消除、合同变更。
+- [Project Manifest](manifest/PROJECT_MANIFEST.yaml)：项目静态参数和未冻结事项。
+- [Project State](state/PROJECT_STATE.yaml)：当前任务状态与实际测试证据。状态应服从已验证的仓库事实；历史记录不自动代表最新结论。
+- [Codex 启动指引](AGENTS.md)：本地开发 AI 快速进入项目的路径。
+- [任务交接模板](interface/HANDOFF_TEMPLATE_V1.0.yaml)：新任务按 V1.3 执行。
 
-## 三个执行工作页
+## 当前角色
 
-- **动物拼图策划001 / DESIGN_DIRECTOR**：与你讨论玩法、关卡、玩家体验、有限形状需求和资源预算。
-- **动物拼图美术001… / ART_EXPERIENCE**：多形体 CGI 视觉母版、动物资产与审美验收包。
-- **动物拼图开发001… / DEV_INTEGRATION**：棋盘几何、引擎、Alpha 管线、自动回归与真实运行验证。
+- **DESIGN_DIRECTOR / GPT 策划页**：玩法、关卡、资源预算和玩家体验。
+- **ART_EXPERIENCE / GPT 美术页**：原创动物素材、Style Kit、候选、用户视觉 G3 验收包。
+- **DEV_INTEGRATION / 本地 Codex**：唯一开发 Owner；游戏逻辑、测试、真实 PNG 接入、构建和 Git 管理。原「动物拼图开发001」为历史档案，不再产生新开发任务。
+- **HUMAN / 制作人**：重大范围与美术版本批准；必要时一次保存获批原始图片至 Codex 可见的 `assets/inbox/`；不需手动把每张 PNG 上传 GitHub。
 
-当前合同讨论与定稿在专用合同页面完成；聊天页面不是事实源，不代表跨页自动触发。角色通过仓库与确切引用交接，新任务依统一合同执行，技术修复不需层层加签。
+## 现有实验，不等于正式游戏
 
-## 历史与迁移说明
+- `experiments/panda_v2/index.html`：最新仓库归档的熊猫 V2 三关交互实验；所需 `assets/animals/panda_rect6_v2.png` **在本次合同审计时不存在**，仓库版浏览器端到端回归未完成。见 [说明](experiments/panda_v2/README.md)。
+- `experiments/first_playable_001/`：更早的两关 HTML/JS 原型，已做局部测试但正式仓库版 G4 未完成。
+- `tasks/`、`docs/reviews/`：既有任务与证据，不因角色迁移而改写。
 
-旧 [美术 V1.4](docs/contracts/ART_STYLE_V1.4.md)、[流水线 V0.3](docs/contracts/ASSET_PIPELINE_V0.3_PROPOSED.md)、[V0.4](docs/contracts/ASSET_PIPELINE_V0.4_PROPOSED.md)、[V0.4.1](docs/contracts/ASSET_PIPELINE_V0.4.1_PROPOSED.md) **仅作历史设计记录**，不作为新任务平行合同。历史任务、提交和证据不修改；其中引用的合同版本继续用于解释原任务。
+GitHub 支持 PNG 二进制；旧阻断是 GPT 环境之间原始文件不可达，不是 GitHub 本身拒绝 PNG。现在由 Codex 本地管理真实文件、校验并执行 Git 提交。候选素材未实际到达本地时必须标记 `UNVERIFIED/BLOCKED`，不得用替代图冒充已批准版本。
 
-现有 GitHub **文本**双向交接与 B1/B2 **合成**测试已通过；图片二进制跨页交接、真实生成器、正式动物资源、Style Kit 审美批准、真实引擎 G1–G4 **尚未完成**。现有 `BINARY_PNG_PROBE_001` 等任务按各自原始请求继续，不因改入口丢失证据。不得把测试夹具或锁定文本冒充已交付游戏。
+## 历史文档
+
+生产 V1.0/V1.1/V1.2、旧 ART_STYLE V1.4、ASSET_PIPELINE V0.3/V0.4/V0.4.1 及旧协作手册保留作历史，不作为并列现行合同；老任务的历史证据与绑定版本原样保留。
