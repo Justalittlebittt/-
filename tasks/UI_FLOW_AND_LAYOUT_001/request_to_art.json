@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FIRST_CHAPTER_UI_CONCEPT_001",
+  "owner": "ART_EXPERIENCE",
+  "from": "DESIGN_DIRECTOR",
+  "to": "ART_EXPERIENCE",
+  "status": "READY_FOR_ART_VISUAL_CANDIDATE",
+  "class": "EXPERIMENT_UI_VISUAL_NOT_RELEASE",
+  "objective": "在已批准的二维卡通动物风格下，给首章运输与入园安置制作一套可拆分、可落地的游戏界面和背景视觉候选；重点验证真实熊猫与棋盘/托盘/背景的协调性，不做正式游戏代码。",
+  "authoritative_inputs": [
+    "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.4.md",
+    "tasks/UI_FLOW_AND_LAYOUT_001/design_spec_v0.1.md",
+    "manifest/PROJECT_MANIFEST.yaml",
+    "state/PROJECT_STATE.yaml",
+    "assets/animals/panda_rect6_desktop_001.json"
+  ],
+  "approved_panda": {
+    "asset_path": "assets/animals/panda_rect6_desktop_001.png",
+    "original_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "handling": "Read unchanged only if accessible and verifiable; else use unmistakably labeled placeholder in concept. Never regenerate/recolor/modify already approved panda as substitute."
+  },
+  "constraints": {
+    "target_layout_primary": "1280x720 desktop illustrative layout",
+    "target_layout_compact": "800x600 constraints as spatial/safe-zone note, not necessarily second finished scene render",
+    "target_board_content": "3x2 minimum, 6x5 pressure sample; 1–6 pieces; these are non-frozen G0 candidates",
+    "theme": "动物园首章：运输与入园安置；温暖活泼的入园安置台背景",
+    "style": "V1.4 cartoon: dark bold smooth outlines, warm clear color blocks, exaggerated playful forms; no realistic fur or movie CG default",
+    "budget": {
+      "visual_candidates_max": 2,
+      "scene_backgrounds_max": 1,
+      "ui_style_sets_max": 1
+    },
+    "rights": "Original layout and illustration; never trace or reuse Dogs Organized Neatly assets/UI/levels"
+  },
+  "in_scope": [
+    "Produce ONE complete, visually legible game-screen candidate with background, board, tray, title, progress, feedback, rotate/reset controls and unobstructed puzzle focus",
+    "Provide independent background design and separation plan; draw canvas board/grid/buttons with parameters rather than demanding many baked PNGs",
+    "Provide minimal UI styling notes: palette, outlines, board readability, button affordances, whitespace, accessible feedback",
+    "Annotate safe zones for 6x5 board and 6 draggable animals plus a practical compact desktop layout behavior",
+    "Attach exact version ID, whether approved panda original was actually accessible, unsolved art/UI risks and user G3 review request"
+  ],
+  "out_of_scope": [
+    "Changing gameplay shape occupancy, level layout or current user-approved panda",
+    "Generating extra animal species, entire animal library, storyboard or many background variants",
+    "Implementing Canvas/HTML/CSS code or testing browser G4",
+    "Assuming visual mockup is interactive/game-ready binary, asking user to manually upload files to GitHub",
+    "Permanent fold/unfold trays, elaborate transitional animations, 3D scenery, new engine or detailed choice UI",
+    "Freeze release size (8 levels/5 animals still G0 candidate)"
+  ],
+  "deliverables": {
+    "concept_preview": "One versioned visual concept at desktop primary aspect; artwork medium subject to generation capability",
+    "component_plan": "Concise list: 1 environment art layer, program-drawn grid/frame/tray/controls, optional small decoration only if necessary",
+    "safe_zone_spec": "6x5 board / 6 pieces stress layout and 800x600 compact adaptation notes",
+    "human_visual_review": "PASS_CANDIDATE_READY_FOR_HUMAN | BLOCKED with exact visual version and 1–2 actual choices",
+    "handoff": "tasks/UI_FLOW_AND_LAYOUT_001/handoff_art_to_design.json"
+  },
+  "gates": {
+    "G0": "NOT_FROZEN",
+    "G1": "NOT_RUN",
+    "G2": "NOT_RUN",
+    "G3": "PENDING_HUMAN_VISUAL",
+    "G4": "NOT_RUN"
+  },
+  "acceptance": [
+    "Main board remains visually dominant at 1280x720; tray and bottom actions do not overlap",
+    "Art direction matches current V1.4 cartoon style, not superseded film-CG brief",
+    "Background has clear low-noise board/tray zones; no baked grid/button/character source imagery",
+    "Actual approved panda is either used unchanged from verified data or honestly shown as placeholder",
+    "ART can identify which visual elements genuinely need image bytes and which Codex can draw",
+    "No illusion of final content approval; one concept alone does not constitute release-ready UI"
+  ],
+  "next_owner_action": "ART posts visual candidate in its own page for HUMAN approval; submit linked GitHub text handoff. After user visual approval, DESIGN issues single-owner Codex UI implementation task; no automatic cross-chat wakeup.",
+  "source_note": "One-page contract-safe art request, not a replacement production contract."
+}
