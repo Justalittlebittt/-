@@ -30,6 +30,8 @@ technology:
   render_profile: null
   local_workspace: "Codex实际打开或clone的仓库工作目录（绝对路径未验证）"
   asset_inbox: "assets/inbox/"
+  approved_asset_source: "C:/Users/Administrator/Desktop/动物拼图美术素材/"
+  approved_asset_policy: "HUMAN声明该目录现有及今后交付素材均已G3视觉验收；DEV逐文件登记哈希并完成技术检查"
   asset_commit_policy: "G3获批的正式原始PNG经校验后由Codex提交Git，HUMAN不手动上传"
 gameplay:
   genre: "二维连通多格拼块填充拼图"

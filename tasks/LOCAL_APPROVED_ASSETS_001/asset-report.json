@@ -1,0 +1,64 @@
+{
+  "path": "assets\\animals\\panda_rect6_desktop_001.png",
+  "expected_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+  "status": "BYTE_AND_DECODE_PRECHECK_PASS",
+  "G1": "PARTIAL_ALPHA_EDGES_METADATA_LICENSE_PENDING",
+  "G2_visual": "NOT_RUN",
+  "G4_formal": "NOT_RUN",
+  "bytes": 1173853,
+  "sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+  "mode": "RGBA",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "alpha_bbox": [
+    0,
+    41,
+    1536,
+    1000
+  ],
+  "alpha_pixel_counts": {
+    "zero": 744563,
+    "partial": 828301,
+    "opaque": 0
+  },
+  "alpha_threshold_bboxes": {
+    "1": [
+      0,
+      41,
+      1536,
+      1000
+    ],
+    "16": [
+      11,
+      164,
+      1529,
+      871
+    ],
+    "128": [
+      12,
+      164,
+      1528,
+      870
+    ],
+    "240": [
+      13,
+      165,
+      1527,
+      869
+    ]
+  },
+  "cell_alpha_coverage_at_128": [
+    0.46059417724609375,
+    0.4232521057128906,
+    0.33982086181640625,
+    0.6152267456054688,
+    0.6674537658691406,
+    0.5871009826660156
+  ]
+}

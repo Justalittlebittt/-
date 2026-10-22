@@ -18,3 +18,7 @@
 回归：`node experiments/first_playable_001/test.js`；安装 Playwright 并确保 Edge 可用后运行 `node experiments/panda_v2/test-browser.cjs`（也可通过 `PLAYWRIGHT_MODULE` 指向已有模块）。截图和 JSON 写入 `tasks/CODEX_TAKEOVER_001/`。当前浏览器测试显式针对缺图占位模式，正式图片到达后需新增真实素材测试，不能复用占位通过结论。
 
 素材预检：使用有 Pillow 的 Python 执行 `experiments/panda_v2/check-asset.py`。缺图或哈希不符返回 2，绝不将其他版本替代目标。哈希与解码通过也只是预检，Alpha边缘/元数据/许可及真实运行仍需验收。
+
+## 当前素材选择（用户更新）
+
+2026-10-22 HUMAN 明确以桌面已验收 `熊猫.png` 为准，已原字节导入 `assets/animals/panda_rect6_desktop_001.png`；实际SHA-256 e88018fb...。历史 candidate_v1 只是该文件旧标签，历史 V2 8ebf034a... 不再是当前接入前提。`assets.js` 指定运行图片。真实PNG三关回归：`node experiments/panda_v2/test-browser.cjs --real-asset`；当前图缺失时的占位回归仍可通过不带参数模式执行。新增证据存于 `tasks/LOCAL_APPROVED_ASSETS_001/`，旧审查证据保留。

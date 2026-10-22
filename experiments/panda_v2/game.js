@@ -1,6 +1,6 @@
 
 'use strict';
-const img=new Image();img.src='../../assets/animals/panda_rect6_v2.png';
+const img=new Image();img.src=pandaAsset.src;
 const C=document.getElementById('game'),ctx=C.getContext('2d'),cell=85,step=88;
 let index=0,pieces=[],held=null,selection=null,mouse={x:0,y:0},board={x:0,y:0};
 function shape(p){return PuzzleCore.rotate(p.base,p.rot*90);}
@@ -53,6 +53,6 @@ document.addEventListener('keydown',e=>{if(e.key.toLowerCase()==='r'){e.preventD
 document.getElementById('reset').onclick=()=>{cancel();start(index);};
 document.getElementById('restart').onclick=()=>{cancel();start(0);};
 document.getElementById('next').onclick=()=>{if(!complete())return;if(index===levels.length-1){document.getElementById('done').style.display='block';document.getElementById('next').disabled=true;}else start(index+1);};
-img.onload=()=>{document.getElementById('asset-status').textContent='已载入本地图片；正式验收以哈希及门禁报告为准';draw();};
+img.onload=()=>{document.getElementById('asset-status').textContent='已载入你已验收的熊猫素材';draw();};
 img.onerror=()=>{document.getElementById('asset-status').textContent='ASSET_LOCAL_MISSING：当前使用占位拼块，正式熊猫美术未验收';draw();};
 start(0);

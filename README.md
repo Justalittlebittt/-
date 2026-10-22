@@ -20,7 +20,7 @@
 
 ## 现有实验，不等于正式游戏
 
-- `experiments/panda_v2/index.html`：最新仓库归档的熊猫 V2 三关交互实验；所需 `assets/animals/panda_rect6_v2.png` **在本次合同审计时不存在**，仓库版浏览器端到端回归未完成。见 [说明](experiments/panda_v2/README.md)。
+- `experiments/panda_v2/index.html`：最新仓库归档的熊猫 V2 三关交互实验；现使用用户桌面已批准原图 `assets/animals/panda_rect6_desktop_001.png`，真实 PNG 三关浏览器回归已通过；历史 V2 哈希保留作版本区分。见 [说明](experiments/panda_v2/README.md)。
 - `experiments/first_playable_001/`：更早的两关 HTML/JS 原型，已做局部测试但正式仓库版 G4 未完成。
 - `tasks/`、`docs/reviews/`：既有任务与证据，不因角色迁移而改写。
 
@@ -29,3 +29,4 @@ GitHub 支持 PNG 二进制；旧阻断是 GPT 环境之间原始文件不可达
 ## 历史文档
 
 生产 V1.0/V1.1/V1.2、旧 ART_STYLE V1.4、ASSET_PIPELINE V0.3/V0.4/V0.4.1 及旧协作手册保留作历史，不作为并列现行合同；老任务的历史证据与绑定版本原样保留。
+当前素材交付规则：HUMAN 已确认本机桌面 `动物拼图美术素材` 文件夹现有及今后交付素材均已视觉验收，DEV 逐文件登记哈希、完成技术检查和Git入库，无需逐张重新批准。详见 AGENTS.md 更新与 `tasks/LOCAL_APPROVED_ASSETS_001/REPORT.md`。

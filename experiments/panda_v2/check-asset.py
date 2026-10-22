@@ -2,8 +2,9 @@ from pathlib import Path
 import hashlib,json,sys
 from PIL import Image
 root=Path(__file__).resolve().parents[2]
-p=root/'assets/animals/panda_rect6_v2.png'
-expected='8ebf034a8cc3e2ab7c25ec17a6861992f76c880275f5b6ebe07765db417d6f83'
+metadata=json.loads((root/'assets/animals/panda_rect6_desktop_001.json').read_text(encoding='utf-8'))
+p=root/metadata['image_rgba']
+expected=metadata['source_png_sha256']
 r={'path':str(p.relative_to(root)),'expected_sha256':expected,'status':'ASSET_LOCAL_MISSING','G1':'NOT_RUN','G2_visual':'NOT_RUN','G4_formal':'NOT_RUN'}
 if p.exists():
  data=p.read_bytes();r.update(bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
@@ -14,7 +15,10 @@ if p.exists():
    im.load();r.update(mode=im.mode,dimensions=list(im.size))
    assert im.mode=='RGBA'
    alpha=im.getchannel('A');r.update(alpha_extrema=alpha.getextrema(),alpha_bbox=alpha.getbbox())
+   histogram=alpha.histogram();r['alpha_pixel_counts']={'zero':histogram[0],'partial':sum(histogram[1:255]),'opaque':histogram[255]}
+   r['alpha_threshold_bboxes']={str(t):alpha.point(lambda a:255 if a>=t else 0).getbbox() for t in (1,16,128,240)}
+   r['cell_alpha_coverage_at_128']=[sum(alpha.crop((x*512,y*512,(x+1)*512,(y+1)*512)).histogram()[128:])/(512*512) for y in range(2) for x in range(3)]
    r['status']='BYTE_AND_DECODE_PRECHECK_PASS';r['G1']='PARTIAL_ALPHA_EDGES_METADATA_LICENSE_PENDING'
 print(json.dumps(r,indent=2))
-out=root/'tasks/CODEX_TAKEOVER_001/asset-report.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(r,indent=2)+'\n')
+out=root/'tasks/LOCAL_APPROVED_ASSETS_001/asset-report.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(r,indent=2)+'\n')
 sys.exit(0 if r['status']=='BYTE_AND_DECODE_PRECHECK_PASS' else 2)

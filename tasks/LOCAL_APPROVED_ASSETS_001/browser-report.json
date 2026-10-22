@@ -1,0 +1,91 @@
+{
+  "status": "PASS_APPROVED_PNG_INTERACTION",
+  "browser": "155.0.4283.62",
+  "checks": [
+    "approved PNG loaded with expected dimensions",
+    "all shapes connected, four rotations, exhaustive boundary matrix and all three levels solvable",
+    "grab offset follows pointer",
+    "level one completion",
+    "placed piece freely rotates while held",
+    "invalid rotated drop restores original position AND rotation",
+    "cancel restores original state",
+    "retrieve disables next",
+    "reset clears state",
+    "pointer-driven level 1 solved",
+    "pointer-driven level 2 solved",
+    "collision rollback preserves completed board",
+    "pointer-driven level 3 solved",
+    "chapter ending visible",
+    "restart returns to fresh level one",
+    "scaled viewport pointer coordinates",
+    "rotated tray pieces fit canvas without overlap",
+    "no runtime exceptions"
+  ],
+  "batch": {
+    "placements": 664,
+    "solutions": [
+      [
+        {
+          "id": "P",
+          "at": [
+            0,
+            0
+          ],
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "id": "P",
+          "at": [
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "id": "B",
+          "at": [
+            3,
+            0
+          ],
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "id": "P",
+          "at": [
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "id": "C",
+          "at": [
+            0,
+            2
+          ],
+          "rot": 0
+        },
+        {
+          "id": "D",
+          "at": [
+            3,
+            0
+          ],
+          "rot": 1
+        }
+      ]
+    ]
+  },
+  "errors": [],
+  "formal_art": {
+    "status": "DESKTOP_APPROVED_001_LOADED",
+    "G1": "SEE_ASSET_REPORT",
+    "G2_visual": "FOUR_ROTATION_SCREENSHOT_REVIEW",
+    "G3": "HUMAN_APPROVED",
+    "G4": "PASS_TESTED_INTERACTION_SCOPE_ONLY"
+  }
+}
