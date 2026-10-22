@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FIRST_CHAPTER_UI_CONCEPT_001",
+  "owner": "ART_EXPERIENCE",
+  "to": "DESIGN_DIRECTOR",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.4.md",
+  "version": "FIRST_CHAPTER_UI_CONCEPT_v1_REVISED",
+  "status": "CANDIDATE_READY_FOR_HUMAN_REVIEW_NOT_G3_APPROVED",
+  "scope": "first chapter transportation and zoo arrival UI",
+  "artifacts": {
+    "background": {
+      "local": "/mnt/data/ui_chapter_v1_revised/background_environment_v1.png",
+      "sha256": "414771bb1d9895c73f1046ac3f35930ef7830bf5376992884b118aaedcf2533d",
+      "role": "independent scene layer, no UI or animals",
+      "github_binary": "NOT_UPLOADED"
+    },
+    "review": {
+      "local": "/mnt/data/ui_chapter_v1_revised/preview_dynamic_layout_with_original_panda_v1.png",
+      "sha256": "7a576d78e69d897287e44ce7e4d5a7a7e4ed4716d125fe09fbe3ee7a6ca483a5",
+      "role": "not a runtime screen",
+      "github_binary": "NOT_UPLOADED"
+    },
+    "component_spec": {
+      "local": "/mnt/data/ui_chapter_v1_revised/component_spec_v1.json"
+    }
+  },
+  "approved_panda": {
+    "path": "assets/animals/panda_rect6_desktop_001.png",
+    "sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "preview_composition": "original bytes decoded for preview, original source unchanged; no regenerate"
+  },
+  "layout": {
+    "primary": [
+      1280,
+      720
+    ],
+    "compact": [
+      800,
+      600
+    ],
+    "pressure_board": "6x5",
+    "maximum_pieces": 6,
+    "board": "responsive region, not absolute positions",
+    "tray": "independent scrolling sidebar; dynamic piece bounding boxes",
+    "header": "chapter & real progress",
+    "status": "instructions, validation and completion controlled by game state"
+  },
+  "implementation": {
+    "static_asset": [
+      "one independent environment background",
+      "unchanged panda source from existing repository asset"
+    ],
+    "programmatic": [
+      "board grid and frame",
+      "tray, scroll and pieces",
+      "title, buttons",
+      "hover, legal/illegal, tutorial, completion feedback"
+    ],
+    "not_implemented": "interactive UI / compact visual screenshot"
+  },
+  "review": {
+    "G0": "NOT_FROZEN",
+    "G3": "PENDING_HUMAN",
+    "G4": "NOT_RUN",
+    "issues": [
+      "Current diagram uses English placeholder labels as structural notation; final localization by Codex",
+      "1/8 and six visible placeholders are layout stress examples, not confirmed game content",
+      "800x600 needs actual browser testing",
+      "Background visual polish intentionally reduced to minimal low-noise concept"
+    ]
+  },
+  "next_action": "HUMAN reviews exact revised preview and background direction, DESIGN checks state logic, then Codex implements dynamic layout and G4 with real approved panda; background file transfer must be verified before runtime."
+}
