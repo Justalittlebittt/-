@@ -1,0 +1,91 @@
+{
+  "status": "PASS_PLACEHOLDER_ONLY",
+  "browser": "155.0.4283.62",
+  "checks": [
+    "asset explicitly missing",
+    "all shapes connected, four rotations, exhaustive boundary matrix and all three levels solvable",
+    "grab offset follows pointer",
+    "level one completion",
+    "placed piece freely rotates while held",
+    "invalid rotated drop restores original position AND rotation",
+    "cancel restores original state",
+    "retrieve disables next",
+    "reset clears state",
+    "pointer-driven level 1 solved",
+    "pointer-driven level 2 solved",
+    "collision rollback preserves completed board",
+    "pointer-driven level 3 solved",
+    "chapter ending visible",
+    "restart returns to fresh level one",
+    "scaled viewport pointer coordinates",
+    "rotated tray pieces fit canvas without overlap",
+    "no runtime exceptions"
+  ],
+  "batch": {
+    "placements": 664,
+    "solutions": [
+      [
+        {
+          "id": "P",
+          "at": [
+            0,
+            0
+          ],
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "id": "P",
+          "at": [
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "id": "B",
+          "at": [
+            3,
+            0
+          ],
+          "rot": 0
+        }
+      ],
+      [
+        {
+          "id": "P",
+          "at": [
+            0,
+            0
+          ],
+          "rot": 0
+        },
+        {
+          "id": "C",
+          "at": [
+            0,
+            2
+          ],
+          "rot": 0
+        },
+        {
+          "id": "D",
+          "at": [
+            3,
+            0
+          ],
+          "rot": 1
+        }
+      ]
+    ]
+  },
+  "errors": [],
+  "formal_art": {
+    "status": "ASSET_LOCAL_MISSING",
+    "G1": "NOT_RUN",
+    "G2_visual": "NOT_RUN",
+    "G3": "NOT_REAPPROVED",
+    "G4": "NOT_RUN"
+  }
+}

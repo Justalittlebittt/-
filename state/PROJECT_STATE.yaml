@@ -7,7 +7,7 @@ repo:
   verified_in_this_session: true
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
-phase: "本地Codex接管合同已锁定；本地环境与真实素材验收待执行"
+phase: "Codex本地接管完成；熊猫V2占位浏览器回归通过；正式PNG缺失"
 current_goal: "Codex本地接管开发并保留既有实验；确认工作目录、实际获批PNG及SHA256、执行真实资产G1/G2/G4；GPT策划/美术继续各自角色"
 source_of_truth:
   current_repository: "GitHub main"
@@ -56,7 +56,7 @@ handoff_transport:
   smoke_test_result: "PASS_FILE_LEVEL_BIDIRECTIONAL"
   autonomous_cross_chat_delivery: "NOT_ESTABLISHED"
   mode: "CODEX_LOCAL_INBOX_THEN_VERIFICATION_AND_GIT_SYNC"
-  codex_local_setup: "NOT_VERIFIED"
+  codex_local_setup: "VERIFIED_2026_10_22"
   approved_png_in_codex_local_workspace: "NOT_VERIFIED"
   github_asset_binary_sync_by_codex: "NOT_RUN"
   rule: "GPT美术/策划与Codex本地目录不自动共享；无实际原始bytes不做G1/G2/G4；一次本地导入后由Codex自行Git管理，不要求HUMAN逐张上传GitHub"
@@ -133,7 +133,7 @@ next_actions:
   - "与DESIGN讨论有限首章关卡/形状/资产预算；未获批准不冻结正式引擎、数量、七天计时起点"
   - "旧BINARY_PNG_PROBE_001仅保留历史，不再阻塞本地开发；不得把合同迁移当作G1/G2/G4 PASS"
 codex_transition:
-  status: "CONTRACT_COMMITTED_LOCAL_SETUP_NOT_VERIFIED"
+  status: "LOCAL_TAKEOVER_PLACEHOLDER_REGRESSION_PASS"
   actor: "CODEX_LOCAL"
   role_id: "DEV_INTEGRATION"
   authority: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.3.md"
@@ -142,9 +142,9 @@ codex_transition:
   asset_delivery: "ONE_TIME_RAW_FILE_TRANSFER_OR_VERIFIED_AUTOMATED_BRIDGE"
   existing_experiment: "experiments/panda_v2/"
   legacy_experiment: "experiments/first_playable_001/"
-  actual_local_file_access: "UNVERIFIED"
-  actual_local_game_test: "NOT_RUN"
-  panda_v2_repository_png: "MISSING_AS_OF_CONTRACT_AUDIT"
+  actual_local_file_access: "VERIFIED"
+  actual_local_game_test: "PASS_PLACEHOLDER_ONLY_SEE_CODEX_TAKEOVER_001"
+  panda_v2_repository_png: "ASSET_LOCAL_MISSING_CONFIRMED_2026_10_22"
   panda_v2_sha256_expected: "8ebf034a8cc3e2ab7c25ec17a6861992f76c880275f5b6ebe07765db417d6f83"
   panda_candidate_v1_sha256_expected: "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732"
 assumptions_and_unknowns:
@@ -152,3 +152,17 @@ assumptions_and_unknowns:
   - "双方GitHub文件级交接通过；跨聊天自动触发、通知和后台执行未建立"
   - "GPT跨聊天PNG二进制传输未验证；但Codex本地Git提交PNG不以此前探针为前置。真实生成器和本机资源传递均未验证"
   - "BINARY_PNG_PROBE_001任务编制于V0.4时，传输协议未变，当前任务仍有效；不得误认为该任务测试了V0.4.1其他未实证能力"
+
+local_takeover_001:
+  owner: "DEV_INTEGRATION"
+  date: "2026-10-22"
+  source_commit: "195456f"
+  report: "tasks/CODEX_TAKEOVER_001/REPORT.md"
+  browser_evidence: "tasks/CODEX_TAKEOVER_001/browser-report.json"
+  asset_evidence: "tasks/CODEX_TAKEOVER_001/asset-report.json"
+  status: "PASS_PLACEHOLDER_ONLY_FORMAL_ASSET_BLOCKED"
+  legacy_logic_checks: 9
+  browser_checks: 18
+  exhaustive_boundary_cases: 664
+  formal_art_gate_status: "NOT_RUN_ASSET_LOCAL_MISSING"
+  next_owner_action: "ART_EXPERIENCE提供原始V2 PNG或含原始字节的已验收HTML附件的可访问批次；DEV核验接入提交；不要求用户逐图上传GitHub"

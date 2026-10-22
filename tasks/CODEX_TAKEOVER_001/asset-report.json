@@ -1,0 +1,8 @@
+{
+  "path": "assets\\animals\\panda_rect6_v2.png",
+  "expected_sha256": "8ebf034a8cc3e2ab7c25ec17a6861992f76c880275f5b6ebe07765db417d6f83",
+  "status": "ASSET_LOCAL_MISSING",
+  "G1": "NOT_RUN",
+  "G2_visual": "NOT_RUN",
+  "G4_formal": "NOT_RUN"
+}

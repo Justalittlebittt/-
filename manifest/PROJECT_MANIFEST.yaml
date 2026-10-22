@@ -66,5 +66,5 @@ out_of_scope:
 status:
   manifest: "DRAFT_PARAMETERS_UNFROZEN"
   production_contract: "LOCKED_V1_3_CODEX_LOCAL"
-  codex_local_setup: "NOT_VERIFIED"
+  codex_local_setup: "VERIFIED_2026_10_22"
   current_project_state: "state/PROJECT_STATE.yaml"
