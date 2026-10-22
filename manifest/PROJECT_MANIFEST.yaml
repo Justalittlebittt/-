@@ -6,7 +6,7 @@ project:
   repository: "Justalittlebittt/-"
   default_branch: "main"
 contracts:
-  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.3.md"
+  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.4.md"
   collaboration: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
 roles:
   design: "DESIGN_DIRECTOR"
@@ -67,6 +67,6 @@ out_of_scope:
   - "首版动物实时3D及骨骼"
 status:
   manifest: "DRAFT_PARAMETERS_UNFROZEN"
-  production_contract: "LOCKED_V1_3_CODEX_LOCAL"
+  production_contract: "LOCKED_V1_4_UI_FLOW_SCOPE_CODEX_LOCAL"
   codex_local_setup: "VERIFIED_2026_10_22"
   current_project_state: "state/PROJECT_STATE.yaml"
