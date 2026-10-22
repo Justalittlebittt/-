@@ -11,7 +11,7 @@ handoff:
   in_scope: []
   out_of_scope: []
   contracts:
-    production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.3.md"
+    production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.4.md"
     collaboration_protocol: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
     project_manifest: "manifest/PROJECT_MANIFEST.yaml"
   input_refs: []
