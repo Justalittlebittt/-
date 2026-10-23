@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FIRST_LEVEL_CONTENT_001",
+  "owner": "DESIGN_DIRECTOR",
+  "phase": "LEVEL1_GEOMETRY_LOCKED_FOR_INTEGRATION_NOT_FULL_RELEASE_APPROVAL",
+  "user_authorization": "2026-10-23 user confirmed '按你的建议来' to 5x4 first-level four whole animals / 6+6+4+4 / one new art species plan",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
+  "scene_ref": "experiments/panda_v2/scene.js",
+  "board": {
+    "width": 5,
+    "height": 4,
+    "cell_count": 20,
+    "background": "assets/backgrounds/chapter_one.png",
+    "background_action": "KEEP_ORIGINAL_UNMODIFIED",
+    "baked_grid_alignment": "current firstScene.board and step; do not repaint or duplicate"
+  },
+  "geometry": {
+    "shapes": [
+      {
+        "shape_id": "RECT_3x2_6",
+        "occupied_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "area": 6,
+        "rotation": "0,90,180,270",
+        "artist_asset": "assets/animals/panda_rect6_desktop_001.png",
+        "sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732"
+      },
+      {
+        "shape_id": "SQUARE_2x2_4",
+        "occupied_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "area": 4,
+        "rotation": "0,90,180,270",
+        "artist_asset": "PENDING_ART_G3_ORIGINAL_BYTES",
+        "sha256": "NOT_AVAILABLE"
+      }
+    ],
+    "instances": [
+      {
+        "piece_id": "A",
+        "shape_id": "RECT_3x2_6",
+        "species_id": "panda",
+        "asset_version": "PANDA_RECT6_DESKTOP_APPROVED_001"
+      },
+      {
+        "piece_id": "B",
+        "shape_id": "SQUARE_2x2_4",
+        "species_id": "ART_TO_SELECT_AND_HUMAN_APPROVE",
+        "asset_version": "PENDING"
+      },
+      {
+        "piece_id": "C",
+        "shape_id": "RECT_3x2_6",
+        "species_id": "panda",
+        "asset_version": "PANDA_RECT6_DESKTOP_APPROVED_001"
+      },
+      {
+        "piece_id": "D",
+        "shape_id": "SQUARE_2x2_4",
+        "species_id": "SAME_AS_B",
+        "asset_version": "PENDING"
+      }
+    ],
+    "instance_count": 4,
+    "distinct_image_count_target": 2,
+    "new_image_count": 1,
+    "area_sum": 20
+  },
+  "reference_solution": {
+    "grid_rows": [
+      "AAABB",
+      "AAABB",
+      "CCCDD",
+      "CCCDD"
+    ],
+    "placement_zero_based": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        3,
+        0
+      ],
+      "C": [
+        0,
+        2
+      ],
+      "D": [
+        3,
+        2
+      ]
+    },
+    "note": "One illustrative complete placement; do NOT pre-draw this solution on the baked background or reveal as hint"
+  },
+  "solver_evidence": {
+    "label_distinct_placements": 16,
+    "identical_type_exchange_collapsed": 4,
+    "rotation_unique_shapes": {
+      "RECT_3x2_6": 2,
+      "SQUARE_2x2_4": 1
+    },
+    "mirrors": false,
+    "algorithm": "Enumerate all unique rotational footprints; translate within 5x4 board; exact recursive disjoint-set cover by piece IDs. Count instance-labelled solutions then quotient by 2! for A/C and 2! for B/D.",
+    "execution": "Independent Python exhaustive search in DESIGN conversation, October 23 2026",
+    "status": "PASS_GEOMETRY_ONLY",
+    "human_experience": "NOT_RUN",
+    "exact_engine_level_test": "NOT_RUN",
+    "source_art_count_ready": 1
+  },
+  "interface_rules": [
+    "One whole animal per piece_id; 4 independent pieces, no splitting bear or new animal into parts, V1.5 FAIL_ANIMAL_FRAGMENTATION",
+    "Arrange four whole animal instances around LEFT and RIGHT of central baked board, with no UI regression or clipping, adapting scene and real viewport.",
+    "Preserve original background image, existing approved panda raw bytes and user-accepted left-drag/right-click-rotate/R-reset controls.",
+    "On valid-but-partial placement, next remains hidden; only all four valid nonoverlapping pieces covering 20 of 20 cells can reveal Next; picking up any piece hides Next.",
+    "Current Next button need not navigate to an unbuilt second level; keep existing nextlevelrequest hook.",
+    "The two new square4 instances must show the SAME intact, approved, original new-animal PNG, not arbitrary placeholder as final."
+  ],
+  "constraints": {
+    "budget": "Within previously approved seven-day full-build maximum; do not infer official clock start",
+    "acceptance_status": "USER_APPROVED_DESIGN_DIRECTION; ART_G3_PENDING; DEV_G4_PENDING; RELEASE_NOT_READY",
+    "no_more_species": "No additional animals until level1 actual four-piece playability experience tested",
+    "no_new_chapter_background": "Keep first approved chapter background exactly, no crop/repaint",
+    "first_level_only": "Do not expand multi-level flow without separate authorization"
+  },
+  "next": {
+    "art_request": "tasks/FIRST_LEVEL_CONTENT_001/request_to_art.json",
+    "dev_request": "tasks/FIRST_LEVEL_CONTENT_001/request_to_dev.json",
+    "dev_stage1": "Integrate four piece IDs with two panda PNG and two explicit placeholders to validate first-level full coverage before G3 new animal ready.",
+    "dev_stage2": "Swap two placeholders to exact G3-approved new original PNG and run real asset QA and browser G4."
+  }
+}
