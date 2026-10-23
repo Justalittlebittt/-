@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FIRST_LEVEL_CONTENT_001_ART_SQUARE4",
+  "owner": "ART_EXPERIENCE",
+  "from": "ART_EXPERIENCE",
+  "to": "DESIGN_DIRECTOR",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
+  "status": "HUMAN_G3_APPROVED_BINARY_HANDOFF_PENDING",
+  "asset": {
+    "id": "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2",
+    "species_id": "rabbit",
+    "shape_id": "SQUARE_2x2_4",
+    "occupied_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "anchor_cell": [
+      0,
+      0
+    ],
+    "visual": "complete round white rabbit, both ears resting alongside head and body, exaggerated eyes, bold outlines",
+    "source_file": "圆滚滚的搞怪白兔迷你贴纸.png",
+    "local_path": "/mnt/data/圆滚滚的搞怪白兔迷你贴纸.png",
+    "png_sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+    "bytes": 1208053,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "generator": "OpenAI image_gen",
+    "github_binary_uploaded": false,
+    "source_rights": "AI original candidate, license and provenance final check by DEV"
+  },
+  "instances": [
+    {
+      "piece_id": "B",
+      "same_original_png": true
+    },
+    {
+      "piece_id": "D",
+      "same_original_png": true
+    }
+  ],
+  "approval": {
+    "G3": "HUMAN_APPROVED_EXACT_IMAGE",
+    "evidence": "User on 2026-10-23 stated 这张通过验收，写入github合同",
+    "scope": "specific rabbit image aesthetics, whole unfragmented 2x2 shape; other gates not implied"
+  },
+  "verification": {
+    "G1": "NOT_RUN_DEV",
+    "G2": "NOT_RUN_DEV",
+    "G4": "NOT_RUN_DEV",
+    "alpha_edge": "NOT_YET_FORMALLY_VERIFIED",
+    "four_direction_game_preview": "NOT_RUN_DEV"
+  },
+  "preserve": [
+    "Do not change approved panda or chapter-one background",
+    "Do not split rabbit into body-part pieces",
+    "Do not generate duplicate asset for B and D"
+  ],
+  "next_owner": "DESIGN hands approved asset reference to CODEX_LOCAL; DEV independently checks PNG source SHA256 and imports same whole rabbit twice to first level B/D then performs G1/G2/G4. If bytes absent locally, report ASSET_LOCAL_MISSING."
+}
