@@ -320,3 +320,13 @@ http_cache_fix_001:
   fix: "content-versioned script and style URLs; no original PNG changes"
   evidence: "tasks/HTTP_CACHE_FIX_001/cache-report.json"
   actual_http_browser_checks: 77
+
+http_cache_human_acceptance:
+  status: "HUMAN_RETEST_PASS"
+  feedback: "试玩成功没有问题"
+  root_cause_record: "tasks/HTTP_CACHE_FIX_001/REPORT.md"
+  prevention: "CONTENT_VERSION_CHECK_REQUIRED_AT_BROWSER_TEST_START"
+  guard_command: "node tools/check-runtime.cjs"
+  stale_version_negative_test: "PASS_REJECTED"
+  old_cache_upgrade_retest: "PASS_ZERO_PAGE_ERRORS"
+  guarantee_scope: "Root-cause regression coverage; no promise of zero future loading errors"

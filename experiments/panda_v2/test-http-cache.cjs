@@ -1,3 +1,4 @@
+require('../../tools/check-runtime.cjs')();
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');const fs=require('fs'),http=require('http'),path=require('path'),assert=require('node:assert/strict'),{execFileSync}=require('child_process');
 (async()=>{
  const root=path.resolve(__dirname,'../..'),out=path.join(root,'tasks/HTTP_CACHE_FIX_001');

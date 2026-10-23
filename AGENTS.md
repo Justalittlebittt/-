@@ -30,3 +30,5 @@
 当前内容更新：FIRST_LEVEL_CONTENT_001已由用户批准A/C两只完整熊猫、B/D两只完整四格兔子。原兔子哈希00ae48b4...；当前场景有四只真实动物可填满20格，不再是仅单熊猫测试。当前回归入口test-content.cjs，原test-first-scene.cjs为历史单熊猫状态。保持原背景和无额外UI。
 
 运行交付规则：修改游戏JS/CSS后执行python tools/version-runtime.py更新HTML依赖内容版本号，再打包；对长期HTTP浏览器必须验证旧缓存升级，不只用全新file://上下文测试。test-http-cache.cjs覆盖旧assets.js缓存启动错误。
+
+白屏防复发门槛：运行脚本/样式修改后执行tools/version-runtime.py生成，再执行--check或node tools/check-runtime.cjs；两个现行浏览器测试已内置版本校验，失败不得标回归通过。HUMAN已复验缓存修复成功，记录见HTTP_CACHE_FIX_001报告。不要以清缓存作为常规交付步骤。

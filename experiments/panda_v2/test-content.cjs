@@ -1,3 +1,4 @@
+require('../../tools/check-runtime.cjs')();
 const fs=require('fs'),path=require('path'),assert=require('node:assert/strict');const {pathToFileURL}=require('url');const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 (async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{
  const page=await browser.newPage({viewport:{width:1280,height:720}}),checks=[],errors=[];page.on('pageerror',e=>errors.push(e.message));
