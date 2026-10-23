@@ -6,7 +6,7 @@ project:
   repository: "Justalittlebittt/-"
   default_branch: "main"
 contracts:
-  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.4.md"
+  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md"
   collaboration: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
 roles:
   design: "DESIGN_DIRECTOR"
@@ -54,6 +54,7 @@ hard_constraints:
   - "完整可发布实验游戏开发最多7天，用户批准方可调整"
   - "原创或权利清晰、免费可获得工具优先"
   - "occupied_cells为二维碰撞真值"
+  - "一只完整动物是一个不可拆分的可操作拼块；禁止将动物分割成头身爪等多个拼图片段"
   - "策划、美术、开发任务单Owner和结构化Handoff"
   - "本地Codex为唯一开发执行者；不从GPT隔离路径假定文件已经同步"
   - "合成测试不替代真实运行G4；不得以降额度削减验收"
@@ -67,6 +68,6 @@ out_of_scope:
   - "首版动物实时3D及骨骼"
 status:
   manifest: "DRAFT_PARAMETERS_UNFROZEN"
-  production_contract: "LOCKED_V1_4_UI_FLOW_SCOPE_CODEX_LOCAL"
+  production_contract: "LOCKED_V1_5_ONE_ANIMAL_ONE_PIECE_CODEX_LOCAL"
   codex_local_setup: "VERIFIED_2026_10_22"
   current_project_state: "state/PROJECT_STATE.yaml"
