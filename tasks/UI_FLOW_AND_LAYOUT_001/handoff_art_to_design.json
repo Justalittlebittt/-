@@ -60,7 +60,7 @@
   },
   "review": {
     "G0": "NOT_FROZEN",
-    "G3": "PENDING_HUMAN",
+    "G3": "BACKGROUND_MOOD_ONLY_HUMAN_APPROVED_UI_LAYOUT_AND_FINAL_ASSET_PENDING",
     "G4": "NOT_RUN",
     "issues": [
       "Current diagram uses English placeholder labels as structural notation; final localization by Codex",
@@ -69,5 +69,28 @@
       "Background visual polish intentionally reduced to minimal low-noise concept"
     ]
   },
-  "next_action": "HUMAN reviews exact revised preview and background direction, DESIGN checks state logic, then Codex implements dynamic layout and G4 with real approved panda; background file transfer must be verified before runtime."
+  "next_action": "ART isolate a background-only image while maintaining approved visual direction; HUMAN approval of exact revised asset if visible changes; Codex programmatically renders board/level text and lays out approved animals on both sides. No full UI G3 claimed.",
+  "background_visual_approval": {
+    "status": "HUMAN_APPROVED_VISUAL_REFERENCE",
+    "approved_version": "FIRST_CHAPTER_TRANSPORT_BACKGROUND_PASTEL_v1",
+    "source_filename": "wide_colorful_cartoon_illustration_game_ui_backgr.png",
+    "source_sha256": "a57d2a4c7830e511561e2d2fe9cc60a62b26b4a16023f5d579480ba3f6f7227a",
+    "source_bytes": 2055169,
+    "dimensions": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "approval_text": "我认为这张图片作为第一张背景可以，通过视觉检测。",
+    "scope": "Background scene color mood and composition for chapter one, excluding baked UI/grid and release asset acceptance",
+    "limits": [
+      "The image contains baked 5x4 puzzle board and level title; it is not a clean independent background layer",
+      "No animal is present, and approved panda PNG remains unchanged",
+      "Actual isolated environment PNG not produced or committed",
+      "No runtime 800x600 validation",
+      "PNG not stored in GitHub"
+    ],
+    "human_visual_result": "PASS_BACKGROUND_AESTHETIC_ONLY",
+    "dev_handoff_state": "PENDING_SEPARATED_BACKGROUND_FILE"
+  }
 }
