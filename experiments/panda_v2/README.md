@@ -36,3 +36,7 @@
 最新交付已替代以上三关UI。双击index.html：完整原背景＋熊猫；左键拖放/取回、右键旋转、R重置。合法放入后才在棋盘右侧显示下一关。本轮不制作第二关。测试改用test-first-scene.cjs，详情tasks/FIRST_LEVEL_SCENE_001/REPORT.md。
 
 用户验收通过后的修正：正式下一关仅在全棋盘被合法填满后显示。当前单熊猫占6/20格，所以放入后不显示按钮；此前入盘即显示只是按钮展示测试，现已移除。参见tasks/FIRST_LEVEL_SCENE_001/ACCEPTANCE.md。
+
+## 当前：第一关真实四动物
+
+A/C两只熊猫、B/D两只已批折耳白兔，6+4+6+4填满20格。原背景和原图保持不变。左键拖放/取回、右键旋转（包括拖动中）、R重置；填满才显示下一关。当前测试test-content.cjs，技术交接tasks/FIRST_LEVEL_CONTENT_001/handoff_dev_to_design.json。

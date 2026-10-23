@@ -7,8 +7,8 @@ repo:
   verified_in_this_session: true
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
-phase: "桌面已批准熊猫原图已接入；真实PNG三关交互回归通过"
-current_goal: "FIRST_LEVEL_CONTENT_001：白兔v2已获G3批准且原始SHA256精确登记；跳过临时拼块，Codex核验原PNG后一次性接入四只完整动物，测试20格真实通关；G1/G2/G4待执行"
+phase: "第一关四只真实完整动物已接入并通过技术验收；待HUMAN试玩"
+current_goal: "FIRST_LEVEL_CONTENT_001真实兔子B/D与熊猫A/C完成；G1/G2/G4第一关测试通过，等待DESIGN/HUMAN体验反馈"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md"
@@ -73,7 +73,7 @@ active_tasks:
   FIRST_LEVEL_CONTENT_001_DEV_INTEGRATION:
     owner: "DEV_INTEGRATION"
     executor: "CODEX_LOCAL"
-    status: "DIRECT_REAL_RABBIT_V2_INTEGRATION_READY_PNG_NOT_YET_IN_GITHUB"
+    status: "REAL_APPROVED_ART_G4_PASS"
     request: "tasks/FIRST_LEVEL_CONTENT_001/request_to_dev.json"
     expected_handoff: "tasks/FIRST_LEVEL_CONTENT_001/handoff_dev_to_design.json"
     note: "取消临时拼块。已批准白兔RABBIT_SQUARE4_EARS_FOLDED_candidate_v2，原始文件圆滚滚的搞怪白兔迷你贴纸.png，SHA256=00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74；Codex核验原字节后B/D复用同一PNG完成G1/G2/G4"
@@ -156,10 +156,8 @@ owner_boundaries:
   DEV_INTEGRATION: "本地Codex唯一开发Owner；二维形状、锚点旋转、游戏代码、原始PNG本地集成、Git同步、G1/G2/G4、证据；原GPT开发页归档不再受理新任务"
   HUMAN: "正式视觉版本确认、重大范围/预算/合同决定"
 next_actions:
-  - "CODEX读取tasks/FIRST_LEVEL_CONTENT_001/request_to_dev.json与handoff_art_to_design.json；在已有获批本地素材目录核对圆滚滚的搞怪白兔迷你贴纸.png，SHA256=00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74；G3不代替PNG原字节核验"
-  - "原始PNG匹配后CODEX一次性接入两只完整熊猫A/C和两只完整白兔B/D；保留背景，验证5x4完整20格、旋转/取回/R重置、跨三个桌面窗口尺寸；不做临时拼块、不做第二关"
-  - "CODEX提交PNG原始字节、元数据、实机浏览器G1/G2/G4测试结果及真实通关截图并GitHub读回，DESIGN复核后由HUMAN试玩四只完整动物"
-  - "如PNG不在CODEX可访问本地路径，只报ASSET_LOCAL_MISSING并记录寻找的路径；不猜测、不生成替代图、不要求重复G3"
+  - "DESIGN/HUMAN读取FIRST_LEVEL_CONTENT_001开发交接并试玩四只完整动物，反馈关卡体验"
+  - "当前仅第一关；未经授权不新增动物、背景或第二关；下一关仍为既有事件接口"
 codex_transition:
   status: "LOCAL_TAKEOVER_PLACEHOLDER_REGRESSION_PASS"
   actor: "CODEX_LOCAL"
@@ -278,7 +276,7 @@ first_level_content_001:
   design_ref: "tasks/FIRST_LEVEL_CONTENT_001/design.json"
   art_request: "tasks/FIRST_LEVEL_CONTENT_001/request_to_art.json"
   dev_request: "tasks/FIRST_LEVEL_CONTENT_001/request_to_dev.json"
-  status: "GEOMETRY_AND_RABBIT_V2_G3_APPROVED_DIRECT_REAL_ASSET_INTEGRATION_PENDING"
+  status: "REAL_APPROVED_ART_G4_PASS"
   board: "5x4 = 20 cells; preserve first scene and approved original background"
   piece_instances: "A/C two whole 3x2 approved panda PNG, B/D two whole 2x2 copies of ONE new animal asset"
   solver_result: "16 instance-labelled exact covers / 4 geometry-distinct if identical same-type copies treated interchangeably"
@@ -287,14 +285,14 @@ first_level_content_001:
   approval_receipt: "tasks/FIRST_LEVEL_CONTENT_001/visual_approval_receipt.json"
   rabbit_source_file: "圆滚滚的搞怪白兔迷你贴纸.png"
   rabbit_original_sha256: "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74"
-  raw_rabbit_png_available_to_codex: "NOT_VERIFIED"
+  raw_rabbit_png_available_to_codex: "VERIFIED_EXACT_BYTES_IMPORTED"
   integration_mode: "NO_PLACEHOLDERS_DIRECT_REAL_ART"
-  dev_G1_G2_G4: "NOT_RUN"
+  dev_G1_G2_G4: "PASS_TESTED_FIRST_LEVEL_SCOPE"
   first_level_human_experience: "NOT_RUN_WITH_FOUR_REAL_ANIMALS"
   full_release_scope: "NOT_FROZEN"
 
 first_level_square4_art_approval:
-  status: "HUMAN_G3_APPROVED_ASSET_BINARY_NOT_UPLOADED"
+  status: "EXACT_ORIGINAL_IMPORTED_VERIFIED_TECHNICAL_QA_PASS"
   asset_version: "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2"
   source_file: "圆滚滚的搞怪白兔迷你贴纸.png"
   sha256: "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74"
@@ -303,4 +301,14 @@ first_level_square4_art_approval:
   occupied_cells: [[0,0], [1,0], [0,1], [1,1]]
   two_instances: [B, D]
   handoff: "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json"
-  technical_gates: "G1_G2_G4_PENDING_CODEX"
+  technical_gates: "G1_G2_G4_PASS_TESTED_SCOPE_SEE_DEV_HANDOFF"
+
+first_level_four_real_animals:
+  owner: "DEV_INTEGRATION"
+  status: "REAL_APPROVED_ART_G4_PASS"
+  instances: "A/C whole panda; B/D whole rabbit; 6+4+6+4=20"
+  report: "tasks/FIRST_LEVEL_CONTENT_001/handoff_dev_to_design.json"
+  browser_checks: 77
+  rotation_boundary_cases: 672
+  exact_covers: 16
+  user_gameplay_feedback: "PENDING"

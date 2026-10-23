@@ -1,0 +1,49 @@
+{
+  "id": "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2",
+  "species_id": "rabbit",
+  "shape_id": "SQUARE_2x2_4",
+  "occupied_cells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "anchor_cell": [
+    0,
+    0
+  ],
+  "visual": "complete round white rabbit, both ears resting alongside head and body, exaggerated eyes, bold outlines",
+  "source_file": "圆滚滚的搞怪白兔迷你贴纸.png",
+  "local_path": "/mnt/data/圆滚滚的搞怪白兔迷你贴纸.png",
+  "png_sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+  "bytes": 1208053,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "generator": "OpenAI image_gen",
+  "github_binary_uploaded": true,
+  "source_rights": "AI original candidate, license and provenance final check by DEV",
+  "local_source": "C:/Users/Administrator/Desktop/动物拼图美术素材/兔子.png",
+  "image_rgba": "assets/animals/rabbit_square4_ears_folded_v2.png",
+  "approval": {
+    "G3": "HUMAN_APPROVED_EXACT_IMAGE",
+    "evidence": "User on 2026-10-23 stated 这张通过验收，写入github合同",
+    "scope": "specific rabbit image aesthetics, whole unfragmented 2x2 shape; other gates not implied"
+  },
+  "provenance": "OpenAI image_gen; ART handoff and HUMAN exact-image approval",
+  "qa_evidence": "tasks/FIRST_LEVEL_CONTENT_001/evidence/asset-report.json"
+}

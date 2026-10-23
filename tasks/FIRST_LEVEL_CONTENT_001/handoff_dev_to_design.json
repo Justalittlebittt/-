@@ -1,0 +1,66 @@
+{
+  "task_id": "FIRST_LEVEL_CONTENT_001_DEV_INTEGRATION",
+  "owner": "DEV_INTEGRATION",
+  "from": "DEV_INTEGRATION",
+  "to": "DESIGN_DIRECTOR",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
+  "status": "REAL_APPROVED_ART_G4_PASS",
+  "source_commit": "e849408",
+  "runtime": "experiments/panda_v2/index.html",
+  "rabbit": {
+    "asset_version": "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2",
+    "local_source": "C:/Users/Administrator/Desktop/动物拼图美术素材/兔子.png",
+    "repository_png": "assets/animals/rabbit_square4_ears_folded_v2.png",
+    "sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+    "instances": [
+      "B",
+      "D"
+    ],
+    "modification": "NONE; original bytes; no generation or image slicing"
+  },
+  "panda_instances": [
+    "A",
+    "C"
+  ],
+  "panda_background_integrity": "ORIGINAL_SHA256_UNCHANGED",
+  "gates": {
+    "G1": "PASS_TESTED_FILE_ALPHA_AND_METADATA_SCOPE",
+    "G2": "PASS_ATOMIC_2x2_AND_3x2_ALIGNMENT_FOUR_DIRECTIONS",
+    "G4": "PASS_FIRST_LEVEL_DESKTOP_REAL_INPUT",
+    "visual_review": "Full rabbit source, light/dark browser composites, 0/90/180/270 staging and filled-board neighbor screenshots inspected; no obvious visible matte fringe, body clipping, fragmentation or main mass invading neighboring slots at tested sizes.",
+    "alpha_note": "Alpha>=128 bbox ends at y1187 of1254. Low alpha bbox reaches bottom edge, preserved as source bytes; no new cut/export.",
+    "scope_limits": [
+      "No claim of complete release acceptance",
+      "Human first-level four-animal gameplay feedback pending",
+      "Nextlevelrequest hook retained; no second playable level",
+      "Source provenance per ART OpenAI image_gen handoff and exact-image HUMAN G3; no new license guarantee"
+    ]
+  },
+  "tests": {
+    "browser_command": "node experiments/panda_v2/test-content.cjs",
+    "asset_command": "python tasks/FIRST_LEVEL_CONTENT_001/verify-assets.py (Pillow required)",
+    "browser_checks": 77,
+    "exhaustive_boundary_rotation_cases": 672,
+    "exact_covers": 16,
+    "legacy_logic_checks": 9,
+    "page_errors": 0,
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        800,
+        600
+      ]
+    ]
+  },
+  "fix": "Edge can drop pointer capture after suppressed right contextmenu while left held. Only this identified chord condition reacquires capture; true cancel/blur restores origin. Verified rotated full-board completion.",
+  "evidence": "tasks/FIRST_LEVEL_CONTENT_001/evidence/",
+  "next_owner_action": "DESIGN/HUMAN试玩四只完整动物的第一关；不增加物种或第二关",
+  "git_commit": "git log -1 -- tasks/FIRST_LEVEL_CONTENT_001/handoff_dev_to_design.json"
+}

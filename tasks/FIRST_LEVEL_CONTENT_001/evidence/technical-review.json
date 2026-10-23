@@ -1,0 +1,13 @@
+{
+  "G1": "PASS_TESTED_FILE_ALPHA_AND_METADATA_SCOPE",
+  "G2": "PASS_ATOMIC_2x2_AND_3x2_ALIGNMENT_FOUR_DIRECTIONS",
+  "G4": "PASS_FIRST_LEVEL_DESKTOP_REAL_INPUT",
+  "visual_review": "Full rabbit source, light/dark browser composites, 0/90/180/270 staging and filled-board neighbor screenshots inspected; no obvious visible matte fringe, body clipping, fragmentation or main mass invading neighboring slots at tested sizes.",
+  "alpha_note": "Alpha>=128 bbox ends at y1187 of1254. Low alpha bbox reaches bottom edge, preserved as source bytes; no new cut/export.",
+  "scope_limits": [
+    "No claim of complete release acceptance",
+    "Human first-level four-animal gameplay feedback pending",
+    "Nextlevelrequest hook retained; no second playable level",
+    "Source provenance per ART OpenAI image_gen handoff and exact-image HUMAN G3; no new license guarantee"
+  ]
+}

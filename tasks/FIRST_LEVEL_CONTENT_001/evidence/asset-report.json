@@ -1,0 +1,122 @@
+{
+  "assets": [
+    {
+      "kind": "rabbit",
+      "sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+      "bytes": 1208053,
+      "mode": "RGBA",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        34,
+        23,
+        1240,
+        1254
+      ],
+      "threshold_bboxes": {
+        "16": [
+          36,
+          126,
+          1238,
+          1188
+        ],
+        "128": [
+          37,
+          126,
+          1237,
+          1187
+        ],
+        "240": [
+          38,
+          127,
+          1236,
+          1186
+        ]
+      },
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparent_pixels": 606901,
+      "partially_transparent_pixels": 963979,
+      "opaque_pixels": 1636,
+      "cell_main_mass_coverage": [
+        0.5779171722259105,
+        0.45014486339089715,
+        0.6587710395315532,
+        0.7415225027917045
+      ],
+      "byte_decode_status": "PASS",
+      "edge_visual_review": "PENDING_BROWSER_COMPOSITES"
+    },
+    {
+      "kind": "panda",
+      "sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+      "bytes": 1173853,
+      "mode": "RGBA",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        41,
+        1536,
+        1000
+      ],
+      "threshold_bboxes": {
+        "16": [
+          11,
+          164,
+          1529,
+          871
+        ],
+        "128": [
+          12,
+          164,
+          1528,
+          870
+        ],
+        "240": [
+          13,
+          165,
+          1527,
+          869
+        ]
+      },
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "transparent_pixels": 744563,
+      "partially_transparent_pixels": 828301,
+      "opaque_pixels": 0,
+      "cell_main_mass_coverage": [
+        0.46059417724609375,
+        0.4232521057128906,
+        0.33982086181640625,
+        0.6152267456054688,
+        0.6674537658691406,
+        0.5871009826660156
+      ],
+      "byte_decode_status": "PASS",
+      "edge_visual_review": "PENDING_BROWSER_COMPOSITES"
+    }
+  ],
+  "background_unchanged": true,
+  "source": "original desktop bytes; no export/regeneration/cropping"
+}
