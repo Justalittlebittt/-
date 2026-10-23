@@ -40,3 +40,5 @@
 ## 当前：第一关真实四动物
 
 A/C两只熊猫、B/D两只已批折耳白兔，6+4+6+4填满20格。原背景和原图保持不变。左键拖放/取回、右键旋转（包括拖动中）、R重置；填满才显示下一关。当前测试test-content.cjs，技术交接tasks/FIRST_LEVEL_CONTENT_001/handoff_dev_to_design.json。
+
+HTTP缓存修复：运行资源修改后先执行python tools/version-runtime.py，再打包。test-http-cache.cjs验证旧浏览器缓存升级；PUZZLE_TEST_URL可让test-content.cjs验证实际HTTP入口，而非仅file://。

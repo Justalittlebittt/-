@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "reproduced_legacy_errors": [
+    "animalAssets is not defined"
+  ],
+  "fixed_page_errors": [],
+  "old_unversioned_asset_requests": 1,
+  "new_versioned_asset_requests": 1,
+  "viewport": [
+    612,
+    906
+  ],
+  "four_original_sprites_loaded": true
+}

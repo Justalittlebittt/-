@@ -2,7 +2,7 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
 (async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{
  const page=await browser.newPage({viewport:{width:1280,height:720}}),checks=[],errors=[];page.on('pageerror',e=>errors.push(e.message));
  const out=path.resolve(__dirname,'../../tasks/FIRST_LEVEL_CONTENT_001/evidence');const check=(name,value)=>{assert.ok(value,name);checks.push(name);};
- await page.goto(pathToFileURL(path.join(__dirname,'index.html')).href);await page.waitForFunction(()=>Object.values(animalImages).every(im=>im.naturalWidth)&&environment.naturalWidth);
+ await page.goto(process.env.PUZZLE_TEST_URL||pathToFileURL(path.join(__dirname,'index.html')).href);await page.waitForFunction(()=>Object.values(animalImages).every(im=>im.naturalWidth)&&environment.naturalWidth);
  async function move(x,y){const r=await page.locator('canvas').boundingBox();await page.mouse.move(r.x+x*r.width/1672,r.y+y*r.height/941,{steps:4});}
  async function hover(id){const v=await page.evaluate(id=>{const o=position(pieces.find(p=>p.id===id));return {x:o.x+step*.4,y:o.y+step*.4};},id);await move(v.x,v.y);}
  async function pick(id){await hover(id);await page.mouse.down();}

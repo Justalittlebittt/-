@@ -312,3 +312,11 @@ first_level_four_real_animals:
   rotation_boundary_cases: 672
   exact_covers: 16
   user_gameplay_feedback: "PENDING"
+
+http_cache_fix_001:
+  owner: "DEV_INTEGRATION"
+  status: "FIXED_HTTP_CACHE_UPGRADE_VERIFIED"
+  cause: "cached old assets.js with new game.js caused animalAssets ReferenceError"
+  fix: "content-versioned script and style URLs; no original PNG changes"
+  evidence: "tasks/HTTP_CACHE_FIX_001/cache-report.json"
+  actual_http_browser_checks: 77
