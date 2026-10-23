@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FIRST_LEVEL_CONTENT_001_ART_SQUARE4",
+  "recorded_by": "DESIGN_DIRECTOR",
+  "approval_source": "HUMAN explicit message in current project chat 2026-10-23: '设计完成了通过验收'",
+  "status": "HUMAN_G3_VISUAL_APPROVAL_DECLARED_EXACT_BINARY_UNVERIFIED",
+  "approved_candidate_description": "The most recently visually approved complete 2x2 four-cell cartoon animal produced by ART_EXPERIENCE for this task; ear-against-body revision; one whole animal, image to be reused twice.",
+  "required_shape_id": "SQUARE_2x2_4",
+  "species_id": "ART_HANDOFF_METADATA_PENDING",
+  "approved_asset_version": "EXACT_VERSION_PENDING_ART_HANDOFF",
+  "filename": "UNKNOWN_NOT_TO_BE_INVENTED",
+  "source_file_path": "UNKNOWN_NOT_TO_BE_INVENTED",
+  "source_png_sha256": "PENDING_ORIGINAL_BYTES_VERIFICATION",
+  "size_bytes": "NOT_VERIFIED",
+  "dimensions": "NOT_VERIFIED",
+  "raw_png_transfer_status": "NOT_VERIFIED_IN_REPO_OR_CODEX",
+  "art_handoff_expected": "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json",
+  "handoff_presence_checked_2026_10_23": "NOT_FOUND",
+  "visual_reapproval_required": false,
+  "exact_candidate_constraint": "Do not substitute a new candidate or regenerate the approved artwork. Resolve image identity via original ART conversation deliverable and verify actual original bytes; approved local desktop folder can be inspected by Codex. If unavailable, mark ASSET_LOCAL_MISSING; no placeholders.",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
+  "acceptance_scope": "User's approval of art appearance only; not G1 byte integrity, G2 fit/rotation, G4 actual runtime, usage rights audit.",
+  "next_actions": {
+    "art": "Record exact selected candidate version, original filename/path and computed SHA256 in the normal ART handoff, without changing approved pixels.",
+    "dev": "Check local approved source folder for the exact file, verify version and SHA256, then import the single original PNG once and instantiate two whole pieces B/D. If identity ambiguous, record a clear blocker, do not guess which PNG."
+  }
+}
