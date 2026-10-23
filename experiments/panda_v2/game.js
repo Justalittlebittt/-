@@ -15,7 +15,11 @@ function tray(p){const [w,h]=dims(shape(p));return {x:firstScene.trayCenter.x-w*
 function position(p){return p.at?{x:board.x+p.at[0]*step,y:board.y+p.at[1]*step}:tray(p);}
 function locate(v){for(const p of pieces){const o=position(p);if(shape(p).some(([x,y])=>v.x>=o.x+x*step&&v.x<o.x+x*step+step&&v.y>=o.y+y*step&&v.y<o.y+y*step+step))return p;}return null;}
 function drawPiece(p,x,y){if(!img.naturalWidth)return;const [w,h]=dims(shape(p));ctx.save();ctx.translate(x+w*step/2,y+h*step/2);ctx.rotate(p.rot*Math.PI/2);ctx.drawImage(img,-3*step/2,-2*step/2,3*step,2*step);ctx.restore();}
-function complete(){return !held&&pieces.every(p=>p.at&&legal(p,p.at));}
+function complete(){
+ if(held||!pieces.length||pieces.some(p=>!p.at||!legal(p,p.at)))return false;
+ const occupied=new Set();for(const p of pieces)for(const [x,y] of shape(p))occupied.add((x+p.at[0])+':'+(y+p.at[1]));
+ return occupied.size===board.w*board.h;
+}
 function draw(){ctx.clearRect(0,0,C.width,C.height);if(environment.naturalWidth)ctx.drawImage(environment,0,0,C.width,C.height);for(const p of pieces){if(held?.p===p)continue;const v=position(p);drawPiece(p,v.x,v.y);}if(held)drawPiece(held.p,mouse.x-held.offset.x,mouse.y-held.offset.y);next.hidden=!complete();}
 function release(){const id=held?.pointerId;held=null;if(id!==undefined&&C.hasPointerCapture(id))C.releasePointerCapture(id);}
 function cancel(){if(!held)return;held.p.at=held.origin;held.p.rot=held.originRot;release();draw();}

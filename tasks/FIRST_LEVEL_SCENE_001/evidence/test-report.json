@@ -4,7 +4,9 @@
     "next initially hidden",
     "one intact six-cell panda",
     "drag follows actual pointer",
-    "valid drop shows next",
+    "partial board never shows next",
+    "fully filled legal board shows next",
+    "invalid filled fixture rejected",
     "next is at board right",
     "picking hides next",
     "drag back retrieves whole panda",
@@ -20,6 +22,6 @@
   ],
   "errors": [],
   "status": "PASS_FIRST_LEVEL_ONLY",
-  "scope": "place one intact panda in illustrated 5x4 area; not full-board tiling",
+  "scope": "first-level interaction; next requires full 5x4 coverage; completion verified using isolated synthetic fixture",
   "browser": "155.0.4283.62"
 }

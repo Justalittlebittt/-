@@ -257,3 +257,12 @@ first_level_scene_001:
   next_level_content: "OUT_OF_CURRENT_SCOPE; button emits nextlevelrequest"
   evidence: "tasks/FIRST_LEVEL_SCENE_001/evidence/test-report.json"
   browser_checks: 17
+
+first_level_human_acceptance:
+  date: "2026-10-23"
+  status: "HUMAN_APPROVED_CURRENT_SCENE_AND_INTERACTION"
+  reasons: "指定原背景完整保留；去除多余UI；完整动物跟手拖入取回；右键旋转/R重置；范围仅第一关"
+  correction: "NEXT_ONLY_WHEN_ALL_VALID_PIECES_FILL_EVERY_BOARD_CELL"
+  implementation: "FIXED_AND_19_BROWSER_CHECKS_PASS"
+  current_single_panda: "6_of_20_cells; next hidden as expected"
+  future_levels: "NOT_ADDED"
