@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "桌面已批准熊猫原图已接入；真实PNG三关交互回归通过"
-current_goal: "V1.4已批准动态UI布局与最小首章流程要求；由DESIGN先形成UI_FLOW_AND_LAYOUT_001具体规格，随后ART视觉候选、CODEX接入与实测；既有真实熊猫三关回归保持有效"
+current_goal: "UI_FLOW_AND_LAYOUT_001策划规格完成；首章背景视觉方向获批但干净独立图未确认；已向Codex下发动态布局与三关流程开发任务，ART继续处理背景分层和G3，互不等待"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.4.md"
@@ -62,6 +62,14 @@ handoff_transport:
   github_asset_binary_sync_by_codex: "NOT_RUN"
   rule: "GPT美术/策划与Codex本地目录不自动共享；无实际原始bytes不做G1/G2/G4；一次本地导入后由Codex自行Git管理，不要求HUMAN逐张上传GitHub"
 active_tasks:
+  UI_RUNTIME_SLICE_001:
+    owner: "DEV_INTEGRATION"
+    executor: "CODEX_LOCAL"
+    status: "READY_FOR_CODEX_NOT_EXECUTED"
+    request: "tasks/UI_FLOW_AND_LAYOUT_001/request_to_dev.json"
+    report_expected: "tasks/UI_FLOW_AND_LAYOUT_001/handoff_dev_to_design.json"
+    scope: "CODE_FIRST_UI_DYNAMIC_LAYOUT_WITH_EXISTING_PANDA_WHILE_ART_ENVIRONMENT_FINAL_PENDING"
+    note: "背景第一张仅视觉方向获批、含烘焙棋盘，禁止作为正式运行背景；Codex可先用占位背景完成三关全流程与自适应布局；动物分布棋盘两侧、不要专属右侧待放置栏；ART独立场景仍需G3及原始bytes交付"
   FIRST_CHAPTER_UI_CONCEPT_001:
     owner: "ART_EXPERIENCE"
     status: "READY_FOR_ART_VISUAL_CANDIDATE_NOT_STARTED"
@@ -133,6 +141,8 @@ owner_boundaries:
   DEV_INTEGRATION: "本地Codex唯一开发Owner；二维形状、锚点旋转、游戏代码、原始PNG本地集成、Git同步、G1/G2/G4、证据；原GPT开发页归档不再受理新任务"
   HUMAN: "正式视觉版本确认、重大范围/预算/合同决定"
 next_actions:
+  - "Codex读取tasks/UI_FLOW_AND_LAYOUT_001/request_to_dev.json，自主执行技术阶段A（现有三关＋已批熊猫＋程序占位背景，棋盘两侧分布动物，不设固定右侧托盘）；完成真实浏览器回归及Git提交报告"
+  - "ART继续提供独立且无烘焙棋盘/关卡牌的背景精确版本，HUMAN确认G3；原始PNG字节经Codex核验后再进入技术阶段B背景接入"
   - "DESIGN已提交tasks/UI_FLOW_AND_LAYOUT_001/design_spec_v0.1.md；8关/5动物和6关/4动物降级方案均为G0候选，正式数量及引擎继续UNFROZEN"
   - "ART读取tasks/UI_FLOW_AND_LAYOUT_001/request_to_art.json制作一张首章UI和背景候选；HUMAN按准确版本G3审核，不预制多张新动物"
   - "由CODEX在独立开发任务下复用panda_v2修复硬编码棋盘/托盘布局，验证最小最大棋盘和缩放下的无重叠交互及完整章节，提交G4证据；当前尚未执行"
@@ -203,8 +213,8 @@ ui_flow_and_layout_001:
   design_spec: "tasks/UI_FLOW_AND_LAYOUT_001/design_spec_v0.1.md"
   art_request: "tasks/UI_FLOW_AND_LAYOUT_001/request_to_art.json"
   recommended_content_budget: "G0_CANDIDATE_8_LEVELS_5_ANIMALS_OR_FALLBACK_6_LEVELS_4_ANIMALS_NOT_FROZEN"
-  formal_ui_art: "REQUESTED_CANDIDATE_NOT_STARTED"
-  codex_layout_fix: "NOT_RUN"
+  formal_ui_art: "BACKGROUND_VISUAL_MOOD_APPROVED_CLEAN_LAYER_AND_FINAL_UI_G3_PENDING"
+  codex_layout_fix: "READY_FOR_CODEX_NOT_EXECUTED"
   full_chapter_G4: "NOT_RUN"
   note: "V1.4纳入5项审查修复要求；不得把合同通过或熊猫三关G4局部测试冒充UI和完整发行功能完成"
 
