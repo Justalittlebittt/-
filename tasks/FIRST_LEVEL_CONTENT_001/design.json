@@ -71,8 +71,10 @@
         ],
         "area": 4,
         "rotation": "0,90,180,270",
-        "artist_asset": "HUMAN_G3_APPROVED_ART_EXACT_PATH_PENDING_HANDOFF",
-        "sha256": "PENDING_BYTE_VERIFICATION"
+        "artist_asset": "ORIGINAL_FILE_PENDING_CODEX_IMPORT: 圆滚滚的搞怪白兔迷你贴纸.png",
+        "sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+        "approved_version": "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2",
+        "source_bytes_in_repo": false
       }
     ],
     "instances": [
@@ -85,8 +87,8 @@
       {
         "piece_id": "B",
         "shape_id": "SQUARE_2x2_4",
-        "species_id": "ART_SELECTED_APPROVED_ID_PENDING_RECORD",
-        "asset_version": "HUMAN_APPROVED_EXACT_VERSION_PENDING_RECORD"
+        "species_id": "rabbit",
+        "asset_version": "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2"
       },
       {
         "piece_id": "C",
@@ -97,8 +99,8 @@
       {
         "piece_id": "D",
         "shape_id": "SQUARE_2x2_4",
-        "species_id": "ART_SELECTED_APPROVED_ID_PENDING_RECORD",
-        "asset_version": "HUMAN_APPROVED_EXACT_VERSION_PENDING_RECORD"
+        "species_id": "rabbit",
+        "asset_version": "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2"
       }
     ],
     "instance_count": 4,
@@ -158,7 +160,7 @@
   ],
   "constraints": {
     "budget": "Within previously approved seven-day full-build maximum; do not infer official clock start",
-    "acceptance_status": "USER_APPROVED_DESIGN_AND_NEW_ART_VISUAL; EXACT_FILE_METADATA_PENDING; DEV_G4_NOT_RUN; RELEASE_NOT_READY",
+    "acceptance_status": "G0_LEVEL_GEOMETRY_USER_APPROVED; G3_RABBIT_APPROVED_EXACT_VERSION; NEW_RABBIT_BYTES_NOT_IN_GITHUB; G1_G2_G4_NOT_RUN",
     "no_more_species": "No additional animals until level1 actual four-piece playability experience tested",
     "no_new_chapter_background": "Keep first approved chapter background exactly, no crop/repaint",
     "first_level_only": "Do not expand multi-level flow without separate authorization"
@@ -168,7 +170,7 @@
     "art_handoff_expected": "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json",
     "dev_request": "tasks/FIRST_LEVEL_CONTENT_001/request_to_dev.json",
     "dev_strategy": "NO_PLACEHOLDER; DIRECT_IMPORT_ONE_USER_APPROVED_2x2_ANIMAL_PNG_AND_INSTANTIATE_TWICE",
-    "dev_prerequisite": "Exact original PNG and verified bytes available from existing approved local art directory or exact ART handoff. Never guess identity, never substitute placeholder.",
+    "dev_prerequisite": "Exact original rabbit bytes from approved local source: 圆滚滚的搞怪白兔迷你贴纸.png, SHA-256 00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74, 1208053 bytes, 1254x1254 RGBA. Existing ART ChatGPT /mnt/data path does not imply Codex file availability.",
     "release_acceptance": "Full original background and panda preserved; four real whole animals, exact 20-cell legal cover, dynamic next visibility, browser G1/G2/G4 and user first-level gameplay acceptance."
   },
   "visual_approval_receipt": "tasks/FIRST_LEVEL_CONTENT_001/visual_approval_receipt.json"
