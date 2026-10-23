@@ -4,7 +4,7 @@
   "owner": "ART_EXPERIENCE",
   "from": "DESIGN_DIRECTOR",
   "to": "ART_EXPERIENCE",
-  "status": "READY_FOR_ART_SINGLE_CANDIDATE",
+  "status": "HUMAN_VISUAL_APPROVED_DELIVERY_RECORD_PENDING_NO_NEW_GENERATION",
   "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
   "design_input": "tasks/FIRST_LEVEL_CONTENT_001/design.json",
   "objective": "Create ONE original complete cartoon animal RGBA PNG candidate, occupying square 2x2 grid (4 cells), reused as B/D two independent entire animals in approved first 5x4 level, to complement A/C two existing whole approved pandas.",
@@ -65,16 +65,15 @@
     "The two pandas A/C are separate full copies; B/D also each full image, NEVER two half-animals or body-part tiles"
   ],
   "blocked_on_visual": {
-    "owner": "HUMAN",
-    "state": "G3_PENDING",
-    "need": "Exact version image approval. If approved raw PNG is present in the desktop approved art folder Codex shall pick it up and verify bytes. No ART claim of GitHub binary upload unless readback confirmed."
+    "owner": "ART_EXPERIENCE",
+    "state": "G3_APPROVED_BY_HUMAN_FILE_IDENTITY_PENDING",
+    "need": "Record exact approved ear-against-body candidate version, original PNG file name/path, original bytes SHA256, PNG dimension/alpha/provenance where genuinely accessible, and whether bytes are in Codex-readable approved local asset folder. If not accessible, label transfer missing. Do not fake paths or hashes."
   },
   "deliverables": [
-    "One original animal candidate sprite with usable clean alpha and no built-in grid/background",
-    "Separate 2x2 logical overlay review and four-rotation view (review file only, not runtime sprite)",
-    "Candidate ID, source tool/provenance, exact file path and SHA256 where actually readable, dimensions and alpha preflight",
-    "G3 visual candidate shown to HUMAN; indicate whether exact image formally accepted",
-    "GitHub text handoff tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json"
+    "Handoff existing approved candidate only, with exact version/species/file identity and genuine source PNG bytes path + sha256 if actually available",
+    "Confirm whole animal, clean alpha, 2x2 footprint, no revisions after approval",
+    "GitHub text handoff tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json; do not assume art-page /mnt/data exists in Codex environment",
+    "ART may use existing approved image in user local approved directory; Codex handles Git binary ingestion after verified original file identity"
   ],
   "acceptance": [
     "Clearly one whole animal (FAIL_ANIMAL_FRAGMENTATION is hard fail), not a collage or four independent squares",
@@ -90,5 +89,7 @@
     "Any extra concept sheet or poster used as fake final PNG"
   ],
   "handoff_expected": "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json",
-  "next_owner_action": "HUMAN visual approval of exact candidate first; DEV then inserts same approved PNG into B and D, verifying SHA and G1/G2/G4. DEV may test placeholder B/D now, separately."
+  "next_owner_action": "Do not generate new image. ART submits exact approved original artwork metadata + handoff. Codex integrates this actual source once into both square4 pieces B/D, with G1/G2/G4.",
+  "g3_approval_receipt": "tasks/FIRST_LEVEL_CONTENT_001/visual_approval_receipt.json",
+  "current_owner_scope": "Documentation/handoff of exact already-approved image only; no further species design, visual revisions or new generation unless HUMAN separately requests."
 }
