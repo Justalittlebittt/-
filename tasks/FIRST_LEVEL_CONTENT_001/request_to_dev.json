@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FIRST_LEVEL_CONTENT_001_DEV_INTEGRATION",
+  "owner": "DEV_INTEGRATION",
+  "executor": "CODEX_LOCAL",
+  "from": "DESIGN_DIRECTOR",
+  "to": "DEV_INTEGRATION",
+  "status": "READY_STAGE_A_PLACEHOLDER; STAGE_B_BLOCKED_ART_G3",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
+  "design_ref": "tasks/FIRST_LEVEL_CONTENT_001/design.json",
+  "art_request_ref": "tasks/FIRST_LEVEL_CONTENT_001/request_to_art.json",
+  "current_runtime": "experiments/panda_v2/index.html",
+  "visual_assets": {
+    "panda": {
+      "path": "assets/animals/panda_rect6_desktop_001.png",
+      "sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+      "G3": "APPROVED"
+    },
+    "first_level_background": {
+      "path": "assets/backgrounds/chapter_one.png",
+      "mode": "AS_APPROVED_IN_FIRST_LEVEL_SCENE_001",
+      "modification": "DO_NOT_EDIT_CROP_REPAINT_OR_RECOMPOSE"
+    },
+    "square4": {
+      "path": "PENDING_APPROVED_ART_BYTE_IMPORT",
+      "state": "ONLY_USE_CLEAR_GEOMETRIC_PLACEHOLDERS_UNTIL_G3"
+    }
+  },
+  "change_scope": {
+    "first_level_board": "5x4 existing baked board aligned to current scene.js board coordinates x532 y234 step123",
+    "input": "Left drag/move/pickup; right mouse rotation including during dragging; R resets entire first level; invalid move restores silently",
+    "pieces": [
+      {
+        "piece_id": "A",
+        "asset": "panda",
+        "shape": "RECT_3x2_6",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "piece_id": "B",
+        "asset": "new_square4_or_explicit_placeholder",
+        "shape": "SQUARE_2x2_4",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "piece_id": "C",
+        "asset": "panda",
+        "shape": "RECT_3x2_6",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "piece_id": "D",
+        "asset": "same_new_square4_or_explicit_placeholder",
+        "shape": "SQUARE_2x2_4",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      }
+    ],
+    "canonical_solution_rows": [
+      "AAABB",
+      "AAABB",
+      "CCCDD",
+      "CCCDD"
+    ],
+    "conservation": "6+4+6+4=20 board cells; same animal asset repeated as separate complete instances",
+    "layout": "Two intact animals on LEFT and two intact animals on RIGHT of baked 5x4 board, no dedicated right tray. Arrange by real bounding dimensions and preserve drag-ability. Use actual image/shape bounds to avoid overlap and clipping in desktop viewports.",
+    "next_policy": "Next hidden until EXACT 20 distinct legal board cells occupied by four actual movable instances with no overlap. Pickup/invalid/edit immediately re-evaluates, no synthetic fixture unlock in real gameplay.",
+    "next_action": "Keep existing nextlevelrequest hook only. Second playable level NOT in current scope. No extra instructional text, status UI, or toolbar beyond prior HUMAN-approved scene."
+  },
+  "stages": [
+    {
+      "name": "A",
+      "purpose": "Add four-piece data/renderer/spawn/hit/drag/rotate/complete using two verified panda PNG instances and two distinct clearly geometric 2x2 placeholders without splitting animals.",
+      "ready": true,
+      "release_gate": "TECHNICAL_TEST_ONLY",
+      "must_not_claim": "FULL_REAL_ANIMAL_G4"
+    },
+    {
+      "name": "B",
+      "purpose": "After exact new 2x2 original animal image is HUMAN-G3-approved and present in Codex-readable approved desktop folder, copy exact bytes, checksum, G1/G2, render same sprite B/D, and browser G4 regression; Git sync readback.",
+      "ready": false,
+      "blocked": "NEW_ANIMAL_ASSET_NOT_APPROVED_AND_NOT_DELIVERED"
+    }
+  ],
+  "acceptance": [
+    "All four pieces remain separate, fully intact draggable instances. Panda source not cut into grid cells or regenerated; one copy for A and another for C.",
+    "Mathematical exact-cover solution replay using real browser mouse/keyboard inputs on current 5x4 scene (not just solver or synthetic completion injection)",
+    "Before 20-cell coverage Next hidden; after 20 legal nonoverlapping cells Next becomes visible; picking up a placed piece hides it; cannot use 6-cell panda-only to trigger Next",
+    "Place all four from balanced left/right starting spots with no clipping/overlap on 1280x720,1024x768,800x600; cursor offset stable; both right-click-alone and right-click-during-left-drag rotate correctly.",
+    "R reset returns all four pieces to valid starting spots and zero rotation; cancellations/invalid moves restore original placements and rotations",
+    "Stage A UI consistent with user accepted full original background and minimal extra UI, and original single-panda interaction regression stays green",
+    "Stage B uses only G3 approved original square4 raw PNG and verified hash, same PNG on B and D; verify actual alpha and edge behavior, neighbor occlusion, four rotations.",
+    "Provide code/evidence paths, exact version and terminal/repro/browser test outcomes, limitations, screenshot of filled 5x4 board, Git commit + readback where possible",
+    "No broad refactor, no second level, no additional background or species, no new engine"
+  ],
+  "explicit_no_go": [
+    "No replacing original background with a generated or separated scene",
+    "No dividing original panda into puzzle image parts",
+    "No claiming stage B done before ART and HUMAN G3",
+    "No adding next-level data or release-ready labels",
+    "No repeated CI-probe loops; fix actual failure on existing runtime"
+  ],
+  "output": {
+    "report": "tasks/FIRST_LEVEL_CONTENT_001/handoff_dev_to_design.json",
+    "evidence_root": "tasks/FIRST_LEVEL_CONTENT_001/evidence/",
+    "code_location": "experiments/panda_v2/",
+    "return_status": "STAGE_A_PASS_ART_PENDING | STAGE_B_G4_PASS | BLOCKED_WITH_EVIDENCE"
+  },
+  "coordination": "Art and Codex are separate owners; no implicit auto-wakeup between their chats. Only Codex may change source code. Visual approval is HUMAN.",
+  "next_action": "Codex start Stage A now, record Stage B pending; once ART delivers exact approved new asset, Codex may finish Stage B in same task without new redundant design round."
+}
