@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FIRST_LEVEL_CONTENT_001_ART_SQUARE4",
+  "owner": "ART_EXPERIENCE",
+  "from": "DESIGN_DIRECTOR",
+  "to": "ART_EXPERIENCE",
+  "status": "READY_FOR_ART_SINGLE_CANDIDATE",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
+  "design_input": "tasks/FIRST_LEVEL_CONTENT_001/design.json",
+  "objective": "Create ONE original complete cartoon animal RGBA PNG candidate, occupying square 2x2 grid (4 cells), reused as B/D two independent entire animals in approved first 5x4 level, to complement A/C two existing whole approved pandas.",
+  "asset_request": {
+    "request_id": "FIRST_LEVEL_SQUARE4_ANIMAL_CANDIDATE_001",
+    "species_id": "ART_SELECT_ORIGINAL_RECOGNIZABLE_SPECIES",
+    "pose_id": "CUTE_COMPACT_TWO_BY_TWO",
+    "shape_id": "SQUARE_2x2_4",
+    "occupied_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "anchor_cell": [
+      0,
+      0
+    ],
+    "species_features": [
+      "recognizable animal species even when reduced to board-cell display",
+      "one complete head/body/limbs/tail, not fragmented or tiled",
+      "humorous expressive face, dark bold contour, clear flat cartoon color masses",
+      "compact expressive pose fitting square-shaped overall visual footprint"
+    ],
+    "abstraction_brief": "Freedom to choose species, face expression and compressed/curled/rounded pose, do not obey real anatomy or three-dimensional foot-contact projection. Form must look like one continuous animal and be readable at about a 2x2 board cell display.",
+    "pose_view_brief": "No forced global camera angle; choose one 2D view fitting 2x2 logical footprint. Distinct from approved original panda species and visual identity.",
+    "silhouette_brief": "Logically all four cells occupied. Animal need not physically fill four rectangle corners, but major mass should make occupancy intuitive; avoid large invisible logical regions, heavy protrusion into neighboring future placed animals and visual orientation ambiguities after rotation. G3 includes all four rotations.",
+    "render_profile": "PNG RGBA single isolated sprite (no environment, stage, built-in chess/grid, outlines of logical cells, texts, collage or UI)",
+    "style_version": "ANIMAL_PUZZLE_PRODUCTION_V1.5_SECTION_4_2D_CARTOON",
+    "source_rights": "Original, with generation tool/version, provenance, rights documentation; no reference game's sprite copying.",
+    "iterations_max": 2
+  },
+  "asset_instances": [
+    {
+      "piece_id": "B",
+      "same_asset": true
+    },
+    {
+      "piece_id": "D",
+      "same_asset": true
+    }
+  ],
+  "preserve": [
+    "Original chapter background src assets/backgrounds/chapter_one.png never edited",
+    "Existing user-approved panda src assets/animals/panda_rect6_desktop_001.png SHA256 e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732 remains untouched",
+    "The two pandas A/C are separate full copies; B/D also each full image, NEVER two half-animals or body-part tiles"
+  ],
+  "blocked_on_visual": {
+    "owner": "HUMAN",
+    "state": "G3_PENDING",
+    "need": "Exact version image approval. If approved raw PNG is present in the desktop approved art folder Codex shall pick it up and verify bytes. No ART claim of GitHub binary upload unless readback confirmed."
+  },
+  "deliverables": [
+    "One original animal candidate sprite with usable clean alpha and no built-in grid/background",
+    "Separate 2x2 logical overlay review and four-rotation view (review file only, not runtime sprite)",
+    "Candidate ID, source tool/provenance, exact file path and SHA256 where actually readable, dimensions and alpha preflight",
+    "G3 visual candidate shown to HUMAN; indicate whether exact image formally accepted",
+    "GitHub text handoff tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json"
+  ],
+  "acceptance": [
+    "Clearly one whole animal (FAIL_ANIMAL_FRAGMENTATION is hard fail), not a collage or four independent squares",
+    "Looks distinct from panda with recognizable species and humorous 2D cartoon quality",
+    "Graphic visually fits a roughly square 2x2 footprint; judge sprite at actual target size next to approved panda",
+    "When repeated twice, remains visually clear as two independent whole animals, not more than two",
+    "No other new animal or changing shape/board/approved asset without explicit design change"
+  ],
+  "out_of_scope": [
+    "New full zoo background, chapter level UI, extra species/poses/animations",
+    "Splitting or repainting approved panda",
+    "Changing shape dimensions / gameplay code / first-level background",
+    "Any extra concept sheet or poster used as fake final PNG"
+  ],
+  "handoff_expected": "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json",
+  "next_owner_action": "HUMAN visual approval of exact candidate first; DEV then inserts same approved PNG into B and D, verifying SHA and G1/G2/G4. DEV may test placeholder B/D now, separately."
+}
