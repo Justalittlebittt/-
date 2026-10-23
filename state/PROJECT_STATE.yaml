@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "桌面已批准熊猫原图已接入；真实PNG三关交互回归通过"
-current_goal: "FIRST_LEVEL_CONTENT_001：已按HUMAN批准方案锁定第一关5x4四只完整动物（两个六格熊猫＋两个四格同款新动物）；ART制作唯一新2x2动物，Codex复用现有第一关实现并在G3前先用方块占位验证真实填满通关；后续关卡暂不开发"
+current_goal: "FIRST_LEVEL_CONTENT_001：2x2完整白兔v2已获HUMAN G3批准；Codex须取得原始PNG验证SHA256并在5x4第一关B/D完整复用两次，保留A/C已批熊猫；G1/G2/G4未由此次美术确认"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md"
@@ -65,7 +65,7 @@ handoff_transport:
 active_tasks:
   FIRST_LEVEL_CONTENT_001_ART_SQUARE4:
     owner: "ART_EXPERIENCE"
-    status: "REQUEST_READY_G3_PENDING"
+    status: "RABBIT_SQUARE4_V2_HUMAN_G3_APPROVED_GITHUB_BINARY_PENDING"
     request: "tasks/FIRST_LEVEL_CONTENT_001/request_to_art.json"
     design: "tasks/FIRST_LEVEL_CONTENT_001/design.json"
     expected_handoff: "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json"
@@ -298,3 +298,15 @@ first_level_content_001:
   dev_stage_B: "BLOCKED_ART_G3"
   first_level_human_experience: "NOT_RUN_WITH_FOUR_REAL_ANIMALS"
   full_release_scope: "NOT_FROZEN"
+
+first_level_square4_art_approval:
+  status: "HUMAN_G3_APPROVED_ASSET_BINARY_NOT_UPLOADED"
+  asset_version: "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2"
+  source_file: "圆滚滚的搞怪白兔迷你贴纸.png"
+  sha256: "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74"
+  byte_size: 1208053
+  dimensions: [1254, 1254]
+  occupied_cells: [[0,0], [1,0], [0,1], [1,1]]
+  two_instances: [B, D]
+  handoff: "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json"
+  technical_gates: "G1_G2_G4_PENDING_CODEX"
