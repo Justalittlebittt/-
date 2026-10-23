@@ -207,3 +207,12 @@ ui_flow_and_layout_001:
   codex_layout_fix: "NOT_RUN"
   full_chapter_G4: "NOT_RUN"
   note: "V1.4纳入5项审查修复要求；不得把合同通过或熊猫三关G4局部测试冒充UI和完整发行功能完成"
+
+chapter_one_background_visual:
+  version: "FIRST_CHAPTER_TRANSPORT_BACKGROUND_PASTEL_v1"
+  status: "HUMAN_APPROVED_VISUAL_DIRECTION_ONLY"
+  sha256: "a57d2a4c7830e511561e2d2fe9cc60a62b26b4a16023f5d579480ba3f6f7227a"
+  file: "wide_colorful_cartoon_illustration_game_ui_backgr.png"
+  dimensions: [1672, 941]
+  github_binary_uploaded: false
+  note: "用户批准第一张背景的视觉构图和淡色配色；当前图含烘焙棋盘与关卡牌，不是可直接运行的独立场景底图，须拆分；UI整体G3未批准"
