@@ -11,7 +11,7 @@ phase: "桌面已批准熊猫原图已接入；真实PNG三关交互回归通过
 current_goal: "UI_FLOW_AND_LAYOUT_001策划规格完成；首章背景视觉方向获批但干净独立图未确认；已向Codex下发动态布局与三关流程开发任务，ART继续处理背景分层和G3，互不等待"
 source_of_truth:
   current_repository: "GitHub main"
-  production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.4.md"
+  production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md"
   collaboration_protocol: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
   project_manifest: "manifest/PROJECT_MANIFEST.yaml"
   handoff_template: "interface/HANDOFF_TEMPLATE_V1.0.yaml"
@@ -20,7 +20,8 @@ contracts:
   production_v1_1: "SUPERSEDED_BY_V1_2_HISTORY_PRESERVED"
   production_v1_2: "SUPERSEDED_BY_V1_3_HISTORY_PRESERVED"
   production_v1_3: "SUPERSEDED_BY_V1_4_HISTORY_PRESERVED"
-  production_v1_4: "LOCKED_HUMAN_APPROVED_UI_FLOW_SCOPE_UNIMPLEMENTED"
+  production_v1_4: "SUPERSEDED_BY_V1_5_HISTORY_PRESERVED"
+  production_v1_5: "LOCKED_HUMAN_APPROVED_ONE_COMPLETE_ANIMAL_ONE_PIECE"
   art_style_v1_4: "SUPERSEDED_FOR_NEW_TASKS_HISTORY_PRESERVED"
   pipeline_v0_3: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
   pipeline_v0_4: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
@@ -226,3 +227,11 @@ chapter_one_background_visual:
   dimensions: [1672, 941]
   github_binary_uploaded: false
   note: "用户批准第一张背景的视觉构图和淡色配色；当前图含烘焙棋盘与关卡牌，不是可直接运行的独立场景底图，须拆分；UI整体G3未批准"
+
+animal_integrity_rule_v1_5:
+  status: "LOCKED_HUMAN_APPROVED"
+  invariant: "ONE_COMPLETE_ANIMAL_EQUALS_ONE_ATOMIC_DRAGGABLE_ROTATABLE_PIECE"
+  prohibited: "ANIMAL_BODY_PARTS_AS_SEPARATE_PUZZLE_PIECES"
+  failure_code: "FAIL_ANIMAL_FRAGMENTATION"
+  applies_to: "ART_GENERATION_UI_CONCEPT_LEVELS_G2_G3_G4"
+  note: "旧概念图含动物碎片全部无效；不改变既有已获批原始熊猫PNG和以前G3证据。"
