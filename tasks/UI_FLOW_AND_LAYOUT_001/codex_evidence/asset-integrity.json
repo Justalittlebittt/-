@@ -1,0 +1,23 @@
+{
+  "source": "C:/Users/Administrator/Desktop/动物拼图美术素材/第一章背景 .png",
+  "path": "assets/reference/chapter_one_mood_temporary.png",
+  "sha256": "a57d2a4c7830e511561e2d2fe9cc60a62b26b4a16023f5d579480ba3f6f7227a",
+  "role": "TEMPORARY_SCENERY_REFERENCE_ONLY",
+  "formal_background_G3": "PENDING",
+  "runtime_sampling": {
+    "left": [
+      0,
+      0,
+      475,
+      941
+    ],
+    "right": [
+      1200,
+      0,
+      472,
+      941
+    ]
+  },
+  "excluded": "central baked grid and top-center level title never sampled",
+  "panda_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732"
+}

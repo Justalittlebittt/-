@@ -1,6 +1,6 @@
 # Codex 项目入口（本地开发执行）
 
-请阅读：`README.md` → `docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.3.md` → `manifest/PROJECT_MANIFEST.yaml` → `state/PROJECT_STATE.yaml` → 本轮关联的 `tasks/` 与代码。历史合同只作参考，不替代 V1.3。
+请阅读：`README.md` → `docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md` → `manifest/PROJECT_MANIFEST.yaml` → `state/PROJECT_STATE.yaml` → 本轮关联的 `tasks/` 与代码。历史合同只作参考，不替代 V1.5。
 
 你是 **DEV_INTEGRATION**，唯一开发执行者。策划和美术分别属于 GPT 策划/美术页，用户拥有 G3 视觉与重大项目变更批准权；不要在旧 GPT 开发页分派新任务。
 
@@ -16,3 +16,5 @@
 用户明确指定本机 `C:/Users/Administrator/Desktop/动物拼图美术素材/` 为已视觉验收素材交付源。该文件夹当前及今后由用户交付的所有素材均视为 HUMAN G3 已批准，无需重复询问视觉批准。DEV 在每批导入时登记实际文件名、原始 bytes、SHA-256 和审批依据；后续文件变化以新哈希登记，不伪造为旧版本。技术G1/G2/G4仍需实测，开发自行修改图像视觉内容不继承原图批准。
 
 当前 `熊猫.png` 的 SHA-256 为 `e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732`，用户已重新确认以此原图为准。当前运行资源为 `assets/animals/panda_rect6_desktop_001.png`，登记为 `PANDA_RECT6_DESKTOP_APPROVED_001`，历史身份为 candidate_v1。历史 V2 `8ebf034a...` 是不同文件，不再作为当前接入前提。保留历史记录，不将本图改称该V2字节。允许直接从桌面交付源复制原字节入库，不要求重复复制到 inbox。
+
+背景交付例外（2026-10-23）：当前第一章背景仅视觉方向获批；桌面第一张背景原图含烘焙棋盘和关卡牌，不能按通用文件夹批准规则推定为正式独立运行背景。阶段A仅取两侧无UI环境区域作临时装饰，等待独立环境原图及确切G3。

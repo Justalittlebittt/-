@@ -1,6 +1,8 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>动物拼图 · 熊猫交互验证</title>
-<style>
-body{margin:0;background:#f8f0e0;color:#2c3540;font:16px system-ui;text-align:center}main{max-width:850px;margin:auto;padding:24px}button{padding:10px 18px;margin:7px;background:white;border:2px solid #667687;border-radius:9px;cursor:pointer;font:inherit}canvas{display:block;max-width:100%;margin:12px auto;touch-action:none;border-radius:12px;background:#e4cb9f}#done{display:none}#message{min-height:26px}
-</style><main><h1>🐼 动物拼图 · 熊猫测试</h1><p>拖动动物放入棋盘；拖出棋盘即可取回；R 键旋转</p><p id="asset-status" role="status">正在检查熊猫图片</p><div id="message" role="status"></div><canvas id="game" width="800" height="570"></canvas><div><button id="rotate">旋转 R</button><button id="reset">重置本关</button><button id="next" disabled>下一关</button></div><p id="done">三关完成！<button id="restart">重新开始</button></p></main>
-<script src="../first_playable_001/core.js"></script><script src="levels.js"></script><script src="assets.js"></script><script src="game.js"></script></html>
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>动物拼图 · 入园安置</title><link rel="stylesheet" href="ui.css"></head>
+<body><main><header><div><small>动物园 · 第一章</small><h1>入园安置站</h1></div><strong id="progress"></strong><span class="tag">三关试玩 · 临时场景</span></header>
+<p id="tutorial"></p><section id="playfield"><canvas id="game" aria-label="拼图棋盘及两侧待放动物"></canvas>
+<div id="intro" class="overlay"><article><small>欢迎来到动物园</small><h2>给动物找个好位置</h2><p>拖动动物，旋转方向，把棋盘填满。<br>先和熊猫一起试试吧！</p><button id="begin">开始入园 →</button></article></div>
+<div id="done" class="overlay"><article><h2>入园安置完成！</h2><p>你已完成本次试玩的全部关卡。</p><button id="restart">重新游玩</button></article></div></section>
+<footer><div class="status"><span id="message" role="status" aria-live="polite"></span><span id="preview" role="status"></span></div><nav aria-label="游戏操作"><button id="rotate">旋转 R ↻</button><button id="reset">重置本关</button><button id="next" disabled>下一关 →</button></nav></footer><small id="asset-status" role="status">正在载入动物…</small></main>
+<script src="../first_playable_001/core.js"></script><script src="levels.js"></script><script src="assets.js"></script><script src="game.js"></script></body></html>

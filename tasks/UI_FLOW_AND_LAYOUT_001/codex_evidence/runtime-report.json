@@ -1,0 +1,248 @@
+{
+  "status": "PASS_STAGE_A",
+  "browser": "155.0.4283.62",
+  "checks": [
+    "START visible",
+    "one complete panda is one atomic piece across all six hit cells",
+    "layout 1280x720 board 3,2",
+    "layout 1280x720 board 5,2",
+    "layout 1280x720 board 4,3",
+    "layout 1280x720 board 6,5",
+    "controls within viewport 1280",
+    "layout 1024x768 board 3,2",
+    "layout 1024x768 board 5,2",
+    "layout 1024x768 board 4,3",
+    "layout 1024x768 board 6,5",
+    "controls within viewport 1024",
+    "layout 800x600 board 3,2",
+    "layout 800x600 board 5,2",
+    "layout 800x600 board 4,3",
+    "layout 800x600 board 6,5",
+    "controls within viewport 800",
+    "long-piece overflow uses scroll instead of tiny targets",
+    "left wheel reaches last piece",
+    "scrolled last piece selectable",
+    "four rotations preserve grab offset",
+    "cancel restores pose",
+    "level complete",
+    "invalid rotation drop rollback",
+    "retrieve restores staging and disables next",
+    "resize while held cancels safely",
+    "pointer completed level 0",
+    "pointer completed level 1",
+    "pointer completed level 2",
+    "chapter complete",
+    "replay START",
+    "replay fresh",
+    "reset works",
+    "no runtime errors"
+  ],
+  "layouts": [
+    {
+      "width": 1280,
+      "height": 720,
+      "ok": true,
+      "rotated": true,
+      "step": 88,
+      "index": 0,
+      "canvas": [
+        1226,
+        455
+      ],
+      "board": [
+        3,
+        2
+      ],
+      "pieces": 1
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "ok": true,
+      "rotated": true,
+      "step": 88,
+      "index": 1,
+      "canvas": [
+        1226,
+        455
+      ],
+      "board": [
+        5,
+        2
+      ],
+      "pieces": 2
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "ok": true,
+      "rotated": true,
+      "step": 56,
+      "index": 2,
+      "canvas": [
+        1226,
+        455
+      ],
+      "board": [
+        4,
+        3
+      ],
+      "pieces": 3
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "ok": true,
+      "rotated": true,
+      "step": 37,
+      "index": 3,
+      "canvas": [
+        1226,
+        455
+      ],
+      "board": [
+        6,
+        5
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "ok": true,
+      "rotated": true,
+      "step": 88,
+      "index": 0,
+      "canvas": [
+        970,
+        503
+      ],
+      "board": [
+        3,
+        2
+      ],
+      "pieces": 1
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "ok": true,
+      "rotated": true,
+      "step": 74,
+      "index": 1,
+      "canvas": [
+        970,
+        503
+      ],
+      "board": [
+        5,
+        2
+      ],
+      "pieces": 2
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "ok": true,
+      "rotated": true,
+      "step": 63,
+      "index": 2,
+      "canvas": [
+        970,
+        503
+      ],
+      "board": [
+        4,
+        3
+      ],
+      "pieces": 3
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "ok": true,
+      "rotated": true,
+      "step": 42,
+      "index": 3,
+      "canvas": [
+        970,
+        503
+      ],
+      "board": [
+        6,
+        5
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "ok": true,
+      "rotated": true,
+      "step": 69,
+      "index": 0,
+      "canvas": [
+        770,
+        364
+      ],
+      "board": [
+        3,
+        2
+      ],
+      "pieces": 1
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "ok": true,
+      "rotated": true,
+      "step": 58,
+      "index": 1,
+      "canvas": [
+        770,
+        364
+      ],
+      "board": [
+        5,
+        2
+      ],
+      "pieces": 2
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "ok": true,
+      "rotated": true,
+      "step": 43,
+      "index": 2,
+      "canvas": [
+        770,
+        364
+      ],
+      "board": [
+        4,
+        3
+      ],
+      "pieces": 3
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "ok": true,
+      "rotated": true,
+      "step": 28,
+      "index": 3,
+      "canvas": [
+        770,
+        364
+      ],
+      "board": [
+        6,
+        5
+      ],
+      "pieces": 6
+    }
+  ],
+  "errors": [],
+  "background": "TEMPORARY_SCENERY_SAMPLES_ONLY_NOT_FINAL_G3"
+}

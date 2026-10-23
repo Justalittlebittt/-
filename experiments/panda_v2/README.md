@@ -22,3 +22,11 @@
 ## 当前素材选择（用户更新）
 
 2026-10-22 HUMAN 明确以桌面已验收 `熊猫.png` 为准，已原字节导入 `assets/animals/panda_rect6_desktop_001.png`；实际SHA-256 e88018fb...。历史 candidate_v1 只是该文件旧标签，历史 V2 8ebf034a... 不再是当前接入前提。`assets.js` 指定运行图片。真实PNG三关回归：`node experiments/panda_v2/test-browser.cjs --real-asset`；当前图缺失时的占位回归仍可通过不带参数模式执行。新增证据存于 `tasks/LOCAL_APPROVED_ASSETS_001/`，旧审查证据保留。
+
+## 2026-10-23 当前试玩入口（UI_RUNTIME_SLICE_001 阶段A）
+
+双击本目录 index.html 即可离线试玩。开始→教学→三关→章节结束→重新游玩。鼠标拖放，R或按钮旋转，拖离棋盘取回，重置本关恢复。左右动物区域溢出可滚轮浏览。窗口缩放会取消当前拖动并恢复原姿态，已落盘内容保留。
+
+当前回归命令：`node experiments/panda_v2/test-ui.cjs`（需Playwright与Edge，可配置PLAYWRIGHT_MODULE）。历史 test-browser.cjs 针对旧版页面，保留作历史，不用于当前UI验收。新报告见 tasks/UI_FLOW_AND_LAYOUT_001/handoff_dev_to_design.json。
+
+桌面第一张背景原图仅作为临时环境参考入库；程序只采样左右无UI区域，原图中央的静态棋盘/关卡牌不参与绘制。当前背景和UI不是最终G3版本。无需等待正式背景即可游玩。

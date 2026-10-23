@@ -210,12 +210,12 @@ ui_flow_and_layout_001:
   contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.4.md"
   current_code: "experiments/panda_v2/game.js"
   known_layout_risk: "BOARD_TRAY_FIXED_Y_OVERLAP_FOR_TALLER_BOARDS"
-  solution_status: "DESIGN_SPEC_READY_DYNAMIC_LAYOUT_IMPLEMENTATION_NOT_RUN"
+  solution_status: "RESPONSIVE_BOTH_SIDES_AND_COMPLETE_THREE_LEVEL_FLOW_IMPLEMENTED"
   design_spec: "tasks/UI_FLOW_AND_LAYOUT_001/design_spec_v0.1.md"
   art_request: "tasks/UI_FLOW_AND_LAYOUT_001/request_to_art.json"
   recommended_content_budget: "G0_CANDIDATE_8_LEVELS_5_ANIMALS_OR_FALLBACK_6_LEVELS_4_ANIMALS_NOT_FROZEN"
   formal_ui_art: "BACKGROUND_VISUAL_MOOD_APPROVED_CLEAN_LAYER_AND_FINAL_UI_G3_PENDING"
-  codex_layout_fix: "READY_FOR_CODEX_NOT_EXECUTED"
+  codex_layout_fix: "STAGE_A_PASS_TESTED_SCOPE_2026_10_23"
   full_chapter_G4: "NOT_RUN"
   note: "V1.4纳入5项审查修复要求；不得把合同通过或熊猫三关G4局部测试冒充UI和完整发行功能完成"
 
@@ -235,3 +235,11 @@ animal_integrity_rule_v1_5:
   failure_code: "FAIL_ANIMAL_FRAGMENTATION"
   applies_to: "ART_GENERATION_UI_CONCEPT_LEVELS_G2_G3_G4"
   note: "旧概念图含动物碎片全部无效；不改变既有已获批原始熊猫PNG和以前G3证据。"
+ui_runtime_slice_001:
+  owner: "DEV_INTEGRATION"
+  stage_A: "PASS_TESTED_SCOPE"
+  stage_B: "PENDING_APPROVED_INDEPENDENT_BACKGROUND"
+  report: "tasks/UI_FLOW_AND_LAYOUT_001/handoff_dev_to_design.json"
+  runtime: "experiments/panda_v2/index.html"
+  browser_checks: 34
+  official_content_count: "NOT_FROZEN; existing 3-level runtime slice only"
