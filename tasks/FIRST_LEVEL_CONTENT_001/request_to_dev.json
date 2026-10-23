@@ -22,14 +22,26 @@
       "modification": "DO_NOT_EDIT_CROP_REPAINT_OR_RECOMPOSE"
     },
     "square4": {
-      "path": "APPROVED_ORIGINAL_ART_PNG_PATH_TO_BE_IDENTIFIED_BY_ART_OR_CODEX_LOCAL",
-      "state": "HUMAN_VISUAL_APPROVED_EXACT_BYTES_AND_VERSION_PENDING",
-      "sha256": "VERIFY_FROM_ORIGINAL_SOURCE; NO_GUESSED_HASH",
+      "species_id": "rabbit",
+      "approved_asset_version": "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2",
+      "original_filename": "圆滚滚的搞怪白兔迷你贴纸.png",
+      "source_art_page_path_only": "/mnt/data/圆滚滚的搞怪白兔迷你贴纸.png",
+      "sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+      "byte_size": 1208053,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "pixel_mode": "RGBA",
+      "github_binary_uploaded": false,
+      "art_handoff": "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json",
+      "source_resolution": "Find EXACT source bytes in Codex-local approved art folder / inbox. The GPT art page /mnt/data path cannot be accessed automatically from Codex; verify actual bytes before use.",
       "instances": [
         "B",
         "D"
       ],
-      "required": "ONE_IDENTICAL_WHOLE_ORIGINAL_PNG_TWO_ATOMIC_PIECE_INSTANCES"
+      "G3": "HUMAN_APPROVED_EXACT_IMAGE",
+      "G1_G2_G4": "NOT_RUN_DEV"
     }
   },
   "change_scope": {
@@ -162,7 +174,7 @@
       "ready": "ONCE_EXACT_SOURCE_FILE_IDENTIFIED_AND_PRESENT",
       "purpose": "Using only original G3 approved 2x2 PNG, register bytes/version/source SHA256; preserve approved panda/background, instantiate four whole sprites (A/C same panda, B/D same approved new animal) and integrate directly into existing first-level engine.",
       "requires_user_reapproval": false,
-      "source_discovery": "Check C:/Users/Administrator/Desktop/动物拼图美术素材/ (already defined approved local delivery folder) and ART handoff path. Do not invent image identity. If multiple ambiguous PNGs, stop only this import with concrete blocker."
+      "source_discovery": "Search already HUMAN-approved Codex-local art directory C:/Users/Administrator/Desktop/动物拼图美术素材/ and inbox for EXACT '圆滚滚的搞怪白兔迷你贴纸.png', matching 1208053 bytes, 1254x1254 RGBA, sha256 00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74. Never equate art page /mnt/data with local Windows drive."
     },
     {
       "name": "REAL_ASSET_QA",
@@ -185,7 +197,7 @@
   "explicit_no_go": [
     "No replacing original background with a generated or separated scene",
     "No dividing original panda into puzzle image parts",
-    "No claiming stage B done before ART and HUMAN G3",
+    "Do not infer G1/G2/G4 from exact-image HUMAN G3; code and real image QA must actually run.",
     "No adding next-level data or release-ready labels",
     "No repeated CI-probe loops; fix actual failure on existing runtime",
     "No temporary placeholder build or staged placeholder-to-real replacement. The project owner explicitly chose immediate formal asset integration."
@@ -197,10 +209,10 @@
     "return_status": "REAL_APPROVED_ART_G4_PASS | ASSET_LOCAL_MISSING | BLOCKED_EXACT_VERSION_AMBIGUOUS | QA_FAIL_WITH_EVIDENCE"
   },
   "coordination": "HUMAN has visually approved art. ART is responsible only for recording selected candidate source/path/SHA and original file delivery, not another generation or aesthetic pass. CODEX is sole code owner and imports actual bytes; no A/B placeholder replacement sequence.",
-  "next_action": "Codex start Stage A now, record Stage B pending; once ART delivers exact approved new asset, Codex may finish Stage B in same task without new redundant design round.",
+  "next_action": "Execute DIRECT_INTEGRATION and REAL_ASSET_QA once actual original rabbit PNG matches specified metadata; no stage A or temporary geometric placeholders.",
   "visual_approval_receipt": "tasks/FIRST_LEVEL_CONTENT_001/visual_approval_receipt.json",
   "art_handoff_expected": "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json",
   "execution_strategy": "ONE_STEP_DIRECT_FORMAL_ART_INTEGRATION_NO_INTERIM_PLACEHOLDER_PHASE",
-  "g3_user_status": "APPROVED_APPEARANCE_EXACT_FILE_IDENTIFICATION_PENDING",
-  "next_owner_action": "Codex starts when approved raw image is genuinely accessible. Do not implement placeholder stage A. Resolve exact selected art identity/version and verify bytes in local approved asset directory and/or ART handoff. Then one direct real sprite integration and regression; if missing, report precise ASSET_LOCAL_MISSING without fake stand-in."
+  "g3_user_status": "HUMAN_APPROVED_EXACT_IMAGE_IDENTIFIED",
+  "next_owner_action": "Codex sync main and read art handoff for RABBIT_SQUARE4_EARS_FOLDED_candidate_v2, locate original 圆滚滚的搞怪白兔迷你贴纸.png (1254x1254 RGBA, 1208053 bytes). Compute exact SHA256 00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74; if matched, copy original unchanged to assets/animals/ and create metadata, import same file for B & D, run all 4 real sprites G1/G2/G4. If no original bytes, stop and report ASSET_LOCAL_MISSING. No placeholders."
 }
