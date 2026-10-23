@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "task_id": "UI_RUNTIME_SLICE_001",
+  "owner": "DEV_INTEGRATION",
+  "executor": "CODEX_LOCAL",
+  "from": "DESIGN_DIRECTOR",
+  "to": "DEV_INTEGRATION",
+  "status": "READY_FOR_CODEX_EXECUTION_TECHNICAL_SLICE",
+  "priority": "HIGH",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.4.md",
+  "collaboration_protocol": "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md",
+  "design_baseline": "tasks/UI_FLOW_AND_LAYOUT_001/design_spec_v0.1.md",
+  "art_handoff": "tasks/UI_FLOW_AND_LAYOUT_001/handoff_art_to_design.json",
+  "note_on_spec_precedence": "Override any 'independent RIGHT sidebar / permanent right-side holding column' proposal in old design/art candidate. User explicitly wants unplaced animals distributed on BOTH SIDES of the board, not an exclusive RIGHT holding bar. This remains a provisional responsive layout to be visually reviewed, not a claim of final UI G3.",
+  "goal": "Use already-working code and user-approved panda PNG to implement a playable, responsive first-chapter UI runtime slice before final background arrives. Build layout/flow now while ART finishes isolated background and visual review in parallel.",
+  "grounded_base": {
+    "source": "experiments/panda_v2/",
+    "existing_real_asset": "assets/animals/panda_rect6_desktop_001.png",
+    "existing_asset_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "last_proof": "tasks/LOCAL_APPROVED_ASSETS_001/REPORT.md",
+    "actual_levels": "experiments/panda_v2/levels.js - 3 levels: 3x2,5x2,4x3",
+    "latest_ui_art_handoff": "tasks/UI_FLOW_AND_LAYOUT_001/handoff_art_to_design.json",
+    "visually_approved_reference": {
+      "version": "FIRST_CHAPTER_TRANSPORT_BACKGROUND_PASTEL_v1",
+      "source_sha256": "a57d2a4c7830e511561e2d2fe9cc60a62b26b4a16023f5d579480ba3f6f7227a",
+      "approval_scope": "VISUAL_MOOD_AND_COMPOSITION_ONLY",
+      "limitation": "Baked board and level label, unsuitable as directly layered runtime environment. No final G3 isolated-background approval."
+    },
+    "separated_environment_candidate": {
+      "local_art_page_path_only": "/mnt/data/ui_chapter_v1_revised/background_environment_v1.png",
+      "sha256": "414771bb1d9895c73f1046ac3f35930ef7830bf5376992884b118aaedcf2533d",
+      "transfer": "NOT_CONFIRMED_IN_CODEX_LOCAL_OR_GITHUB",
+      "visual_G3": "PENDING_FOR_EXACT_REVISED_ASSET"
+    }
+  },
+  "execution_plan": [
+    {
+      "step": "A",
+      "owner": "DEV_INTEGRATION",
+      "scope": "Build layout and complete prototype-level flow using existing 3 levels and approved panda, with placeholder or simple programmatic background; no dependence on isolated art file."
+    },
+    {
+      "step": "B",
+      "owner": "DEV_INTEGRATION",
+      "scope": "When exact separate environment PNG is approved and genuinely accessible from verified local path, import by original bytes/hash, apply as low-noise behind-the-board background, keep UI/grid/buttons programmatic; test and sync to GitHub."
+    }
+  ],
+  "required_behavior": [
+    "Keep existing multigrid placement/rotation engine, existing real approved panda PNG and user-passed grab-point and rollback behavior; do not rewrite basic gameplay for UI styling.",
+    "Arrange unplaced animals around the LEFT and RIGHT sides of the board, distributed/balanced, NOT one permanent dedicated right-hand pending tray. Overflow may scroll within available side regions, with all pieces reachable.",
+    "Board remains primary focus. Header/progress, board, both animal staging regions and controls must be non-overlapping, no art/UI collision.",
+    "Layout responds to real w/h, piece counts and rotated bounding boxes; eliminate fixed board/tray Y and fixed '3 levels' strings.",
+    "Adapt to desktop 1280x720, 1024x768, 800x600; 3x2, 5x2, 4x3 real existing levels and 6x5/6-piece layout stress fixture (not official 4th level).",
+    "Keep pointer grab offset stable during rotation, full-piece visual ghost/preview, legal/illegal feedback not only by color, invalid operation rollback, placed pieces retrievable to side staging area.",
+    "Add functional START, light tutorial cues, PLAY, LEVEL_COMPLETE, CHAPTER_COMPLETE and REPLAY within existing HTML/Canvas. Progress comes from levels.length; do not hardcode 8/15 or issue formal content size assertions.",
+    "Keep accessible text actions for rotate, reset/recover; implement undo only if gameplay testing shows reset/reposition insufficient and approved within scope.",
+    "Use style placeholders until exact isolated art version approved; do not use baked board/level-title source as a runtime background, do not crop/regenerate/retouch the G3-approved panda."
+  ],
+  "not_in_scope": [
+    "New animal generation, new official puzzle levels or freezing 8/5 content candidates",
+    "Full final UI visual G3 approval, marketing art, title logo polish, custom animation engine",
+    "Changing current V1.4 contract or re-opening old GPT development Owner",
+    "Recreating reference game's original UI, levels, program or assets",
+    "Claiming full release G4/G1 from existing 3-level tests",
+    "Waiting or polling repeatedly for background if separate PNG is not available; code independent UI now and keep background integration as explicit blocker"
+  ],
+  "implementation_acceptance": [
+    "Existing 3 playable levels pass actual pointer/keyboard click-through start-to-chapter-end and restart in browser using approved original panda source bytes",
+    "Responsiveness check includes 1280x720/1024x768/800x600 and smallest/largest board fixture; no overlap/clip or inaccessible UI/pieces",
+    "At least one invalid drop/rotation, retrieval, cancellation, resize during play, next and restart regression test with no JavaScript page errors",
+    "UI no longer relies on boardY=40/trayY=405 as globally fixed functional layout assumptions",
+    "Baked background not silently treated as approved game asset; app remains playable with fallback background",
+    "Evidence: exact commands, screenshots at representative desktop dimensions, result JSON, current Git commit and limitations; CI optional if already supported, no new huge pipeline",
+    "Handoff distinctly records A code status, B art dependency and whether unmodified PNG bytes were verified/read back",
+    "Do not label 'RELEASE_READY' until independent G1-G4 scope is actually met"
+  ],
+  "output": {
+    "report": "tasks/UI_FLOW_AND_LAYOUT_001/handoff_dev_to_design.json",
+    "evidence_folder": "tasks/UI_FLOW_AND_LAYOUT_001/codex_evidence/",
+    "implementation_location": "Reuse experiments/panda_v2/ unless a very small clearly explained boundary is needed",
+    "git_policy": "Single scoped code/evidence PR or commits on existing main branch following existing Codex repo rules; no duplicate engines."
+  },
+  "blocking_dependency": {
+    "task": "FIRST_CHAPTER_UI_CONCEPT_001",
+    "art_owner": "ART_EXPERIENCE",
+    "condition": "Exact revised isolated environment PNG visually approved by HUMAN, original byte file actually reaches local Codex or GitHub and SHA256 checks pass",
+    "blocks": "Background finalization only, NOT dynamic layout implementation"
+  },
+  "decisions": {
+    "user_requested_layout": "ANIMALS_DISTRIBUTED_BOTH_SIDES_NO_EXCLUSIVE_RIGHT_TRAY",
+    "final_ui_appearance": "PENDING_HUMAN_G3",
+    "official_level_and_asset_count": "NOT_FROZEN",
+    "user_current_request": "May Codex start now that first background candidate is visually completed? yes, technical UI work can start immediately."
+  },
+  "next_owner_action": "Codex reads V1.4, this request, current code and real approved panda metadata; executes step A autonomously, tests and commits evidence, reports step B only when art G3/bytes available."
+}
