@@ -30,3 +30,7 @@
 当前回归命令：`node experiments/panda_v2/test-ui.cjs`（需Playwright与Edge，可配置PLAYWRIGHT_MODULE）。历史 test-browser.cjs 针对旧版页面，保留作历史，不用于当前UI验收。新报告见 tasks/UI_FLOW_AND_LAYOUT_001/handoff_dev_to_design.json。
 
 桌面第一张背景原图仅作为临时环境参考入库；程序只采样左右无UI区域，原图中央的静态棋盘/关卡牌不参与绘制。当前背景和UI不是最终G3版本。无需等待正式背景即可游玩。
+
+## 当前入口：仅第一关（HUMAN最新要求）
+
+最新交付已替代以上三关UI。双击index.html：完整原背景＋熊猫；左键拖放/取回、右键旋转、R重置。合法放入后才在棋盘右侧显示下一关。本轮不制作第二关。测试改用test-first-scene.cjs，详情tasks/FIRST_LEVEL_SCENE_001/REPORT.md。

@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "only extra UI is next button",
+    "next initially hidden",
+    "one intact six-cell panda",
+    "drag follows actual pointer",
+    "valid drop shows next",
+    "next is at board right",
+    "picking hides next",
+    "drag back retrieves whole panda",
+    "right click during drag rotates exactly once",
+    "four right rotations restore",
+    "R resets placement and rotation",
+    "invalid boundary drop restores full original pose",
+    "cancel silently restores",
+    "scaled drag aligns 1280x720",
+    "scaled drag aligns 1024x768",
+    "scaled drag aligns 800x600",
+    "no errors"
+  ],
+  "errors": [],
+  "status": "PASS_FIRST_LEVEL_ONLY",
+  "scope": "place one intact panda in illustrated 5x4 area; not full-board tiling",
+  "browser": "155.0.4283.62"
+}

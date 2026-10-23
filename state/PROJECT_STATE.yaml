@@ -243,3 +243,17 @@ ui_runtime_slice_001:
   runtime: "experiments/panda_v2/index.html"
   browser_checks: 34
   official_content_count: "NOT_FROZEN; existing 3-level runtime slice only"
+
+first_level_scene_001:
+  owner: "DEV_INTEGRATION"
+  authority: "HUMAN explicit current request overrides prior multi-level UI scope"
+  status: "FIRST_LEVEL_ONLY_IMPLEMENTED"
+  runtime: "experiments/panda_v2/index.html"
+  background: "assets/backgrounds/chapter_one.png"
+  background_policy: "REQUIRED_ORIGINAL_COMPLETE_BACKGROUND_NOT_TEMPORARY"
+  board: "5x4 aligned to baked background; one whole 3x2 panda"
+  success: "panda legally placed; not full-board tiling"
+  controls: "left drag; right rotate; R reset"
+  next_level_content: "OUT_OF_CURRENT_SCOPE; button emits nextlevelrequest"
+  evidence: "tasks/FIRST_LEVEL_SCENE_001/evidence/test-report.json"
+  browser_checks: 17
