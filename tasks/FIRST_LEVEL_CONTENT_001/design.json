@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "task_id": "FIRST_LEVEL_CONTENT_001",
   "owner": "DESIGN_DIRECTOR",
-  "phase": "LEVEL1_GEOMETRY_LOCKED_FOR_INTEGRATION_NOT_FULL_RELEASE_APPROVAL",
+  "phase": "GEOMETRY_READY_NEW_ANIMAL_VISUAL_APPROVED_BINARY_NOT_VERIFIED",
   "user_authorization": "2026-10-23 user confirmed '按你的建议来' to 5x4 first-level four whole animals / 6+6+4+4 / one new art species plan",
   "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
   "scene_ref": "experiments/panda_v2/scene.js",
@@ -71,8 +71,8 @@
         ],
         "area": 4,
         "rotation": "0,90,180,270",
-        "artist_asset": "PENDING_ART_G3_ORIGINAL_BYTES",
-        "sha256": "NOT_AVAILABLE"
+        "artist_asset": "HUMAN_G3_APPROVED_ART_EXACT_PATH_PENDING_HANDOFF",
+        "sha256": "PENDING_BYTE_VERIFICATION"
       }
     ],
     "instances": [
@@ -85,8 +85,8 @@
       {
         "piece_id": "B",
         "shape_id": "SQUARE_2x2_4",
-        "species_id": "ART_TO_SELECT_AND_HUMAN_APPROVE",
-        "asset_version": "PENDING"
+        "species_id": "ART_SELECTED_APPROVED_ID_PENDING_RECORD",
+        "asset_version": "HUMAN_APPROVED_EXACT_VERSION_PENDING_RECORD"
       },
       {
         "piece_id": "C",
@@ -97,8 +97,8 @@
       {
         "piece_id": "D",
         "shape_id": "SQUARE_2x2_4",
-        "species_id": "SAME_AS_B",
-        "asset_version": "PENDING"
+        "species_id": "ART_SELECTED_APPROVED_ID_PENDING_RECORD",
+        "asset_version": "HUMAN_APPROVED_EXACT_VERSION_PENDING_RECORD"
       }
     ],
     "instance_count": 4,
@@ -146,7 +146,7 @@
     "status": "PASS_GEOMETRY_ONLY",
     "human_experience": "NOT_RUN",
     "exact_engine_level_test": "NOT_RUN",
-    "source_art_count_ready": 1
+    "source_art_count_ready": "two unique images visually approved including existing panda; original new image byte verification pending"
   },
   "interface_rules": [
     "One whole animal per piece_id; 4 independent pieces, no splitting bear or new animal into parts, V1.5 FAIL_ANIMAL_FRAGMENTATION",
@@ -158,15 +158,18 @@
   ],
   "constraints": {
     "budget": "Within previously approved seven-day full-build maximum; do not infer official clock start",
-    "acceptance_status": "USER_APPROVED_DESIGN_DIRECTION; ART_G3_PENDING; DEV_G4_PENDING; RELEASE_NOT_READY",
+    "acceptance_status": "USER_APPROVED_DESIGN_AND_NEW_ART_VISUAL; EXACT_FILE_METADATA_PENDING; DEV_G4_NOT_RUN; RELEASE_NOT_READY",
     "no_more_species": "No additional animals until level1 actual four-piece playability experience tested",
     "no_new_chapter_background": "Keep first approved chapter background exactly, no crop/repaint",
     "first_level_only": "Do not expand multi-level flow without separate authorization"
   },
   "next": {
-    "art_request": "tasks/FIRST_LEVEL_CONTENT_001/request_to_art.json",
+    "art_receipt": "tasks/FIRST_LEVEL_CONTENT_001/visual_approval_receipt.json",
+    "art_handoff_expected": "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json",
     "dev_request": "tasks/FIRST_LEVEL_CONTENT_001/request_to_dev.json",
-    "dev_stage1": "Integrate four piece IDs with two panda PNG and two explicit placeholders to validate first-level full coverage before G3 new animal ready.",
-    "dev_stage2": "Swap two placeholders to exact G3-approved new original PNG and run real asset QA and browser G4."
-  }
+    "dev_strategy": "NO_PLACEHOLDER; DIRECT_IMPORT_ONE_USER_APPROVED_2x2_ANIMAL_PNG_AND_INSTANTIATE_TWICE",
+    "dev_prerequisite": "Exact original PNG and verified bytes available from existing approved local art directory or exact ART handoff. Never guess identity, never substitute placeholder.",
+    "release_acceptance": "Full original background and panda preserved; four real whole animals, exact 20-cell legal cover, dynamic next visibility, browser G1/G2/G4 and user first-level gameplay acceptance."
+  },
+  "visual_approval_receipt": "tasks/FIRST_LEVEL_CONTENT_001/visual_approval_receipt.json"
 }
