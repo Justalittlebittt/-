@@ -5,7 +5,7 @@
   "executor": "CODEX_LOCAL",
   "from": "DESIGN_DIRECTOR",
   "to": "DEV_INTEGRATION",
-  "status": "READY_STAGE_A_PLACEHOLDER; STAGE_B_BLOCKED_ART_G3",
+  "status": "READY_FOR_APPROVED_ART_DIRECT_INTEGRATION_SOURCE_BYTES_PENDING",
   "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
   "design_ref": "tasks/FIRST_LEVEL_CONTENT_001/design.json",
   "art_request_ref": "tasks/FIRST_LEVEL_CONTENT_001/request_to_art.json",
@@ -22,8 +22,14 @@
       "modification": "DO_NOT_EDIT_CROP_REPAINT_OR_RECOMPOSE"
     },
     "square4": {
-      "path": "PENDING_APPROVED_ART_BYTE_IMPORT",
-      "state": "ONLY_USE_CLEAR_GEOMETRIC_PLACEHOLDERS_UNTIL_G3"
+      "path": "APPROVED_ORIGINAL_ART_PNG_PATH_TO_BE_IDENTIFIED_BY_ART_OR_CODEX_LOCAL",
+      "state": "HUMAN_VISUAL_APPROVED_EXACT_BYTES_AND_VERSION_PENDING",
+      "sha256": "VERIFY_FROM_ORIGINAL_SOURCE; NO_GUESSED_HASH",
+      "instances": [
+        "B",
+        "D"
+      ],
+      "required": "ONE_IDENTICAL_WHOLE_ORIGINAL_PNG_TWO_ATOMIC_PIECE_INSTANCES"
     }
   },
   "change_scope": {
@@ -63,7 +69,7 @@
       },
       {
         "piece_id": "B",
-        "asset": "new_square4_or_explicit_placeholder",
+        "asset": "approved_square4_one_original_asset_shared_twice",
         "shape": "SQUARE_2x2_4",
         "cells": [
           [
@@ -117,7 +123,7 @@
       },
       {
         "piece_id": "D",
-        "asset": "same_new_square4_or_explicit_placeholder",
+        "asset": "approved_square4_one_original_asset_shared_twice",
         "shape": "SQUARE_2x2_4",
         "cells": [
           [
@@ -152,17 +158,16 @@
   },
   "stages": [
     {
-      "name": "A",
-      "purpose": "Add four-piece data/renderer/spawn/hit/drag/rotate/complete using two verified panda PNG instances and two distinct clearly geometric 2x2 placeholders without splitting animals.",
-      "ready": true,
-      "release_gate": "TECHNICAL_TEST_ONLY",
-      "must_not_claim": "FULL_REAL_ANIMAL_G4"
+      "name": "DIRECT_INTEGRATION",
+      "ready": "ONCE_EXACT_SOURCE_FILE_IDENTIFIED_AND_PRESENT",
+      "purpose": "Using only original G3 approved 2x2 PNG, register bytes/version/source SHA256; preserve approved panda/background, instantiate four whole sprites (A/C same panda, B/D same approved new animal) and integrate directly into existing first-level engine.",
+      "requires_user_reapproval": false,
+      "source_discovery": "Check C:/Users/Administrator/Desktop/动物拼图美术素材/ (already defined approved local delivery folder) and ART handoff path. Do not invent image identity. If multiple ambiguous PNGs, stop only this import with concrete blocker."
     },
     {
-      "name": "B",
-      "purpose": "After exact new 2x2 original animal image is HUMAN-G3-approved and present in Codex-readable approved desktop folder, copy exact bytes, checksum, G1/G2, render same sprite B/D, and browser G4 regression; Git sync readback.",
-      "ready": false,
-      "blocked": "NEW_ANIMAL_ASSET_NOT_APPROVED_AND_NOT_DELIVERED"
+      "name": "REAL_ASSET_QA",
+      "ready": "AFTER_DIRECT_INTEGRATION",
+      "purpose": "G1/G2/G4 real PNG decode, clean Alpha/edge, 2x2 shape alignment, independent atomic drag/retrieval/rotation, four-piece real player full coverage, test 1280x720, 1024x768,800x600; capture screenshots and commit verified assets/evidence."
     }
   ],
   "acceptance": [
@@ -171,24 +176,31 @@
     "Before 20-cell coverage Next hidden; after 20 legal nonoverlapping cells Next becomes visible; picking up a placed piece hides it; cannot use 6-cell panda-only to trigger Next",
     "Place all four from balanced left/right starting spots with no clipping/overlap on 1280x720,1024x768,800x600; cursor offset stable; both right-click-alone and right-click-during-left-drag rotate correctly.",
     "R reset returns all four pieces to valid starting spots and zero rotation; cancellations/invalid moves restore original placements and rotations",
-    "Stage A UI consistent with user accepted full original background and minimal extra UI, and original single-panda interaction regression stays green",
-    "Stage B uses only G3 approved original square4 raw PNG and verified hash, same PNG on B and D; verify actual alpha and edge behavior, neighbor occlusion, four rotations.",
+    "Final UI consistent with user accepted full original background and minimal extra UI; original single-panda interaction regression stays green",
+    "Direct integration uses only G3 approved original square4 raw PNG and verified hash, same PNG on B and D; verify actual alpha and edge behavior, neighbor occlusion, four rotations.",
     "Provide code/evidence paths, exact version and terminal/repro/browser test outcomes, limitations, screenshot of filled 5x4 board, Git commit + readback where possible",
-    "No broad refactor, no second level, no additional background or species, no new engine"
+    "No broad refactor, no second level, no additional background or species, no new engine",
+    "Do not create/use any temporary geometric 2x2 placement sprites as intermediate playable deliverable; missing original approved PNG blocks ONLY the new asset integration, not the recorded approval."
   ],
   "explicit_no_go": [
     "No replacing original background with a generated or separated scene",
     "No dividing original panda into puzzle image parts",
     "No claiming stage B done before ART and HUMAN G3",
     "No adding next-level data or release-ready labels",
-    "No repeated CI-probe loops; fix actual failure on existing runtime"
+    "No repeated CI-probe loops; fix actual failure on existing runtime",
+    "No temporary placeholder build or staged placeholder-to-real replacement. The project owner explicitly chose immediate formal asset integration."
   ],
   "output": {
     "report": "tasks/FIRST_LEVEL_CONTENT_001/handoff_dev_to_design.json",
     "evidence_root": "tasks/FIRST_LEVEL_CONTENT_001/evidence/",
     "code_location": "experiments/panda_v2/",
-    "return_status": "STAGE_A_PASS_ART_PENDING | STAGE_B_G4_PASS | BLOCKED_WITH_EVIDENCE"
+    "return_status": "REAL_APPROVED_ART_G4_PASS | ASSET_LOCAL_MISSING | BLOCKED_EXACT_VERSION_AMBIGUOUS | QA_FAIL_WITH_EVIDENCE"
   },
-  "coordination": "Art and Codex are separate owners; no implicit auto-wakeup between their chats. Only Codex may change source code. Visual approval is HUMAN.",
-  "next_action": "Codex start Stage A now, record Stage B pending; once ART delivers exact approved new asset, Codex may finish Stage B in same task without new redundant design round."
+  "coordination": "HUMAN has visually approved art. ART is responsible only for recording selected candidate source/path/SHA and original file delivery, not another generation or aesthetic pass. CODEX is sole code owner and imports actual bytes; no A/B placeholder replacement sequence.",
+  "next_action": "Codex start Stage A now, record Stage B pending; once ART delivers exact approved new asset, Codex may finish Stage B in same task without new redundant design round.",
+  "visual_approval_receipt": "tasks/FIRST_LEVEL_CONTENT_001/visual_approval_receipt.json",
+  "art_handoff_expected": "tasks/FIRST_LEVEL_CONTENT_001/handoff_art_to_design.json",
+  "execution_strategy": "ONE_STEP_DIRECT_FORMAL_ART_INTEGRATION_NO_INTERIM_PLACEHOLDER_PHASE",
+  "g3_user_status": "APPROVED_APPEARANCE_EXACT_FILE_IDENTIFICATION_PENDING",
+  "next_owner_action": "Codex starts when approved raw image is genuinely accessible. Do not implement placeholder stage A. Resolve exact selected art identity/version and verify bytes in local approved asset directory and/or ART handoff. Then one direct real sprite integration and regression; if missing, report precise ASSET_LOCAL_MISSING without fake stand-in."
 }
