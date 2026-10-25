@@ -7,8 +7,8 @@ repo:
   verified_in_this_session: true
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
-phase: "独立8关几何章节试玩已完成真实连续通关；原正式第一关保持不变"
-current_goal: "LEVEL_GENERATOR_001已完成12原创候选和8关连续试玩；待DESIGN/HUMAN体验后决定调整与按需美术"
+phase: "第一章场景版8关已完成；全部动物为几何拼块；待用户试玩"
+current_goal: "CHAPTER_ONE_SCENE_001复用既有场景，8关连玩和章节结束通过；等待HUMAN场景及玩法反馈"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md"
@@ -364,3 +364,18 @@ level_generator_001_result:
   old_first_level: "SOURCE_PNG_UNCHANGED_AND_77_BROWSER_CHECKS_PASS"
   human_experience: "PENDING_PLAYTEST"
   release_status: "NOT_RELEASE_READY_GEOMETRY_PREVIEW_ONLY"
+
+chapter_one_scene_001:
+  owner: "DEV_INTEGRATION"
+  status: "CHAPTER_ONE_SCENE_GEOMETRY_PLAYABLE_PASS"
+  user_scope: "第一章场景和流程；全部动物使用完整几何占格，熊猫兔子也不显示"
+  runtime: "experiments/chapter_preview/index.html"
+  chapter_levels: 8
+  existing_scene_art: "REUSED_ORIGINAL_BACKGROUND_WITH_PROGRAMMATIC_DYNAMIC_BOARD_TITLE"
+  animal_image_requests: 0
+  browser_checks: 362
+  real_pointer_level_completions: 24
+  source_asset_integrity: "UNCHANGED"
+  formal_first_level: "UNCHANGED_77_CHECKS_PASS"
+  report: "tasks/CHAPTER_ONE_SCENE_001/handoff_dev_to_design.json"
+  human_visual_gameplay_feedback: "PENDING"

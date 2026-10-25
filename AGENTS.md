@@ -34,3 +34,5 @@
 白屏防复发门槛：运行脚本/样式修改后执行tools/version-runtime.py生成，再执行--check或node tools/check-runtime.cjs；两个现行浏览器测试已内置版本校验，失败不得标回归通过。HUMAN已复验缓存修复成功，记录见HTTP_CACHE_FIX_001报告。不要以清缓存作为常规交付步骤。
 
 2026-10-25：LEVEL_GENERATOR_001独立8关几何试玩入口experiments/chapter_preview/index.html，不替换panda_v2已验收第一关。12原创候选/8关为用户当前授权的设计试玩，非正式数量冻结。几何整块有颜色与单个ID，可整体旋转拖放，禁止把动物拆片。该入口资源版本生成使用tools/version-runtime.py --entry experiments/chapter_preview/index.html；生成器修改后重生成并验证确定性，实际HTTP连续通关通过后才能交付。
+
+CHAPTER_ONE_SCENE_001当前交付：chapter_preview为带既有动物园场景的8关第一章，全部动物仍用完整几何块（不显示已批熊猫/兔子）。程序覆盖仅原背景烘焙棋盘内表面和牌上文字以适配当前关卡，原PNG与panda_v2正式第一关不变。场景回归应通过PREVIEW_EVIDENCE_DIR/PREVIEW_REPORT_FILE输出独立验收，勿覆盖历史关卡生成证据。

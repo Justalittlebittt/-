@@ -1,15 +1,15 @@
 'use strict';
 const fs=require('fs'),path=require('path'),assert=require('node:assert/strict');const {pathToFileURL}=require('url');const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 require('../../tools/check-runtime.cjs')(path.join(__dirname,'index.html'));
-(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{const out=path.resolve(__dirname,'../../tasks/LEVEL_GENERATOR_001/evidence'),levels=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../tasks/LEVEL_GENERATOR_001/chapter_preview_levels.json'),'utf8')),checks=[],runs=[],errors=[];
-const page=await browser.newPage();page.on('pageerror',e=>errors.push(e.message));const check=(name,v)=>{assert.ok(v,name);checks.push(name);};
+(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{const out=path.resolve(process.env.PREVIEW_EVIDENCE_DIR||path.join(__dirname,'../../tasks/LEVEL_GENERATOR_001/evidence')),levels=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../tasks/LEVEL_GENERATOR_001/chapter_preview_levels.json'),'utf8')),checks=[],runs=[],errors=[];
+const page=await browser.newPage();page.on('pageerror',e=>errors.push(e.message));const animalRequests=[];page.on('request',r=>{if(r.url().includes('/assets/animals/'))animalRequests.push(r.url());});fs.mkdirSync(out,{recursive:true});const check=(name,v)=>{assert.ok(v,name);checks.push(name);};
 async function move(x,y){const r=await page.locator('canvas').boundingBox();const dim=await page.evaluate(()=>[C.width,C.height]);await page.mouse.move(r.x+x*r.width/dim[0],r.y+y*r.height/dim[1],{steps:5});}
 async function hover(id){for(let tries=0;tries<4;tries++){const o=await page.evaluate(id=>{const p=pieces.find(p=>p.piece_id===id),o=pos(p),[x,y]=shape(p)[0];return {x:o.x+(x+.45)*step,y:o.y+(y+.45)*step,at:!!p.at,height:C.height,side:pieces.indexOf(p)%2};},id);if(o.at||(o.y>30&&o.y<o.height-5)){await move(o.x,o.y);return;}await move(o.x<0?10:o.x,60);await page.mouse.wheel(0,o.y<30?-300:300);}throw Error('UNREACHABLE '+id);}
 async function pick(id){await hover(id);await page.mouse.down();check('whole piece grabbed '+id,await page.evaluate(id=>held?.p.piece_id===id,id));}
 async function right(){await page.mouse.down({button:'right'});await page.mouse.up({button:'right'});}
 async function drop(at){const v=await page.evaluate(at=>({x:board.x+at[0]*step+held.offset.x,y:board.y+at[1]*step+held.offset.y}),at);await move(v.x,v.y);await page.mouse.up();}
 for(const [width,height] of [[1280,720],[1024,768],[800,600]]){
- await page.setViewportSize({width,height});await page.goto(process.env.PREVIEW_TEST_URL||pathToFileURL(path.join(__dirname,'index.html')).href);await page.locator('#begin').click();
+ await page.setViewportSize({width,height});await page.goto(process.env.PREVIEW_TEST_URL||pathToFileURL(path.join(__dirname,'index.html')).href);await page.waitForFunction(()=>environment.naturalWidth===1672);await page.locator('#begin').click();
  for(let i=0;i<8;i++){
  check('progress correct '+width+' '+i,await page.evaluate(i=>levelIndex===i&&phase==='PLAY'&&document.getElementById('progress').textContent.includes((i+1)+' / 8'),i));
  check('no premature next '+width+' '+i,await page.locator('#next').isHidden());
@@ -23,6 +23,6 @@ for(const [width,height] of [[1280,720],[1024,768],[800,600]]){
  }
  check('chapter end '+width,await page.locator('#ending').isVisible()&&await page.evaluate(()=>phase==='END'));await page.screenshot({path:path.join(out,`ending-${width}.png`)});await page.locator('#replay').click();check('replay returns start '+width,await page.locator('#intro').isVisible());await page.locator('#begin').click();await pick(levels[0].pieces[0].piece_id);await page.keyboard.press('r');await page.mouse.up();check('R resets current level '+width,await page.evaluate(()=>levelIndex===0&&!held&&pieces.every(p=>!p.at&&p.rot===0)));
 }
-check('no page errors',errors.length===0);const report={status:'PASS_8_LEVEL_GEOMETRY_PREVIEW_G4',checks,runs,completed_chapters:3,real_pointer_level_completions:24,errors,browser:await browser.version(),limitations:'Not human difficulty validation or final animal-art/release acceptance'};fs.writeFileSync(path.resolve(__dirname,'../../tasks/LEVEL_GENERATOR_001/playtest_report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({checks:checks.length,chapters:3,levels:24,errors}));
+check('no animal images loaded',animalRequests.length===0);check('no page errors',errors.length===0);const report={status:'PASS_8_LEVEL_CHAPTER_SCENE_GEOMETRY_G4',animal_image_requests:animalRequests,checks,runs,completed_chapters:3,real_pointer_level_completions:24,errors,browser:await browser.version(),limitations:'Not human difficulty validation or final animal-art/release acceptance'};fs.writeFileSync(path.resolve(process.env.PREVIEW_REPORT_FILE||path.join(__dirname,'../../tasks/LEVEL_GENERATOR_001/playtest_report.json')),JSON.stringify(report,null,2));console.log(JSON.stringify({checks:checks.length,chapters:3,levels:24,errors}));
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
 

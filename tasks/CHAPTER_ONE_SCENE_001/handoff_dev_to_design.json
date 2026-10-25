@@ -1,0 +1,55 @@
+{
+  "task_id": "CHAPTER_ONE_SCENE_001",
+  "owner": "DEV_INTEGRATION",
+  "from": "DEV_INTEGRATION",
+  "to": "DESIGN_DIRECTOR",
+  "date": "2026-10-25",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
+  "authority": "HUMAN latest instruction: build first chapter, all animal assets replaced by whole geometry; do not use even approved panda/rabbit",
+  "status": "CHAPTER_ONE_SCENE_GEOMETRY_PLAYABLE_PASS",
+  "entry": "experiments/chapter_preview/index.html",
+  "levels": 8,
+  "level_data": "unchanged selected original levels from LEVEL_GENERATOR_001",
+  "art_policy": {
+    "background": "assets/backgrounds/chapter_one.png",
+    "background_sha256": "a57d2a4c7830e511561e2d2fe9cc60a62b26b4a16023f5d579480ba3f6f7227a",
+    "background_original_bytes": "UNCHANGED",
+    "animal_images_loaded": 0,
+    "animal_representation": "all whole colored connected geometry with one piece_id; no animal sprites"
+  },
+  "scene_adaptation": "Existing full scenery and wooden frame reused. Opaque runtime board surface covers only baked 5x4 grid interior; dynamic grid and ordinal text rendered by program. Original PNG not edited. Formal panda_v2 entry unchanged.",
+  "input": "left drag/retrieve; right rotate incl during drag; R reset; full legal coverage unlocks next; all 8 then chapter end/replay",
+  "validation": {
+    "browser_checks": 362,
+    "real_pointer_completions": 24,
+    "viewport_sizes": [
+      [
+        1280,
+        720
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        800,
+        600
+      ]
+    ],
+    "chapters_completed": 3,
+    "page_errors": 0,
+    "actual_animal_image_requests": 0,
+    "original_first_level_regression": 77,
+    "original_baseline_integrity": "PASS via tools/level_generator/test.cjs",
+    "cache_guards": "content-versioned dependencies validated"
+  },
+  "evidence": "tasks/CHAPTER_ONE_SCENE_001/evidence/",
+  "playtest": "tasks/CHAPTER_ONE_SCENE_001/playtest_report.json",
+  "limitations": [
+    "Animal artwork intentionally absent",
+    "8-level sequence and scenery adaptation still need HUMAN gameplay/visual feedback",
+    "No claim of complete Steam release readiness"
+  ],
+  "next_owner_action": "HUMAN/DESIGN试玩本章场景与8关几何玩法后提出修正；再决定按需替换动物素材",
+  "commit": "git log -1 -- tasks/CHAPTER_ONE_SCENE_001/handoff_dev_to_design.json"
+}
