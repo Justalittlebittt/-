@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "task_id": "CHAPTER_ONE_ART_BATCH_001",
+  "owner": "ART_EXPERIENCE",
+  "from": "ART_EXPERIENCE",
+  "to": "DESIGN_DIRECTOR",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
+  "status": "BATCH_CONSOLIDATED_FOR_CODEX_INTEGRATION_PREFLIGHT",
+  "scope": "U5 S4 T4 three complete animal candidates; one-time DEV integration package without false approvals",
+  "local_asset_root": "C:/Users/Administrator/Desktop/动物拼图美术素材/",
+  "source_binaries_in_github": false,
+  "assets": [
+    {
+      "shape_id": "U5",
+      "species": "snake",
+      "asset_version": "U5_SNAKE_UPOSE_candidate_v2",
+      "filename": "可爱卡通u形蛇贴纸.png",
+      "image_sha256": "d4579d080d98461b615fa04033aeba461a02bf8321db4dc499da692e3aee987e",
+      "bytes": 1060852,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "G3": "HUMAN_VISUAL_APPROVED",
+      "G2": "PENDING_GAME_GRID_VERIFICATION",
+      "notes": "Approved U-shape overall appearance; visual G3 not a geometric implementation PASS"
+    },
+    {
+      "shape_id": "S4",
+      "species": "squirrel",
+      "asset_version": "S4_SQUIRREL_CURLED_candidate_v1",
+      "filename": "蜷曲卖萌的栗色松鼠.png",
+      "image_sha256": "4dc06e9ebd976659efbb75a5d871643d0c3bbea2fa286bed234bd5dfc142da75",
+      "bytes": 1291793,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "G3": "OVERALL_AESTHETIC_POSITIVE_SHAPE_NOT_APPROVED",
+      "G2": "PENDING_GAME_GRID_VERIFICATION",
+      "notes": "S-shaped silhouette unclear; do not mark formally approved or released before grid visual evaluation"
+    },
+    {
+      "shape_id": "T4",
+      "species": "owl",
+      "asset_version": "T4_OWL_WINGS_OPEN_candidate_v1",
+      "filename": "萌趣张翅猫头鹰.png",
+      "image_sha256": "940bc2b6e87b8f9692f6a806566e0048e12911bc1d8ed766d4de75228a3d5e75",
+      "bytes": 1082232,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "G3": "OVERALL_AESTHETIC_POSITIVE_SHAPE_NOT_APPROVED",
+      "G2": "PENDING_GAME_GRID_VERIFICATION",
+      "notes": "Close to T pose but rotation and grid fitting not verified"
+    }
+  ],
+  "rules": [
+    "One animal is one indivisible piece; no part-tiles or slicing; FAIL_ANIMAL_FRAGMENTATION on any breach",
+    "DEV independently reads original PNGs from desktop art folder and checks actual bytes; no assistant claim of transfer or GitHub binary upload",
+    "Preserve approved panda, rabbit, first chapter background and game logic/occupied_cells unchanged",
+    "DEV may integrate all three as preflight/experimental and render real board overlays for ART/HUMAN review; production G3 for S4/T4 remains pending",
+    "Do not deform/repaint original PNG to fit silently; any pixel changes require new candidate and HUMAN G3",
+    "DEV handles G1/G2/G4 tests and commits binary assets once verified; no false release status"
+  ],
+  "expected_dev_outputs": [
+    "Compare three actual PNGs with 3 geometry shapes and board overlays",
+    "Full-piece rendering, rotation, no collisions/obscure other cells, desktop stress layout",
+    "Record exact source image names and provenance, GitHub PNG commits/readback",
+    "Separate per-asset pass/fail and clearly leave S4/T4 pending G3 if shapes ambiguous"
+  ],
+  "next_owner_action": "DESIGN creates or forwards one CODEX_LOCAL single-owner integration task using this package; user need not send three separate prompts."
+}
