@@ -5,7 +5,7 @@
   "from": "ART_EXPERIENCE",
   "to": "DESIGN_DIRECTOR",
   "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
-  "status": "BATCH_CONSOLIDATED_FOR_CODEX_INTEGRATION_PREFLIGHT",
+  "status": "ART_SHAPE_REVIEW_IN_PROGRESS_NOT_READY_FOR_DEV",
   "scope": "U5 S4 T4 three complete animal candidates; one-time DEV integration package without false approvals",
   "local_asset_root": "C:/Users/Administrator/Desktop/动物拼图美术素材/",
   "source_binaries_in_github": false,
@@ -125,5 +125,7 @@
     "Record exact source image names and provenance, GitHub PNG commits/readback",
     "Separate per-asset pass/fail and clearly leave S4/T4 pending G3 if shapes ambiguous"
   ],
-  "next_owner_action": "DESIGN creates or forwards one CODEX_LOCAL single-owner integration task using this package; user need not send three separate prompts."
+  "next_owner_action": "ART must finish U5/S4/T4 grid silhouette validation and revisions, then HUMAN approves exact final versions; only then DESIGN dispatches formal integration to Codex.",
+  "dev_dispatch_authorized": false,
+  "gate_correction": "Prior BATCH_CONSOLIDATED_FOR_CODEX_INTEGRATION_PREFLIGHT was premature. DEV should not treat this as a production integration order."
 }
