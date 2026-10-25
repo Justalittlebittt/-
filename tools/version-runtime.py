@@ -1,7 +1,7 @@
 """Version local script/style URLs by content so an existing browser cannot mix releases."""
 from pathlib import Path
 import hashlib,re,sys
-entry=Path(__file__).resolve().parents[1]/'experiments/panda_v2/index.html'
+entry=(Path(sys.argv[sys.argv.index('--entry')+1]).resolve() if '--entry' in sys.argv else Path(__file__).resolve().parents[1]/'experiments/panda_v2/index.html')
 original=entry.read_text(encoding='utf-8')
 s=original
 def version(m):

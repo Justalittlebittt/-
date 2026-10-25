@@ -1,5 +1,5 @@
 schema_version: "1.0"
-last_updated: "2026-10-23"
+last_updated: "2026-10-25"
 project_id: "animal-puzzle-zoo"
 repo:
   full_name: "Justalittlebittt/-"
@@ -7,8 +7,8 @@ repo:
   verified_in_this_session: true
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
-phase: "第一关四只真实完整动物已接入并通过技术验收；待HUMAN试玩"
-current_goal: "LEVEL_GENERATOR_001改为原创关卡生成＋8关可连续游玩的几何占格预览；先做完整关卡并真人测试，再按所需形状制作正式动物，保留原首关不变"
+phase: "独立8关几何章节试玩已完成真实连续通关；原正式第一关保持不变"
+current_goal: "LEVEL_GENERATOR_001已完成12原创候选和8关连续试玩；待DESIGN/HUMAN体验后决定调整与按需美术"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md"
@@ -169,10 +169,8 @@ owner_boundaries:
   DEV_INTEGRATION: "本地Codex唯一开发Owner；二维形状、锚点旋转、游戏代码、原始PNG本地集成、Git同步、G1/G2/G4、证据；原GPT开发页归档不再受理新任务"
   HUMAN: "正式视觉版本确认、重大范围/预算/合同决定"
 next_actions:
-  - "本地CODEX读取tasks/LEVEL_GENERATOR_001/request_to_dev.json，仅用已批熊猫六格/白兔四格构造原创几何，生成有解且去重的关卡候选，提交CLI、生成种子、解数口径、回归及GitHub证据；不改现有第一关"
-  - "DESIGN评审生成批次的棋盘/拼块组合与难度代理指标，决定下一批需要的新的二维形状，再由ART自由设计能适配的完整动物；不要让美术无目标批量生产"
-  - "DESIGN/HUMAN读取FIRST_LEVEL_CONTENT_001开发交接并试玩四只完整动物，反馈关卡体验"
-  - "当前仅第一关；未经授权不新增动物、背景或第二关；下一关仍为既有事件接口"
+  - "HUMAN/DESIGN从独立chapter_preview入口连续试玩8关，反馈难度、重复性和死局恢复体验"
+  - "根据试玩选择有限形状对应的动物素材；不得修改已批准panda_v2第一关或原背景"
 codex_transition:
   status: "LOCAL_TAKEOVER_PLACEHOLDER_REGRESSION_PASS"
   actor: "CODEX_LOCAL"
@@ -351,4 +349,18 @@ level_generator_001_scope_change:
   preview_level_count: "8_PROVISIONAL_NOT_RELEASE_FROZEN"
   geometry_placeholders: "WHOLE_CONNECTED_PIECES_ALLOWED_IN_CHAPTER_PREVIEW"
   existing_first_level: "PRESERVE_NO_MODIFICATIONS"
-  status: "REQUEST_UPDATED_CODEX_NOT_YET_EXECUTED"
+  status: "GEOMETRY_CHAPTER_8_LEVELS_IMPLEMENTED_BROWSER_PASS"
+
+level_generator_001_result:
+  owner: "DEV_INTEGRATION"
+  date: "2026-10-25"
+  status: "PASS_8_LEVEL_GEOMETRY_PREVIEW_G4"
+  candidates: 12
+  preview_levels: 8
+  runtime: "experiments/chapter_preview/index.html"
+  report: "tasks/LEVEL_GENERATOR_001/handoff_dev_to_design.json"
+  browser_checks: 361
+  actual_pointer_level_completions: 24
+  old_first_level: "SOURCE_PNG_UNCHANGED_AND_77_BROWSER_CHECKS_PASS"
+  human_experience: "PENDING_PLAYTEST"
+  release_status: "NOT_RELEASE_READY_GEOMETRY_PREVIEW_ONLY"

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "deterministic_candidates": 12,
+  "unique_signatures": 12,
+  "selected": 8,
+  "invalid_level_rejections": 4,
+  "shape_rotation_checks": 11,
+  "solution_placement_checks": 55,
+  "baseline_commit": "4af1403",
+  "unchanged_baseline_assertion": true,
+  "unchanged_baseline_hashes": {
+    "experiments/panda_v2/index.html": "6a8e050dc19f09016bee12c1adff74270a0abb980b5822b87e19953ba2d19b44",
+    "experiments/panda_v2/game.js": "1972581b0b381af98dd3d5bf4864b15d2feb2583dddb338a76fa0f8b1f92c024",
+    "experiments/panda_v2/levels.js": "9ad1de24849eb69a21db5afdb31fb5fb41e9695380f419bd81615829e582b9d0",
+    "experiments/panda_v2/scene.js": "015a9898e4db1006a8050e309d4a14e34eaf0cad32c6e5cf7cdd76232ed622b1",
+    "assets/backgrounds/chapter_one.png": "a57d2a4c7830e511561e2d2fe9cc60a62b26b4a16023f5d579480ba3f6f7227a",
+    "assets/animals/panda_rect6_desktop_001.png": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "assets/animals/rabbit_square4_ears_folded_v2.png": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74"
+  }
+}

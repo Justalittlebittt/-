@@ -30,3 +30,7 @@ GitHub 支持 PNG 二进制；旧阻断是 GPT 环境之间原始文件不可达
 
 生产 V1.0/V1.1/V1.2、旧 ART_STYLE V1.4、ASSET_PIPELINE V0.3/V0.4/V0.4.1 及旧协作手册保留作历史，不作为并列现行合同；老任务的历史证据与绑定版本原样保留。
 当前素材交付规则：HUMAN 已确认本机桌面 `动物拼图美术素材` 文件夹现有及今后交付素材均已视觉验收，DEV 逐文件登记哈希、完成技术检查和Git入库，无需逐张重新批准。详见 AGENTS.md 更新与 `tasks/LOCAL_APPROVED_ASSETS_001/REPORT.md`。
+
+## 当前新增：8关几何章节试玩
+
+打开 `experiments/chapter_preview/index.html`。由12原创候选筛选8关，整块彩色占格可拖动、右键旋转、R重置，真实填满后逐关到章节结束。仅几何试玩，未完成动物素材。原熊猫白兔第一关仍在 `experiments/panda_v2/index.html`，源码/正式PNG未改。生成与验收见 `tasks/LEVEL_GENERATOR_001/REPORT.md`。

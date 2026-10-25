@@ -9,7 +9,8 @@ function check(entry=path.resolve(__dirname,'../experiments/panda_v2/index.html'
   if(version!==hash)throw Error('FAIL_STALE_RESOURCE_VERSION: '+file+'; run python tools/version-runtime.py');
   count++;
  }
- if(count<6)throw Error('FAIL_RUNTIME_DEPENDENCIES_MISSING');
+ const expected=Number(html.match(/name="runtime-dependencies" content="(\d+)"/)?.[1]||6);
+ if(count!==expected)throw Error('FAIL_RUNTIME_DEPENDENCIES_MISSING');
  return count;
 }
 module.exports=check;

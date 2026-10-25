@@ -1,0 +1,66 @@
+{
+  "task_id": "LEVEL_GENERATOR_001",
+  "owner": "DEV_INTEGRATION",
+  "from": "DEV_INTEGRATION",
+  "to": "DESIGN_DIRECTOR",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
+  "date": "2026-10-25",
+  "status": "PASS_8_LEVEL_GEOMETRY_PREVIEW_G4",
+  "source_commit": "4af1403",
+  "preview_entry": "experiments/chapter_preview/index.html",
+  "direct_url": "http://127.0.0.1:8765/experiments/chapter_preview/index.html",
+  "candidate_count": 12,
+  "chapter_count": 8,
+  "generator_version": "1.0.0",
+  "selected": [
+    "GEN_01",
+    "GEN_02",
+    "GEN_03",
+    "GEN_04",
+    "GEN_05",
+    "GEN_07",
+    "GEN_10",
+    "GEN_12"
+  ],
+  "gates": {
+    "G4": "PASS_TESTED_GEOMETRY_CHAPTER_SCOPE",
+    "G1_G3_final_art": "NOT_APPLICABLE_TO_PROGRAMMATIC_PLACEHOLDERS; final art pending"
+  },
+  "test_evidence": {
+    "candidate_logic": "tasks/LEVEL_GENERATOR_001/evidence/logic-report.json",
+    "browser": "tasks/LEVEL_GENERATOR_001/playtest_report.json",
+    "screenshots": "tasks/LEVEL_GENERATOR_001/evidence/",
+    "real_pointer_level_completions": 24,
+    "browser_assertions": 361,
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        800,
+        600
+      ]
+    ],
+    "legacy_first_level_browser": 77,
+    "legacy_core": 9,
+    "legacy_cache_upgrade": "PASS",
+    "runtime_errors": 0
+  },
+  "preservation": "Original first-level runtime files plus panda/rabbit/background bytes asserted equal to Git baseline 4af1403. No changes under experiments/panda_v2 or assets.",
+  "reuse": "Uses unchanged PuzzleCore.normalize/rotate; small generic board/blocker adapter and solver shared by offline generator and separate preview. Reuses proven drag/rollback/right-button capture handling, without changing formal scene.",
+  "limits": [
+    "8 is provisional preview quantity, not final release freeze",
+    "Neutral programmatic board; no new animal art generated",
+    "No reference game data read or copied",
+    "Dedup only fixed board coordinates plus rotational shape multiset; not global board symmetry quotient",
+    "Human difficulty/experience not yet approved",
+    "No saved progress, undo stack or release packaging beyond offline HTML preview"
+  ],
+  "next_owner_action": "DESIGN/HUMAN按关序实际试玩，反馈难度/重复性/死局恢复后，再决定形状对应的有限动物美术",
+  "commit": "See git log -1 -- tasks/LEVEL_GENERATOR_001/handoff_dev_to_design.json"
+}

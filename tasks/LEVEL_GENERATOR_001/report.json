@@ -1,0 +1,464 @@
+{
+  "generator_version": "1.0.0",
+  "candidate_count": 12,
+  "selected": [
+    "GEN_01",
+    "GEN_02",
+    "GEN_03",
+    "GEN_04",
+    "GEN_05",
+    "GEN_07",
+    "GEN_10",
+    "GEN_12"
+  ],
+  "catalog": [
+    {
+      "shape_id": "D2",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "shape_id": "I3",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "shape_id": "L3",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "shape_id": "O4",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "shape_id": "I4",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "shape_id": "L4",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "shape_id": "T4",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "shape_id": "S4",
+      "occupied_cells": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "shape_id": "P5",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "shape_id": "U5",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "shape_id": "RECT6",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "equivalence": "same fixed board coordinates + rotationally equivalent shapes as interchangeable multiset; no global board rotation/reflection quotient",
+  "solution_count_equivalence": "identical shapes interchangeable; unique orientations only",
+  "selection_reason": "2-3 piece introduction, larger areas and new shapes, first corner blockers, 4-piece board, mixed rectangle, corner frame, 6-piece capstone; metrics are not human difficulty",
+  "metrics": [
+    {
+      "id": "GEN_01",
+      "movable_piece_count": 2,
+      "distinct_shape_count": 1,
+      "fixed_area": 0,
+      "example_rotations_required": 0,
+      "search_nodes": 4,
+      "placement_options": [
+        2,
+        2
+      ],
+      "solution_count": 1,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_02",
+      "movable_piece_count": 3,
+      "distinct_shape_count": 3,
+      "fixed_area": 0,
+      "example_rotations_required": 1,
+      "search_nodes": 29,
+      "placement_options": [
+        4,
+        12,
+        6
+      ],
+      "solution_count": 8,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_03",
+      "movable_piece_count": 4,
+      "distinct_shape_count": 3,
+      "fixed_area": 0,
+      "example_rotations_required": 1,
+      "search_nodes": 391,
+      "placement_options": [
+        14,
+        17,
+        17,
+        6
+      ],
+      "solution_count": 12,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_04",
+      "movable_piece_count": 3,
+      "distinct_shape_count": 3,
+      "fixed_area": 2,
+      "example_rotations_required": 1,
+      "search_nodes": 45,
+      "placement_options": [
+        8,
+        13,
+        4
+      ],
+      "solution_count": 2,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_05",
+      "movable_piece_count": 4,
+      "distinct_shape_count": 4,
+      "fixed_area": 0,
+      "example_rotations_required": 2,
+      "search_nodes": 393,
+      "placement_options": [
+        24,
+        24,
+        24,
+        8
+      ],
+      "solution_count": 8,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_06",
+      "movable_piece_count": 4,
+      "distinct_shape_count": 2,
+      "fixed_area": 1,
+      "example_rotations_required": 2,
+      "search_nodes": 88,
+      "placement_options": [
+        17,
+        17,
+        20,
+        20
+      ],
+      "solution_count": 6,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_07",
+      "movable_piece_count": 6,
+      "distinct_shape_count": 5,
+      "fixed_area": 0,
+      "example_rotations_required": 2,
+      "search_nodes": 17563,
+      "placement_options": [
+        12,
+        34,
+        48,
+        31,
+        48,
+        22
+      ],
+      "solution_count": 226,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_08",
+      "movable_piece_count": 5,
+      "distinct_shape_count": 3,
+      "fixed_area": 2,
+      "example_rotations_required": 3,
+      "search_nodes": 1699,
+      "placement_options": [
+        28,
+        42,
+        28,
+        30,
+        42
+      ],
+      "solution_count": 8,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_09",
+      "movable_piece_count": 6,
+      "distinct_shape_count": 4,
+      "fixed_area": 0,
+      "example_rotations_required": 2,
+      "search_nodes": 8225,
+      "placement_options": [
+        28,
+        28,
+        18,
+        18,
+        22,
+        44
+      ],
+      "solution_count": 56,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_10",
+      "movable_piece_count": 6,
+      "distinct_shape_count": 5,
+      "fixed_area": 4,
+      "example_rotations_required": 2,
+      "search_nodes": 63633,
+      "placement_options": [
+        52,
+        32,
+        52,
+        32,
+        40,
+        20
+      ],
+      "solution_count": 116,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_11",
+      "movable_piece_count": 6,
+      "distinct_shape_count": 5,
+      "fixed_area": 2,
+      "example_rotations_required": 3,
+      "search_nodes": 3151,
+      "placement_options": [
+        20,
+        20,
+        38,
+        10,
+        16,
+        30
+      ],
+      "solution_count": 12,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    },
+    {
+      "id": "GEN_12",
+      "movable_piece_count": 6,
+      "distinct_shape_count": 5,
+      "fixed_area": 4,
+      "example_rotations_required": 4,
+      "search_nodes": 47451,
+      "placement_options": [
+        41,
+        46,
+        46,
+        50,
+        54,
+        23
+      ],
+      "solution_count": 2,
+      "count_status": "FULL_EXACT",
+      "difficulty_interpretation": "PROXIES_ONLY_NOT_HUMAN_DIFFICULTY"
+    }
+  ],
+  "provenance": "constructive seeded catalog tilings; no reference game files read"
+}

@@ -32,3 +32,5 @@
 运行交付规则：修改游戏JS/CSS后执行python tools/version-runtime.py更新HTML依赖内容版本号，再打包；对长期HTTP浏览器必须验证旧缓存升级，不只用全新file://上下文测试。test-http-cache.cjs覆盖旧assets.js缓存启动错误。
 
 白屏防复发门槛：运行脚本/样式修改后执行tools/version-runtime.py生成，再执行--check或node tools/check-runtime.cjs；两个现行浏览器测试已内置版本校验，失败不得标回归通过。HUMAN已复验缓存修复成功，记录见HTTP_CACHE_FIX_001报告。不要以清缓存作为常规交付步骤。
+
+2026-10-25：LEVEL_GENERATOR_001独立8关几何试玩入口experiments/chapter_preview/index.html，不替换panda_v2已验收第一关。12原创候选/8关为用户当前授权的设计试玩，非正式数量冻结。几何整块有颜色与单个ID，可整体旋转拖放，禁止把动物拆片。该入口资源版本生成使用tools/version-runtime.py --entry experiments/chapter_preview/index.html；生成器修改后重生成并验证确定性，实际HTTP连续通关通过后才能交付。
