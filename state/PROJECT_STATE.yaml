@@ -11,7 +11,7 @@ phase: "第一章场景版8关已完成；全部动物为几何拼块；待用�
 current_goal: "CHAPTER_ONE_SCENE_001复用既有场景，8关连玩和章节结束通过；等待HUMAN场景及玩法反馈"
 source_of_truth:
   current_repository: "GitHub main"
-  production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md"
+  production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md"
   collaboration_protocol: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
   project_manifest: "manifest/PROJECT_MANIFEST.yaml"
   handoff_template: "interface/HANDOFF_TEMPLATE_V1.0.yaml"
@@ -21,7 +21,8 @@ contracts:
   production_v1_2: "SUPERSEDED_BY_V1_3_HISTORY_PRESERVED"
   production_v1_3: "SUPERSEDED_BY_V1_4_HISTORY_PRESERVED"
   production_v1_4: "SUPERSEDED_BY_V1_5_HISTORY_PRESERVED"
-  production_v1_5: "LOCKED_HUMAN_APPROVED_ONE_COMPLETE_ANIMAL_ONE_PIECE"
+  production_v1_5: "SUPERSEDED_BY_V1_6_HARD_RULES_RETAINED"
+  production_v1_6: "LOCKED_HUMAN_APPROVED_ANIMAL_STORY"
   art_style_v1_4: "SUPERSEDED_FOR_NEW_TASKS_HISTORY_PRESERVED"
   pipeline_v0_3: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
   pipeline_v0_4: "SUPERSEDED_PROPOSAL_HISTORY_NOT_LOCKED"
