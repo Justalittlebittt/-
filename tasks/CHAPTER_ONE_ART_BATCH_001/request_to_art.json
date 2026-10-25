@@ -1,0 +1,110 @@
+{
+  "task_id": "CHAPTER_ONE_ART_BATCH_001",
+  "owner": "ART_EXPERIENCE",
+  "from": "DESIGN_DIRECTOR",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
+  "status": "READY_FOR_ART",
+  "purpose": "8-level public itch.io Demo uses 11 whole-animal sprites, no colored geometry placeholders in released game. First batch tackle hardest shapes to reduce art-fit risk.",
+  "chapter_levels": [
+    "GEN_01",
+    "GEN_02",
+    "GEN_03",
+    "GEN_04",
+    "GEN_05",
+    "GEN_07",
+    "GEN_10",
+    "GEN_12"
+  ],
+  "geometry_source": "tasks/LEVEL_GENERATOR_001/chapter_preview_levels.json",
+  "catalog_source": "tasks/LEVEL_GENERATOR_001/report.json",
+  "batch_one": [
+    {
+      "shape_id": "U5",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "shape_id": "S4",
+      "occupied_cells": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "shape_id": "T4",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "workflow": "ART selects original species and poses for each shape; draw one COMPLETE autonomous animal per shape, never split into body parts; keep heavy dark outline, playful features, vivid color blocks. HUMAN approves each final image (G3). Do not redraw existing approved panda RECT6 or rabbit O4. Do not force influencer-animal story choice; narrative deferred.",
+  "future_missing_shapes": [
+    "D2",
+    "I3",
+    "L3",
+    "I4",
+    "L4",
+    "P5"
+  ],
+  "existing_reuse": {
+    "O4": "approved whole rabbit",
+    "RECT6": "approved whole panda"
+  },
+  "outputs": "Original RGBA PNG with occupancy map and anchor metadata + G3 handoff for each approved candidate; local asset folder C:/Users/Administrator/Desktop/动物拼图美术素材/",
+  "safety": "Shape occupancy is strict but species/pose creatively chosen by ART. Avoid unworkable hidden occupied cells, silhouettes interfering with next cells, or constrained realistic anatomy. Revisit shape only with DESIGN permission.",
+  "not_now": [
+    "full narrative copy",
+    "more chapters",
+    "new shapes outside 11",
+    "expensive animations"
+  ]
+}
