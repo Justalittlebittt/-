@@ -1,0 +1,28 @@
+{
+  "source": "https://itch.io/docs/creators/html5",
+  "checked_on": "2026-10-25",
+  "requirements": {
+    "entry": "index.html at ZIP root for this exporter",
+    "archive": "ZIP including all resources; no enclosing project folder",
+    "paths": "relative URLs, exact case, UTF-8 names",
+    "max_files": 1000,
+    "max_path_characters": 240,
+    "max_uncompressed_bytes_conservative_decimal": 500000000,
+    "max_single_file_bytes_conservative_decimal": 200000000,
+    "https": "external resources require HTTPS; this build has zero external dependencies",
+    "embedding": "iframe; support configured viewport and fullscreen resizing"
+  },
+  "proposed_itch_options": {
+    "kind": "HTML Game",
+    "file_flag": "This file will be played in the browser",
+    "click_to_play": true,
+    "viewport": [
+      1280,
+      720
+    ],
+    "fullscreen_button": true,
+    "scrollbars": false,
+    "mobile_friendly": false
+  },
+  "scope": "Desktop mouse/keyboard geometry QA only. These are preparation settings, no project page or upload was changed."
+}

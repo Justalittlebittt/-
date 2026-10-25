@@ -380,3 +380,22 @@ chapter_one_scene_001:
   formal_first_level: "UNCHANGED_77_CHECKS_PASS"
   report: "tasks/CHAPTER_ONE_SCENE_001/handoff_dev_to_design.json"
   human_visual_gameplay_feedback: "PENDING"
+
+itch_demo_packaging_001:
+  owner: "DEV_INTEGRATION"
+  status: "PACKAGING_AND_EXTRACTED_IFRAME_QA_PASS_GEOMETRY_ONLY"
+  builder: "tools/itch/build.py"
+  command: "python tools/itch/build.py --browser"
+  artifact: "builds/itch/animal-puzzle-geometry-test.zip"
+  root_index: true
+  deterministic_two_builds: true
+  files: 8
+  archive_bytes: 1990413
+  sha256: "75a58aa02b3209bcf096f62084f3bb89d403be9ad013aef9ba728cac283d6dfa"
+  browser_checks: 362
+  real_iframe_pointer_level_completions: 24
+  negative_checks: 10
+  missing_resources: 0
+  actual_itch_upload: "NOT_RUN"
+  public_animal_release: "BLOCKED_PENDING_11_WHOLE_ANIMAL_SHAPES_G1_G2_G3_G4"
+  report: "tasks/ITCH_DEMO_PACKAGING_001/handoff_dev_to_design.json"

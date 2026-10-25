@@ -1,0 +1,54 @@
+{
+  "task_id": "ITCH_DEMO_PACKAGING_001",
+  "owner": "DEV_INTEGRATION",
+  "from": "DEV_INTEGRATION",
+  "to": "DESIGN_DIRECTOR",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
+  "date": "2026-10-25",
+  "source_commit": "f7e4cb2",
+  "status": "PACKAGING_AND_EXTRACTED_IFRAME_QA_PASS_GEOMETRY_ONLY",
+  "build_command": "python tools/itch/build.py --browser",
+  "negative_test_command": "python tools/itch/test.py",
+  "artifact": "builds/itch/animal-puzzle-geometry-test.zip",
+  "artifact_sha256": "75a58aa02b3209bcf096f62084f3bb89d403be9ad013aef9ba728cac283d6dfa",
+  "build_id": "db398e8bae6fa9faffef",
+  "file_count": 8,
+  "compressed_bytes": 1990413,
+  "uncompressed_bytes": 2081631,
+  "root_entry": "index.html",
+  "two_builds_byte_identical": true,
+  "path_static_checks": "PASS_RELATIVE_EXACT_CASE_NO_EXTERNAL_DEPENDENCIES",
+  "browser": {
+    "direct_extracted_entry": "PASS",
+    "cross_origin_sandbox_iframe": "PASS_LOCAL_SIMULATION",
+    "fullscreen_enter_exit": "PASS",
+    "full_chapter_pointer_completions": 24,
+    "checks": 362,
+    "missing_resources": 0,
+    "page_errors": 0
+  },
+  "negative_checks": 10,
+  "preserved": "All 8 selected levels, gameplay source, formal first level, approved background and PNG bytes unchanged. Only test harness accepts iframe context.",
+  "instructions": "Existing start screen already provides left-drag/right-rotate/R-reset and blocker instructions; retained unchanged.",
+  "release_gate": {
+    "geometry": "PRIVATE_TEST_BUILD_NOT_FINISHED_ANIMAL_GAME",
+    "public_finished_animal_demo": "BLOCKED_PENDING_11_WHOLE_ANIMAL_SHAPES_G1_G2_G3_G4_AND_RUNTIME_INTEGRATION",
+    "release_flag": "--release returns code 2 with PUBLIC_RELEASE_BLOCKED",
+    "itch_upload": "NOT_RUN_NO_EXTERNAL_PROJECT_OR_ACCOUNT_MUTATION"
+  },
+  "evidence": [
+    "tasks/ITCH_DEMO_PACKAGING_001/build-report.json",
+    "tasks/ITCH_DEMO_PACKAGING_001/browser-report.json",
+    "tasks/ITCH_DEMO_PACKAGING_001/iframe-playtest-report.json",
+    "tasks/ITCH_DEMO_PACKAGING_001/negative-test-report.json",
+    "tasks/ITCH_DEMO_PACKAGING_001/evidence/"
+  ],
+  "known_limits": [
+    "Local HTTP subdirectory/iframe simulation, not actual itch HTTPS/CDN acceptance",
+    "Edge desktop tested; Firefox/Safari/mobile NOT_RUN",
+    "No new animal artwork or narrative, no additional chapter",
+    "ZIP byte determinism demonstrated with same source inputs and toolchain"
+  ],
+  "next_owner_action": "Continue art and technical integration in parallel. After all required gates, rebuild and re-run archive QA; arrange a separately authorized itch project draft/upload/hosting verification.",
+  "git_commit": "git log -1 -- tasks/ITCH_DEMO_PACKAGING_001/handoff_dev_to_design.json"
+}

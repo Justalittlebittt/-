@@ -1,6 +1,6 @@
 # Codex 项目入口（本地开发执行）
 
-请阅读：`README.md` → `docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md` → `manifest/PROJECT_MANIFEST.yaml` → `state/PROJECT_STATE.yaml` → 本轮关联的 `tasks/` 与代码。历史合同只作参考，不替代 V1.5。
+请阅读：`README.md` → `docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md` → `manifest/PROJECT_MANIFEST.yaml` → `state/PROJECT_STATE.yaml` → 本轮关联的 `tasks/` 与代码。历史合同只作参考，不替代 V1.6。
 
 你是 **DEV_INTEGRATION**，唯一开发执行者。策划和美术分别属于 GPT 策划/美术页，用户拥有 G3 视觉与重大项目变更批准权；不要在旧 GPT 开发页分派新任务。
 
@@ -36,3 +36,5 @@
 2026-10-25：LEVEL_GENERATOR_001独立8关几何试玩入口experiments/chapter_preview/index.html，不替换panda_v2已验收第一关。12原创候选/8关为用户当前授权的设计试玩，非正式数量冻结。几何整块有颜色与单个ID，可整体旋转拖放，禁止把动物拆片。该入口资源版本生成使用tools/version-runtime.py --entry experiments/chapter_preview/index.html；生成器修改后重生成并验证确定性，实际HTTP连续通关通过后才能交付。
 
 CHAPTER_ONE_SCENE_001当前交付：chapter_preview为带既有动物园场景的8关第一章，全部动物仍用完整几何块（不显示已批熊猫/兔子）。程序覆盖仅原背景烘焙棋盘内表面和牌上文字以适配当前关卡，原PNG与panda_v2正式第一关不变。场景回归应通过PREVIEW_EVIDENCE_DIR/PREVIEW_REPORT_FILE输出独立验收，勿覆盖历史关卡生成证据。
+
+ITCH_DEMO_PACKAGING_001：当前可用python tools/itch/build.py --browser构建根index.html的itch几何私测ZIP并对实际解压物验证。不得把已有嵌套离线包直接冒充itch包；不从仓库源目录通过推定导出包通过。11种完整动物及其G1-G4接入前不得把几何包标作正式动物版发布；本工具--release拒绝。实际itch上传/HTTPS托管仍需单独执行记录。

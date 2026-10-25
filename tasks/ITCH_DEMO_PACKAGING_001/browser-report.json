@@ -1,0 +1,28 @@
+{
+  "status": "PASS_EXTRACTED_ZIP_HTML5_IFRAME_QA",
+  "build_id": "db398e8bae6fa9faffef",
+  "isolated_extracted_package": true,
+  "case_sensitive_server": true,
+  "nested_mount": "/html/qa-upload/db398e8bae6fa9faffef/",
+  "cross_origin_iframe": true,
+  "sandbox": "allow-scripts allow-same-origin allow-pointer-lock",
+  "direct_entry_pass": true,
+  "fullscreen_enter_exit_pass": true,
+  "failed_requests": [],
+  "missing_resource_requests": [],
+  "request_count": 17,
+  "unique_requested_files": [
+    "assets/chapter-one.a57d2a4c7830e511.png",
+    "css/style.7606d03f1f10a9f6.css",
+    "index.html",
+    "js/core.e231a3c2db421141.js",
+    "js/game.cc1d5cb1da2f76f5.js",
+    "js/geometry.0918be7686729a30.js",
+    "js/levels.704b83b4af99eb57.js"
+  ],
+  "external_resources": 0,
+  "all_8_levels_in_3_viewports": 24,
+  "browser_checks": 362,
+  "errors": [],
+  "itch_live_upload": "NOT_RUN_NOT_AUTHORIZED_NO_FINISHED_ANIMAL_ART"
+}

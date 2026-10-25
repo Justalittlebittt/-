@@ -36,3 +36,5 @@ GitHub 支持 PNG 二进制；旧阻断是 GPT 环境之间原始文件不可达
 打开 `experiments/chapter_preview/index.html`。由12原创候选筛选8关，整块彩色占格可拖动、右键旋转、R重置，真实填满后逐关到章节结束。仅几何试玩，未完成动物素材。原熊猫白兔第一关仍在 `experiments/panda_v2/index.html`，源码/正式PNG未改。生成与验收见 `tasks/LEVEL_GENERATOR_001/REPORT.md`。
 
 当前第一章场景版：`experiments/chapter_preview/index.html` 已复用动物园背景和木框UI，8关从开始到章节结束连续可玩；全部动物以整块几何表示，熊猫/兔子图也不加载。参见 `tasks/CHAPTER_ONE_SCENE_001/REPORT.md`。
+
+itch HTML5测试打包：`python tools/itch/build.py --browser`，输出根index.html的独立ZIP并对真实解压产物做子目录/iframe/全屏及8关回归。当前仅几何私测包，未发布itch；正式动物Demo等待全部11形状原图及G1-G4。见 `tasks/ITCH_DEMO_PACKAGING_001/REPORT.md`。
