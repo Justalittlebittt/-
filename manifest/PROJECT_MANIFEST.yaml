@@ -6,7 +6,7 @@ project:
   repository: "Justalittlebittt/-"
   default_branch: "main"
 contracts:
-  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md"
+  production: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md"
   collaboration: "docs/contracts/UNIVERSAL_PROTOCOL_V1.0.md"
 roles:
   design: "DESIGN_DIRECTOR"
@@ -68,6 +68,12 @@ out_of_scope:
   - "首版动物实时3D及骨骼"
 status:
   manifest: "DRAFT_PARAMETERS_UNFROZEN"
-  production_contract: "LOCKED_V1_5_ONE_ANIMAL_ONE_PIECE_CODEX_LOCAL"
+  production_contract: "LOCKED_V1_6_FAMOUS_ANIMAL_FACT_CHECKED_STORY_AND_V1_5_ONE_PIECE"
   codex_local_setup: "VERIFIED_2026_10_22"
   current_project_state: "state/PROJECT_STATE.yaml"
+
+narrative:
+  core: "动物园运输与入园安置轻剧情"
+  character_introductions: "首次出现新物种/新形状：优先考证知名真实动物趣事，转化为原创角色短介绍"
+  real_animal_reference_policy: "SOURCED_FACT_ONLY_ORIGINAL_CHARACTER_EXPRESSION_NO_UNCLEARED_BRANDED_ASSETS"
+  story_cards: "NOT_WRITTEN_PENDING_CHAPTER_ANIMAL_SPECIES_MAPPING"
