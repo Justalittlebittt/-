@@ -4,9 +4,9 @@
   "owner": "DEV_INTEGRATION",
   "executor": "CODEX_LOCAL",
   "from": "DESIGN_DIRECTOR",
-  "status": "READY_FOR_IMPLEMENTATION",
+  "status": "READY_FOR_CODEX_CHAPTER_PLAYABLE_GEOMETRY",
   "authority": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
-  "objective": "Build a small deterministic OFFLINE original animal polyomino level candidate generator and exact-cover validator using existing approved shape metadata, so DESIGN can efficiently screen varied solvable levels. Do not copy source game's fixed level layouts or replace the playable first level.",
+  "objective": "Generate an original, solvable FIRST-CHAPTER candidate sequence and integrate a SEPARATE playable geometric-occupancy preview into the existing game stack before commissioning missing animal art; existing first level and its approved artwork must remain unchanged.",
   "existing_inputs": [
     "tasks/FIRST_LEVEL_CONTENT_001/design.json",
     "experiments/first_playable_001/core.js",
@@ -85,39 +85,49 @@
       }
     ],
     "reference_level": "Keep human-accepted first-level 5x4 6+4+6+4 exactly unchanged; it is a calibration fixture not newly generated content.",
-    "generation_strategy": "Construct-from-solution or exact cover with randomized seeded placement; ensure each candidate's original instance placements form at least one valid proof solution, then enumerate all legal solutions/allowed quarter turns for verification. Unique solution NOT required.",
-    "board_policy": "Allow rectangular boards up to 6x6 in the experiment; choose candidates whose playable area exactly matches available instances. Do not assume arbitrary 5x5 with only 4-/6-cell pieces is fillable. Any unavailable cells are explicit fixed blocked positions, not phantom visual animal cells.",
+    "generation_strategy": "Use 80-level reference research for abstract complexity/distribution statistics only. Build original seeded constructive board/obstacle/whole-piece configurations and exact-cover verify them. No importing specific DOGS board instances or copying sequences.",
+    "board_policy": "Support configurable rectangular boards, explicit blockers and generated levels with board sizes independently defined; the first-level background has a baked 5x4 grid and CANNOT serve as the generic background for arbitrary boards. Use neutral programmatic preview background/board on a separate chapter-preview route. Keep first-level scene unmodified.",
     "legal_pieces": "Each animal is ONE atomic draggable piece. Multiple instances of same approved sprite are allowed. Only quarter-turn rotations, no reflections; dedupe normalized orientations.",
     "seed": "Every generated result records deterministic PRNG seed and generator version; replay must produce the exact same canonical board signature.",
     "deduplication": "Within generated candidates canonicalize board occupancy/fixed geometry and shape-instance assignments; treat repeated indistinguishable animals as interchangeable. Do not claim geometric isomorphism dedup across 90deg board rotation/reflection without explicit implementation. Log what equivalence relation is actually used.",
     "difficulty": "For V0.1 collect movable-piece count, distinct shape count, rotations required by example solution, fixed area, exact-cover solution count and branching/placement indicators. These are proxies, NOT proven human difficulty; avoid arbitrary pass/fail cutoffs.",
-    "release_constraint": "Generated levels remain candidate-only until DESIGN selects, original image cells and background geometry match, browser G4 and HUMAN first chapter playtest. No DOGS original coordinates/images/source code copied."
+    "release_constraint": "Geometry preview is intentionally playable with whole-shape placeholders and can receive USER gameplay QA as level-design proof. Release requires approved animal art, background fit and full G1-G4 afterward; do not call preview a finished release.",
+    "initial_allowed_shapes_note": "These two approved sprites may appear when an exact shape match exists, but they DO NOT restrict the geometry prototype shape set.",
+    "shape_supply": "Finite set of original polyomino shapes (4-neighbor connected; optional 2-8 cells with controlled count); placeholders display WHOLE PIECE occupied cells as a unified draggable outline with consistent color/ID, never animal body fragments. Animal assets are added later and must match shape precisely."
   },
   "build_scope": [
-    "Single locally runnable CLI (Node or Python matching existing repo) that takes a config and deterministic seed and emits JSON with board width/height, blocked cells, list of whole animal IDs/occupied cells/instances, at least one exact-cover solution and basic difficulty proxy metrics.",
-    "Generate at least 12 mathematically distinct candidate geometries across minimum two shape-instance counts or board/blocker compositions, unless demonstrably infeasible with two types; document feasible search space and avoid lowering correctness to hit a quota.",
-    "Independent exact-cover solver validates imported candidate data, rotational normalization, fixed blockers, collision, total area, instance identity and identical-instance dedup; report solution count and termination/cap status. Do not call limited-count 1000+ exact count unless full enumeration complete.",
-    "Avoid comparing candidates to all 80 source geometry items or porting source level coordinates. Derive quality goals from abstract distributions only; source ZIP is not a required runtime input.",
-    "Deduplicate within output batch and supply informative short report for DESIGN. Retain a few notably different candidates; no visual sprites generated and no new animal art tasks.",
-    "Repro tests include seed repeatability, total-area checks, intentionally unsatisfiable fixture, blocked-cell overlap, duplicate equivalent instance, rotation and exact-cover count; verify known first-level count 16 with instance labels / 4 after same-type exchange as regression fixture.",
-    "Do not modify current player runtime, finished first level, approved panda/rabbit bytes or chapter background. Do not build complex level editor/generic engine or new production framework."
+    "Create an offline seeded generator with curated small original shape catalog (not just panda and rabbit); board geometry, fixed occupied blockers and piece counts must match exactly; support same shape multiple instances and quarter turns without mirror.",
+    "Generate and curate an ordered first-chapter PREVIEW of 8 playable candidate levels (provisional, not a frozen release quantity). If 8 cannot provide meaningful variety, report limitation rather than invent useless levels. Maintain at least 12 candidate JSONs where feasible for selection.",
+    "Integrate a separate browser-accessible playable chapter preview using existing core, with whole-colored polyomino silhouettes (each piece one atomic draggable object) for sprites not yet produced; completed panda/rabbit may reuse existing PNG if shape matches.",
+    "Preview supports start/level progress, left-pointer drag, right-click rotate (including while dragging), invalid-drop rollback, pickup/reposition, R reset, exact-cover win, NEXT transitions across preview levels, end-of-chapter and replay. Do not add large new UI framework.",
+    "Show one explicit note '几何关卡试玩版｜未完成动物素材' to avoid confusing preview with published art, and keep natural controls; lay out whole pieces left/right of board, not a permanent right-only tray.",
+    "Configure board dimensions per level and ensure preview uses PROGRAMMATIC grids and separate neutral environment instead of first-level baked 5x4 background; viewport regression at 1280x720,1024x768,800x600.",
+    "Implement exact-cover solver with reproducible seeds, proof solutions, full-vs-capped counts labelled, shape symmetry and repeated-identical-piece dedup, canonical JSON signatures to suppress duplicates.",
+    "Provide level data schema with stable shape_id, piece_id, occupied_cells, board w/h, blocked cells, optional art_asset_id; do not couple runtime logic to PNG existence.",
+    "Computer/Playwright tests must navigate 8-level chapter preview via real mouse actions, validate completion and correct transition, reset/invalid rollback/rotation, and unchanged prior first-level regression. Gather screenshot(s) and a concise known limits report.",
+    "Do not make or regenerate new animal sprites, do not build all 80 levels or copy original DOGS levels, do not change production contract."
   ],
   "output": {
     "code_root": "tools/level_generator/ (or minimal justified existing compatible path)",
     "candidate_json": "tasks/LEVEL_GENERATOR_001/candidates.json",
     "metrics_report": "tasks/LEVEL_GENERATOR_001/report.json",
     "design_handoff": "tasks/LEVEL_GENERATOR_001/handoff_dev_to_design.json",
-    "human_review": "DESIGN chooses what content to make; HUMAN later approves major chapter content scope and visual/gameplay experience"
+    "human_review": "DESIGN chooses what content to make; HUMAN later approves major chapter content scope and visual/gameplay experience",
+    "preview_entry": "experiments/chapter_preview/index.html (or another explicit separate URL/path)",
+    "preview_levels": "tasks/LEVEL_GENERATOR_001/chapter_preview_levels.json",
+    "preview_report": "tasks/LEVEL_GENERATOR_001/playtest_report.json"
   },
   "acceptance": [
-    "Generator can run offline with existing two approved shapes and seed",
-    "Candidate JSON has explicit unique instance IDs and independent piece state representation",
-    "Every exported candidate has at least one completed exact-cover proof, and no invalid placements",
-    "All counts and equivalence conventions labelled; max-limit truncation reported, not presented as full solution count",
-    "12 different geometry candidates where feasible and at least 2 structural setups tested",
-    "No imported DOGS level coordinates/art/code in game/release data",
-    "Existing first-level browser replay and asset bytes unchanged",
-    "Concise source test and run commands and Git commit recorded; not called RELEASE_READY"
+    "At least 12 unique original level candidates if possible and a curated ordered 8-level clickable preview; justify any unavoidable smaller count.",
+    "Every preview level playable from start to NEXT or chapter end using REAL browser drag/rotation with atomic whole geometry pieces; no faked game-state completion.",
+    "All cells covered exactly and collisions/blockers properly enforced; repeating shapes are distinct objects and legal 90° rotations only.",
+    "Unfinished animals represented ONLY by unified colored occupied-grid piece, not torn animal parts; art replacement later cannot alter logical occupied_cells.",
+    "Current 5x4 human-approved first level, original background, panda and rabbit bytes remain unchanged. New multi-board preview does NOT overlay its grids on baked 5x4 art.",
+    "Board and side staging fit in 1280x720,1024x768,800x600; nothing unreachable due to scrolling or viewport scaling.",
+    "Deterministic seeds, deduping and exact-cover reports reproducible; difficulty metrics explicitly proxies only.",
+    "All returned candidates are original; no source DOGS level layouts/assets in production.",
+    "Document browser preview opening command/link, G4 preview testing, known shortcomings and handoff; not marked RELEASE_READY."
   ],
-  "next_owner_action": "Codex implement generator V0.1 autonomously, validate and commit evidence. DESIGN then select original generated candidate levels and request only shapes necessary for approved chapters."
+  "next_owner_action": "CODEX implement original level generator AND 8-level browser playable whole-piece geometric preview; do not stop at candidate JSON. Preserve existing 1st level. Submit screenshots, browser QA, dedup/solution evidence and Git commits so DESIGN/HUMAN can play the sequence before requesting any more animal art.",
+  "execution_model": "DESIGN_GENERATES_LEVELS_FIRST_ART_COMES_AFTER_HUMAN_PLAYTEST"
 }
