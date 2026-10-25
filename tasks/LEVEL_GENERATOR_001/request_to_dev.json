@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "task_id": "LEVEL_GENERATOR_001",
+  "owner": "DEV_INTEGRATION",
+  "executor": "CODEX_LOCAL",
+  "from": "DESIGN_DIRECTOR",
+  "status": "READY_FOR_IMPLEMENTATION",
+  "authority": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md",
+  "objective": "Build a small deterministic OFFLINE original animal polyomino level candidate generator and exact-cover validator using existing approved shape metadata, so DESIGN can efficiently screen varied solvable levels. Do not copy source game's fixed level layouts or replace the playable first level.",
+  "existing_inputs": [
+    "tasks/FIRST_LEVEL_CONTENT_001/design.json",
+    "experiments/first_playable_001/core.js",
+    "experiments/panda_v2/",
+    "manifest/PROJECT_MANIFEST.yaml",
+    "state/PROJECT_STATE.yaml"
+  ],
+  "reference_research": {
+    "purpose": "Internal analysis of design distributions/solver conventions, not release-level coordinates.",
+    "research_zip": "Dogs_Geometry_Research_Package(1).zip (conversation attachment, NOT automatically present on Codex local Windows)",
+    "included_files": [
+      "SHAPE_CATALOG.json",
+      "BLOCKER_CATALOG.json",
+      "LEVEL_GEOMETRY_80.json",
+      "SOLVER_RULES.json",
+      "SOURCE_MANIFEST.json"
+    ],
+    "verified_structure": "80 levels,30 mobile shapes, 21 blocker catalog entries including 20 irregular+single, and solver rule specification",
+    "access_policy": "Do not assume this chat attachment is in local Codex workspace. Implement against original shape metadata already in GitHub; importing research zip is optional and never a blocker. No level JSON from the reference is to be copied into release data."
+  },
+  "locked_design": {
+    "initial_allowed_shapes": [
+      {
+        "id": "panda_rect6",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "area": 6,
+        "asset": "assets/animals/panda_rect6_desktop_001.png"
+      },
+      {
+        "id": "rabbit_square4",
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "area": 4,
+        "asset": "assets/animals/rabbit_square4_ears_folded_v2.png"
+      }
+    ],
+    "reference_level": "Keep human-accepted first-level 5x4 6+4+6+4 exactly unchanged; it is a calibration fixture not newly generated content.",
+    "generation_strategy": "Construct-from-solution or exact cover with randomized seeded placement; ensure each candidate's original instance placements form at least one valid proof solution, then enumerate all legal solutions/allowed quarter turns for verification. Unique solution NOT required.",
+    "board_policy": "Allow rectangular boards up to 6x6 in the experiment; choose candidates whose playable area exactly matches available instances. Do not assume arbitrary 5x5 with only 4-/6-cell pieces is fillable. Any unavailable cells are explicit fixed blocked positions, not phantom visual animal cells.",
+    "legal_pieces": "Each animal is ONE atomic draggable piece. Multiple instances of same approved sprite are allowed. Only quarter-turn rotations, no reflections; dedupe normalized orientations.",
+    "seed": "Every generated result records deterministic PRNG seed and generator version; replay must produce the exact same canonical board signature.",
+    "deduplication": "Within generated candidates canonicalize board occupancy/fixed geometry and shape-instance assignments; treat repeated indistinguishable animals as interchangeable. Do not claim geometric isomorphism dedup across 90deg board rotation/reflection without explicit implementation. Log what equivalence relation is actually used.",
+    "difficulty": "For V0.1 collect movable-piece count, distinct shape count, rotations required by example solution, fixed area, exact-cover solution count and branching/placement indicators. These are proxies, NOT proven human difficulty; avoid arbitrary pass/fail cutoffs.",
+    "release_constraint": "Generated levels remain candidate-only until DESIGN selects, original image cells and background geometry match, browser G4 and HUMAN first chapter playtest. No DOGS original coordinates/images/source code copied."
+  },
+  "build_scope": [
+    "Single locally runnable CLI (Node or Python matching existing repo) that takes a config and deterministic seed and emits JSON with board width/height, blocked cells, list of whole animal IDs/occupied cells/instances, at least one exact-cover solution and basic difficulty proxy metrics.",
+    "Generate at least 12 mathematically distinct candidate geometries across minimum two shape-instance counts or board/blocker compositions, unless demonstrably infeasible with two types; document feasible search space and avoid lowering correctness to hit a quota.",
+    "Independent exact-cover solver validates imported candidate data, rotational normalization, fixed blockers, collision, total area, instance identity and identical-instance dedup; report solution count and termination/cap status. Do not call limited-count 1000+ exact count unless full enumeration complete.",
+    "Avoid comparing candidates to all 80 source geometry items or porting source level coordinates. Derive quality goals from abstract distributions only; source ZIP is not a required runtime input.",
+    "Deduplicate within output batch and supply informative short report for DESIGN. Retain a few notably different candidates; no visual sprites generated and no new animal art tasks.",
+    "Repro tests include seed repeatability, total-area checks, intentionally unsatisfiable fixture, blocked-cell overlap, duplicate equivalent instance, rotation and exact-cover count; verify known first-level count 16 with instance labels / 4 after same-type exchange as regression fixture.",
+    "Do not modify current player runtime, finished first level, approved panda/rabbit bytes or chapter background. Do not build complex level editor/generic engine or new production framework."
+  ],
+  "output": {
+    "code_root": "tools/level_generator/ (or minimal justified existing compatible path)",
+    "candidate_json": "tasks/LEVEL_GENERATOR_001/candidates.json",
+    "metrics_report": "tasks/LEVEL_GENERATOR_001/report.json",
+    "design_handoff": "tasks/LEVEL_GENERATOR_001/handoff_dev_to_design.json",
+    "human_review": "DESIGN chooses what content to make; HUMAN later approves major chapter content scope and visual/gameplay experience"
+  },
+  "acceptance": [
+    "Generator can run offline with existing two approved shapes and seed",
+    "Candidate JSON has explicit unique instance IDs and independent piece state representation",
+    "Every exported candidate has at least one completed exact-cover proof, and no invalid placements",
+    "All counts and equivalence conventions labelled; max-limit truncation reported, not presented as full solution count",
+    "12 different geometry candidates where feasible and at least 2 structural setups tested",
+    "No imported DOGS level coordinates/art/code in game/release data",
+    "Existing first-level browser replay and asset bytes unchanged",
+    "Concise source test and run commands and Git commit recorded; not called RELEASE_READY"
+  ],
+  "next_owner_action": "Codex implement generator V0.1 autonomously, validate and commit evidence. DESIGN then select original generated candidate levels and request only shapes necessary for approved chapters."
+}
