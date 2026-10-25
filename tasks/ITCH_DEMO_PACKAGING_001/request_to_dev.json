@@ -1,0 +1,18 @@
+{
+  "task_id": "ITCH_DEMO_PACKAGING_001",
+  "owner": "DEV_INTEGRATION",
+  "executor": "CODEX_LOCAL",
+  "status": "READY_FOR_CODEX",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
+  "goal": "Prepare itch.io HTML5 packaged browser-demo build and verification while art creates missing whole-animal graphics.",
+  "input": "experiments/chapter_preview/index.html",
+  "requirements": [
+    "Keep 8 selected geometry levels and existing approved first level unchanged.",
+    "Check entrypoint index.html, relative file paths, ZIP structure, offline resource dependencies, right-click rotation, drag, reset, Next and chapter end.",
+    "Add clear short player control instructions if missing.",
+    "Prepare repeatable local packaging command and browser QA report.",
+    "Do not publish unfinished geometric sprite version as finished animal game; public build gated on all 11 whole-animal shapes integrated with G1 G2 G3 G4.",
+    "No storyline or new chapters."
+  ],
+  "handoff": "tasks/ITCH_DEMO_PACKAGING_001/handoff_dev_to_design.json"
+}
