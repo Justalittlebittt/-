@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "第一关四只真实完整动物已接入并通过技术验收；待HUMAN试玩"
-current_goal: "FIRST_LEVEL_CONTENT_001真实兔子B/D与熊猫A/C完成；G1/G2/G4第一关测试通过，等待DESIGN/HUMAN体验反馈"
+current_goal: "第一关真实熊猫白兔已通过Codex G1/G2/G4及HUMAN实机复测；LEVEL_GENERATOR_001已交本地Codex开发原创候选自动生成与验证工具，80关逆向几何包仅作设计研究，不移植原关卡"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.5.md"
@@ -63,6 +63,13 @@ handoff_transport:
   github_asset_binary_sync_by_codex: "NOT_RUN"
   rule: "GPT美术/策划与Codex本地目录不自动共享；无实际原始bytes不做G1/G2/G4；一次本地导入后由Codex自行Git管理，不要求HUMAN逐张上传GitHub"
 active_tasks:
+  LEVEL_GENERATOR_001:
+    owner: "DEV_INTEGRATION"
+    executor: "CODEX_LOCAL"
+    status: "READY_FOR_IMPLEMENTATION_NOT_RUN"
+    request: "tasks/LEVEL_GENERATOR_001/request_to_dev.json"
+    expected_output: "tasks/LEVEL_GENERATOR_001/handoff_dev_to_design.json"
+    note: "以已批准熊猫6格和兔子4格生成原创候选并精确求解、去重、确定性重放；逆向80关仅研究规律，不移植实际关卡。现有第一关代码和资源不变。"
   FIRST_LEVEL_CONTENT_001_ART_SQUARE4:
     owner: "ART_EXPERIENCE"
     status: "RABBIT_SQUARE4_V2_HUMAN_G3_APPROVED_GITHUB_BINARY_PENDING"
@@ -156,6 +163,8 @@ owner_boundaries:
   DEV_INTEGRATION: "本地Codex唯一开发Owner；二维形状、锚点旋转、游戏代码、原始PNG本地集成、Git同步、G1/G2/G4、证据；原GPT开发页归档不再受理新任务"
   HUMAN: "正式视觉版本确认、重大范围/预算/合同决定"
 next_actions:
+  - "本地CODEX读取tasks/LEVEL_GENERATOR_001/request_to_dev.json，仅用已批熊猫六格/白兔四格构造原创几何，生成有解且去重的关卡候选，提交CLI、生成种子、解数口径、回归及GitHub证据；不改现有第一关"
+  - "DESIGN评审生成批次的棋盘/拼块组合与难度代理指标，决定下一批需要的新的二维形状，再由ART自由设计能适配的完整动物；不要让美术无目标批量生产"
   - "DESIGN/HUMAN读取FIRST_LEVEL_CONTENT_001开发交接并试玩四只完整动物，反馈关卡体验"
   - "当前仅第一关；未经授权不新增动物、背景或第二关；下一关仍为既有事件接口"
 codex_transition:
