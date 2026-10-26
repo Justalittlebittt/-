@@ -34,7 +34,7 @@ visual:
   lion: "INITIAL_AESTHETIC_FEEDBACK_POSITIVE_ONLY"
   panda: "DESKTOP_APPROVED_001_HUMAN_RECONFIRMED_LOCAL_IMPORTED"
   thin_shape_family: "NOT_RUN"
-  official_asset_batch: "NOT_STARTED"
+  official_asset_batch: "U5_S4_T4_G3_HUMAN_APPROVED_2026_10_26"
 qa:
   G0: "PENDING"
   G1: "NOT_RUN_FOR_CURRENT_PIPELINE"
@@ -400,12 +400,17 @@ itch_demo_packaging_001:
   public_animal_release: "BLOCKED_PENDING_11_WHOLE_ANIMAL_SHAPES_G1_G2_G3_G4"
   report: "tasks/ITCH_DEMO_PACKAGING_001/handoff_dev_to_design.json"
 
-chapter_one_art_batch_001_handoff:
-  status: "ART_BATCH_CONSOLIDATED_READY_FOR_CODEX_PREFLIGHT"
-  report: "tasks/CHAPTER_ONE_ART_BATCH_001/handoff_art_to_design.json"
-  shapes: [U5, S4, T4]
-  visual_approval: "U5_HUMAN_APPROVED; S4_T4_AESTHETIC_POSITIVE_BUT_SHAPE_G3_PENDING"
-  asset_location: "C:/Users/Administrator/Desktop/动物拼图美术素材/"
-  github_binary_delivery: "NOT_VERIFIED"
-  next_owner: "DEV_INTEGRATION_CODEX_LOCAL_AFTER_DESIGN_DISPATCH"
-  note: "Three full animals in a single integration-preflight batch, never split body parts; exact occupied_cells and G1/G2/G4 still require DEV real tests."
+
+chapter_one_art_batch_001_final_visual:
+  date: "2026-10-26"
+  status: "U5_S4_T4_ALL_HUMAN_G3_APPROVED"
+  handoff: "tasks/CHAPTER_ONE_ART_BATCH_001/handoff_art_to_design.json"
+  local_asset_source: "C:/Users/Administrator/Desktop/动物拼图美术素材/"
+  exact_approved_files:
+    U5: "a_clean_high_resolution_cartoon_illustration_on_a.png"
+    S4: "抱着橡果的跃动松鼠.png"
+    T4: "展翅欢笑的萌系猫头鹰.png"
+  github_original_png_uploaded: false
+  dev_gates: "G1_G2_G4_PENDING_REAL_LOCAL_CODEX_VALIDATION"
+  next_owner: "DESIGN_DIRECTOR_TO_CODEX_LOCAL"
+  note: "G3视觉通过≠PNG交付或游戏格形与旋转验证完成；不得拿旧版本替代获批原图。"
