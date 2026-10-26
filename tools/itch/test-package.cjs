@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('fs'),path=require('path'),http=require('http'),assert=require('node:assert/strict');const {promisify}=require('util'),{execFile}=require('child_process');const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 (async()=>{
- const root=path.resolve(process.argv[process.argv.indexOf('--root')+1]),repo=path.resolve(__dirname,'../..'),task=path.join(repo,'tasks/ITCH_DEMO_PACKAGING_001'),evidence=path.join(task,'evidence');fs.mkdirSync(evidence,{recursive:true});
+ const root=path.resolve(process.argv[process.argv.indexOf('--root')+1]),repo=path.resolve(__dirname,'../..'),task=path.resolve(process.env.ITCH_REPORT_DIR||path.join(repo,'tasks/ITCH_DEMO_PACKAGING_001')),evidence=path.join(task,'evidence');fs.mkdirSync(evidence,{recursive:true});
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'build-manifest.json'),'utf8')),files=new Set(Object.keys(manifest.files).concat('build-manifest.json')),prefix='/html/qa-upload/'+manifest.build_id+'/';const misses=[],requests=[];
  const gameServer=http.createServer((req,res)=>{const u=new URL(req.url,'http://localhost');if(u.pathname==='/favicon.ico'){res.writeHead(204);res.end();return;}
  const relative=u.pathname.startsWith(prefix)?decodeURIComponent(u.pathname.slice(prefix.length)):null;
@@ -12,7 +12,7 @@ const fs=require('fs'),path=require('path'),http=require('http'),assert=require(
  let browser;
  try{
  browser=await chromium.launch({channel:'msedge',headless:true});const page=await browser.newPage({viewport:{width:1280,height:720}}),errors=[],failed=[];page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>failed.push(r.url()));
- await page.goto(entry);await page.waitForFunction(()=>environment.naturalWidth===1672&&pieces.length===2);assert.equal(await page.locator('#geometry-note').innerText(),'几何关卡试玩版｜未完成动物素材');await page.screenshot({path:path.join(evidence,'extracted-direct.png')});
+ await page.goto(entry);await page.waitForFunction(()=>environment.naturalWidth===1672&&pieces.length===2);await page.evaluate(()=>chapterArtReady);assert.equal(await page.locator('#geometry-note').innerText(),'动物素材接入试玩｜其余形状为占位');await page.screenshot({path:path.join(evidence,'extracted-direct.png')});
  const assets=await page.evaluate(()=>performance.getEntriesByType('resource').map(r=>r.name).filter(url=>!url.endsWith('/favicon.ico')));assert.ok(assets.every(url=>url.startsWith(locationOrigin(entry))));assert.ok(assets.every(url=>url.startsWith(base+prefix)));assert.equal(errors.length,0);
  await page.goto(wrapper);const handle=await page.locator('#game').elementHandle(),frame=await handle.contentFrame();await frame.waitForFunction(()=>environment.naturalWidth===1672);
  assert.notEqual(new URL(frame.url()).origin,new URL(page.url()).origin);await page.locator('#fullscreen').click();await page.waitForFunction(()=>!!document.fullscreenElement);await frame.locator('#begin').click();await frame.waitForFunction(()=>phase==='PLAY');await page.screenshot({path:path.join(evidence,'iframe-fullscreen.png')});await page.evaluate(()=>document.exitFullscreen());await page.waitForFunction(()=>!document.fullscreenElement);assert.equal(await frame.evaluate(()=>phase),'PLAY');assert.equal(errors.length,0);assert.equal(failed.length,0);await browser.close();browser=null;

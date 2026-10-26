@@ -3,7 +3,7 @@ from pathlib import Path,PurePosixPath
 import argparse,hashlib,json,re,subprocess,sys,tempfile,zipfile,os
 ROOT=Path(__file__).resolve().parents[2]
 TASK=ROOT/'tasks/ITCH_DEMO_PACKAGING_001'
-VERSION='1.0.0'
+VERSION='1.1.0'
 SOURCE=ROOT/'experiments/chapter_preview'
 BACKGROUND='assets/backgrounds/chapter_one.png'
 DOC='https://itch.io/docs/creators/html5'
@@ -34,11 +34,19 @@ def build():
  if geometry.count(fallback)!=1:raise ValueError('BUILD_TRANSFORM_MISMATCH_GEOMETRY')
  geometry=put('tools/level_generator/geometry.js','js','geometry',geometry.replace(fallback,'root.PuzzleCore'))
  levels=put('experiments/chapter_preview/levels.js','js','levels')
+ animals=text(SOURCE/'animals.js')
+ animal_sources=re.findall(r"src:'([^']+)'",animals)
+ assert len(animal_sources)==3
+ for source in animal_sources:
+  relative=source.split('?')[0].removeprefix('../../')
+  exported=put(relative,'assets',Path(relative).stem)
+  animals=animals.replace(source,exported)
+ animals=put('experiments/chapter_preview/animals.js','js','animals',animals)
  game=text(SOURCE/'game.js');old="../../assets/backgrounds/chapter_one.png"
  if game.count(old)!=1:raise ValueError('BUILD_TRANSFORM_MISMATCH_BACKGROUND')
  game=put('experiments/chapter_preview/game.js','js','game',game.replace(old,bg))
  css=put('experiments/chapter_preview/style.css','css','style')
- links={'../first_playable_001/core.js':core,'../../tools/level_generator/geometry.js':geometry,'levels.js':levels,'game.js':game,'style.css':css}
+ links={'../first_playable_001/core.js':core,'../../tools/level_generator/geometry.js':geometry,'levels.js':levels,'game.js':game,'animals.js':animals,'style.css':css}
  html=text(SOURCE/'index.html');sources['experiments/chapter_preview/index.html']=sha(html.encode())
  def remap(m):
   source=m.group(2).split('?')[0]
@@ -46,8 +54,8 @@ def build():
   return m.group(1)+links[source]+m.group(3)
  html=re.sub(r'((?:src|href)=")([^\"]+)(")',remap,html)
  files['index.html']=html.encode()
- build_id=sha(json.dumps({'builder':sha(Path(__file__).read_bytes().replace(b'\r\n',b'\n')),'sources':sources,'mode':'geometry-private-test'},sort_keys=True).encode())[:20]
- manifest={'builder_version':VERSION,'build_id':build_id,'entry':'index.html','mode':'GEOMETRY_PRIVATE_TEST_ONLY','public_animal_release':'BLOCKED_PENDING_ALL_11_WHOLE_ANIMAL_G1_G2_G3_G4_AND_RUNTIME_INTEGRATION','levels':8,'runtime_dependencies':'self-contained; no external services/CDN/fonts required','source_files':sources,'files':{n:{'bytes':len(d),'sha256':sha(d)} for n,d in sorted(files.items())}}
+ build_id=sha(json.dumps({'builder':sha(Path(__file__).read_bytes().replace(b'\r\n',b'\n')),'sources':sources,'mode':'partial-animal-private-test'},sort_keys=True).encode())[:20]
+ manifest={'builder_version':VERSION,'build_id':build_id,'entry':'index.html','mode':'PARTIAL_ANIMAL_PRIVATE_TEST_ONLY','public_animal_release':'BLOCKED_PENDING_ALL_11_WHOLE_ANIMAL_G1_G2_G3_G4_AND_RUNTIME_INTEGRATION','levels':8,'runtime_dependencies':'self-contained; no external services/CDN/fonts required','source_files':sources,'files':{n:{'bytes':len(d),'sha256':sha(d)} for n,d in sorted(files.items())}}
  files['build-manifest.json']=(json.dumps(manifest,sort_keys=True,ensure_ascii=False,indent=2)+'\n').encode()
  return files,manifest
 def validate(data):
@@ -66,16 +74,20 @@ def validate(data):
   for n,info in manifest['files'].items():assert sha(z.read(n))==info['sha256'] and len(z.read(n))==info['bytes']
   html=z.read('index.html').decode();references=re.findall(r'(?:src|href)="([^\"]+)"',html)
   for ref in references:assert ref in names and not ref.startswith('/') and '://' not in ref
-  assert len(references)==5
-  assert len([n for n in names if n.endswith('.png')])==1
+  assert len(references)==6
+  assert len([n for n in names if n.endswith('.png')])==4
   js='\n'.join(z.read(n).decode() for n in names if n.endswith('.js'))
   image_refs=re.findall(r"\.src=['\"]([^'\"]+)['\"]",js)
-  assert len(image_refs)==1 and all(r in names for r in image_refs)
+  image_refs+=re.findall(r"src:'([^']+)'",js)
+  assert len(image_refs)==4 and all(r in names for r in image_refs)
   assert not re.search(r'https?://|localhost|127\.0\.0\.1|/assets/animals/',js)
-  assert '左键拖动' in html and '右键旋转' in html and 'R 重置' in html and '未完成动物素材' in html
-  return {'status':'PASS','zip_bytes':len(data),'file_count':len(names),'uncompressed_bytes':total,'longest_path_chars':max(map(len,names)),'root_index':True,'case_sensitive_dependency_closure':True,'external_runtime_dependencies':0,'animal_images_included':0,'manifest_hashes_match':True,'limits':LIMITS,'rules_source':DOC,'rules_checked_on':'2026-10-25','build_id':manifest['build_id'],'sha256':sha(data)}
+  assert '左键拖动' in html and '右键旋转' in html and 'R 重置' in html and '其余形状为占位' in html
+  return {'status':'PASS','zip_bytes':len(data),'file_count':len(names),'uncompressed_bytes':total,'longest_path_chars':max(map(len,names)),'root_index':True,'case_sensitive_dependency_closure':True,'external_runtime_dependencies':0,'animal_images_included':3,'manifest_hashes_match':True,'limits':LIMITS,'rules_source':DOC,'rules_checked_on':'2026-10-25','build_id':manifest['build_id'],'sha256':sha(data)}
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--browser',action='store_true');parser.add_argument('--release',action='store_true');parser.add_argument('--output',default='builds/itch/animal-puzzle-geometry-test.zip');args=parser.parse_args()
+ parser=argparse.ArgumentParser();parser.add_argument('--browser',action='store_true');parser.add_argument('--release',action='store_true');parser.add_argument('--output',default='builds/itch/animal-puzzle-partial-animal-test.zip');parser.add_argument('--report-dir',default='tasks/ITCH_DEMO_PACKAGING_001');args=parser.parse_args()
+ global TASK
+ TASK=(ROOT/args.report_dir).resolve()
+ if not TASK.is_relative_to(ROOT/'tasks'):parser.error('report directory must stay inside repository tasks/')
  if args.release:parser.exit(2,'PUBLIC_RELEASE_BLOCKED: current runtime is geometric; all 11 whole-animal mappings and G1/G2/G3/G4 must be integrated before a separate approved release workflow.\n')
  output=(ROOT/args.output).resolve()
  if not output.is_relative_to(ROOT/'builds'):parser.error('output must stay inside repository builds/')
@@ -87,5 +99,5 @@ def main():
  if args.browser:
   with tempfile.TemporaryDirectory(prefix='itch-extracted-build-',dir=ROOT/'builds/itch') as tmp:
    with zipfile.ZipFile(output) as z:z.extractall(tmp)
-   subprocess.run(['node',str(ROOT/'tools/itch/test-package.cjs'),'--root',tmp],cwd=ROOT,check=True)
+   subprocess.run(['node',str(ROOT/'tools/itch/test-package.cjs'),'--root',tmp],cwd=ROOT,check=True,env={**os.environ,'ITCH_REPORT_DIR':str(TASK)})
 if __name__=='__main__':main()

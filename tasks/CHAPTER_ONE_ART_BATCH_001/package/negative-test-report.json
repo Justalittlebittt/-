@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "rejected_invalid_cases": [
+    "missing_root_index",
+    "case_mismatch",
+    "absolute_resource_path",
+    "external_resource_url",
+    "missing_background",
+    "zip_path_traversal",
+    "case_collision",
+    "manifest_checksum_tampering",
+    "file_count_over_1000",
+    "public_release_mode_blocked"
+  ],
+  "negative_checks": 10,
+  "published_to_itch": false
+}

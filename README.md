@@ -38,3 +38,5 @@ GitHub 支持 PNG 二进制；旧阻断是 GPT 环境之间原始文件不可达
 当前第一章场景版：`experiments/chapter_preview/index.html` 已复用动物园背景和木框UI，8关从开始到章节结束连续可玩；全部动物以整块几何表示，熊猫/兔子图也不加载。参见 `tasks/CHAPTER_ONE_SCENE_001/REPORT.md`。
 
 itch HTML5测试打包：`python tools/itch/build.py --browser`，输出根index.html的独立ZIP并对真实解压产物做子目录/iframe/全屏及8关回归。当前仅几何私测包，未发布itch；正式动物Demo等待全部11形状原图及G1-G4。见 `tasks/ITCH_DEMO_PACKAGING_001/REPORT.md`。
+
+2026-10-26 第一批真实动物已接入chapter_preview：U5绿蛇、S4松鼠、T4猫头鹰均为HUMAN G3指定原始PNG；其他形状保持整块几何占位。八关数据、已批准熊猫白兔第一关和背景原图不变。技术验收和局部轮廓越界数据见 [本批报告](tasks/CHAPTER_ONE_ART_BATCH_001/REPORT.md)。当前可构建builds/itch/animal-puzzle-partial-animal-test.zip，尚非正式动物发行版本。

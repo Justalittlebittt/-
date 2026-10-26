@@ -1,0 +1,339 @@
+{
+  "status": "EXACT_FINAL_ORIGINALS_PRESENT",
+  "assets": [
+    {
+      "shape_id": "U5",
+      "version": "U5_SNAKE_LEFT_HEAD_RAISED_candidate_final_G3",
+      "source": "C:\\Users\\Administrator\\Desktop\\动物拼图美术素材\\蛇.png",
+      "handoff_filename": "a_clean_high_resolution_cartoon_illustration_on_a.png",
+      "repository_file": "assets/animals/snake_u5_final_g3.png",
+      "sha256": "0fdb68ffa5a76ca6200c0b5602ed1e49d526bc9d62ae5deaf51fd978df6c9379",
+      "bytes": 1413402,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1029314,
+      "semi_transparent_pixels": 543550,
+      "opaque_pixels": 0,
+      "alpha_bbox": [
+        0,
+        9,
+        1514,
+        1000
+      ],
+      "canvas_border_alpha_max": 1,
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "mapping": "full original image uniformly contained and centered within 3x2 cell bounding box; no source pixel modification",
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.4235,
+          "alpha_gt_200_fraction": 0.4157,
+          "alpha_weighted_fraction": 0.4164
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": false,
+          "alpha_gt_60_fraction": 0.0,
+          "alpha_gt_200_fraction": 0.0,
+          "alpha_weighted_fraction": 0.0
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.186,
+          "alpha_gt_200_fraction": 0.1813,
+          "alpha_weighted_fraction": 0.1822
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.4073,
+          "alpha_gt_200_fraction": 0.4024,
+          "alpha_weighted_fraction": 0.4013
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.4566,
+          "alpha_gt_200_fraction": 0.4498,
+          "alpha_weighted_fraction": 0.4488
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.5476,
+          "alpha_gt_200_fraction": 0.5407,
+          "alpha_weighted_fraction": 0.5391
+        }
+      ],
+      "G3": "HUMAN_APPROVED_2026_10_26"
+    },
+    {
+      "shape_id": "S4",
+      "version": "S4_SQUIRREL_ACORN_GIANT_TAIL_CLEAN_G3",
+      "source": "C:\\Users\\Administrator\\Desktop\\动物拼图美术素材\\松鼠.png",
+      "handoff_filename": "抱着橡果的跃动松鼠.png",
+      "repository_file": "assets/animals/squirrel_s4_clean_g3.png",
+      "sha256": "e68f4b6f68a56e78716a04e0d5c81b827a19f67aa473b3308fe820c4f6c70440",
+      "bytes": 1430213,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_pixels": 883604,
+      "semi_transparent_pixels": 689260,
+      "opaque_pixels": 0,
+      "alpha_bbox": [
+        0,
+        13,
+        1514,
+        985
+      ],
+      "canvas_border_alpha_max": 1,
+      "occupied_cells": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mapping": "full original image uniformly contained and centered within 3x2 cell bounding box; no source pixel modification",
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": false,
+          "alpha_gt_60_fraction": 0.0024,
+          "alpha_gt_200_fraction": 0.0022,
+          "alpha_weighted_fraction": 0.0023
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.5597,
+          "alpha_gt_200_fraction": 0.5539,
+          "alpha_weighted_fraction": 0.5518
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.6585,
+          "alpha_gt_200_fraction": 0.6529,
+          "alpha_weighted_fraction": 0.6505
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.3919,
+          "alpha_gt_200_fraction": 0.3865,
+          "alpha_weighted_fraction": 0.3864
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.8,
+          "alpha_gt_200_fraction": 0.7941,
+          "alpha_weighted_fraction": 0.7906
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "occupied": false,
+          "alpha_gt_60_fraction": 0.1835,
+          "alpha_gt_200_fraction": 0.1789,
+          "alpha_weighted_fraction": 0.1798
+        }
+      ],
+      "G3": "HUMAN_APPROVED_2026_10_26"
+    },
+    {
+      "shape_id": "T4",
+      "version": "T4_OWL_WIDE_WINGS_LARGE_TAIL_G3",
+      "source": "C:\\Users\\Administrator\\Desktop\\动物拼图美术素材\\猫头鹰.png",
+      "handoff_filename": "展翅欢笑的萌系猫头鹰.png",
+      "repository_file": "assets/animals/owl_t4_wide_g3.png",
+      "sha256": "c57b9af6ed27ce2254aadf328720553899d2749b5056996412790f6700b9144c",
+      "bytes": 1178380,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 837364,
+      "semi_transparent_pixels": 733075,
+      "opaque_pixels": 2089,
+      "alpha_bbox": [
+        0,
+        15,
+        1448,
+        1086
+      ],
+      "canvas_border_alpha_max": 2,
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mapping": "full original image uniformly contained and centered within 3x2 cell bounding box; no source pixel modification",
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.4852,
+          "alpha_gt_200_fraction": 0.4767,
+          "alpha_weighted_fraction": 0.4772
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.6844,
+          "alpha_gt_200_fraction": 0.6784,
+          "alpha_weighted_fraction": 0.6761
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.4808,
+          "alpha_gt_200_fraction": 0.4729,
+          "alpha_weighted_fraction": 0.4733
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "occupied": false,
+          "alpha_gt_60_fraction": 0.0519,
+          "alpha_gt_200_fraction": 0.0495,
+          "alpha_weighted_fraction": 0.0503
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt_60_fraction": 0.6846,
+          "alpha_gt_200_fraction": 0.678,
+          "alpha_weighted_fraction": 0.6758
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "occupied": false,
+          "alpha_gt_60_fraction": 0.0483,
+          "alpha_gt_200_fraction": 0.046,
+          "alpha_weighted_fraction": 0.0468
+        }
+      ],
+      "G3": "HUMAN_APPROVED_2026_10_26"
+    }
+  ]
+}

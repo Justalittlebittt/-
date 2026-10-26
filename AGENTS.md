@@ -38,3 +38,5 @@
 CHAPTER_ONE_SCENE_001当前交付：chapter_preview为带既有动物园场景的8关第一章，全部动物仍用完整几何块（不显示已批熊猫/兔子）。程序覆盖仅原背景烘焙棋盘内表面和牌上文字以适配当前关卡，原PNG与panda_v2正式第一关不变。场景回归应通过PREVIEW_EVIDENCE_DIR/PREVIEW_REPORT_FILE输出独立验收，勿覆盖历史关卡生成证据。
 
 ITCH_DEMO_PACKAGING_001：当前可用python tools/itch/build.py --browser构建根index.html的itch几何私测ZIP并对实际解压物验证。不得把已有嵌套离线包直接冒充itch包；不从仓库源目录通过推定导出包通过。11种完整动物及其G1-G4接入前不得把几何包标作正式动物版发布；本工具--release拒绝。实际itch上传/HTTPS托管仍需单独执行记录。
+
+2026-10-26 CHAPTER_ONE_ART_BATCH_001：用户授权chapter_preview将U5/S4/T4占位替换为精确最终绿蛇/松鼠/猫头鹰整图；元数据assets/animals/chapter_one_batch_001.json，源文件桌面蛇.png/松鼠.png/猫头鹰.png，均与美术handoff哈希相同。其他八种形状继续几何占位，不启用熊猫兔子于本入口。animals.js按shape_id复用整图、等比完整绘制，禁止切片/变形/裁格遮掩局部越界。专项回归tasks/CHAPTER_ONE_ART_BATCH_001/test-animals.cjs；历史几何截图保留。Edge suppressed contextmenu可能连续产生多次lostpointercapture，contextRotation标记保持至整次拖动结束，仅在左键仍按下时重捕获；真正cancel/blur必须回滚。构建报告使用--report-dir隔离历史证据；当前导出partial-animal-test.zip仍非正式发行包。

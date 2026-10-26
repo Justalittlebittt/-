@@ -1,7 +1,11 @@
 """Negative packaging checks: reject broken roots, paths, dependencies and unsafe archives."""
 from pathlib import Path
-import copy,json,subprocess,sys
+import argparse,copy,json,subprocess,sys
 import build
+parser=argparse.ArgumentParser();parser.add_argument('--report-dir',default='tasks/ITCH_DEMO_PACKAGING_001');args=parser.parse_args()
+build.TASK=(build.ROOT/args.report_dir).resolve()
+if not build.TASK.is_relative_to(build.ROOT/'tasks'):parser.error('report directory must stay inside repository tasks/')
+build.TASK.mkdir(parents=True,exist_ok=True)
 files,manifest=build.build();checks=[]
 def reindex(f):
  m=copy.deepcopy(manifest);m['files']={n:{'bytes':len(d),'sha256':build.sha(d)} for n,d in f.items() if n!='build-manifest.json'};f['build-manifest.json']=(json.dumps(m,sort_keys=True,ensure_ascii=False,indent=2)+'\n').encode();return f
