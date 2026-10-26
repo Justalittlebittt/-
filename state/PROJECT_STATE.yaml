@@ -7,7 +7,7 @@ repo:
   verified_in_this_session: true
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
-phase: "第一章8关已接入U5绿蛇/S4松鼠/T4猫头鹰；其余形状为完整几何占位；本批技术验收通过"
+phase: "第一章8关已接入六种完整动物；第二批P5河马/L4长颈鹿/L3柯尔鸭技术验收通过，五种形状仍为几何占位"
 current_goal: "第一章第二批P5、L4、L3正式动物按单只G3验收、三只统一交接Codex；第三批D2、I3、I4保留；暂停剧情及扩关"
 source_of_truth:
   current_repository: "GitHub main"
@@ -459,10 +459,22 @@ squirrel_alignment_001:
   contract_record: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md section 12"
 
 chapter_one_art_batch_002:
-  owner: "ART_EXPERIENCE"
-  status: "READY_FOR_ART_PER_IMAGE_G3_PENDING"
+  owner: "DEV_INTEGRATION"
+  status: "THREE_FINAL_DESKTOP_ORIGINALS_INTEGRATED_TECHNICAL_G1_G2_G4_PASS_TESTED_SCOPE"
   request: "tasks/CHAPTER_ONE_ART_BATCH_002/request_to_art.json"
   shapes: ["P5", "L4", "L3"]
   handoff_policy: "ONE_ANIMAL_AT_A_TIME_VISUAL_APPROVAL_THEN_THREE_ASSETS_SINGLE_CODEX_INTAKE"
   third_batch: ["D2", "I3", "I4"]
   demo_scope: "8_LEVELS_11_WHOLE_ANIMALS_ITCH_IO_RELEASE_PENDING"
+  G3: "HUMAN_APPROVED_CURRENT_DISPATCH_P5_HIPPO_L4_GIRAFFE_L3_CALL_DUCK"
+  originals: "Desktop 河马.png / 长颈鹿.png / 鸭子.png pinned SHA256; no source pixel changes"
+  metadata: "assets/animals/chapter_one_batch_002.json"
+  technical_evidence: "tasks/CHAPTER_ONE_ART_BATCH_002/handoff_dev_to_design.json"
+  G1: "PASS_RAW_PNG_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE; provider/licence metadata remains unverified for release"
+  G2: "PASS_672_BOUNDARIES_48_COLLISIONS_NEW_BATCH; all6species24poses; local contours documented"
+  G4: "PASS_195_ANIMAL_CHECKS_AND_362_EXTRACTED_IFRAME_CHECKS_24_LEVEL_COMPLETIONS"
+  render_fix: "Draw opaque geometry before whole animal sprites; sourceBounds/baseRotation register original whole PNGs"
+  prior_content: "10baselinefiles and 12 first-batch image transforms unchanged; S4 offset remains[-0.2,0]"
+  current_runtime: "experiments/chapter_preview/index.html"
+  human_runtime_retest: "PENDING"
+  github_raw_readback: "PENDING_PUSH"

@@ -1,0 +1,335 @@
+{
+  "status": "EXACT_PINNED_DESKTOP_ORIGINALS_IMPORTED",
+  "assets": [
+    {
+      "shape_id": "P5",
+      "filename": "河马.png",
+      "repository_file": "assets/animals/hippo_p5_desktop_002.png",
+      "asset_version": "P5_DESKTOP_HUMAN_APPROVED_BATCH_002",
+      "version_assigned_by": "DEV local registration, not a claimed ART candidate ID",
+      "image_sha256": "127c4466453cb349cf718bcb60af36711f82769b042d5067e21b2fed182304b1",
+      "hash_basis": "First DEV read of the single final desktop file explicitly approved in this HUMAN dispatch; no remote pre-approved hash supplied",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1293147,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "baseSize": [
+        2,
+        3
+      ],
+      "sourceBounds": [
+        10,
+        97,
+        1443,
+        1016
+      ],
+      "baseRotation": 3,
+      "G3": "HUMAN_APPROVED_CURRENT_DISPATCH_2026_10_26",
+      "sha256": "127c4466453cb349cf718bcb60af36711f82769b042d5067e21b2fed182304b1",
+      "source": "C:\\Users\\Administrator\\Desktop\\动物拼图美术素材\\河马.png",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 635623,
+      "semi_transparent_pixels": 935789,
+      "canvas_border_alpha_max": 3,
+      "alpha_bbox60": [
+        10,
+        97,
+        1443,
+        1016
+      ],
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.67115,
+          "center_alpha": 252
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.85965,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.83747,
+          "center_alpha": 252
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.85095,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.68885,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "occupied": false,
+          "alpha_gt60_fraction": 0.14743,
+          "center_alpha": 0
+        }
+      ],
+      "pixel_changes": false,
+      "registration": "Source bounds define scaling/anchor only; whole PNG is rendered once, no cropped source rectangle"
+    },
+    {
+      "shape_id": "L4",
+      "filename": "长颈鹿.png",
+      "repository_file": "assets/animals/giraffe_l4_desktop_002.png",
+      "asset_version": "L4_DESKTOP_HUMAN_APPROVED_BATCH_002",
+      "version_assigned_by": "DEV local registration, not a claimed ART candidate ID",
+      "image_sha256": "722712b83ae535835856d353f7477ff15171f0f57ec7b96330691a0feb61d4ad",
+      "hash_basis": "First DEV read of the single final desktop file explicitly approved in this HUMAN dispatch; no remote pre-approved hash supplied",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1202037,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "baseSize": [
+        2,
+        3
+      ],
+      "sourceBounds": [
+        413,
+        12,
+        1172,
+        1013
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_CURRENT_DISPATCH_2026_10_26",
+      "sha256": "722712b83ae535835856d353f7477ff15171f0f57ec7b96330691a0feb61d4ad",
+      "source": "C:\\Users\\Administrator\\Desktop\\动物拼图美术素材\\长颈鹿.png",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1240198,
+      "semi_transparent_pixels": 332666,
+      "canvas_border_alpha_max": 0,
+      "alpha_bbox60": [
+        413,
+        12,
+        1172,
+        1013
+      ],
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.52877,
+          "center_alpha": 252
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": false,
+          "alpha_gt60_fraction": 0.0,
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.57503,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "occupied": false,
+          "alpha_gt60_fraction": 0.13167,
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.41532,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.58852,
+          "center_alpha": 0
+        }
+      ],
+      "pixel_changes": false,
+      "registration": "Source bounds define scaling/anchor only; whole PNG is rendered once, no cropped source rectangle"
+    },
+    {
+      "shape_id": "L3",
+      "filename": "鸭子.png",
+      "repository_file": "assets/animals/call_duck_l3_desktop_002.png",
+      "asset_version": "L3_DESKTOP_HUMAN_APPROVED_BATCH_002",
+      "version_assigned_by": "DEV local registration, not a claimed ART candidate ID",
+      "image_sha256": "3255a1bc5c9a3daaecf9b3d2364427237b3e0c6792189ffdff94a25c8a3b0b32",
+      "hash_basis": "First DEV read of the single final desktop file explicitly approved in this HUMAN dispatch; no remote pre-approved hash supplied",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 898041,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "baseSize": [
+        2,
+        2
+      ],
+      "sourceBounds": [
+        161,
+        15,
+        1354,
+        1082
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_CURRENT_DISPATCH_2026_10_26",
+      "sha256": "3255a1bc5c9a3daaecf9b3d2364427237b3e0c6792189ffdff94a25c8a3b0b32",
+      "source": "C:\\Users\\Administrator\\Desktop\\动物拼图美术素材\\鸭子.png",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 907258,
+      "semi_transparent_pixels": 663579,
+      "canvas_border_alpha_max": 1,
+      "alpha_bbox60": [
+        161,
+        15,
+        1354,
+        1082
+      ],
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.60447,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": false,
+          "alpha_gt60_fraction": 0.11745,
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.4911,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.6286,
+          "center_alpha": 253
+        }
+      ],
+      "pixel_changes": false,
+      "registration": "Source bounds define scaling/anchor only; whole PNG is rendered once, no cropped source rectangle"
+    }
+  ]
+}

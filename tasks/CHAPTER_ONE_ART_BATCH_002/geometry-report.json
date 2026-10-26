@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "exact_original_hashes": 3,
+  "unchanged_existing_occupied_cell_instances": 9,
+  "four_rotation_assets": 3,
+  "boundary_cases": 672,
+  "occupied_collision_cases": 48
+}

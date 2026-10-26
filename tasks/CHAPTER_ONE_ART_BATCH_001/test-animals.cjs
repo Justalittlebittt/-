@@ -12,8 +12,8 @@ require('../../tools/check-runtime.cjs')(path.join(root,'experiments/chapter_pre
  async function pick(id){const v=await page.evaluate(id=>{const p=pieces.find(p=>p.piece_id===id),o=pos(p),c=shape(p)[0];return {x:o.x+(c[0]+.5)*step,y:o.y+(c[1]+.5)*step};},id);await move(v.x,v.y);await page.mouse.down();check('atomic pickup '+id,await page.evaluate(id=>held?.p.piece_id===id,id));}
  async function right(){await page.mouse.down({button:'right'});await page.mouse.up({button:'right'});}
  async function drop(at){const v=await page.evaluate(at=>({x:board.x+at[0]*step+held.offset.x,y:board.y+at[1]*step+held.offset.y}),at);await move(v.x,v.y);await page.mouse.up();}
- for(const sid of ['U5','S4','T4'])for(let rot=0;rot<4;rot++){
-  await page.evaluate(()=>begin(6));const id=await page.evaluate(sid=>pieces.find(p=>p.shape_id===sid).piece_id,sid);
+ for(const sid of await page.evaluate(()=>Object.keys(chapterAnimals)))for(let rot=0;rot<4;rot++){
+  await page.evaluate(sid=>begin(previewLevels.findIndex(l=>l.pieces.some(p=>p.shape_id===sid))),sid);const id=await page.evaluate(sid=>pieces.find(p=>p.shape_id===sid).piece_id,sid);
   await pick(id);for(let i=0;i<rot;i++)await right();
   await move(838,480);const follow=await page.evaluate(()=>({held:!!held,mouse:{...mouse},phase,trace:devInputTrace}));const follows=follow.held&&Math.abs(follow.mouse.x-838)<.15&&Math.abs(follow.mouse.y-480)<.15;check('drag follows pointer '+sid+rot+(follows?'':' '+JSON.stringify(follow)),follows);
   const target=await page.evaluate(()=>{for(let y=0;y<level.h;y++)for(let x=0;x<level.w;x++)if(G.valid(level,pieces,held.p,[x,y]))return [x,y];return null;});assert.ok(target);
@@ -31,7 +31,7 @@ require('../../tools/check-runtime.cjs')(path.join(root,'experiments/chapter_pre
  // Replay the genuine seventh level with all three animal species adjacent, using actual input.
  await page.evaluate(()=>begin(6));const level=JSON.parse(fs.readFileSync(path.join(root,'tasks/LEVEL_GENERATOR_001/chapter_preview_levels.json')))[6];
  for(const q of level.proof.solution){await pick(q.piece_id);for(let k=0;k<q.rot;k++)await right();await drop(q.at);}
- check('three animals adjacent with full legal cover',await page.evaluate(()=>complete()&&pieces.filter(p=>chapterAnimals[p.shape_id]&&p.at).length===3));
+ check('mapped animals adjacent with full legal cover',await page.evaluate(()=>complete()&&pieces.filter(p=>chapterAnimals[p.shape_id]&&p.at).length===level.pieces.filter(p=>chapterAnimals[p.shape_id]).length));
  const adjacency=await page.evaluate(()=>{
   const unit=60,W=level.w*unit,H=level.h*unit,masks=pieces.map(p=>{const c=document.createElement('canvas');c.width=W;c.height=H;const a=c.getContext('2d');if(chapterAnimals[p.shape_id])drawAnimal(a,p,p.at[0]*unit,p.at[1]*unit,unit);else{a.fillStyle='#000';for(const [x,y] of shape(p))a.fillRect((p.at[0]+x)*unit,(p.at[1]+y)*unit,unit,unit);}return {id:p.piece_id,shape:p.shape_id,data:a.getImageData(0,0,W,H).data};});
   const result=[];for(let i=0;i<masks.length;i++)for(let j=i+1;j<masks.length;j++){const a=masks[i],b=masks[j];if(!chapterAnimals[a.shape]&&!chapterAnimals[b.shape])continue;let n=0;for(let k=3;k<a.data.length;k+=4)if(a.data[k]>200&&b.data[k]>200)n++;if(n)result.push({a:a.shape+'#'+a.id,b:b.shape+'#'+b.id,overlap_pixels:n,cell_area:unit*unit,equivalent_cell_area:n/(unit*unit)});}return result;

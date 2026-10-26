@@ -42,3 +42,5 @@ ITCH_DEMO_PACKAGING_001：当前可用python tools/itch/build.py --browser构建
 2026-10-26 CHAPTER_ONE_ART_BATCH_001：用户授权chapter_preview将U5/S4/T4占位替换为精确最终绿蛇/松鼠/猫头鹰整图；元数据assets/animals/chapter_one_batch_001.json，源文件桌面蛇.png/松鼠.png/猫头鹰.png，均与美术handoff哈希相同。其他八种形状继续几何占位，不启用熊猫兔子于本入口。animals.js按shape_id复用整图、等比完整绘制，禁止切片/变形/裁格遮掩局部越界。专项回归tasks/CHAPTER_ONE_ART_BATCH_001/test-animals.cjs；历史几何截图保留。Edge suppressed contextmenu可能连续产生多次lostpointercapture，contextRotation标记保持至整次拖动结束，仅在左键仍按下时重捕获；真正cancel/blur必须回滚。构建报告使用--report-dir隔离历史证据；当前导出partial-animal-test.zip仍非正式发行包。
 
 2026-10-26 HUMAN已复验批准SQUIRREL_ALIGNMENT_001（321429c）并要求写入合同。V1.6 §12明确形状→完整PNG映射、局部显示锚点随整图旋转、PNG/逻辑占格保持不变及实际验收范围；当前S4 offsetCells=[-0.2,0]为已批准对齐，不恢复旧居中值。通过记录见tasks/SQUIRREL_ALIGNMENT_001/approval_receipt.json。
+
+2026-10-26 CHAPTER_ONE_ART_BATCH_002：用户本条派工明确G3批准桌面河马.png、长颈鹿.png、鸭子.png，分别P5/L4/L3。原始哈希/字节与渲染登记见assets/animals/chapter_one_batch_002.json。当前chapter_preview六种真实动物，其余五种形状仍占位，熊猫兔子正式第一关保持不变。sourceBounds仅用于透明画布留白的等比缩放与锚点登记，仍完整PNG一次五参drawImage，无源裁剪；P5 baseRotation=3匹配原图与既定P形。图层先几何占位、后动物、最后拖拽对象，避免色块截断动物轮廓。工具按注册表动态导出PNG数量；批量验收通过ASSET_TASK_DIR/ASSET_SPEC_FILE、ANIMAL_REPORT_DIR隔离证据。未来改图须按现行合同审批，不把技术登记参数当作修改逻辑形状授权。

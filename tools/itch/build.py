@@ -3,7 +3,7 @@ from pathlib import Path,PurePosixPath
 import argparse,hashlib,json,re,subprocess,sys,tempfile,zipfile,os
 ROOT=Path(__file__).resolve().parents[2]
 TASK=ROOT/'tasks/ITCH_DEMO_PACKAGING_001'
-VERSION='1.1.0'
+VERSION='1.2.0'
 SOURCE=ROOT/'experiments/chapter_preview'
 BACKGROUND='assets/backgrounds/chapter_one.png'
 DOC='https://itch.io/docs/creators/html5'
@@ -36,10 +36,11 @@ def build():
  levels=put('experiments/chapter_preview/levels.js','js','levels')
  animals=text(SOURCE/'animals.js')
  animal_sources=re.findall(r"src:'([^']+)'",animals)
- assert len(animal_sources)==3
+ assert animal_sources and len(animal_sources)==len(set(animal_sources))
+ animal_exports=[]
  for source in animal_sources:
   relative=source.split('?')[0].removeprefix('../../')
-  exported=put(relative,'assets',Path(relative).stem)
+  exported=put(relative,'assets',Path(relative).stem);animal_exports.append(exported)
   animals=animals.replace(source,exported)
  animals=put('experiments/chapter_preview/animals.js','js','animals',animals)
  game=text(SOURCE/'game.js');old="../../assets/backgrounds/chapter_one.png"
@@ -55,7 +56,7 @@ def build():
  html=re.sub(r'((?:src|href)=")([^\"]+)(")',remap,html)
  files['index.html']=html.encode()
  build_id=sha(json.dumps({'builder':sha(Path(__file__).read_bytes().replace(b'\r\n',b'\n')),'sources':sources,'mode':'partial-animal-private-test'},sort_keys=True).encode())[:20]
- manifest={'builder_version':VERSION,'build_id':build_id,'entry':'index.html','mode':'PARTIAL_ANIMAL_PRIVATE_TEST_ONLY','public_animal_release':'BLOCKED_PENDING_ALL_11_WHOLE_ANIMAL_G1_G2_G3_G4_AND_RUNTIME_INTEGRATION','levels':8,'runtime_dependencies':'self-contained; no external services/CDN/fonts required','source_files':sources,'files':{n:{'bytes':len(d),'sha256':sha(d)} for n,d in sorted(files.items())}}
+ manifest={'builder_version':VERSION,'build_id':build_id,'entry':'index.html','mode':'PARTIAL_ANIMAL_PRIVATE_TEST_ONLY','public_animal_release':'BLOCKED_PENDING_ALL_11_WHOLE_ANIMAL_G1_G2_G3_G4_AND_RUNTIME_INTEGRATION','levels':8,'animal_images':animal_exports,'runtime_dependencies':'self-contained; no external services/CDN/fonts required','source_files':sources,'files':{n:{'bytes':len(d),'sha256':sha(d)} for n,d in sorted(files.items())}}
  files['build-manifest.json']=(json.dumps(manifest,sort_keys=True,ensure_ascii=False,indent=2)+'\n').encode()
  return files,manifest
 def validate(data):
@@ -75,14 +76,15 @@ def validate(data):
   html=z.read('index.html').decode();references=re.findall(r'(?:src|href)="([^\"]+)"',html)
   for ref in references:assert ref in names and not ref.startswith('/') and '://' not in ref
   assert len(references)==6
-  assert len([n for n in names if n.endswith('.png')])==4
+  assert len([n for n in names if n.endswith('.png')])==1+len(manifest['animal_images'])
+  assert all(n in names for n in manifest['animal_images'])
   js='\n'.join(z.read(n).decode() for n in names if n.endswith('.js'))
   image_refs=re.findall(r"\.src=['\"]([^'\"]+)['\"]",js)
   image_refs+=re.findall(r"src:'([^']+)'",js)
-  assert len(image_refs)==4 and all(r in names for r in image_refs)
+  assert len(image_refs)==1+len(manifest['animal_images']) and all(r in names for r in image_refs)
   assert not re.search(r'https?://|localhost|127\.0\.0\.1|/assets/animals/',js)
   assert '左键拖动' in html and '右键旋转' in html and 'R 重置' in html and '其余形状为占位' in html
-  return {'status':'PASS','zip_bytes':len(data),'file_count':len(names),'uncompressed_bytes':total,'longest_path_chars':max(map(len,names)),'root_index':True,'case_sensitive_dependency_closure':True,'external_runtime_dependencies':0,'animal_images_included':3,'manifest_hashes_match':True,'limits':LIMITS,'rules_source':DOC,'rules_checked_on':'2026-10-25','build_id':manifest['build_id'],'sha256':sha(data)}
+  return {'status':'PASS','zip_bytes':len(data),'file_count':len(names),'uncompressed_bytes':total,'longest_path_chars':max(map(len,names)),'root_index':True,'case_sensitive_dependency_closure':True,'external_runtime_dependencies':0,'animal_images_included':len(manifest['animal_images']),'manifest_hashes_match':True,'limits':LIMITS,'rules_source':DOC,'rules_checked_on':'2026-10-25','build_id':manifest['build_id'],'sha256':sha(data)}
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--browser',action='store_true');parser.add_argument('--release',action='store_true');parser.add_argument('--output',default='builds/itch/animal-puzzle-partial-animal-test.zip');parser.add_argument('--report-dir',default='tasks/ITCH_DEMO_PACKAGING_001');args=parser.parse_args()
  global TASK

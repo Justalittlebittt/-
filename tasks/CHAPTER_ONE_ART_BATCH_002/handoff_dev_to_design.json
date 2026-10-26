@@ -1,0 +1,188 @@
+{
+  "task_id": "CHAPTER_ONE_ART_BATCH_002",
+  "owner": "DEV_INTEGRATION",
+  "date": "2026-10-26",
+  "base_commit": "57eb2f6",
+  "status": "SECOND_BATCH_THREE_ORIGINALS_INTEGRATED_TECHNICAL_G1_G2_G4_PASS_TESTED_SCOPE",
+  "assets": [
+    {
+      "shape_id": "P5",
+      "filename": "河马.png",
+      "repository_file": "assets/animals/hippo_p5_desktop_002.png",
+      "asset_version": "P5_DESKTOP_HUMAN_APPROVED_BATCH_002",
+      "version_assigned_by": "DEV local registration, not a claimed ART candidate ID",
+      "image_sha256": "127c4466453cb349cf718bcb60af36711f82769b042d5067e21b2fed182304b1",
+      "hash_basis": "First DEV read of the single final desktop file explicitly approved in this HUMAN dispatch; no remote pre-approved hash supplied",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1293147,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "baseSize": [
+        2,
+        3
+      ],
+      "sourceBounds": [
+        10,
+        97,
+        1443,
+        1016
+      ],
+      "baseRotation": 3,
+      "G3": "HUMAN_APPROVED_CURRENT_DISPATCH_2026_10_26",
+      "G1": "PASS_FILE_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBORS_WITH_LOCAL_EDGE_PROTRUSIONS",
+      "G4": "PASS_REAL_POINTER_AND_EXTRACTED_EIGHT_LEVEL_FLOW",
+      "evidence": "tasks/CHAPTER_ONE_ART_BATCH_002/REPORT.md"
+    },
+    {
+      "shape_id": "L4",
+      "filename": "长颈鹿.png",
+      "repository_file": "assets/animals/giraffe_l4_desktop_002.png",
+      "asset_version": "L4_DESKTOP_HUMAN_APPROVED_BATCH_002",
+      "version_assigned_by": "DEV local registration, not a claimed ART candidate ID",
+      "image_sha256": "722712b83ae535835856d353f7477ff15171f0f57ec7b96330691a0feb61d4ad",
+      "hash_basis": "First DEV read of the single final desktop file explicitly approved in this HUMAN dispatch; no remote pre-approved hash supplied",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1202037,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "baseSize": [
+        2,
+        3
+      ],
+      "sourceBounds": [
+        413,
+        12,
+        1172,
+        1013
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_CURRENT_DISPATCH_2026_10_26",
+      "offsetCells": [
+        0,
+        0.12
+      ],
+      "G1": "PASS_FILE_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBORS_WITH_LOCAL_EDGE_PROTRUSIONS",
+      "G4": "PASS_REAL_POINTER_AND_EXTRACTED_EIGHT_LEVEL_FLOW",
+      "evidence": "tasks/CHAPTER_ONE_ART_BATCH_002/REPORT.md"
+    },
+    {
+      "shape_id": "L3",
+      "filename": "鸭子.png",
+      "repository_file": "assets/animals/call_duck_l3_desktop_002.png",
+      "asset_version": "L3_DESKTOP_HUMAN_APPROVED_BATCH_002",
+      "version_assigned_by": "DEV local registration, not a claimed ART candidate ID",
+      "image_sha256": "3255a1bc5c9a3daaecf9b3d2364427237b3e0c6792189ffdff94a25c8a3b0b32",
+      "hash_basis": "First DEV read of the single final desktop file explicitly approved in this HUMAN dispatch; no remote pre-approved hash supplied",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 898041,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "baseSize": [
+        2,
+        2
+      ],
+      "sourceBounds": [
+        161,
+        15,
+        1354,
+        1082
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_CURRENT_DISPATCH_2026_10_26",
+      "offsetCells": [
+        0,
+        0.08
+      ],
+      "G1": "PASS_FILE_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBORS_WITH_LOCAL_EDGE_PROTRUSIONS",
+      "G4": "PASS_REAL_POINTER_AND_EXTRACTED_EIGHT_LEVEL_FLOW",
+      "evidence": "tasks/CHAPTER_ONE_ART_BATCH_002/REPORT.md"
+    }
+  ],
+  "source_approval": "Explicit HUMAN current dispatch approves P5 hippo / L4 giraffe / L3 call duck final desktop originals; remote ART request had not supplied final hashes. Intake pins first local SHA256, does not invent independent hash agreement.",
+  "renderer": "One complete PNG per instance, five-argument drawImage only. Source bounds are scale/anchor metadata, not source cropping. P5 baseRotation=3; L4 offset [0,0.12]; L3 offset [0,0.08].",
+  "logic": "Existing occupied_cells and eight levels unchanged; P5 two instances, L4 three instances, L3 four instances.",
+  "test_reports": [
+    "asset-report.json",
+    "geometry-report.json",
+    "animal-browser-report.json",
+    "baseline-report.json",
+    "package/browser-report.json",
+    "package/iframe-playtest-report.json",
+    "package/negative-test-report.json"
+  ],
+  "tests": {
+    "new_batch_boundary_cases": 672,
+    "new_batch_collision_cases": 48,
+    "all_registered_animal_rotation_poses": 24,
+    "animal_browser_checks": 195,
+    "extracted_iframe_checks": 362,
+    "real_pointer_level_completions": 24,
+    "completed_chapters": 3,
+    "negative_package_cases": 10,
+    "unchanged_baseline_files": 10,
+    "unchanged_first_batch_render_transforms": 12
+  },
+  "contours": "Local protrusions retained and quantified. Final P5 empty-cell alpha>60 coverage 14.743%; L4 middle-right 4.623%; L3 top-right 5.28%. Empty-cell centers remain transparent. Final real solution overlap metrics saved; no claim of zero visual overlap in all layouts.",
+  "render_fix": "Opaque geometry now draws before whole animal sprites, avoiding rectangular erasure of protruding contour edges. Held piece still draws last.",
+  "not_changed": "First approved panda/rabbit level, six previous PNGs including background, existing eight geometries, first-batch asset mappings and S4 -0.2 anchor.",
+  "release_status": "PARTIAL_ANIMAL_PREVIEW; five shapes remain geometry under current chapter policy; no live itch upload; no formal release clearance.",
+  "human_retest": "PENDING_NEW_RUNTIME_REVIEW",
+  "github_readback": "PENDING_PUSH_THEN_RAW_DOWNLOAD"
+}
