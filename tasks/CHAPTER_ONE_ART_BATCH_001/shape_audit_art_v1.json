@@ -1,0 +1,93 @@
+{
+  "task_id": "CHAPTER_ONE_ART_BATCH_001_SHAPE_AUDIT",
+  "owner": "ART_EXPERIENCE",
+  "status": "ART_REVISIONS_REQUIRED_DEV_DISPATCH_BLOCKED",
+  "version": "SHAPE_AUDIT_V1",
+  "review_image": "/mnt/data/chapter_one_shape_audit_v1.png",
+  "method": "Original RGBA sources, non-destructive centered proportional overlay against 3x2 board with source's alpha >60 used for rough cell coverage; diagnostic only, not numerical pass criterion",
+  "shapes": [
+    {
+      "id": "U5",
+      "animal": "snake",
+      "occupied": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "finding": "Top-center forbidden cell overlap caused by oversized head/tongue; preserve visually approved overall snake identity, revise local pose",
+      "decision": "REVISE_POSE"
+    },
+    {
+      "id": "S4",
+      "animal": "squirrel",
+      "occupied": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "finding": "Bottom-right empty cell obscured by major body/tail mass. Silhouette not S4",
+      "decision": "REBUILD_POSE"
+    },
+    {
+      "id": "T4",
+      "animal": "owl",
+      "occupied": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "finding": "Lower corners invaded by outstretched wing feathers; raise wing tips and narrow bottom body",
+      "decision": "MINOR_REVISE"
+    }
+  ],
+  "verification": {
+    "G3": "U5 AESTHETIC USER APPROVED; S4/T4 ART DIRECTION POSITIVE, SHAPE REVISIONS PENDING",
+    "DEV_G1": "NOT_RUN",
+    "DEV_G2": "NOT_RUN",
+    "DEV_G4": "NOT_RUN"
+  },
+  "next_action": "ART to revise original shape silhouettes before requesting exact-image user approval and formal Codex dispatch. No animal fragmentation and no change to occupied_cells."
+}
