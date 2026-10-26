@@ -50,3 +50,5 @@ python tools/itch/test.py --report-dir tasks/CHAPTER_ONE_ART_BATCH_002/package
 Python审计需Pillow，浏览器需现有Playwright/Edge（必要时设置PLAYWRIGHT_MODULE）。所有原图仍可直接在 `assets/animals/` 查验。当前入口仍为 `experiments/chapter_preview/index.html`，六种真实动物与其余五种完整几何占位连玩八关；熊猫、白兔正式第一关及背景原始文件均未变更。尚未做本轮新运行版本的HUMAN实际试玩复验或itch在线发布；本次G3依据是用户已批准的原始文件。
 
 GitHub原始PNG提交后的实际远端下载结果归档为本任务 `github-readback.json`。
+
+实现与PNG提交：`5ea55c922ff073d389c706fa07e9da49d8a482ab`，已推送main。随后从该提交的GitHub raw地址实际下载三张PNG，均HTTP200，大小与SHA-256全部等于桌面固定原图；详见 `github-readback.json`。

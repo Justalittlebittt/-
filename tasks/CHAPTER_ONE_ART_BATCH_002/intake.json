@@ -1,7 +1,6 @@
 {
   "task_id": "CHAPTER_ONE_ART_BATCH_002",
   "base_commit": "57eb2f6",
-  "approval_quote": "第二批动物素材已全部通过用户视觉验收：P5 = 河马、L4 = 长颈鹿、L3 = 柯尔鸭；统一从桌面读取三张最终通过版PNG",
   "source_root": "C:/Users/Administrator/Desktop/动物拼图美术素材",
   "assets": [
     {
@@ -141,5 +140,6 @@
         0.08
       ]
     }
-  ]
+  ],
+  "approval_summary": "第二批动物素材已全部通过用户视觉验收：P5 = 河马、L4 = 长颈鹿、L3 = 柯尔鸭；统一从桌面读取三张最终通过版PNG"
 }

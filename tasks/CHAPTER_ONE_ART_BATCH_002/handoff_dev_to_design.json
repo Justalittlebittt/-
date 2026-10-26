@@ -184,5 +184,6 @@
   "not_changed": "First approved panda/rabbit level, six previous PNGs including background, existing eight geometries, first-batch asset mappings and S4 -0.2 anchor.",
   "release_status": "PARTIAL_ANIMAL_PREVIEW; five shapes remain geometry under current chapter policy; no live itch upload; no formal release clearance.",
   "human_retest": "PENDING_NEW_RUNTIME_REVIEW",
-  "github_readback": "PENDING_PUSH_THEN_RAW_DOWNLOAD"
+  "github_readback": "PASS_THREE_RAW_HTTP200_EXACT_PINNED_DESKTOP_BYTES_AND_SHA256",
+  "implementation_commit": "5ea55c922ff073d389c706fa07e9da49d8a482ab"
 }

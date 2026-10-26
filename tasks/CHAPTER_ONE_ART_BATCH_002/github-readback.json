@@ -1,0 +1,30 @@
+{
+  "status": "PASS_GITHUB_RAW_BINARY_READBACK",
+  "implementation_commit": "5ea55c922ff073d389c706fa07e9da49d8a482ab",
+  "assets": [
+    {
+      "shape_id": "P5",
+      "url": "https://raw.githubusercontent.com/Justalittlebittt/-/5ea55c922ff073d389c706fa07e9da49d8a482ab/assets/animals/hippo_p5_desktop_002.png",
+      "http_status": 200,
+      "bytes": 1293147,
+      "sha256": "127c4466453cb349cf718bcb60af36711f82769b042d5067e21b2fed182304b1",
+      "matches_pinned_desktop_original": true
+    },
+    {
+      "shape_id": "L4",
+      "url": "https://raw.githubusercontent.com/Justalittlebittt/-/5ea55c922ff073d389c706fa07e9da49d8a482ab/assets/animals/giraffe_l4_desktop_002.png",
+      "http_status": 200,
+      "bytes": 1202037,
+      "sha256": "722712b83ae535835856d353f7477ff15171f0f57ec7b96330691a0feb61d4ad",
+      "matches_pinned_desktop_original": true
+    },
+    {
+      "shape_id": "L3",
+      "url": "https://raw.githubusercontent.com/Justalittlebittt/-/5ea55c922ff073d389c706fa07e9da49d8a482ab/assets/animals/call_duck_l3_desktop_002.png",
+      "http_status": 200,
+      "bytes": 898041,
+      "sha256": "3255a1bc5c9a3daaecf9b3d2364427237b3e0c6792189ffdff94a25c8a3b0b32",
+      "matches_pinned_desktop_original": true
+    }
+  ]
+}
