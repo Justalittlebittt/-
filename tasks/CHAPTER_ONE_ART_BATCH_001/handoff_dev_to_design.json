@@ -140,5 +140,8 @@
   "bug_fix": "Repeated lostpointercapture following suppressed contextmenu cleared the recovery marker too early. Keep contextRotation for the duration of held drag; left-button loss still recovers, real cancel/blur/release restores or finishes. 123 checks including native rotations and repeated-loss/cancel/blur regression. Formal panda_v2 source untouched.",
   "unchanged": "Approved panda/rabbit/background raw bytes and formal panda_v2 baseline verified by tools/level_generator/test.cjs; chapter levels.js and core unchanged.",
   "release_status": "NOT_RELEASE_READY; eight remaining geometry shapes, independent rights/provenance metadata and live itch upload not completed.",
-  "report": "tasks/CHAPTER_ONE_ART_BATCH_001/REPORT.md"
+  "report": "tasks/CHAPTER_ONE_ART_BATCH_001/REPORT.md",
+  "implementation_commit": "2a20b0c5b779bd619b88d379935adc488a7d7a97",
+  "github_original_png_uploaded": true,
+  "github_raw_binary_readback": "PASS_HTTP_200_THREE_MATCHING_SHA256_SEE_github-readback.json"
 }

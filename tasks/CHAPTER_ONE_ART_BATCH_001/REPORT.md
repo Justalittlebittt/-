@@ -42,3 +42,5 @@ python tools/itch/test.py --report-dir tasks/CHAPTER_ONE_ART_BATCH_001/package
 ```
 
 结论限于三种真实动物的本地接入、技术测试和完整八关流程。仍有八种几何占位，未作正式动物完整版或 itch.io 在线上传验收。HUMAN 实际试玩反馈另行记录。远端最终二进制读回结果见本任务 `github-readback.json`。
+
+GitHub实现提交：`2a20b0c5b779bd619b88d379935adc488a7d7a97`。已从该提交的GitHub raw地址实际下载三张PNG，全部HTTP 200，原始字节大小与批准SHA-256一致；不是仅比较本地文件或Git blob SHA。读回报告与脚本一起归档。

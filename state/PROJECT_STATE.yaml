@@ -1,5 +1,5 @@
 schema_version: "1.0"
-last_updated: "2026-10-25"
+last_updated: "2026-10-26"
 project_id: "animal-puzzle-zoo"
 repo:
   full_name: "Justalittlebittt/-"
@@ -7,8 +7,8 @@ repo:
   verified_in_this_session: true
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
-phase: "第一章场景版8关已完成；全部动物为几何拼块；待用户试玩"
-current_goal: "CHAPTER_ONE_SCENE_001复用既有场景，8关连玩和章节结束通过；等待HUMAN场景及玩法反馈"
+phase: "第一章8关已接入U5绿蛇/S4松鼠/T4猫头鹰；其余形状为完整几何占位；本批技术验收通过"
+current_goal: "CHAPTER_ONE_ART_BATCH_001三张精确最终PNG接入、八关与导出包回归、GitHub原始字节读回已完成；待HUMAN试玩及后续有限素材交付"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md"
@@ -410,9 +410,9 @@ chapter_one_art_batch_001_final_visual:
     U5: "a_clean_high_resolution_cartoon_illustration_on_a.png"
     S4: "抱着橡果的跃动松鼠.png"
     T4: "展翅欢笑的萌系猫头鹰.png"
-  github_original_png_uploaded: false
-  dev_gates: "G1_G2_G4_PENDING_REAL_LOCAL_CODEX_VALIDATION"
-  next_owner: "DESIGN_DIRECTOR_TO_CODEX_LOCAL"
+  github_original_png_uploaded: true
+  dev_gates: "TECHNICAL_G1_G2_G4_PASS_TESTED_SCOPE_SEE_DEV_REPORT"
+  next_owner: "HUMAN_PLAYTEST_AND_DESIGN_ART_NEXT_BATCH"
   note: "G3视觉通过≠PNG交付或游戏格形与旋转验证完成；不得拿旧版本替代获批原图。"
 
 chapter_one_art_batch_001_dev:
@@ -432,3 +432,5 @@ chapter_one_art_batch_001_dev:
   preserved: "panda/rabbit/background bytes; formal first level; original core and eight level data unchanged"
   report: "tasks/CHAPTER_ONE_ART_BATCH_001/handoff_dev_to_design.json"
   release: "PARTIAL_ANIMAL_PRIVATE_TEST_ONLY_NOT_ITCH_PUBLISHED"
+  implementation_commit: "2a20b0c5b779bd619b88d379935adc488a7d7a97"
+  github_readback: "PASS_THREE_HTTP_200_EXACT_APPROVED_SHA256; tasks/CHAPTER_ONE_ART_BATCH_001/github-readback.json"
