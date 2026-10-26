@@ -1,0 +1,102 @@
+{
+  "task_id": "CHAPTER_ONE_ART_BATCH_002",
+  "owner": "ART_EXPERIENCE",
+  "from": "DESIGN_DIRECTOR",
+  "status": "READY_FOR_ART",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
+  "goal": "Create the second batch of three whole-animal sprites for the already playable 8-level chapter-one itch.io demo.",
+  "source_geometry": "tasks/LEVEL_GENERATOR_001/chapter_preview_levels.json",
+  "shapes": [
+    {
+      "shape_id": "P5",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "shape_id": "L4",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "shape_id": "L3",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "production": "One shape at a time: choose original species and pose, show candidate and exact occupancy overlay to HUMAN, iterate to G3 approval; once all three approved, create one structured batch handoff to Codex for G1/G2/G4 integration.",
+  "acceptance": [
+    "Every PNG contains exactly one complete animal, never dismembered or sliced into separately operable cells.",
+    "Shape cells match the source geometry exactly; ART may suggest but not independently change occupied_cells.",
+    "Dark thick outlines, expressive humorous 2D cartoon proportions; maintain consistency with approved snake/squirrel/owl/panda/rabbit.",
+    "Check transparency, blank corners, neighboring cells and four 90-degree orientations in target board context.",
+    "HUMAN G3 approval is per individual image, not automatic for batch.",
+    "After all three G3 approved, hand off original PNG paths, exact version, source/provenance, byte metadata and occupied_cells in one GitHub record for Codex local intake.",
+    "Do not claim Codex has received image bytes until independently verified."
+  ],
+  "existing_approved_shapes": [
+    "O4 rabbit",
+    "RECT6 panda",
+    "U5 snake",
+    "S4 squirrel",
+    "T4 owl"
+  ],
+  "third_batch_reserved": [
+    "D2",
+    "I3",
+    "I4"
+  ],
+  "defer": [
+    "narrative",
+    "new chapters",
+    "changes to eight current level geometries"
+  ],
+  "next_owner": "ART_EXPERIENCE"
+}
