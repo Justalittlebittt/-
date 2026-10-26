@@ -1,0 +1,12 @@
+{
+  "task_id": "SQUIRREL_ALIGNMENT_001",
+  "date": "2026-10-26",
+  "approver": "HUMAN",
+  "quote": "通过，写入github合同",
+  "approved_implementation_commit": "321429c",
+  "scope": "Current eight-level playtest with U5/S4/T4 whole sprites and S4 local render anchor shifted from [0,0] to [-0.2,0], following rotation; reusable shape-to-whole-PNG mapping and independent display anchors.",
+  "original_png_and_occupied_cells": "UNCHANGED",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
+  "contract_section": "12",
+  "release_scope": "Partial animal preview, remaining geometry shapes and release gates retain their actual status."
+}
