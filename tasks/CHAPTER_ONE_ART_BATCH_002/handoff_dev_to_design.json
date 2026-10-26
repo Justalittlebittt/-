@@ -183,7 +183,8 @@
   "render_fix": "Opaque geometry now draws before whole animal sprites, avoiding rectangular erasure of protruding contour edges. Held piece still draws last.",
   "not_changed": "First approved panda/rabbit level, six previous PNGs including background, existing eight geometries, first-batch asset mappings and S4 -0.2 anchor.",
   "release_status": "PARTIAL_ANIMAL_PREVIEW; five shapes remain geometry under current chapter policy; no live itch upload; no formal release clearance.",
-  "human_retest": "PENDING_NEW_RUNTIME_REVIEW",
+  "human_retest": "HUMAN_PLAYTEST_PASS_NO_ISSUES_2026_10_26",
   "github_readback": "PASS_THREE_RAW_HTTP200_EXACT_PINNED_DESKTOP_BYTES_AND_SHA256",
-  "implementation_commit": "5ea55c922ff073d389c706fa07e9da49d8a482ab"
+  "implementation_commit": "5ea55c922ff073d389c706fa07e9da49d8a482ab",
+  "human_approval_receipt": "tasks/CHAPTER_ONE_ART_BATCH_002/approval_receipt.json"
 }

@@ -47,8 +47,14 @@ python tools/itch/build.py --browser --report-dir tasks/CHAPTER_ONE_ART_BATCH_00
 python tools/itch/test.py --report-dir tasks/CHAPTER_ONE_ART_BATCH_002/package
 ```
 
-Python审计需Pillow，浏览器需现有Playwright/Edge（必要时设置PLAYWRIGHT_MODULE）。所有原图仍可直接在 `assets/animals/` 查验。当前入口仍为 `experiments/chapter_preview/index.html`，六种真实动物与其余五种完整几何占位连玩八关；熊猫、白兔正式第一关及背景原始文件均未变更。尚未做本轮新运行版本的HUMAN实际试玩复验或itch在线发布；本次G3依据是用户已批准的原始文件。
+Python审计需Pillow，浏览器需现有Playwright/Edge（必要时设置PLAYWRIGHT_MODULE）。所有原图仍可直接在 `assets/animals/` 查验。当前入口仍为 `experiments/chapter_preview/index.html`，六种真实动物与其余五种完整几何占位连玩八关；熊猫、白兔正式第一关及背景原始文件均未变更。HUMAN已于2026-10-26完成本轮实际试玩并确认没有问题（见下方通过记录）；尚未做itch在线发布。原始文件G3依据与运行试玩通过分别登记。
 
 GitHub原始PNG提交后的实际远端下载结果归档为本任务 `github-readback.json`。
 
 实现与PNG提交：`5ea55c922ff073d389c706fa07e9da49d8a482ab`，已推送main。随后从该提交的GitHub raw地址实际下载三张PNG，均HTTP200，大小与SHA-256全部等于桌面固定原图；详见 `github-readback.json`。
+
+## HUMAN实际试玩通过（2026-10-26）
+
+用户明确反馈：“试玩结束，没有问题，写入报告。”当前八关、六种完整动物版本的实际试玩验收通过。对应实现提交 `5ea55c922ff073d389c706fa07e9da49d8a482ab`，反馈时最新main文档提交 `e00cae6`。机器测试与本次真实用户试玩均已完成，各自证据分别保留；通过范围不扩大为剩余动物或平台发行完成。结构化记录见 `approval_receipt.json`。
+
+熊猫/白兔未出现在本入口的原因：此前用户说“只是把所有的动物素材用格子来代替，已经做好的动物素材熊猫和兔子不用”，DEV将其解释为本八关入口暂不使用这两张图，后续两批派工只接入各自三种新动物，故当前注册表尚无 `RECT6 → panda`、`O4 → rabbit` 映射。这是当前内容启用范围及当时解释造成的，不是素材丢失、上传失败或无法复用。两张已批原始PNG已保存在仓库，原 `experiments/panda_v2/index.html` 的正式第一关仍加载两只熊猫与两只白兔；当前八关的同类形状显示占位。此条解释不擅自更改本轮启用范围，后续如接入只需复用原图并核验这两种映射与八关回归。
