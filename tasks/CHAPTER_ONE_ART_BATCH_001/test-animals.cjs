@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('fs'),path=require('path'),assert=require('node:assert/strict');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
-const root=path.resolve(__dirname,'../..'),out=path.join(__dirname,'evidence');
+const root=path.resolve(__dirname,'../..'),reportDir=path.resolve(process.env.ANIMAL_REPORT_DIR||__dirname),out=path.join(reportDir,'evidence');fs.mkdirSync(out,{recursive:true});
 require('../../tools/check-runtime.cjs')(path.join(root,'experiments/chapter_preview/index.html'));
 (async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{
  const page=await browser.newPage({viewport:{width:1280,height:900}}),errors=[],checks=[],rotations=[],overlaps=[];
@@ -52,5 +52,5 @@ require('../../tools/check-runtime.cjs')(path.join(root,'experiments/chapter_pre
  await page.locator('canvas').dispatchEvent('pointercancel');await page.mouse.up();check('cancel still restores original animal',await page.evaluate(()=>!held&&pieces.every(p=>!p.at&&p.rot===0)));
  await pick('4');await right();await page.evaluate(()=>window.dispatchEvent(new Event('blur')));await page.mouse.up();check('blur still cancels rotated drag',await page.evaluate(()=>!held&&pieces.every(p=>!p.at&&p.rot===0)));
  await page.keyboard.press('r');check('R resets all real sprites',await page.evaluate(()=>pieces.every(p=>!p.at&&p.rot===0)&&!held));check('no page errors',errors.length===0);
- const report={status:'PASS_TESTED_INTERACTION_AND_ROTATION_WITH_LOCAL_CONTOUR_PROTRUSIONS',checks,rotations,adjacent_alpha_overlaps:overlaps,errors,limits:'Empty-cell centers and atomic interaction checked; local edge/feather protrusions remain recorded, not claimed pixel-exact silhouette. G3 is HUMAN approval, not replaced by this test.'};fs.writeFileSync(path.join(__dirname,'animal-browser-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({checks:checks.length,rotations:rotations.length,overlaps,errors}));
+ const report={status:'PASS_TESTED_INTERACTION_AND_ROTATION_WITH_LOCAL_CONTOUR_PROTRUSIONS',checks,rotations,adjacent_alpha_overlaps:overlaps,errors,limits:'Empty-cell centers and atomic interaction checked; local edge/feather protrusions remain recorded, not claimed pixel-exact silhouette. G3 is HUMAN approval, not replaced by this test.'};fs.writeFileSync(path.join(reportDir,'animal-browser-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({checks:checks.length,rotations:rotations.length,overlaps,errors}));
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

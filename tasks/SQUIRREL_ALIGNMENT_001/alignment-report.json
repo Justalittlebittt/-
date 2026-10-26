@@ -1,0 +1,204 @@
+{
+  "rows": [
+    {
+      "offset_cells": [
+        0,
+        0
+      ],
+      "rotation": 0,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "alpha_gt60_fraction": 0.002475
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "alpha_gt60_fraction": 0.1838
+        }
+      ],
+      "outside_bounding_box_alpha_gt60_pixels": 0
+    },
+    {
+      "offset_cells": [
+        0,
+        0
+      ],
+      "rotation": 1,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "alpha_gt60_fraction": 0.002475
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "alpha_gt60_fraction": 0.1838
+        }
+      ],
+      "outside_bounding_box_alpha_gt60_pixels": 0
+    },
+    {
+      "offset_cells": [
+        0,
+        0
+      ],
+      "rotation": 2,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "alpha_gt60_fraction": 0.1838
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "alpha_gt60_fraction": 0.002475
+        }
+      ],
+      "outside_bounding_box_alpha_gt60_pixels": 0
+    },
+    {
+      "offset_cells": [
+        0,
+        0
+      ],
+      "rotation": 3,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "alpha_gt60_fraction": 0.1838
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "alpha_gt60_fraction": 0.002475
+        }
+      ],
+      "outside_bounding_box_alpha_gt60_pixels": 0
+    },
+    {
+      "offset_cells": [
+        -0.2,
+        0
+      ],
+      "rotation": 0,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "alpha_gt60_fraction": 0.018075
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "alpha_gt60_fraction": 0.058025
+        }
+      ],
+      "outside_bounding_box_alpha_gt60_pixels": 0
+    },
+    {
+      "offset_cells": [
+        -0.2,
+        0
+      ],
+      "rotation": 1,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "alpha_gt60_fraction": 0.018075
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "alpha_gt60_fraction": 0.058025
+        }
+      ],
+      "outside_bounding_box_alpha_gt60_pixels": 0
+    },
+    {
+      "offset_cells": [
+        -0.2,
+        0
+      ],
+      "rotation": 2,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "alpha_gt60_fraction": 0.058025
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "alpha_gt60_fraction": 0.018075
+        }
+      ],
+      "outside_bounding_box_alpha_gt60_pixels": 0
+    },
+    {
+      "offset_cells": [
+        -0.2,
+        0
+      ],
+      "rotation": 3,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "alpha_gt60_fraction": 0.058025
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "alpha_gt60_fraction": 0.018075
+        }
+      ],
+      "outside_bounding_box_alpha_gt60_pixels": 0
+    }
+  ],
+  "offset_cells": [
+    -0.2,
+    0
+  ],
+  "status": "PASS_USER_REQUESTED_LOCAL_ANCHOR_SHIFT",
+  "before_bottom_right_coverage": 0.1838,
+  "after_bottom_right_coverage": 0.058025,
+  "note": "Alpha>60 sampling is diagnostic, not an art approval threshold. Exact PNG bytes and logical occupied_cells unchanged."
+}

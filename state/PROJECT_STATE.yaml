@@ -434,3 +434,22 @@ chapter_one_art_batch_001_dev:
   release: "PARTIAL_ANIMAL_PRIVATE_TEST_ONLY_NOT_ITCH_PUBLISHED"
   implementation_commit: "2a20b0c5b779bd619b88d379935adc488a7d7a97"
   github_readback: "PASS_THREE_HTTP_200_EXACT_APPROVED_SHA256; tasks/CHAPTER_ONE_ART_BATCH_001/github-readback.json"
+
+chapter_one_art_batch_001_human_playtest:
+  date: "2026-10-26"
+  status: "HUMAN_PLAYED_OTHERS_ACCEPTED_SQUIRREL_ANCHOR_CORRECTION_REQUESTED"
+  feedback: "整体我已经试玩了，除了这个截图中的松鼠我认为可以修一下素材其他没有问题"
+  correction: "Shift the whole squirrel left to match HUMAN second screenshot; source pixels and S4 cells unchanged"
+squirrel_alignment_001:
+  owner: "DEV_INTEGRATION"
+  date: "2026-10-26"
+  status: "IMPLEMENTED_AND_REGRESSION_PASS"
+  local_offset_cells: [-0.2, 0]
+  offset_rotation: "Follows whole-animal local 90-degree rotation"
+  original_png_and_occupied_cells: "UNCHANGED"
+  bottom_right_empty_cell_alpha60_fraction_before_after: [0.1838, 0.058025]
+  animal_checks: 123
+  extracted_iframe_checks: 362
+  real_pointer_level_completions: 24
+  report: "tasks/SQUIRREL_ALIGNMENT_001/REPORT.md"
+  human_retest_of_shifted_version: "PENDING"

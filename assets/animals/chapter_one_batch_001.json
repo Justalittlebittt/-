@@ -75,11 +75,15 @@
           1
         ]
       ],
-      "mapping": "full original image uniformly contained and centered within 3x2 cell bounding box; no source pixel modification",
+      "mapping": "Full original uniformly contained in 3x2; HUMAN screenshot correction: whole-image local anchor shifted left 0.2 cell, rotating with the animal. Source bytes and occupied_cells unchanged.",
       "G1": "PASS_ORIGINAL_BYTES_RGBA_ALPHA_AND_COMPOSITE_EDGE_TECHNICAL_CHECKS",
       "G2": "PASS_TESTED_FOUR_ROTATIONS_AND_NEIGHBORS_WITH_RECORDED_LOCAL_PROTRUSIONS",
       "G3": "HUMAN_APPROVED_2026_10_26",
-      "G4": "PASS_REAL_POINTER_AND_EIGHT_LEVEL_FLOW_TESTED_SCOPE"
+      "G4": "PASS_REAL_POINTER_AND_EIGHT_LEVEL_FLOW_TESTED_SCOPE",
+      "render_offset_cells": [
+        -0.2,
+        0
+      ]
     },
     {
       "shape_id": "T4",
