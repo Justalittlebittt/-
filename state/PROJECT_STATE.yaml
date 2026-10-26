@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "第一章8关已接入U5绿蛇/S4松鼠/T4猫头鹰；其余形状为完整几何占位；本批技术验收通过"
-current_goal: "CHAPTER_ONE_ART_BATCH_001三张精确最终PNG接入、八关与导出包回归、GitHub原始字节读回已完成；待HUMAN试玩及后续有限素材交付"
+current_goal: "第一章第二批P5、L4、L3正式动物按单只G3验收、三只统一交接Codex；第三批D2、I3、I4保留；暂停剧情及扩关"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md"
@@ -457,3 +457,12 @@ squirrel_alignment_001:
   approved_implementation_commit: "321429c"
   approval_receipt: "tasks/SQUIRREL_ALIGNMENT_001/approval_receipt.json"
   contract_record: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md section 12"
+
+chapter_one_art_batch_002:
+  owner: "ART_EXPERIENCE"
+  status: "READY_FOR_ART_PER_IMAGE_G3_PENDING"
+  request: "tasks/CHAPTER_ONE_ART_BATCH_002/request_to_art.json"
+  shapes: ["P5", "L4", "L3"]
+  handoff_policy: "ONE_ANIMAL_AT_A_TIME_VISUAL_APPROVAL_THEN_THREE_ASSETS_SINGLE_CODEX_INTAKE"
+  third_batch: ["D2", "I3", "I4"]
+  demo_scope: "8_LEVELS_11_WHOLE_ANIMALS_ITCH_IO_RELEASE_PENDING"
