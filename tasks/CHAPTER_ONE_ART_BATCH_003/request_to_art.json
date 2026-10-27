@@ -1,0 +1,74 @@
+{
+  "task_id": "CHAPTER_ONE_ART_BATCH_003",
+  "owner": "ART_EXPERIENCE",
+  "status": "READY_FOR_ART",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
+  "goal": "Create three final original complete-animal RGBA PNG sprites D2, I3 and I4 for eight-level itch.io demo.",
+  "shapes": [
+    {
+      "shape_id": "D2",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "shape_id": "I3",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "shape_id": "I4",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    }
+  ],
+  "source": "tasks/LEVEL_GENERATOR_001/chapter_preview_levels.json",
+  "rules": [
+    "Pick species and poses individually, avoid repeating already approved species unless justified.",
+    "One whole animal per independently draggable piece; occupied cells define logic, never a set of animal fragments.",
+    "Follow approved bold-line expressive cartoon style; no mandatory gaze at camera.",
+    "Review each whole image and occupancy overlay with HUMAN separately; record G3 version and accurate original filename.",
+    "Only after all three G3 passes send ONE structured batch handoff to CODEX local; source PNG files reside on user's Desktop/动物拼图美术素材 and are not auto-synced.",
+    "No geometry changes, no narrative, no new chapter."
+  ],
+  "outputs": [
+    "3 separate human-approved original PNG assets",
+    "one consolidated ART-to-DEV handoff with accurate file provenance and occupancy"
+  ],
+  "release_condition": "Not a standalone publishing gate; remaining assets and human playable QA still required."
+}
