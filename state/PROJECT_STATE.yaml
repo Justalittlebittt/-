@@ -1,5 +1,5 @@
 schema_version: "1.0"
-last_updated: "2026-10-26"
+last_updated: "2026-10-27"
 project_id: "animal-puzzle-zoo"
 repo:
   full_name: "Justalittlebittt/-"
@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "第一章8关已接入六种完整动物；第二批P5河马/L4长颈鹿/L3柯尔鸭技术验收通过，五种形状仍为几何占位"
-current_goal: "第一章第二批P5、L4、L3正式动物按单只G3验收、三只统一交接Codex；第三批D2、I3、I4保留；暂停剧情及扩关"
+current_goal: "第一章8关：第三批D2/I3/I4正式美术按单图G3验收并统一交接；Codex并行把现有白兔O4和熊猫RECT6接入章节；尚未公开发布"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md"
@@ -482,3 +482,16 @@ chapter_one_art_batch_002:
   human_approval_quote: "试玩结束，没有问题，写入报告。"
   human_approval_receipt: "tasks/CHAPTER_ONE_ART_BATCH_002/approval_receipt.json"
   panda_rabbit_chapter_mapping: "NOT_ENABLED_BY_PRIOR_SCOPE_INTERPRETATION; originals preserved and used by panda_v2 first level"
+
+chapter_one_completion_work_2026_10_27:
+  art_batch_003:
+    task: "tasks/CHAPTER_ONE_ART_BATCH_003/request_to_art.json"
+    owner: "ART_EXPERIENCE"
+    shapes: ["D2", "I3", "I4"]
+    status: "READY_FOR_ART_NOT_YET_EXECUTED"
+  reuse_panda_rabbit:
+    task: "tasks/CHAPTER_ONE_PANDA_RABBIT_REUSE_001/request_to_dev.json"
+    owner: "DEV_INTEGRATION_CODEX_LOCAL"
+    mapping: ["O4 rabbit", "RECT6 panda"]
+    status: "READY_FOR_CODEX_NOT_YET_EXECUTED"
+  policy: "Keep 8 existing chapter levels and all approved original PNG intact; formal 11-shape full-art itch Demo gate still pending"
