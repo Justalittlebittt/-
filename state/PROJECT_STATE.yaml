@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "第一章8关已映射八种完整动物；已批准熊猫白兔复用完成，D2/I3/I4仍为几何占位"
-current_goal: "按HUMAN指令启用已批准熊猫RECT6与白兔O4；整图旋转拖放和八关导出包回归通过，原正式第一关不变"
+current_goal: "第一章八关熊猫白兔复用及回归已完成；第三批D2/I3/I4由ART按单图G3验收并交接，尚未公开发布"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md"
@@ -504,3 +504,17 @@ chapter_one_existing_animals_001:
   metadata: "assets/animals/chapter_existing_approved_reuse.json"
   report: "tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/REPORT.md"
   human_retest: "PENDING_CURRENT_BUILD"
+
+chapter_one_completion_work_2026_10_27:
+  art_batch_003:
+    task: "tasks/CHAPTER_ONE_ART_BATCH_003/request_to_art.json"
+    owner: "ART_EXPERIENCE"
+    shapes: ["D2", "I3", "I4"]
+    status: "READY_FOR_ART_NOT_YET_EXECUTED"
+  reuse_panda_rabbit:
+    task: "tasks/CHAPTER_ONE_PANDA_RABBIT_REUSE_001/request_to_dev.json"
+    owner: "DEV_INTEGRATION_CODEX_LOCAL"
+    mapping: ["O4 rabbit", "RECT6 panda"]
+    handoff: "tasks/CHAPTER_ONE_PANDA_RABBIT_REUSE_001/handoff_dev_to_design.json"
+    status: "COMPLETE_REGRESSION_PASS_HUMAN_PLAYTEST_PENDING"
+  policy: "Keep 8 existing chapter levels and all approved original PNG intact; formal 11-shape full-art itch Demo gate still pending"

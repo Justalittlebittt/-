@@ -1,0 +1,27 @@
+{
+  "task_id": "CHAPTER_ONE_PANDA_RABBIT_REUSE_001",
+  "owner": "DEV_INTEGRATION",
+  "executor": "CODEX_LOCAL",
+  "status": "READY_FOR_CODEX",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
+  "goal": "Enable two already approved full-animal PNG assets in chapter one preview by mapping O4 to rabbit and RECT6 to panda; preserve every existing level, existing independent first-level scene and original image bytes.",
+  "asset_mapping": [
+    {
+      "shape_id": "O4",
+      "asset": "assets/animals/rabbit_square4_ears_folded_v2.png"
+    },
+    {
+      "shape_id": "RECT6",
+      "asset": "assets/animals/panda_rect6_desktop_001.png"
+    }
+  ],
+  "requirements": [
+    "Do not redraw, recrop or slice original PNG; reuse proven render metadata where applicable.",
+    "Programmatic occupied_cells remain authoritative, all four rotations and grabs/pickups/invalid drops consistent.",
+    "No image changes to existing snake, squirrel, owl, hippo, giraffe or call duck; no edits to original chapter layout.",
+    "Validate real browser eight-level completion and adjacent silhouettes, archive screenshots of O4 and RECT6 in chapter and run extracted itch iframe smoke.",
+    "Record separate integration status. Before batch 003 finishes 3 shapes D2 I3 I4 remain geometry, so not public demo ready.",
+    "No narrative or extra levels; produce one succinct handoff with tests and Git commit."
+  ],
+  "handoff": "tasks/CHAPTER_ONE_PANDA_RABBIT_REUSE_001/handoff_dev_to_design.json"
+}

@@ -37,3 +37,5 @@ python tools/itch/test.py --report-dir tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/pa
 ```
 
 现在当前入口为8种真实动物，仅D2、I3、I4保留完整几何占位。第1关仍按既有数据使用I3占位，未为提前展示熊猫或兔子重排关卡。HUMAN对两张原图的批准与本次启用指令已登记；当前八动物版本的实际用户复验另记，未上传itch平台或宣称正式发行完成。远端原始PNG读回证据见本任务 `github-readback.json`。
+
+交付对接：开发期间DESIGN在远端追加了同项正式任务 `CHAPTER_ONE_PANDA_RABBIT_REUSE_001`。已读取并逐项满足该request，结果登记在其指定的 `handoff_dev_to_design.json`，本目录保留已执行证据；远端第三批美术任务和安排一并保留，未重复开发或重做素材。

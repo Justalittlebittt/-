@@ -1,0 +1,44 @@
+{
+  "task_id": "CHAPTER_ONE_PANDA_RABBIT_REUSE_001",
+  "owner": "DEV_INTEGRATION",
+  "date": "2026-10-27",
+  "status": "COMPLETE_REGRESSION_PASS_HUMAN_PLAYTEST_PENDING",
+  "implementation_commit": "cbe4259f2374a46948b1b02f88fcf008182c8cc6",
+  "mapping": {
+    "O4": "assets/animals/rabbit_square4_ears_folded_v2.png",
+    "RECT6": "assets/animals/panda_rect6_desktop_001.png"
+  },
+  "source_bytes_and_all_eight_levels": "UNCHANGED",
+  "rabbit_levels": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "panda_levels": [
+    8
+  ],
+  "tests": {
+    "original_hashes_checked": 2,
+    "boundary_cases": 448,
+    "collision_cases": 40,
+    "animal_pointer_checks": 243,
+    "rotation_poses": 32,
+    "extracted_iframe_checks": 362,
+    "real_pointer_level_completions": 24,
+    "completed_chapters": 3,
+    "missing_resources": 0,
+    "page_errors": 0,
+    "baseline_unchanged_files": 15
+  },
+  "report": "tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/REPORT.md",
+  "evidence_directory": "tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/",
+  "runtime": "experiments/chapter_preview/index.html",
+  "remaining_geometry": [
+    "D2",
+    "I3",
+    "I4"
+  ],
+  "release": "NOT_PUBLIC_DEMO_READY",
+  "note": "This same implementation was already tested locally while DESIGN dispatched this task; linked existing evidence without repeating development. Third batch art request preserved unchanged."
+}
