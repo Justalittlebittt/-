@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": [
+    "eleven silent default mappings",
+    "unknown and unset animal are quiet",
+    "configured clip plays",
+    "rapid press limited globally",
+    "same URL reused and restarted",
+    "mute stops active sound",
+    "muted press silent",
+    "volume clamps high",
+    "volume clamps low",
+    "different sound stops previous voice",
+    "explicit stop pauses voice",
+    "decode/play rejection handled",
+    "construction failure handled"
+  ]
+}

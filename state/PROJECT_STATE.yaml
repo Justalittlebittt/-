@@ -8,7 +8,7 @@ repo:
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
 phase: "第一章8关34个实例已全部使用11种完整动物PNG；第三批本地技术验证通过，尚未声明发布就绪"
-current_goal: "完成第三批D2豚鼠/I3水獭/I4鳄鱼接入、源码与导出包连续八关验证及GitHub字节核验；提交正式交接并分别记录发布门禁缺项"
+current_goal: "11动物版已获HUMAN试玩成功；简洁点击音效接口和导出支持已实现验证，正式音频未交付时默认静默"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md"
@@ -580,3 +580,23 @@ animal_click_audio_audit_001:
   export_audio_support: "NOT_IMPLEMENTED; current PNG/JS/CSS exporter needs explicit audio dependency support"
   audit: "tasks/ANIMAL_CLICK_AUDIO_AUDIT_001/REPORT.md"
   implementation: "NOT_REQUESTED_IN_CURRENT_INTERFACE_CHECK"
+
+animal_click_audio_001:
+  date: "2026-10-27"
+  owner: "DEV_INTEGRATION"
+  status: "IMPLEMENTED_AND_QA_PASS_DEFAULT_SILENT"
+  supersedes_audit: "ANIMAL_CLICK_AUDIO_AUDIT_001 no-interface finding; historical audit retained"
+  runtime: "experiments/chapter_preview/audio.js"
+  sound_mapping: "animalClickSounds, 11 null entries until approved files arrive"
+  trigger: "successful left press on existing animal; not pointermove/right rotation"
+  controls: "shared volume, mute, cooldown, single active voice, stop on reset/level change"
+  unit_checks: 13
+  source_audio_checks: 10
+  extracted_iframe_audio_checks: 10
+  extracted_8_level_checks: 370
+  actual_level_completions: 24
+  negative_audio_export_checks: 3
+  normal_export_audio_files: 0
+  delivered_animal_voice_files: "NONE_SUPPLIED"
+  test_tone: "QA_ONLY_NOT_BOUND_OR_INCLUDED_IN_NORMAL_EXPORT"
+  report: "tasks/ANIMAL_CLICK_AUDIO_001/REPORT.md"

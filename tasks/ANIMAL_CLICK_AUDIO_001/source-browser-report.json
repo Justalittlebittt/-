@@ -1,0 +1,20 @@
+{
+  "status": "PASS_REAL_MEDIA_CLICK_AUDIO",
+  "checks": [
+    "unset mapping stays quiet and allows pickup",
+    "native audio decoded and started on left press",
+    "drag and right rotation do not replay",
+    "empty board does not play",
+    "mute does not block pickup",
+    "rapid click guard keeps input working",
+    "missing media leaves animal draggable",
+    "missing media returns false",
+    "valid media works again after error",
+    "no unhandled script errors"
+  ],
+  "errors": [],
+  "native_play_starts": 2,
+  "test_clip_only": true,
+  "packaged_audio": false,
+  "notes": "Verified native media decode/play promises in Edge; not human sound review or delivered animal voices."
+}

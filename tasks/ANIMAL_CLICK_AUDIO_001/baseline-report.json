@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "baseline": "8b55527",
+  "unchanged_files": {
+    "assets/animals/call_duck_l3_desktop_002.png": "3255a1bc5c9a3daaecf9b3d2364427237b3e0c6792189ffdff94a25c8a3b0b32",
+    "assets/animals/crocodile_i4_desktop_003.png": "4195db5453c276c9ea05868d16d17fa7c925578ddd764c423b12fb4dcc364ba9",
+    "assets/animals/giraffe_l4_desktop_002.png": "722712b83ae535835856d353f7477ff15171f0f57ec7b96330691a0feb61d4ad",
+    "assets/animals/guinea_pig_d2_desktop_003.png": "c81e7fb131285be564b1fb400f9854e2f76343b7fb5ee86d593ca90d2dd4efa7",
+    "assets/animals/hippo_p5_desktop_002.png": "127c4466453cb349cf718bcb60af36711f82769b042d5067e21b2fed182304b1",
+    "assets/animals/otter_i3_desktop_003.png": "a5370d6232a77150a9ae71d750265dcfd453d85a7e9e151c5315463073040c94",
+    "assets/animals/owl_t4_wide_g3.png": "c57b9af6ed27ce2254aadf328720553899d2749b5056996412790f6700b9144c",
+    "assets/animals/panda_rect6_desktop_001.png": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "assets/animals/rabbit_square4_ears_folded_v2.png": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+    "assets/animals/snake_u5_final_g3.png": "0fdb68ffa5a76ca6200c0b5602ed1e49d526bc9d62ae5deaf51fd978df6c9379",
+    "assets/animals/squirrel_s4_clean_g3.png": "e68f4b6f68a56e78716a04e0d5c81b827a19f67aa473b3308fe820c4f6c70440",
+    "assets/backgrounds/chapter_one.png": "a57d2a4c7830e511561e2d2fe9cc60a62b26b4a16023f5d579480ba3f6f7227a",
+    "experiments/chapter_preview/animals.js": "224bed53eaa73f32d3f870567f590da9e8c52b6d42beaf1cfb140a0a7529207c",
+    "experiments/chapter_preview/levels.js": "704b83b4af99eb57194eb9462bb30c1d937d0142c5b77a2cca7557a457f930be",
+    "experiments/first_playable_001/core.js": "e231a3c2db4211415e45306c1f560aa436e23362667c5c6973070582afaf7dc7",
+    "experiments/panda_v2/game.js": "03700c5adba539c1502762f2310e33883515c33a7a305a47e0bcf9b5aa328a35",
+    "experiments/panda_v2/index.html": "6a8e050dc19f09016bee12c1adff74270a0abb980b5822b87e19953ba2d19b44"
+  }
+}

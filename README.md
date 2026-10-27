@@ -46,3 +46,5 @@ itch HTML5测试打包：`python tools/itch/build.py --browser`，输出根index
 2026-10-27已按HUMAN指令复用原批准熊猫/白兔：chapter_preview第2/3/4/6关显示白兔、第8关显示熊猫，现为8种完整动物，仅D2/I3/I4仍占位；原图及旧正式第一关不变。参见 [复用验收](tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/REPORT.md)。
 
 2026-10-27第三批已接入：D2豚鼠、I3水獭、I4鳄鱼。现有八关的34个实例全部映射11种完整动物PNG，正常加载不再有几何占位；原图和既有关卡不变。源码与实际导出包均完成三种窗口连续八关操作验证；这是全美术本地测试版，尚未声明正式发布就绪。见 [第三批正式交接](tasks/CHAPTER_ONE_ART_BATCH_003/REPORT.md) 与 [发布门禁实际状态](tasks/CHAPTER_ONE_ART_BATCH_003/release_gate_review.json)。导出工具当前产物为builds/itch/animal-puzzle-chapter-one-test.zip。
+
+点击音效扩展已实现：chapter_preview/audio.js中的11动物映射可配置正式音频，左键选中播放一次，支持共用音量/静音/限流和HTML5导出。当前未交付正式声音，配置全部留空，游戏静默；测试音未混入正常包。见 [音效扩展说明](tasks/ANIMAL_CLICK_AUDIO_001/REPORT.md) 与 [声音交付目录说明](assets/audio/README.md)。

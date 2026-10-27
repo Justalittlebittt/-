@@ -1,0 +1,25 @@
+{
+  "task_id": "ANIMAL_CLICK_AUDIO_001",
+  "owner": "DEV_INTEGRATION",
+  "date": "2026-10-27",
+  "status": "IMPLEMENTED_TESTED_DEFAULT_SILENT_NO_FORMAL_SOUND_ASSETS",
+  "runtime_module": "experiments/chapter_preview/audio.js",
+  "mapping": "animalClickSounds initial JSON: per-shape relative WAV/MP3/OGG/M4A URL or null",
+  "trigger": "One call after successful left-button locate; none on drag move/right rotation; stop at begin/reset/next",
+  "runtime_module_lines": 23,
+  "tests": {
+    "unit": 13,
+    "source_real_media": 10,
+    "extracted_iframe_real_media": 10,
+    "audio_fixture_export_eight_levels": 370,
+    "real_level_completions": 24,
+    "audio_negative_cases": 3,
+    "normal_package_negative_cases": 10
+  },
+  "default_formal_config": "All 11 null; zero delivered voice files; zero audio files included in normal export",
+  "qa_fixture": "120ms generated tone, only under task fixtures; no claim of animal voice or human listening acceptance",
+  "normal_build": "builds/itch/animal-puzzle-chapter-one-test.zip",
+  "qa_only_build": "builds/audio-qa/qa-tone-package.zip",
+  "preserved": "All original PNGs, animal visual registrations, eight levels, puzzle core and formal first-level source unchanged; pointer hook and scene-entry stop are the only runtime integration calls",
+  "report": "tasks/ANIMAL_CLICK_AUDIO_001/REPORT.md"
+}

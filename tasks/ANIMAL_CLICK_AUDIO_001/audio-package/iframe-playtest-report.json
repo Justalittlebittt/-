@@ -1,0 +1,855 @@
+{
+  "status": "PASS_8_LEVEL_CHAPTER_REGISTERED_ANIMALS_G4",
+  "animal_image_requests": [
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/snake_u5_final_g3.0fdb68ffa5a76ca6.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/squirrel_s4_clean_g3.e68f4b6f68a56e78.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/owl_t4_wide_g3.c57b9af6ed27ce22.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/hippo_p5_desktop_002.127c4466453cb349.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/giraffe_l4_desktop_002.722712b83ae53583.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/call_duck_l3_desktop_002.3255a1bc5c9a3daa.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/panda_rect6_desktop_001.e88018fb1b8d9928.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/rabbit_square4_ears_folded_v2.00ae48b4ee3c9f41.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/guinea_pig_d2_desktop_003.c81e7fb131285be5.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/otter_i3_desktop_003.a5370d6232a77150.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/crocodile_i4_desktop_003.4195db5453c276c9.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/snake_u5_final_g3.0fdb68ffa5a76ca6.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/squirrel_s4_clean_g3.e68f4b6f68a56e78.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/owl_t4_wide_g3.c57b9af6ed27ce22.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/hippo_p5_desktop_002.127c4466453cb349.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/giraffe_l4_desktop_002.722712b83ae53583.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/call_duck_l3_desktop_002.3255a1bc5c9a3daa.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/panda_rect6_desktop_001.e88018fb1b8d9928.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/rabbit_square4_ears_folded_v2.00ae48b4ee3c9f41.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/guinea_pig_d2_desktop_003.c81e7fb131285be5.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/otter_i3_desktop_003.a5370d6232a77150.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/crocodile_i4_desktop_003.4195db5453c276c9.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/snake_u5_final_g3.0fdb68ffa5a76ca6.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/squirrel_s4_clean_g3.e68f4b6f68a56e78.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/owl_t4_wide_g3.c57b9af6ed27ce22.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/hippo_p5_desktop_002.127c4466453cb349.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/giraffe_l4_desktop_002.722712b83ae53583.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/call_duck_l3_desktop_002.3255a1bc5c9a3daa.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/panda_rect6_desktop_001.e88018fb1b8d9928.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/rabbit_square4_ears_folded_v2.00ae48b4ee3c9f41.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/guinea_pig_d2_desktop_003.c81e7fb131285be5.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/otter_i3_desktop_003.a5370d6232a77150.png",
+    "http://127.0.0.1:58882/html/qa-upload/ac5e59180534c21e8c95/assets/crocodile_i4_desktop_003.4195db5453c276c9.png"
+  ],
+  "neighbor_overlaps": [
+    {
+      "level_id": "GEN_01",
+      "overlaps": []
+    },
+    {
+      "level_id": "GEN_02",
+      "overlaps": []
+    },
+    {
+      "level_id": "GEN_03",
+      "overlaps": [
+        {
+          "a": "L4#1",
+          "b": "D2#3",
+          "overlap_pixels": 56,
+          "equivalent_cell_area": 0.015555555555555555
+        }
+      ]
+    },
+    {
+      "level_id": "GEN_04",
+      "overlaps": []
+    },
+    {
+      "level_id": "GEN_05",
+      "overlaps": []
+    },
+    {
+      "level_id": "GEN_07",
+      "overlaps": [
+        {
+          "a": "P5#2",
+          "b": "L3#5",
+          "overlap_pixels": 14,
+          "equivalent_cell_area": 0.0038888888888888888
+        },
+        {
+          "a": "L3#5",
+          "b": "I3#6",
+          "overlap_pixels": 46,
+          "equivalent_cell_area": 0.012777777777777779
+        }
+      ]
+    },
+    {
+      "level_id": "GEN_10",
+      "overlaps": []
+    },
+    {
+      "level_id": "GEN_12",
+      "overlaps": []
+    }
+  ],
+  "checks": [
+    "progress correct 1280 0",
+    "no premature next 1280 0",
+    "nonoverlap reachable layout 1280 0",
+    "whole piece grabbed 1",
+    "four rotations restore grab",
+    "pointercancel restores",
+    "whole piece grabbed 1",
+    "vertical I3 rejects the short first board 1280",
+    "whole piece grabbed 1",
+    "actual solution pose 1280 0 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1280 0 2",
+    "exact-cover win 1280 0",
+    "whole piece grabbed 1",
+    "collision atomic rollback 1280",
+    "whole piece grabbed 1",
+    "pickup hides win",
+    "retrieve is atomic",
+    "whole piece grabbed 1",
+    "reposition excluded self",
+    "progress correct 1280 1",
+    "no premature next 1280 1",
+    "nonoverlap reachable layout 1280 1",
+    "whole piece grabbed 1",
+    "actual solution pose 1280 1 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1280 1 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1280 1 3",
+    "exact-cover win 1280 1",
+    "progress correct 1280 2",
+    "no premature next 1280 2",
+    "nonoverlap reachable layout 1280 2",
+    "whole piece grabbed 1",
+    "actual solution pose 1280 2 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1280 2 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1280 2 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1280 2 4",
+    "exact-cover win 1280 2",
+    "progress correct 1280 3",
+    "no premature next 1280 3",
+    "nonoverlap reachable layout 1280 3",
+    "whole piece grabbed 1",
+    "blocked square rejects actual drop 1280 3",
+    "whole piece grabbed 1",
+    "actual solution pose 1280 3 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1280 3 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1280 3 3",
+    "exact-cover win 1280 3",
+    "progress correct 1280 4",
+    "no premature next 1280 4",
+    "nonoverlap reachable layout 1280 4",
+    "whole piece grabbed 1",
+    "actual solution pose 1280 4 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1280 4 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1280 4 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1280 4 4",
+    "exact-cover win 1280 4",
+    "progress correct 1280 5",
+    "no premature next 1280 5",
+    "nonoverlap reachable layout 1280 5",
+    "whole piece grabbed 1",
+    "actual solution pose 1280 5 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1280 5 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1280 5 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1280 5 4",
+    "whole piece grabbed 5",
+    "actual solution pose 1280 5 5",
+    "whole piece grabbed 6",
+    "actual solution pose 1280 5 6",
+    "exact-cover win 1280 5",
+    "progress correct 1280 6",
+    "no premature next 1280 6",
+    "nonoverlap reachable layout 1280 6",
+    "whole piece grabbed 1",
+    "blocked square rejects actual drop 1280 6",
+    "whole piece grabbed 1",
+    "actual solution pose 1280 6 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1280 6 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1280 6 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1280 6 4",
+    "whole piece grabbed 5",
+    "actual solution pose 1280 6 5",
+    "whole piece grabbed 6",
+    "actual solution pose 1280 6 6",
+    "exact-cover win 1280 6",
+    "progress correct 1280 7",
+    "no premature next 1280 7",
+    "nonoverlap reachable layout 1280 7",
+    "whole piece grabbed 1",
+    "blocked square rejects actual drop 1280 7",
+    "whole piece grabbed 1",
+    "actual solution pose 1280 7 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1280 7 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1280 7 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1280 7 4",
+    "whole piece grabbed 5",
+    "actual solution pose 1280 7 5",
+    "whole piece grabbed 6",
+    "actual solution pose 1280 7 6",
+    "exact-cover win 1280 7",
+    "chapter end 1280",
+    "replay returns start 1280",
+    "whole piece grabbed 1",
+    "R resets current level 1280",
+    "progress correct 1024 0",
+    "no premature next 1024 0",
+    "nonoverlap reachable layout 1024 0",
+    "whole piece grabbed 1",
+    "four rotations restore grab",
+    "pointercancel restores",
+    "whole piece grabbed 1",
+    "vertical I3 rejects the short first board 1024",
+    "whole piece grabbed 1",
+    "actual solution pose 1024 0 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1024 0 2",
+    "exact-cover win 1024 0",
+    "whole piece grabbed 1",
+    "collision atomic rollback 1024",
+    "whole piece grabbed 1",
+    "pickup hides win",
+    "retrieve is atomic",
+    "whole piece grabbed 1",
+    "reposition excluded self",
+    "progress correct 1024 1",
+    "no premature next 1024 1",
+    "nonoverlap reachable layout 1024 1",
+    "whole piece grabbed 1",
+    "actual solution pose 1024 1 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1024 1 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1024 1 3",
+    "exact-cover win 1024 1",
+    "progress correct 1024 2",
+    "no premature next 1024 2",
+    "nonoverlap reachable layout 1024 2",
+    "whole piece grabbed 1",
+    "actual solution pose 1024 2 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1024 2 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1024 2 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1024 2 4",
+    "exact-cover win 1024 2",
+    "progress correct 1024 3",
+    "no premature next 1024 3",
+    "nonoverlap reachable layout 1024 3",
+    "whole piece grabbed 1",
+    "blocked square rejects actual drop 1024 3",
+    "whole piece grabbed 1",
+    "actual solution pose 1024 3 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1024 3 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1024 3 3",
+    "exact-cover win 1024 3",
+    "progress correct 1024 4",
+    "no premature next 1024 4",
+    "nonoverlap reachable layout 1024 4",
+    "whole piece grabbed 1",
+    "actual solution pose 1024 4 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1024 4 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1024 4 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1024 4 4",
+    "exact-cover win 1024 4",
+    "progress correct 1024 5",
+    "no premature next 1024 5",
+    "nonoverlap reachable layout 1024 5",
+    "whole piece grabbed 1",
+    "actual solution pose 1024 5 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1024 5 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1024 5 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1024 5 4",
+    "whole piece grabbed 5",
+    "actual solution pose 1024 5 5",
+    "whole piece grabbed 6",
+    "actual solution pose 1024 5 6",
+    "exact-cover win 1024 5",
+    "progress correct 1024 6",
+    "no premature next 1024 6",
+    "nonoverlap reachable layout 1024 6",
+    "whole piece grabbed 1",
+    "blocked square rejects actual drop 1024 6",
+    "whole piece grabbed 1",
+    "actual solution pose 1024 6 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1024 6 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1024 6 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1024 6 4",
+    "whole piece grabbed 5",
+    "actual solution pose 1024 6 5",
+    "whole piece grabbed 6",
+    "actual solution pose 1024 6 6",
+    "exact-cover win 1024 6",
+    "progress correct 1024 7",
+    "no premature next 1024 7",
+    "nonoverlap reachable layout 1024 7",
+    "whole piece grabbed 1",
+    "blocked square rejects actual drop 1024 7",
+    "whole piece grabbed 1",
+    "actual solution pose 1024 7 1",
+    "whole piece grabbed 2",
+    "actual solution pose 1024 7 2",
+    "whole piece grabbed 3",
+    "actual solution pose 1024 7 3",
+    "whole piece grabbed 4",
+    "actual solution pose 1024 7 4",
+    "whole piece grabbed 5",
+    "actual solution pose 1024 7 5",
+    "whole piece grabbed 6",
+    "actual solution pose 1024 7 6",
+    "exact-cover win 1024 7",
+    "chapter end 1024",
+    "replay returns start 1024",
+    "whole piece grabbed 1",
+    "R resets current level 1024",
+    "progress correct 800 0",
+    "no premature next 800 0",
+    "nonoverlap reachable layout 800 0",
+    "whole piece grabbed 1",
+    "four rotations restore grab",
+    "pointercancel restores",
+    "whole piece grabbed 1",
+    "vertical I3 rejects the short first board 800",
+    "whole piece grabbed 1",
+    "actual solution pose 800 0 1",
+    "whole piece grabbed 2",
+    "actual solution pose 800 0 2",
+    "exact-cover win 800 0",
+    "whole piece grabbed 1",
+    "collision atomic rollback 800",
+    "whole piece grabbed 1",
+    "pickup hides win",
+    "retrieve is atomic",
+    "whole piece grabbed 1",
+    "reposition excluded self",
+    "progress correct 800 1",
+    "no premature next 800 1",
+    "nonoverlap reachable layout 800 1",
+    "whole piece grabbed 1",
+    "actual solution pose 800 1 1",
+    "whole piece grabbed 2",
+    "actual solution pose 800 1 2",
+    "whole piece grabbed 3",
+    "actual solution pose 800 1 3",
+    "exact-cover win 800 1",
+    "progress correct 800 2",
+    "no premature next 800 2",
+    "nonoverlap reachable layout 800 2",
+    "whole piece grabbed 1",
+    "actual solution pose 800 2 1",
+    "whole piece grabbed 2",
+    "actual solution pose 800 2 2",
+    "whole piece grabbed 3",
+    "actual solution pose 800 2 3",
+    "whole piece grabbed 4",
+    "actual solution pose 800 2 4",
+    "exact-cover win 800 2",
+    "progress correct 800 3",
+    "no premature next 800 3",
+    "nonoverlap reachable layout 800 3",
+    "whole piece grabbed 1",
+    "blocked square rejects actual drop 800 3",
+    "whole piece grabbed 1",
+    "actual solution pose 800 3 1",
+    "whole piece grabbed 2",
+    "actual solution pose 800 3 2",
+    "whole piece grabbed 3",
+    "actual solution pose 800 3 3",
+    "exact-cover win 800 3",
+    "progress correct 800 4",
+    "no premature next 800 4",
+    "nonoverlap reachable layout 800 4",
+    "whole piece grabbed 1",
+    "actual solution pose 800 4 1",
+    "whole piece grabbed 2",
+    "actual solution pose 800 4 2",
+    "whole piece grabbed 3",
+    "actual solution pose 800 4 3",
+    "whole piece grabbed 4",
+    "actual solution pose 800 4 4",
+    "exact-cover win 800 4",
+    "progress correct 800 5",
+    "no premature next 800 5",
+    "nonoverlap reachable layout 800 5",
+    "whole piece grabbed 1",
+    "actual solution pose 800 5 1",
+    "whole piece grabbed 2",
+    "actual solution pose 800 5 2",
+    "whole piece grabbed 3",
+    "actual solution pose 800 5 3",
+    "whole piece grabbed 4",
+    "actual solution pose 800 5 4",
+    "whole piece grabbed 5",
+    "actual solution pose 800 5 5",
+    "whole piece grabbed 6",
+    "actual solution pose 800 5 6",
+    "exact-cover win 800 5",
+    "progress correct 800 6",
+    "no premature next 800 6",
+    "nonoverlap reachable layout 800 6",
+    "whole piece grabbed 1",
+    "blocked square rejects actual drop 800 6",
+    "whole piece grabbed 1",
+    "actual solution pose 800 6 1",
+    "whole piece grabbed 2",
+    "actual solution pose 800 6 2",
+    "whole piece grabbed 3",
+    "actual solution pose 800 6 3",
+    "whole piece grabbed 4",
+    "actual solution pose 800 6 4",
+    "whole piece grabbed 5",
+    "actual solution pose 800 6 5",
+    "whole piece grabbed 6",
+    "actual solution pose 800 6 6",
+    "exact-cover win 800 6",
+    "progress correct 800 7",
+    "no premature next 800 7",
+    "nonoverlap reachable layout 800 7",
+    "whole piece grabbed 1",
+    "blocked square rejects actual drop 800 7",
+    "whole piece grabbed 1",
+    "actual solution pose 800 7 1",
+    "whole piece grabbed 2",
+    "actual solution pose 800 7 2",
+    "whole piece grabbed 3",
+    "actual solution pose 800 7 3",
+    "whole piece grabbed 4",
+    "actual solution pose 800 7 4",
+    "whole piece grabbed 5",
+    "actual solution pose 800 7 5",
+    "whole piece grabbed 6",
+    "actual solution pose 800 7 6",
+    "exact-cover win 800 7",
+    "chapter end 800",
+    "replay returns start 800",
+    "whole piece grabbed 1",
+    "R resets current level 800",
+    "only registered approved animal assets loaded",
+    "all eight levels use registered whole animals",
+    "no remaining geometry placeholders",
+    "no page errors"
+  ],
+  "runs": [
+    {
+      "width": 1280,
+      "height": 720,
+      "index": 0,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        3,
+        2
+      ],
+      "pieces": 2
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "index": 1,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        3,
+        3
+      ],
+      "pieces": 3
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "index": 2,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        4,
+        3
+      ],
+      "pieces": 4
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "index": 3,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        4,
+        3
+      ],
+      "pieces": 3
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "index": 4,
+      "ok": true,
+      "step": 100,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        4,
+        4
+      ],
+      "pieces": 4
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "index": 5,
+      "ok": true,
+      "step": 87,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        5,
+        4
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "index": 6,
+      "ok": true,
+      "step": 87,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        5,
+        5
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "index": 7,
+      "ok": true,
+      "step": 77,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        6,
+        5
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "index": 0,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        3,
+        2
+      ],
+      "pieces": 2
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "index": 1,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        3,
+        3
+      ],
+      "pieces": 3
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "index": 2,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        4,
+        3
+      ],
+      "pieces": 4
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "index": 3,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        4,
+        3
+      ],
+      "pieces": 3
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "index": 4,
+      "ok": true,
+      "step": 100,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        4,
+        4
+      ],
+      "pieces": 4
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "index": 5,
+      "ok": true,
+      "step": 87,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        5,
+        4
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "index": 6,
+      "ok": true,
+      "step": 87,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        5,
+        5
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "index": 7,
+      "ok": true,
+      "step": 77,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        6,
+        5
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "index": 0,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        3,
+        2
+      ],
+      "pieces": 2
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "index": 1,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        3,
+        3
+      ],
+      "pieces": 3
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "index": 2,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        4,
+        3
+      ],
+      "pieces": 4
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "index": 3,
+      "ok": true,
+      "step": 133,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        4,
+        3
+      ],
+      "pieces": 3
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "index": 4,
+      "ok": true,
+      "step": 100,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        4,
+        4
+      ],
+      "pieces": 4
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "index": 5,
+      "ok": true,
+      "step": 87,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        5,
+        4
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "index": 6,
+      "ok": true,
+      "step": 87,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        5,
+        5
+      ],
+      "pieces": 6
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "index": 7,
+      "ok": true,
+      "step": 77,
+      "scroll": [
+        0,
+        0
+      ],
+      "board": [
+        6,
+        5
+      ],
+      "pieces": 6
+    }
+  ],
+  "completed_chapters": 3,
+  "real_pointer_level_completions": 24,
+  "errors": [],
+  "browser": "156.0.4314.42",
+  "limitations": "All chapter instances use approved whole animal images; local G4 only, not release/provenance clearance or human difficulty acceptance"
+}

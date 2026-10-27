@@ -48,3 +48,5 @@ ITCH_DEMO_PACKAGING_001：当前可用python tools/itch/build.py --browser构建
 2026-10-27 HUMAN明确“先直接复用这两张”：覆盖此前chapter_preview不启用熊猫白兔的解释，当前RECT6复用原panda_rect6_desktop_001.png、O4复用原rabbit_square4_ears_folded_v2.png，不改字节，不生成新图。章节现8种真实动物，仅D2/I3/I4几何占位；兔子第2/3/4/6关、熊猫第8关，既有关卡和panda_v2正式第一关均不变。新证据tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/，元数据assets/animals/chapter_existing_approved_reuse.json。不得依据历史未启用记录撤销本次映射。
 
 2026-10-27 CHAPTER_ONE_ART_BATCH_003：第三批D2豚鼠/I3水獭/I4鳄鱼已按HUMAN G3交接接入，原字节/注册参数见assets/animals/chapter_one_batch_003.json。chapter_preview现11种完整动物、34实例、8关，正常加载零几何占位；原8种注册、PNG、关卡、核心、背景均不变。长条I3第一关竖向放不进3×2是正确边界拒绝，不改关卡；四向放置测试在既有能容纳该方向的关卡执行。全美术本地QA不等于公开发行，来源/许可元数据未闭合与实际itch托管未跑须保留真实状态；tools/itch/build.py --release仍拒绝。当前导出builds/itch/animal-puzzle-chapter-one-test.zip，证据tasks/CHAPTER_ONE_ART_BATCH_003/。
+
+2026-10-27 ANIMAL_CLICK_AUDIO_001：现有chapter_preview已有简洁音效接口audio.js，取代此前“无声音接口”的历史核查结论。仅在animalClickSounds初始JSON对象中配置正式本地声音路径，默认11项null，未交付音频不得混用tasks下QA短音。animalAudio共用缓存/音量/静音/限流/单声音，左键成功选中调用一次，重置/换关stop；音频失败不影响拼图。导出器复制原始音频、哈希命名并验证闭环。正常ZIP无QA音频；测试夹具包明确仅用于实际解压iframe播放与八关回归。
