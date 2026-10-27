@@ -74,3 +74,7 @@ python tools/itch/test.py --report-dir tasks/CHAPTER_ONE_ART_BATCH_003/package
 使用现有Pillow、Playwright和Edge，必要时设置PLAYWRIGHT_MODULE。正式机器交接为 `handoff_dev_to_design.json`，发布状态矩阵为 `release_gate_review.json`。GitHub提交后实际下载原始PNG验证的记录为 `github-readback.json`。
 
 交由DESIGN汇总来源/许可字段、审核完整运行版及最终发行范围，HUMAN可直接试玩当前11动物版；真实itch上传/托管验收另行执行。本次交接不提前宣布Demo具备正式发布条件。
+
+## 7. GitHub最终字节核验
+
+实现与原始PNG已提交并推送main：`7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1`。随后从该提交的GitHub raw地址实际下载三张PNG，全部HTTP200，大小与SHA-256逐一等于桌面固定原图；不是只比较本地Git blob。证据 `github-readback.json`。第三批文件交付、G2与本地G4闭环完成，正式发布状态仍按前述矩阵保留，不因推送成功自动升级。

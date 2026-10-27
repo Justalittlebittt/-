@@ -13,7 +13,7 @@
   "G3_originals": "ALL_ELEVEN_APPROVED_BY_HUMAN_PRIOR_RECEIPTS_AND_CURRENT_ART_HANDOFF",
   "G4_source_http": "PASS_370_CHECKS_24_ACTUAL_LEVEL_COMPLETIONS",
   "G4_extracted_iframe": "PASS_370_CHECKS_24_ACTUAL_LEVEL_COMPLETIONS",
-  "github_original_readback": "PENDING_PUSH_THEN_RAW_DOWNLOAD",
+  "github_original_readback": "PASS_THREE_ORIGINAL_PNGS_HTTP200_SHA256_AND_BYTES_MATCH",
   "HUMAN_current_full_art_gameplay_feedback": "PENDING",
   "itch_live_hosted_upload": "NOT_RUN; exported ZIP local simulation only",
   "public_release_ready": "NOT_DECLARED",
@@ -21,5 +21,6 @@
     "Record complete source/provenance/licence metadata for release gate review",
     "DESIGN/HUMAN review full-art runtime and final release scope using this handoff",
     "If separately authorized, perform real platform upload and hosted run verification"
-  ]
+  ],
+  "verified_implementation_commit": "7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1"
 }

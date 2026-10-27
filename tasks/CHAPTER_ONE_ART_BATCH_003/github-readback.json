@@ -1,0 +1,30 @@
+{
+  "status": "PASS_GITHUB_RAW_BINARY_READBACK",
+  "implementation_commit": "7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1",
+  "assets": [
+    {
+      "shape_id": "D2",
+      "url": "https://raw.githubusercontent.com/Justalittlebittt/-/7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1/assets/animals/guinea_pig_d2_desktop_003.png",
+      "http_status": 200,
+      "bytes": 892562,
+      "sha256": "c81e7fb131285be564b1fb400f9854e2f76343b7fb5ee86d593ca90d2dd4efa7",
+      "matches_pinned_desktop_original": true
+    },
+    {
+      "shape_id": "I3",
+      "url": "https://raw.githubusercontent.com/Justalittlebittt/-/7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1/assets/animals/otter_i3_desktop_003.png",
+      "http_status": 200,
+      "bytes": 823220,
+      "sha256": "a5370d6232a77150a9ae71d750265dcfd453d85a7e9e151c5315463073040c94",
+      "matches_pinned_desktop_original": true
+    },
+    {
+      "shape_id": "I4",
+      "url": "https://raw.githubusercontent.com/Justalittlebittt/-/7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1/assets/animals/crocodile_i4_desktop_003.png",
+      "http_status": 200,
+      "bytes": 892531,
+      "sha256": "4195db5453c276c9ea05868d16d17fa7c925578ddd764c423b12fb4dcc364ba9",
+      "matches_pinned_desktop_original": true
+    }
+  ]
+}

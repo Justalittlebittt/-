@@ -177,7 +177,8 @@
     "zip_iframe": "package/browser-report.json",
     "all_neighbors": "package/iframe-playtest-report.json",
     "baseline": "baseline-report.json",
-    "readiness": "release_gate_review.json"
+    "readiness": "release_gate_review.json",
+    "github_raw_pngs": "github-readback.json"
   },
   "artifact": {
     "file": "builds/itch/animal-puzzle-chapter-one-test.zip",
@@ -210,5 +211,6 @@
     "If separately authorized, perform real platform upload and hosted run verification"
   ],
   "next_owner_action": "DESIGN review complete-art handoff and release gate gaps; HUMAN review current eleven-animal runtime",
-  "github_readback": "PENDING_PUSH_THEN_RAW_DOWNLOAD"
+  "github_readback": "PASS_THREE_RAW_HTTP200_EXACT_ORIGINAL_BYTES_AND_SHA256",
+  "implementation_commit": "7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1"
 }
