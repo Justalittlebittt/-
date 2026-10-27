@@ -1,0 +1,22 @@
+{
+  "status": "PASS_GITHUB_RAW_BINARY_READBACK",
+  "implementation_commit": "59e33afed052837b391adebccbbdcec2ebaec403",
+  "assets": [
+    {
+      "shape_id": "RECT6",
+      "url": "https://raw.githubusercontent.com/Justalittlebittt/-/59e33afed052837b391adebccbbdcec2ebaec403/assets/animals/panda_rect6_desktop_001.png",
+      "http_status": 200,
+      "bytes": 1173853,
+      "sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+      "matches_pinned_desktop_original": true
+    },
+    {
+      "shape_id": "O4",
+      "url": "https://raw.githubusercontent.com/Justalittlebittt/-/59e33afed052837b391adebccbbdcec2ebaec403/assets/animals/rabbit_square4_ears_folded_v2.png",
+      "http_status": 200,
+      "bytes": 1208053,
+      "sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+      "matches_pinned_desktop_original": true
+    }
+  ]
+}

@@ -517,4 +517,6 @@ chapter_one_completion_work_2026_10_27:
     mapping: ["O4 rabbit", "RECT6 panda"]
     handoff: "tasks/CHAPTER_ONE_PANDA_RABBIT_REUSE_001/handoff_dev_to_design.json"
     status: "COMPLETE_REGRESSION_PASS_HUMAN_PLAYTEST_PENDING"
+    verified_merged_commit: "59e33afed052837b391adebccbbdcec2ebaec403"
+    github_raw_readback: "PASS_BOTH_PNG_HASHES_AND_SIZES"
   policy: "Keep 8 existing chapter levels and all approved original PNG intact; formal 11-shape full-art itch Demo gate still pending"

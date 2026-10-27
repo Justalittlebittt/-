@@ -40,5 +40,8 @@
     "I4"
   ],
   "release": "NOT_PUBLIC_DEMO_READY",
-  "note": "This same implementation was already tested locally while DESIGN dispatched this task; linked existing evidence without repeating development. Third batch art request preserved unchanged."
+  "note": "This same implementation was already tested locally while DESIGN dispatched this task; linked existing evidence without repeating development. Third batch art request preserved unchanged.",
+  "github_readback": "PASS_BOTH_RAW_HTTP200_ORIGINAL_SIZE_AND_SHA256",
+  "verified_merged_commit": "59e33afed052837b391adebccbbdcec2ebaec403",
+  "github_readback_report": "tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/github-readback.json"
 }

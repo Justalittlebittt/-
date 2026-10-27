@@ -116,5 +116,7 @@
   ],
   "preserved": "15 existing asset/runtime/data files unchanged against c771dec, including all prior PNGs, core and approved formal first level",
   "human_retest": "PENDING_CURRENT_EIGHT_ANIMAL_BUILD",
-  "github_readback": "PENDING_COMMIT_THEN_RAW_DOWNLOAD"
+  "github_readback": "PASS_BOTH_RAW_HTTP200_ORIGINAL_SIZE_AND_SHA256",
+  "verified_merged_commit": "59e33afed052837b391adebccbbdcec2ebaec403",
+  "github_readback_report": "tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/github-readback.json"
 }
