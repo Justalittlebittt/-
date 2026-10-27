@@ -1,0 +1,223 @@
+{
+  "status": "EXACT_PINNED_DESKTOP_ORIGINALS_IMPORTED",
+  "assets": [
+    {
+      "shape_id": "RECT6",
+      "filename": "panda_rect6_desktop_001.png",
+      "repository_file": "assets/animals/panda_rect6_desktop_001.png",
+      "image_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1173853,
+      "mode": "RGBA",
+      "asset_version": "PANDA_RECT6_DESKTOP_APPROVED_001",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "baseSize": [
+        3,
+        2
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "baseRotation": 0,
+      "G3": "EXISTING_APPROVED_ORIGINAL_REUSE_AUTHORIZED_HUMAN_2026_10_27",
+      "sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+      "source": "C:\\Users\\Administrator\\Documents\\ChatGPT\\游戏制作\\animal-puzzle\\assets\\animals\\panda_rect6_desktop_001.png",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_pixels": 744563,
+      "semi_transparent_pixels": 828301,
+      "canvas_border_alpha_max": 1,
+      "alpha_bbox60": [
+        11,
+        164,
+        1529,
+        871
+      ],
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.4626,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.42485,
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.34155,
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.6176,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.66868,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.5894,
+          "center_alpha": 253
+        }
+      ],
+      "pixel_changes": false,
+      "registration": "Source bounds define scaling/anchor only; whole PNG is rendered once, no cropped source rectangle"
+    },
+    {
+      "shape_id": "O4",
+      "filename": "rabbit_square4_ears_folded_v2.png",
+      "repository_file": "assets/animals/rabbit_square4_ears_folded_v2.png",
+      "image_sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1208053,
+      "mode": "RGBA",
+      "asset_version": "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "baseSize": [
+        2,
+        2
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "baseRotation": 0,
+      "G3": "EXISTING_APPROVED_ORIGINAL_REUSE_AUTHORIZED_HUMAN_2026_10_27",
+      "sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+      "source": "C:\\Users\\Administrator\\Documents\\ChatGPT\\游戏制作\\animal-puzzle\\assets\\animals\\rabbit_square4_ears_folded_v2.png",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 606901,
+      "semi_transparent_pixels": 963979,
+      "canvas_border_alpha_max": 1,
+      "alpha_bbox60": [
+        36,
+        126,
+        1237,
+        1187
+      ],
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.57995,
+          "center_alpha": 254
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.4521,
+          "center_alpha": 254
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.66127,
+          "center_alpha": 254
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.74428,
+          "center_alpha": 254
+        }
+      ],
+      "pixel_changes": false,
+      "registration": "Source bounds define scaling/anchor only; whole PNG is rendered once, no cropped source rectangle"
+    }
+  ]
+}

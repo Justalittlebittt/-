@@ -13,7 +13,9 @@ for row,a in enumerate(data['assets']):
  assert raw.startswith(b'\x89PNG\r\n\x1a\n');im=Image.open(src);im.load();assert im.mode=='RGBA' and im.size==(a['width'],a['height'])
  alpha=im.getchannel('A');hist=alpha.histogram();assert hist[0]>0 and sum(hist[61:])>0
  border=max(alpha.crop(r).getextrema()[1] for r in [(0,0,im.width,1),(0,im.height-1,im.width,im.height),(0,0,1,im.height),(im.width-1,0,im.width,im.height)])
- dest=ROOT/a['repository_file'];shutil.copyfile(src,dest);assert dest.read_bytes()==raw
+ dest=ROOT/a['repository_file']
+ if src.resolve()!=dest.resolve():shutil.copyfile(src,dest)
+ assert dest.read_bytes()==raw
  # Non-destructive source registration: rotate the whole canvas; keep all image pixels.
  turn=a.get('baseRotation',0);rotated=im.rotate(-90*turn,expand=True)
  x0,y0,x1,y1=a['sourceBounds'];corners=[(x0,y0),(x1,y0),(x0,y1),(x1,y1)];iw,ih=im.size

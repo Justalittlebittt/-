@@ -1,5 +1,5 @@
 schema_version: "1.0"
-last_updated: "2026-10-26"
+last_updated: "2026-10-27"
 project_id: "animal-puzzle-zoo"
 repo:
   full_name: "Justalittlebittt/-"
@@ -7,8 +7,8 @@ repo:
   verified_in_this_session: true
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
-phase: "第一章8关已接入六种完整动物；第二批P5河马/L4长颈鹿/L3柯尔鸭技术验收通过，五种形状仍为几何占位"
-current_goal: "第一章第二批P5、L4、L3正式动物按单只G3验收、三只统一交接Codex；第三批D2、I3、I4保留；暂停剧情及扩关"
+phase: "第一章8关已映射八种完整动物；已批准熊猫白兔复用完成，D2/I3/I4仍为几何占位"
+current_goal: "按HUMAN指令启用已批准熊猫RECT6与白兔O4；整图旋转拖放和八关导出包回归通过，原正式第一关不变"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md"
@@ -481,4 +481,26 @@ chapter_one_art_batch_002:
   implementation_commit: "5ea55c922ff073d389c706fa07e9da49d8a482ab"
   human_approval_quote: "试玩结束，没有问题，写入报告。"
   human_approval_receipt: "tasks/CHAPTER_ONE_ART_BATCH_002/approval_receipt.json"
-  panda_rabbit_chapter_mapping: "NOT_ENABLED_BY_PRIOR_SCOPE_INTERPRETATION; originals preserved and used by panda_v2 first level"
+  panda_rabbit_chapter_mapping: "ENABLED_BY_HUMAN_2026_10_27; see chapter_one_existing_animals_001"
+
+chapter_one_existing_animals_001:
+  date: "2026-10-27"
+  owner: "DEV_INTEGRATION"
+  status: "APPROVED_ORIGINALS_REUSED_TECHNICAL_REGRESSION_PASS"
+  human_instruction: "先直接复用这两张"
+  mapping: "RECT6=panda_rect6_desktop_001.png; O4=rabbit_square4_ears_folded_v2.png"
+  rabbit_preview_levels: [2,3,4,6]
+  panda_preview_levels: [8]
+  original_pngs_and_eight_level_data: "UNCHANGED"
+  runtime_registered_animals: 8
+  remaining_geometry: ["D2","I3","I4"]
+  boundary_cases: 448
+  collision_cases: 40
+  animal_pointer_checks: 243
+  animal_rotation_poses: 32
+  extracted_iframe_checks: 362
+  real_level_completions: 24
+  baseline_unchanged_files: 15
+  metadata: "assets/animals/chapter_existing_approved_reuse.json"
+  report: "tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/REPORT.md"
+  human_retest: "PENDING_CURRENT_BUILD"

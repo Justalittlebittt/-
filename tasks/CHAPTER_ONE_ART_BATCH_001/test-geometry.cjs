@@ -21,4 +21,4 @@ for(const a of handoff.assets){
   for(const cell of manual){assert.equal(G.valid(level,[p,{occupied_cells:[[0,0]],at:cell}],p,[0,0]),false);collisions++;}
  }
 }
-const report={status:'PASS',exact_original_hashes:3,unchanged_existing_occupied_cell_instances:instances,four_rotation_assets:3,boundary_cases:bounds,occupied_collision_cases:collisions};fs.writeFileSync(path.join(task,'geometry-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+const report={status:'PASS',exact_original_hashes:handoff.assets.length,unchanged_existing_occupied_cell_instances:instances,four_rotation_assets:handoff.assets.length,boundary_cases:bounds,occupied_collision_cases:collisions};fs.writeFileSync(path.join(task,'geometry-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));

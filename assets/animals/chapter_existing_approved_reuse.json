@@ -1,0 +1,101 @@
+{
+  "task_id": "CHAPTER_ONE_EXISTING_ANIMALS_001",
+  "date": "2026-10-27",
+  "approval_quote": "先直接复用这两张",
+  "supersedes": "Prior exclusion of approved panda/rabbit images from chapter_preview; formal first-level content stays intact",
+  "assets": [
+    {
+      "shape_id": "RECT6",
+      "filename": "panda_rect6_desktop_001.png",
+      "repository_file": "assets/animals/panda_rect6_desktop_001.png",
+      "image_sha256": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1173853,
+      "mode": "RGBA",
+      "asset_version": "PANDA_RECT6_DESKTOP_APPROVED_001",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "baseSize": [
+        3,
+        2
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "baseRotation": 0,
+      "G3": "EXISTING_APPROVED_ORIGINAL_REUSE_AUTHORIZED_HUMAN_2026_10_27"
+    },
+    {
+      "shape_id": "O4",
+      "filename": "rabbit_square4_ears_folded_v2.png",
+      "repository_file": "assets/animals/rabbit_square4_ears_folded_v2.png",
+      "image_sha256": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1208053,
+      "mode": "RGBA",
+      "asset_version": "RABBIT_SQUARE4_EARS_FOLDED_candidate_v2",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "baseSize": [
+        2,
+        2
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "baseRotation": 0,
+      "G3": "EXISTING_APPROVED_ORIGINAL_REUSE_AUTHORIZED_HUMAN_2026_10_27"
+    }
+  ],
+  "png_bytes_changed": false,
+  "runtime": "experiments/chapter_preview/index.html",
+  "report": "tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/REPORT.md"
+}

@@ -44,3 +44,5 @@ ITCH_DEMO_PACKAGING_001：当前可用python tools/itch/build.py --browser构建
 2026-10-26 HUMAN已复验批准SQUIRREL_ALIGNMENT_001（321429c）并要求写入合同。V1.6 §12明确形状→完整PNG映射、局部显示锚点随整图旋转、PNG/逻辑占格保持不变及实际验收范围；当前S4 offsetCells=[-0.2,0]为已批准对齐，不恢复旧居中值。通过记录见tasks/SQUIRREL_ALIGNMENT_001/approval_receipt.json。
 
 2026-10-26 CHAPTER_ONE_ART_BATCH_002：用户本条派工明确G3批准桌面河马.png、长颈鹿.png、鸭子.png，分别P5/L4/L3。原始哈希/字节与渲染登记见assets/animals/chapter_one_batch_002.json。当前chapter_preview六种真实动物，其余五种形状仍占位，熊猫兔子正式第一关保持不变。sourceBounds仅用于透明画布留白的等比缩放与锚点登记，仍完整PNG一次五参drawImage，无源裁剪；P5 baseRotation=3匹配原图与既定P形。图层先几何占位、后动物、最后拖拽对象，避免色块截断动物轮廓。工具按注册表动态导出PNG数量；批量验收通过ASSET_TASK_DIR/ASSET_SPEC_FILE、ANIMAL_REPORT_DIR隔离证据。未来改图须按现行合同审批，不把技术登记参数当作修改逻辑形状授权。
+
+2026-10-27 HUMAN明确“先直接复用这两张”：覆盖此前chapter_preview不启用熊猫白兔的解释，当前RECT6复用原panda_rect6_desktop_001.png、O4复用原rabbit_square4_ears_folded_v2.png，不改字节，不生成新图。章节现8种真实动物，仅D2/I3/I4几何占位；兔子第2/3/4/6关、熊猫第8关，既有关卡和panda_v2正式第一关均不变。新证据tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/，元数据assets/animals/chapter_existing_approved_reuse.json。不得依据历史未启用记录撤销本次映射。

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "baseline": "c771dec",
+  "unchanged_files": {
+    "assets/animals/panda_rect6_desktop_001.png": "e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732",
+    "assets/animals/rabbit_square4_ears_folded_v2.png": "00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74",
+    "assets/animals/snake_u5_final_g3.png": "0fdb68ffa5a76ca6200c0b5602ed1e49d526bc9d62ae5deaf51fd978df6c9379",
+    "assets/animals/squirrel_s4_clean_g3.png": "e68f4b6f68a56e78716a04e0d5c81b827a19f67aa473b3308fe820c4f6c70440",
+    "assets/animals/owl_t4_wide_g3.png": "c57b9af6ed27ce2254aadf328720553899d2749b5056996412790f6700b9144c",
+    "assets/animals/hippo_p5_desktop_002.png": "127c4466453cb349cf718bcb60af36711f82769b042d5067e21b2fed182304b1",
+    "assets/animals/giraffe_l4_desktop_002.png": "722712b83ae535835856d353f7477ff15171f0f57ec7b96330691a0feb61d4ad",
+    "assets/animals/call_duck_l3_desktop_002.png": "3255a1bc5c9a3daaecf9b3d2364427237b3e0c6792189ffdff94a25c8a3b0b32",
+    "assets/backgrounds/chapter_one.png": "a57d2a4c7830e511561e2d2fe9cc60a62b26b4a16023f5d579480ba3f6f7227a",
+    "experiments/chapter_preview/game.js": "275e5a12a44470bd6f4c4ed2f932724606fa56b351ae8dff17094e6b4e831aff",
+    "experiments/chapter_preview/levels.js": "704b83b4af99eb57194eb9462bb30c1d937d0142c5b77a2cca7557a457f930be",
+    "experiments/first_playable_001/core.js": "e231a3c2db4211415e45306c1f560aa436e23362667c5c6973070582afaf7dc7",
+    "experiments/panda_v2/assets.js": "4af17b4ecc77ef315a7485c092020e6dbac13b036c53ce8fb8fcffe6fffd3d87",
+    "experiments/panda_v2/game.js": "03700c5adba539c1502762f2310e33883515c33a7a305a47e0bcf9b5aa328a35",
+    "experiments/panda_v2/index.html": "6a8e050dc19f09016bee12c1adff74270a0abb980b5822b87e19953ba2d19b44"
+  }
+}

@@ -6,7 +6,9 @@ const chapterAnimals={
  T4:{src:'../../assets/animals/owl_t4_wide_g3.png?v=c57b9af6ed27ce22',sha256:'c57b9af6ed27ce2254aadf328720553899d2749b5056996412790f6700b9144c',version:'T4_OWL_WIDE_WINGS_LARGE_TAIL_G3',baseSize:[3,2]},
  P5:{src:'../../assets/animals/hippo_p5_desktop_002.png?v=127c4466453cb349',"sha256":"127c4466453cb349cf718bcb60af36711f82769b042d5067e21b2fed182304b1","version":"P5_DESKTOP_HUMAN_APPROVED_BATCH_002","baseSize":[2,3],"sourceBounds":[10,97,1443,1016],"baseRotation":3},
  L4:{src:'../../assets/animals/giraffe_l4_desktop_002.png?v=722712b83ae53583',"sha256":"722712b83ae535835856d353f7477ff15171f0f57ec7b96330691a0feb61d4ad","version":"L4_DESKTOP_HUMAN_APPROVED_BATCH_002","baseSize":[2,3],"sourceBounds":[413,12,1172,1013],"baseRotation":0,"offsetCells":[0,0.12]},
- L3:{src:'../../assets/animals/call_duck_l3_desktop_002.png?v=3255a1bc5c9a3daa',"sha256":"3255a1bc5c9a3daaecf9b3d2364427237b3e0c6792189ffdff94a25c8a3b0b32","version":"L3_DESKTOP_HUMAN_APPROVED_BATCH_002","baseSize":[2,2],"sourceBounds":[161,15,1354,1082],"baseRotation":0,"offsetCells":[0,0.08]}
+ L3:{src:'../../assets/animals/call_duck_l3_desktop_002.png?v=3255a1bc5c9a3daa',"sha256":"3255a1bc5c9a3daaecf9b3d2364427237b3e0c6792189ffdff94a25c8a3b0b32","version":"L3_DESKTOP_HUMAN_APPROVED_BATCH_002","baseSize":[2,2],"sourceBounds":[161,15,1354,1082],"baseRotation":0,"offsetCells":[0,0.08]},
+ RECT6:{src:'../../assets/animals/panda_rect6_desktop_001.png?v=e88018fb1b8d9928',sha256:'e88018fb1b8d992834f11ca25303161f28ce2643db6deefe1555c03f54311732',version:'PANDA_RECT6_DESKTOP_APPROVED_001',baseSize:[3,2],sourceBounds:[0,0,1536,1024],baseRotation:0},
+ O4:{src:'../../assets/animals/rabbit_square4_ears_folded_v2.png?v=00ae48b4ee3c9f41',sha256:'00ae48b4ee3c9f413cf996c239625f35a9ba946a8648225ed5dea9dc269ace74',version:'RABBIT_SQUARE4_EARS_FOLDED_candidate_v2',baseSize:[2,2],sourceBounds:[0,0,1254,1254],baseRotation:0}
 };
 const chapterAnimalImages={};
 const chapterArtReady=Promise.all(Object.entries(chapterAnimals).map(([id,asset])=>new Promise(resolve=>{
