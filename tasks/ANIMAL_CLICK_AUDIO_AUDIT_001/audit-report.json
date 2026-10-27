@@ -1,0 +1,21 @@
+{
+  "task_id": "ANIMAL_CLICK_AUDIO_AUDIT_001",
+  "date": "2026-10-27",
+  "owner": "DEV_INTEGRATION",
+  "status": "CHECK_COMPLETE_NO_DEDICATED_AUDIO_INTERFACE_YET",
+  "findings": {
+    "animals_registry": "11 PNG registrations; no click sound/audio fields",
+    "pointer_entry": "game.js pointerdown -> locate(local(e)) -> piece identity; left press initializes atomic pickup",
+    "dedicated_animal_click_event": "ABSENT; no separate callback or CustomEvent for audio consumers",
+    "audio_playback": "ABSENT; no Audio, AudioContext, play() or audio element in chapter runtime",
+    "audio_assets": [],
+    "export_pipeline": "PNG, JS and CSS closure only; no explicit audio resource mapping/verification"
+  },
+  "integration_options_not_implemented": [
+    "Configure clickSound per animal asset ID, retaining piece_id for instance identity",
+    "Trigger once per successful left press on an animal, not on every pointermove or right rotation",
+    "Add one shared playback module for missing-file handling, volume, overlap/cooldown and mute",
+    "Extend root HTML5 package dependency closure and audio playback/browser regression"
+  ],
+  "unchanged": "No runtime, PNG, geometry, export tool or audio behavior modified during this audit; only documentation and acceptance state recorded."
+}

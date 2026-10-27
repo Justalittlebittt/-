@@ -14,13 +14,14 @@
   "G4_source_http": "PASS_370_CHECKS_24_ACTUAL_LEVEL_COMPLETIONS",
   "G4_extracted_iframe": "PASS_370_CHECKS_24_ACTUAL_LEVEL_COMPLETIONS",
   "github_original_readback": "PASS_THREE_ORIGINAL_PNGS_HTTP200_SHA256_AND_BYTES_MATCH",
-  "HUMAN_current_full_art_gameplay_feedback": "PENDING",
+  "HUMAN_current_full_art_gameplay_feedback": "PASS_HUMAN_REPORTED_PLAYTEST_SUCCESS_2026_10_27",
   "itch_live_hosted_upload": "NOT_RUN; exported ZIP local simulation only",
   "public_release_ready": "NOT_DECLARED",
   "remaining_actions": [
     "Record complete source/provenance/licence metadata for release gate review",
-    "DESIGN/HUMAN review full-art runtime and final release scope using this handoff",
+    "DESIGN review final release scope using this handoff and the completed HUMAN runtime playtest",
     "If separately authorized, perform real platform upload and hosted run verification"
   ],
-  "verified_implementation_commit": "7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1"
+  "verified_implementation_commit": "7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1",
+  "HUMAN_feedback_receipt": "tasks/CHAPTER_ONE_ART_BATCH_003/approval_receipt.json"
 }

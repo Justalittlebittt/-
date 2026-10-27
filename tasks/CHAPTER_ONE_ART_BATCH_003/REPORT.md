@@ -2,7 +2,7 @@
 
 2026-10-27 · DEV_INTEGRATION → DESIGN_DIRECTOR · V1.6 · 基线main `ad8ccef`
 
-**结论：第三批本地文件、透明边缘、占格/旋转及实际游戏/导出包技术验证通过。现有8关的34个实例全部使用11种完整动物PNG，零几何占位。尚未声明正式Demo可发布：G1完整来源/许可元数据未提供，当前11动物运行版本的HUMAN实际试玩和真实itch托管验证尚未完成。** 逐项状态见 `release_gate_review.json`，不要将本次技术结论扩大为发布许可。
+**结论：第三批本地文件、透明边缘、占格/旋转及实际游戏/导出包技术验证通过。现有8关的34个实例全部使用11种完整动物PNG，零几何占位。尚未声明正式Demo可发布：G1完整来源/许可元数据未提供，当前11动物运行版本已获HUMAN试玩成功反馈，真实itch托管验证尚未完成。** 逐项状态见 `release_gate_review.json`，不要将本次技术结论扩大为发布许可。
 
 ## 1. 输入与准确原图
 
@@ -78,3 +78,7 @@ python tools/itch/test.py --report-dir tasks/CHAPTER_ONE_ART_BATCH_003/package
 ## 7. GitHub最终字节核验
 
 实现与原始PNG已提交并推送main：`7d795f578b7d1ffbbaeaf3e4861b338384e6e0c1`。随后从该提交的GitHub raw地址实际下载三张PNG，全部HTTP200，大小与SHA-256逐一等于桌面固定原图；不是只比较本地Git blob。证据 `github-readback.json`。第三批文件交付、G2与本地G4闭环完成，正式发布状态仍按前述矩阵保留，不因推送成功自动升级。
+
+## 8. HUMAN实际试玩反馈（2026-10-27）
+
+用户明确回复“试玩成功”。已将当前11动物版本运行试玩通过写入 `approval_receipt.json`、开发交接和项目状态；未将此反馈扩展为音效功能或正式公开发行已通过。随后用户要求检查点击动物播放声音的接口，核查结果单独见 `tasks/ANIMAL_CLICK_AUDIO_AUDIT_001/REPORT.md`。
