@@ -510,7 +510,7 @@ chapter_one_completion_work_2026_10_27:
     task: "tasks/CHAPTER_ONE_ART_BATCH_003/request_to_art.json"
     owner: "ART_EXPERIENCE"
     shapes: ["D2", "I3", "I4"]
-    status: "READY_FOR_ART_NOT_YET_EXECUTED"
+    status: "ALL_THREE_HUMAN_G3_APPROVED_CODEX_INTAKE_PENDING"
   reuse_panda_rabbit:
     task: "tasks/CHAPTER_ONE_PANDA_RABBIT_REUSE_001/request_to_dev.json"
     owner: "DEV_INTEGRATION_CODEX_LOCAL"
@@ -520,3 +520,15 @@ chapter_one_completion_work_2026_10_27:
     verified_merged_commit: "59e33afed052837b391adebccbbdcec2ebaec403"
     github_raw_readback: "PASS_BOTH_PNG_HASHES_AND_SIZES"
   policy: "Keep 8 existing chapter levels and all approved original PNG intact; formal 11-shape full-art itch Demo gate still pending"
+
+chapter_one_art_batch_003_final_visual:
+  date: "2026-10-27"
+  status: "D2_I3_I4_ALL_HUMAN_G3_APPROVED"
+  handoff: "tasks/CHAPTER_ONE_ART_BATCH_003/handoff_art_to_design.json"
+  D2: "guinea_pig_sleeping_horizontal"
+  I3: "otter_floating_supine_holding_stone"
+  I4: "crocodile_half_lidded_relaxed"
+  next_owner: "DESIGN_TO_CODEX_LOCAL_SINGLE_BATCH"
+  source_pngs_in_github: false
+  technical_G1_G2_G4: "PENDING"
+  unchanged: "logic_occupied_cells_eight_levels_prior_approved_assets"
