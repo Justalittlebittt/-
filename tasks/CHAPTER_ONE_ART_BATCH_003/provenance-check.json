@@ -1,0 +1,22 @@
+{
+  "source_delivery": "HUMAN Desktop animal-art folder",
+  "visual_approval": "ART handoff + current HUMAN dispatch",
+  "files": [
+    {
+      "file": "豚鼠.png",
+      "png_metadata_keys": [],
+      "provider_license_metadata_supplied": false
+    },
+    {
+      "file": "水獭.png",
+      "png_metadata_keys": [],
+      "provider_license_metadata_supplied": false
+    },
+    {
+      "file": "鳄鱼.png",
+      "png_metadata_keys": [],
+      "provider_license_metadata_supplied": false
+    }
+  ],
+  "release_rights_metadata": "UNVERIFIED_NOT_SUPPLIED_IN_HANDOFF_OR_PNG"
+}

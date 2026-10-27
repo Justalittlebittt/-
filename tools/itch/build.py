@@ -1,9 +1,9 @@
-"""Deterministic, dependency-free itch.io HTML5 geometry-demo packaging and verification."""
+"""Deterministic, dependency-free itch.io HTML5 whole-animal test packaging and verification."""
 from pathlib import Path,PurePosixPath
 import argparse,hashlib,json,re,subprocess,sys,tempfile,zipfile,os
 ROOT=Path(__file__).resolve().parents[2]
 TASK=ROOT/'tasks/ITCH_DEMO_PACKAGING_001'
-VERSION='1.2.0'
+VERSION='1.3.0'
 SOURCE=ROOT/'experiments/chapter_preview'
 BACKGROUND='assets/backgrounds/chapter_one.png'
 DOC='https://itch.io/docs/creators/html5'
@@ -55,8 +55,8 @@ def build():
   return m.group(1)+links[source]+m.group(3)
  html=re.sub(r'((?:src|href)=")([^\"]+)(")',remap,html)
  files['index.html']=html.encode()
- build_id=sha(json.dumps({'builder':sha(Path(__file__).read_bytes().replace(b'\r\n',b'\n')),'sources':sources,'mode':'partial-animal-private-test'},sort_keys=True).encode())[:20]
- manifest={'builder_version':VERSION,'build_id':build_id,'entry':'index.html','mode':'PARTIAL_ANIMAL_PRIVATE_TEST_ONLY','public_animal_release':'BLOCKED_PENDING_ALL_11_WHOLE_ANIMAL_G1_G2_G3_G4_AND_RUNTIME_INTEGRATION','levels':8,'animal_images':animal_exports,'runtime_dependencies':'self-contained; no external services/CDN/fonts required','source_files':sources,'files':{n:{'bytes':len(d),'sha256':sha(d)} for n,d in sorted(files.items())}}
+ build_id=sha(json.dumps({'builder':sha(Path(__file__).read_bytes().replace(b'\r\n',b'\n')),'sources':sources,'mode':'animal-local-test'},sort_keys=True).encode())[:20]
+ manifest={'builder_version':VERSION,'build_id':build_id,'entry':'index.html','mode':'ANIMAL_LOCAL_TEST_ONLY','public_animal_release':'NOT_DECLARED_LOCAL_TEST_BUILD_REQUIRES_SEPARATE_FULL_GATE_REVIEW','levels':8,'animal_images':animal_exports,'runtime_dependencies':'self-contained; no external services/CDN/fonts required','source_files':sources,'files':{n:{'bytes':len(d),'sha256':sha(d)} for n,d in sorted(files.items())}}
  files['build-manifest.json']=(json.dumps(manifest,sort_keys=True,ensure_ascii=False,indent=2)+'\n').encode()
  return files,manifest
 def validate(data):
@@ -83,14 +83,14 @@ def validate(data):
   image_refs+=re.findall(r"src:'([^']+)'",js)
   assert len(image_refs)==1+len(manifest['animal_images']) and all(r in names for r in image_refs)
   assert not re.search(r'https?://|localhost|127\.0\.0\.1|/assets/animals/',js)
-  assert '左键拖动' in html and '右键旋转' in html and 'R 重置' in html and '其余形状为占位' in html
+  assert '左键拖动' in html and '右键旋转' in html and 'R 重置' in html and '动物拼图试玩' in html
   return {'status':'PASS','zip_bytes':len(data),'file_count':len(names),'uncompressed_bytes':total,'longest_path_chars':max(map(len,names)),'root_index':True,'case_sensitive_dependency_closure':True,'external_runtime_dependencies':0,'animal_images_included':len(manifest['animal_images']),'manifest_hashes_match':True,'limits':LIMITS,'rules_source':DOC,'rules_checked_on':'2026-10-25','build_id':manifest['build_id'],'sha256':sha(data)}
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--browser',action='store_true');parser.add_argument('--release',action='store_true');parser.add_argument('--output',default='builds/itch/animal-puzzle-partial-animal-test.zip');parser.add_argument('--report-dir',default='tasks/ITCH_DEMO_PACKAGING_001');args=parser.parse_args()
+ parser=argparse.ArgumentParser();parser.add_argument('--browser',action='store_true');parser.add_argument('--release',action='store_true');parser.add_argument('--output',default='builds/itch/animal-puzzle-chapter-one-test.zip');parser.add_argument('--report-dir',default='tasks/ITCH_DEMO_PACKAGING_001');args=parser.parse_args()
  global TASK
  TASK=(ROOT/args.report_dir).resolve()
  if not TASK.is_relative_to(ROOT/'tasks'):parser.error('report directory must stay inside repository tasks/')
- if args.release:parser.exit(2,'PUBLIC_RELEASE_BLOCKED: current runtime is geometric; all 11 whole-animal mappings and G1/G2/G3/G4 must be integrated before a separate approved release workflow.\n')
+ if args.release:parser.exit(2,'PUBLIC_RELEASE_BLOCKED: local QA export is not a publishing workflow; full G1-G4, provenance and release clearance must be recorded separately.\n')
  output=(ROOT/args.output).resolve()
  if not output.is_relative_to(ROOT/'builds'):parser.error('output must stay inside repository builds/')
  files,manifest=build();data=deterministic_zip(files);report=validate(data)

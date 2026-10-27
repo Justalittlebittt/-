@@ -44,3 +44,5 @@ itch HTML5测试打包：`python tools/itch/build.py --browser`，输出根index
 第二批已接入：P5河马、L4长颈鹿、L3柯尔鸭，当前八关共有六种正式整图动物，保持上一批和松鼠左移锚点，其他五种形状仍为几何占位。原图未切割、未重编码，技术验收与实际游玩截图见 [第二批接入报告](tasks/CHAPTER_ONE_ART_BATCH_002/REPORT.md)。
 
 2026-10-27已按HUMAN指令复用原批准熊猫/白兔：chapter_preview第2/3/4/6关显示白兔、第8关显示熊猫，现为8种完整动物，仅D2/I3/I4仍占位；原图及旧正式第一关不变。参见 [复用验收](tasks/CHAPTER_ONE_EXISTING_ANIMALS_001/REPORT.md)。
+
+2026-10-27第三批已接入：D2豚鼠、I3水獭、I4鳄鱼。现有八关的34个实例全部映射11种完整动物PNG，正常加载不再有几何占位；原图和既有关卡不变。源码与实际导出包均完成三种窗口连续八关操作验证；这是全美术本地测试版，尚未声明正式发布就绪。见 [第三批正式交接](tasks/CHAPTER_ONE_ART_BATCH_003/REPORT.md) 与 [发布门禁实际状态](tasks/CHAPTER_ONE_ART_BATCH_003/release_gate_review.json)。导出工具当前产物为builds/itch/animal-puzzle-chapter-one-test.zip。

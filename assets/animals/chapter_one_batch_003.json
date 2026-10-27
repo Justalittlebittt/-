@@ -1,0 +1,141 @@
+{
+  "task_id": "CHAPTER_ONE_ART_BATCH_003",
+  "date": "2026-10-27",
+  "assets": [
+    {
+      "shape_id": "D2",
+      "species": "guinea_pig",
+      "filename": "豚鼠.png",
+      "handoff_filename": "卡通棕白睡眠豚鼠素材.png",
+      "repository_file": "assets/animals/guinea_pig_d2_desktop_003.png",
+      "asset_version": "D2_DESKTOP_HUMAN_APPROVED_BATCH_003",
+      "version_assigned_by": "DEV local intake registration; ART supplied no candidate version string",
+      "image_sha256": "c81e7fb131285be564b1fb400f9854e2f76343b7fb5ee86d593ca90d2dd4efa7",
+      "hash_basis": "First DEV measurement of the unique final desktop file; no pre-approved remote hash supplied",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 892562,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "baseSize": [
+        2,
+        1
+      ],
+      "sourceBounds": [
+        24,
+        248,
+        1425,
+        853
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_ART_HANDOFF_AND_CURRENT_DISPATCH_2026_10_27",
+      "G1": "PASS_ORIGINAL_PNG_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBOR_LAYOUTS",
+      "G4": "PASS_ATOMIC_POINTER_INTERACTION_AND_BOTH_EIGHT_LEVEL_FLOWS"
+    },
+    {
+      "shape_id": "I3",
+      "species": "otter",
+      "filename": "水獭.png",
+      "handoff_filename": "横躺抱石的可爱水獭.png",
+      "repository_file": "assets/animals/otter_i3_desktop_003.png",
+      "asset_version": "I3_DESKTOP_HUMAN_APPROVED_BATCH_003",
+      "version_assigned_by": "DEV local intake registration; ART supplied no candidate version string",
+      "image_sha256": "a5370d6232a77150a9ae71d750265dcfd453d85a7e9e151c5315463073040c94",
+      "hash_basis": "First DEV measurement of the unique final desktop file; no pre-approved remote hash supplied",
+      "width": 2006,
+      "height": 784,
+      "bytes": 823220,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "baseSize": [
+        3,
+        1
+      ],
+      "sourceBounds": [
+        54,
+        134,
+        1966,
+        682
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_ART_HANDOFF_AND_CURRENT_DISPATCH_2026_10_27",
+      "G1": "PASS_ORIGINAL_PNG_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBOR_LAYOUTS",
+      "G4": "PASS_ATOMIC_POINTER_INTERACTION_AND_BOTH_EIGHT_LEVEL_FLOWS"
+    },
+    {
+      "shape_id": "I4",
+      "species": "crocodile",
+      "filename": "鳄鱼.png",
+      "handoff_filename": "慵懒侧卧的卡通鳄鱼.png",
+      "repository_file": "assets/animals/crocodile_i4_desktop_003.png",
+      "asset_version": "I4_DESKTOP_HUMAN_APPROVED_BATCH_003",
+      "version_assigned_by": "DEV local intake registration; ART supplied no candidate version string",
+      "image_sha256": "4195db5453c276c9ea05868d16d17fa7c925578ddd764c423b12fb4dcc364ba9",
+      "hash_basis": "First DEV measurement of the unique final desktop file; no pre-approved remote hash supplied",
+      "width": 2172,
+      "height": 724,
+      "bytes": 892531,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "baseSize": [
+        4,
+        1
+      ],
+      "sourceBounds": [
+        30,
+        121,
+        2146,
+        580
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_ART_HANDOFF_AND_CURRENT_DISPATCH_2026_10_27",
+      "G1": "PASS_ORIGINAL_PNG_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBOR_LAYOUTS",
+      "G4": "PASS_ATOMIC_POINTER_INTERACTION_AND_BOTH_EIGHT_LEVEL_FLOWS"
+    }
+  ],
+  "source_provenance": "HUMAN desktop delivery matched to ART handoff species/poses and current HUMAN G3 dispatch; no independent remote hash was supplied. Generator/provider/licence metadata absent from handoff remains UNVERIFIED for release.",
+  "source_png_pixel_changes": false,
+  "report": "tasks/CHAPTER_ONE_ART_BATCH_003/REPORT.md"
+}

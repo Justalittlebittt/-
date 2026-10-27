@@ -13,7 +13,7 @@ require('../../tools/check-runtime.cjs')(path.join(root,'experiments/chapter_pre
  async function right(){await page.mouse.down({button:'right'});await page.mouse.up({button:'right'});}
  async function drop(at){const v=await page.evaluate(at=>({x:board.x+at[0]*step+held.offset.x,y:board.y+at[1]*step+held.offset.y}),at);await move(v.x,v.y);await page.mouse.up();}
  for(const sid of await page.evaluate(()=>Object.keys(chapterAnimals)))for(let rot=0;rot<4;rot++){
-  await page.evaluate(sid=>begin(previewLevels.findIndex(l=>l.pieces.some(p=>p.shape_id===sid))),sid);const id=await page.evaluate(sid=>pieces.find(p=>p.shape_id===sid).piece_id,sid);
+  await page.evaluate(({sid,rot})=>begin(previewLevels.findIndex(l=>{const def=l.pieces.find(p=>p.shape_id===sid);if(!def)return false;const q={...def,rot};for(let y=0;y<l.h;y++)for(let x=0;x<l.w;x++)if(G.valid(l,[],q,[x,y]))return true;return false;})),{sid,rot});const id=await page.evaluate(sid=>pieces.find(p=>p.shape_id===sid).piece_id,sid);
   await pick(id);for(let i=0;i<rot;i++)await right();
   await move(838,480);const follow=await page.evaluate(()=>({held:!!held,mouse:{...mouse},phase,trace:devInputTrace}));const follows=follow.held&&Math.abs(follow.mouse.x-838)<.15&&Math.abs(follow.mouse.y-480)<.15;check('drag follows pointer '+sid+rot+(follows?'':' '+JSON.stringify(follow)),follows);
   const target=await page.evaluate(()=>{for(let y=0;y<level.h;y++)for(let x=0;x<level.w;x++)if(G.valid(level,pieces,held.p,[x,y]))return [x,y];return null;});assert.ok(target);

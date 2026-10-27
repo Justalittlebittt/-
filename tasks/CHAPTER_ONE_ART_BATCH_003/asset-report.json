@@ -1,0 +1,266 @@
+{
+  "status": "EXACT_PINNED_DESKTOP_ORIGINALS_IMPORTED",
+  "assets": [
+    {
+      "shape_id": "D2",
+      "species": "guinea_pig",
+      "filename": "豚鼠.png",
+      "handoff_filename": "卡通棕白睡眠豚鼠素材.png",
+      "repository_file": "assets/animals/guinea_pig_d2_desktop_003.png",
+      "asset_version": "D2_DESKTOP_HUMAN_APPROVED_BATCH_003",
+      "version_assigned_by": "DEV local intake registration; ART supplied no candidate version string",
+      "image_sha256": "c81e7fb131285be564b1fb400f9854e2f76343b7fb5ee86d593ca90d2dd4efa7",
+      "hash_basis": "First DEV measurement of the unique final desktop file; no pre-approved remote hash supplied",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 892562,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "baseSize": [
+        2,
+        1
+      ],
+      "sourceBounds": [
+        24,
+        248,
+        1425,
+        853
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_ART_HANDOFF_AND_CURRENT_DISPATCH_2026_10_27",
+      "sha256": "c81e7fb131285be564b1fb400f9854e2f76343b7fb5ee86d593ca90d2dd4efa7",
+      "source": "C:\\Users\\Administrator\\Desktop\\动物拼图美术素材\\豚鼠.png",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 910637,
+      "semi_transparent_pixels": 660389,
+      "canvas_border_alpha_max": 1,
+      "alpha_bbox60": [
+        24,
+        248,
+        1425,
+        853
+      ],
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.67202,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.658,
+          "center_alpha": 253
+        }
+      ],
+      "pixel_changes": false,
+      "registration": "Source bounds define scaling/anchor only; whole PNG is rendered once, no cropped source rectangle"
+    },
+    {
+      "shape_id": "I3",
+      "species": "otter",
+      "filename": "水獭.png",
+      "handoff_filename": "横躺抱石的可爱水獭.png",
+      "repository_file": "assets/animals/otter_i3_desktop_003.png",
+      "asset_version": "I3_DESKTOP_HUMAN_APPROVED_BATCH_003",
+      "version_assigned_by": "DEV local intake registration; ART supplied no candidate version string",
+      "image_sha256": "a5370d6232a77150a9ae71d750265dcfd453d85a7e9e151c5315463073040c94",
+      "hash_basis": "First DEV measurement of the unique final desktop file; no pre-approved remote hash supplied",
+      "width": 2006,
+      "height": 784,
+      "bytes": 823220,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "baseSize": [
+        3,
+        1
+      ],
+      "sourceBounds": [
+        54,
+        134,
+        1966,
+        682
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_ART_HANDOFF_AND_CURRENT_DISPATCH_2026_10_27",
+      "sha256": "a5370d6232a77150a9ae71d750265dcfd453d85a7e9e151c5315463073040c94",
+      "source": "C:\\Users\\Administrator\\Desktop\\动物拼图美术素材\\水獭.png",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 970883,
+      "semi_transparent_pixels": 601498,
+      "canvas_border_alpha_max": 1,
+      "alpha_bbox60": [
+        54,
+        134,
+        1966,
+        682
+      ],
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.6416,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.48552,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.31272,
+          "center_alpha": 0
+        }
+      ],
+      "pixel_changes": false,
+      "registration": "Source bounds define scaling/anchor only; whole PNG is rendered once, no cropped source rectangle"
+    },
+    {
+      "shape_id": "I4",
+      "species": "crocodile",
+      "filename": "鳄鱼.png",
+      "handoff_filename": "慵懒侧卧的卡通鳄鱼.png",
+      "repository_file": "assets/animals/crocodile_i4_desktop_003.png",
+      "asset_version": "I4_DESKTOP_HUMAN_APPROVED_BATCH_003",
+      "version_assigned_by": "DEV local intake registration; ART supplied no candidate version string",
+      "image_sha256": "4195db5453c276c9ea05868d16d17fa7c925578ddd764c423b12fb4dcc364ba9",
+      "hash_basis": "First DEV measurement of the unique final desktop file; no pre-approved remote hash supplied",
+      "width": 2172,
+      "height": 724,
+      "bytes": 892531,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "baseSize": [
+        4,
+        1
+      ],
+      "sourceBounds": [
+        30,
+        121,
+        2146,
+        580
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_ART_HANDOFF_AND_CURRENT_DISPATCH_2026_10_27",
+      "sha256": "4195db5453c276c9ea05868d16d17fa7c925578ddd764c423b12fb4dcc364ba9",
+      "source": "C:\\Users\\Administrator\\Desktop\\动物拼图美术素材\\鳄鱼.png",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_pixels": 970513,
+      "semi_transparent_pixels": 600803,
+      "canvas_border_alpha_max": 1,
+      "alpha_bbox60": [
+        30,
+        121,
+        2146,
+        580
+      ],
+      "cell_coverage": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.48152,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.67273,
+          "center_alpha": 252
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.60525,
+          "center_alpha": 253
+        },
+        {
+          "cell": [
+            3,
+            0
+          ],
+          "occupied": true,
+          "alpha_gt60_fraction": 0.352,
+          "center_alpha": 0
+        }
+      ],
+      "pixel_changes": false,
+      "registration": "Source bounds define scaling/anchor only; whole PNG is rendered once, no cropped source rectangle"
+    }
+  ]
+}

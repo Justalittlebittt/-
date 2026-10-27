@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "task_id": "CHAPTER_ONE_ART_BATCH_003",
+  "owner": "DEV_INTEGRATION",
+  "from": "DEV_INTEGRATION",
+  "to": "DESIGN_DIRECTOR",
+  "date": "2026-10-27",
+  "contract": "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md",
+  "base_commit": "ad8ccef",
+  "status": "FULL_ART_EIGHT_LEVEL_LOCAL_TECHNICAL_ACCEPTANCE_PASS_NOT_PUBLIC_RELEASE_CLEARED",
+  "goal": "Integrate final D2 guinea pig / I3 otter / I4 crocodile originals without changing existing eight levels, prior animals or background",
+  "inputs": [
+    "tasks/CHAPTER_ONE_ART_BATCH_003/handoff_art_to_design.json",
+    "state/PROJECT_STATE.yaml",
+    "C:/Users/Administrator/Desktop/动物拼图美术素材"
+  ],
+  "assets": [
+    {
+      "shape_id": "D2",
+      "species": "guinea_pig",
+      "filename": "豚鼠.png",
+      "handoff_filename": "卡通棕白睡眠豚鼠素材.png",
+      "repository_file": "assets/animals/guinea_pig_d2_desktop_003.png",
+      "asset_version": "D2_DESKTOP_HUMAN_APPROVED_BATCH_003",
+      "version_assigned_by": "DEV local intake registration; ART supplied no candidate version string",
+      "image_sha256": "c81e7fb131285be564b1fb400f9854e2f76343b7fb5ee86d593ca90d2dd4efa7",
+      "hash_basis": "First DEV measurement of the unique final desktop file; no pre-approved remote hash supplied",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 892562,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "baseSize": [
+        2,
+        1
+      ],
+      "sourceBounds": [
+        24,
+        248,
+        1425,
+        853
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_ART_HANDOFF_AND_CURRENT_DISPATCH_2026_10_27",
+      "G1": "PASS_ORIGINAL_PNG_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBOR_LAYOUTS",
+      "G4": "PASS_ATOMIC_POINTER_INTERACTION_AND_BOTH_EIGHT_LEVEL_FLOWS"
+    },
+    {
+      "shape_id": "I3",
+      "species": "otter",
+      "filename": "水獭.png",
+      "handoff_filename": "横躺抱石的可爱水獭.png",
+      "repository_file": "assets/animals/otter_i3_desktop_003.png",
+      "asset_version": "I3_DESKTOP_HUMAN_APPROVED_BATCH_003",
+      "version_assigned_by": "DEV local intake registration; ART supplied no candidate version string",
+      "image_sha256": "a5370d6232a77150a9ae71d750265dcfd453d85a7e9e151c5315463073040c94",
+      "hash_basis": "First DEV measurement of the unique final desktop file; no pre-approved remote hash supplied",
+      "width": 2006,
+      "height": 784,
+      "bytes": 823220,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "baseSize": [
+        3,
+        1
+      ],
+      "sourceBounds": [
+        54,
+        134,
+        1966,
+        682
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_ART_HANDOFF_AND_CURRENT_DISPATCH_2026_10_27",
+      "G1": "PASS_ORIGINAL_PNG_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBOR_LAYOUTS",
+      "G4": "PASS_ATOMIC_POINTER_INTERACTION_AND_BOTH_EIGHT_LEVEL_FLOWS"
+    },
+    {
+      "shape_id": "I4",
+      "species": "crocodile",
+      "filename": "鳄鱼.png",
+      "handoff_filename": "慵懒侧卧的卡通鳄鱼.png",
+      "repository_file": "assets/animals/crocodile_i4_desktop_003.png",
+      "asset_version": "I4_DESKTOP_HUMAN_APPROVED_BATCH_003",
+      "version_assigned_by": "DEV local intake registration; ART supplied no candidate version string",
+      "image_sha256": "4195db5453c276c9ea05868d16d17fa7c925578ddd764c423b12fb4dcc364ba9",
+      "hash_basis": "First DEV measurement of the unique final desktop file; no pre-approved remote hash supplied",
+      "width": 2172,
+      "height": 724,
+      "bytes": 892531,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "baseSize": [
+        4,
+        1
+      ],
+      "sourceBounds": [
+        30,
+        121,
+        2146,
+        580
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_APPROVED_ART_HANDOFF_AND_CURRENT_DISPATCH_2026_10_27",
+      "G1": "PASS_ORIGINAL_PNG_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBOR_LAYOUTS",
+      "G4": "PASS_ATOMIC_POINTER_INTERACTION_AND_BOTH_EIGHT_LEVEL_FLOWS"
+    }
+  ],
+  "runtime": "experiments/chapter_preview/index.html",
+  "coverage": {
+    "shapes": 11,
+    "levels": 8,
+    "instances": 34,
+    "unmapped_instances": 0
+  },
+  "tests": {
+    "new_shape_boundary_cases": 672,
+    "new_shape_collision_cases": 36,
+    "new_instances": 13,
+    "all_animal_rotation_poses": 44,
+    "animal_pointer_checks": 315,
+    "source_browser_checks": 370,
+    "source_real_level_completions": 24,
+    "extracted_iframe_checks": 370,
+    "export_real_level_completions": 24,
+    "negative_packaging_checks": 10,
+    "prior_registrations_unchanged": 8,
+    "prior_files_unchanged": 15
+  },
+  "evidence": {
+    "files_alpha": "asset-report.json",
+    "geometry": "geometry-report.json",
+    "atomic_browser": "animal-browser-report.json",
+    "source_eight_levels": "source-playtest-report.json",
+    "zip_iframe": "package/browser-report.json",
+    "all_neighbors": "package/iframe-playtest-report.json",
+    "baseline": "baseline-report.json",
+    "readiness": "release_gate_review.json"
+  },
+  "artifact": {
+    "file": "builds/itch/animal-puzzle-chapter-one-test.zip",
+    "status": "PASS",
+    "zip_bytes": 13527481,
+    "file_count": 20,
+    "uncompressed_bytes": 14496239,
+    "longest_path_chars": 57,
+    "root_index": true,
+    "case_sensitive_dependency_closure": true,
+    "external_runtime_dependencies": 0,
+    "animal_images_included": 11,
+    "manifest_hashes_match": true,
+    "limits": {
+      "files": 1000,
+      "path_chars": 240,
+      "total_bytes": 500000000,
+      "file_bytes": 200000000
+    },
+    "rules_source": "https://itch.io/docs/creators/html5",
+    "rules_checked_on": "2026-10-25",
+    "build_id": "a81cd367be5776c02ebf",
+    "sha256": "0d536920cd133681f51e57c54349678aab0208f5041c7e7e277899371efacd86",
+    "two_builds_byte_identical": true
+  },
+  "out_of_scope": "No narrative/new levels, original PNG edits, old sprite registration changes, engine freeze or itch publishing",
+  "unresolved_release_items": [
+    "Record complete source/provenance/licence metadata for release gate review",
+    "DESIGN/HUMAN review full-art runtime and final release scope using this handoff",
+    "If separately authorized, perform real platform upload and hosted run verification"
+  ],
+  "next_owner_action": "DESIGN review complete-art handoff and release gate gaps; HUMAN review current eleven-animal runtime",
+  "github_readback": "PENDING_PUSH_THEN_RAW_DOWNLOAD"
+}

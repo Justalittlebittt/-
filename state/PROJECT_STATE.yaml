@@ -7,8 +7,8 @@ repo:
   verified_in_this_session: true
   intended_project_label: "动物拼图"
   path_note: "GitHub API返回的仓库实际名称为'-'；与中文项目名称不同"
-phase: "第一章8关已映射八种完整动物；已批准熊猫白兔复用完成，D2/I3/I4仍为几何占位"
-current_goal: "第一章八关熊猫白兔复用及回归已完成；第三批D2/I3/I4由ART按单图G3验收并交接，尚未公开发布"
+phase: "第一章8关34个实例已全部使用11种完整动物PNG；第三批本地技术验证通过，尚未声明发布就绪"
+current_goal: "完成第三批D2豚鼠/I3水獭/I4鳄鱼接入、源码与导出包连续八关验证及GitHub字节核验；提交正式交接并分别记录发布门禁缺项"
 source_of_truth:
   current_repository: "GitHub main"
   production_contract: "docs/contracts/ANIMAL_PUZZLE_PRODUCTION_V1.6.md"
@@ -510,7 +510,7 @@ chapter_one_completion_work_2026_10_27:
     task: "tasks/CHAPTER_ONE_ART_BATCH_003/request_to_art.json"
     owner: "ART_EXPERIENCE"
     shapes: ["D2", "I3", "I4"]
-    status: "ALL_THREE_HUMAN_G3_APPROVED_CODEX_INTAKE_PENDING"
+    status: "CODEX_LOCAL_FULL_ART_TECHNICAL_QA_PASS_HANDOFF_READY"
   reuse_panda_rabbit:
     task: "tasks/CHAPTER_ONE_PANDA_RABBIT_REUSE_001/request_to_dev.json"
     owner: "DEV_INTEGRATION_CODEX_LOCAL"
@@ -528,7 +528,41 @@ chapter_one_art_batch_003_final_visual:
   D2: "guinea_pig_sleeping_horizontal"
   I3: "otter_floating_supine_holding_stone"
   I4: "crocodile_half_lidded_relaxed"
-  next_owner: "DESIGN_TO_CODEX_LOCAL_SINGLE_BATCH"
+  next_owner: "DESIGN_REVIEW_CODEX_HANDOFF_AND_RELEASE_GATE_GAPS"
   source_pngs_in_github: false
-  technical_G1_G2_G4: "PENDING"
+  technical_G1_G2_G4: "PASS_FILE_ALPHA_G2_G4_TESTED_SCOPE; complete licence provenance remains unverified"
   unchanged: "logic_occupied_cells_eight_levels_prior_approved_assets"
+
+chapter_one_art_batch_003_dev:
+  owner: "DEV_INTEGRATION"
+  date: "2026-10-27"
+  status: "FULL_ART_LOCAL_TECHNICAL_PASS_NOT_PUBLIC_RELEASE_CLEARED"
+  original_sources: "Desktop 豚鼠.png / 水獭.png / 鳄鱼.png; no re-encode, crop, fragmentation or pixel changes"
+  metadata: "assets/animals/chapter_one_batch_003.json"
+  mapped_shape_count: 11
+  chapter_levels: 8
+  chapter_instances: 34
+  geometry_placeholders: 0
+  new_instances: 13
+  G1_file_alpha_edges: "PASS; all PNG metadata keys empty; full provider/licence details not supplied"
+  G1_complete_provenance_license: "UNVERIFIED"
+  G2_boundaries: 672
+  G2_collisions: 36
+  G3: "ALL_THREE_HUMAN_APPROVED_HANDOFF_AND_CURRENT_DISPATCH"
+  animal_pointer_checks: 315
+  real_rotation_poses: 44
+  source_eight_level_checks: 370
+  source_pointer_level_completions: 24
+  extracted_iframe_checks: 370
+  extracted_pointer_level_completions: 24
+  missing_resources_and_page_errors: 0
+  baseline_unchanged_files: 15
+  prior_animal_registrations_unchanged: 8
+  background_levels_core_and_old_pngs: "UNCHANGED"
+  runtime: "experiments/chapter_preview/index.html"
+  local_export: "builds/itch/animal-puzzle-chapter-one-test.zip"
+  report: "tasks/CHAPTER_ONE_ART_BATCH_003/handoff_dev_to_design.json"
+  release_review: "tasks/CHAPTER_ONE_ART_BATCH_003/release_gate_review.json"
+  human_full_art_runtime_playtest: "PENDING"
+  itch_live_upload: "NOT_RUN"
+  github_raw_readback: "PENDING_PUSH"
