@@ -1,0 +1,37 @@
+{
+  "task_id": "ANIMAL_REAL_VOICE_PROCESS_001",
+  "owner": "DEV_INTEGRATION",
+  "executor": "CODEX_LOCAL",
+  "status": "READY_FOR_CODEX",
+  "scope": "Only RECT6 panda and I3 otter. HUMAN accepted real recording sources but has not accepted processed sound clips.",
+  "sources": [
+    {
+      "shape_id": "RECT6",
+      "page": "https://commons.wikimedia.org/wiki/File:Giant_panda_twittering.ogg",
+      "recording": "Giant panda twittering.ogg",
+      "license": "Public domain stated on Wikimedia Commons"
+    },
+    {
+      "shape_id": "I3",
+      "page": "https://www.nps.gov/subjects/sound/sounds-otter.htm",
+      "recording": "NPS River otters recording; river otter, not Asian small-clawed otter",
+      "license": "NPS sound gallery states recordings public domain; retain credit"
+    }
+  ],
+  "processing": [
+    "Download original sources and archive unchanged originals with URLs, credit and SHA256.",
+    "Listen and select cleanest isolated animal vocal segment, not a random timestamp.",
+    "Panda: produce candidate 0.5-1.0 seconds, avoid silence and aggressive pitch shifts.",
+    "Otter: produce candidate 0.4-0.9 seconds, remove water splashing and background only if separation does not damage call.",
+    "Use gentle denoise, 5-15ms fades, consistent moderate perceived loudness and avoid clipping. No invented animal vocals.",
+    "Render A/B alternatives only if meaningful differences; provide browser-playable WAV preview and source/processed comparison.",
+    "Ask HUMAN to approve processed audio before integrating into game. Do not touch the 9 previously approved sound candidates or game code now.",
+    "After explicit HUMAN approval, integrate 11 animal sound effects as separate later task."
+  ],
+  "outputs": [
+    "Processed WAV candidate per animal",
+    "provenance and processing log",
+    "browser or local playback for HUMAN"
+  ],
+  "not_done": "File download/processing has not happened in this ChatGPT conversation."
+}
