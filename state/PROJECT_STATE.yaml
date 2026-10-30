@@ -657,3 +657,19 @@ chapter_one_music_001:
   operation_sound_effects: "SEPARATE_TODO"
   itch_live_upload: "NOT_RUN"
   report: "tasks/CHAPTER_ONE_MUSIC_001/REPORT.md"
+
+
+chapter_one_ui_sfx_001:
+  date: "2026-10-30"
+  status: "FOUR_APPROVED_A_SOUNDS_INTEGRATED_SOURCE_AND_EXPORTED_IFRAME_QA_PASS"
+  events: ["rotate", "place", "invalid", "complete"]
+  generic_pickup_sound: "NONE_ANIMAL_VOICE_ONLY"
+  source_exact_remote_bytes: 4
+  source_ui_checks: 19
+  exported_ui_checks: 19
+  exported_chapter_checks: 370
+  real_pointer_level_completions: 24
+  exported_animal_audio_checks: 10
+  human_mix_review: "PENDING_PLAYTEST"
+  source_originals: "LICENSED_LOCAL_IMPORT_SHIPPED_INSIDE_GAME_ZIP_NOT_STANDALONE_GITHUB_AUDIO"
+  report: "tasks/CHAPTER_ONE_UI_SFX_001/REPORT.md"

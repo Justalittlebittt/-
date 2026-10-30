@@ -56,3 +56,5 @@ ITCH_DEMO_PACKAGING_001：当前可用python tools/itch/build.py --browser构建
 2026-10-30 DUCK_HIPPO_REPLACEMENT_001：桌面美术/鸭子-替换.png、河马-替换.png已替换chapter_preview L3/P5映射，新版本路径及哈希见assets/animals/duck_hippo_replacement_001.json。旧图保留。鸭子offset[0,0.08]、河马baseRotation=3不变。局部交叠1190→666px，仍非零，勿声称完全消除。新注册src遵循现有导出器src单引号格式，完整依赖验证通过后才交付。
 
 2026-10-30 CHAPTER_ONE_MUSIC_001：V1.6 §13单曲背景音乐已接入，点击开始播放，loop=true，音乐独立静音/音量控件18%默认；换关/R不重启。音乐源assets/audio/chapter_one_music_v1.wav按Soundza许可保守处理不提交独立音频，实际ZIP包含原字节；新检出先运行tasks/CHAPTER_ONE_MUSIC_001/import_music.py校验批准SHA导入，再运行test-export.py --build验证。不得假设gitignored缺失可静默跳过或用试听版替换。官方loop_seamless=false，未剪改音频；衔接听感待用户确认。许可范围见本任务报告，不扩大为所有Demo素材发行门禁已过。
+
+2026-10-30 CHAPTER_ONE_UI_SFX_001：V1.6 §14四条A版UI声音已接入，原字节与合同/g链接一致。复用animalAudio三瞬时通道，音效开关与音乐独立；无通用pickup声音。完成声每关一次，重置/换关重置标志，绘制不触发。4个独立WAV同BGM按许可不进公开源仓库，克隆后用本任务import_sounds.py导入并核对哈希，再构建及test-ui.cjs/test-export.py。人声/动物音频单测计数须排除UI与BGM，以免将不同事件误算为动物重复叫声。

@@ -7,3 +7,9 @@ __pycache__/
 
 # Full repeated chapter screenshots stay local; representative music screenshots are tracked.
 /tasks/CHAPTER_ONE_MUSIC_001/package/evidence/
+
+# Licensed UI sounds ship in the game, not as standalone files.
+/assets/audio/ui_*_a_v1.wav
+
+/tasks/CHAPTER_ONE_UI_SFX_001/local-package/
+/tasks/CHAPTER_ONE_UI_SFX_001/public-package/evidence/

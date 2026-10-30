@@ -17,3 +17,7 @@ Shared settings/API: `animalAudio.volume` (0–1), `animalAudio.cooldownMs`, `an
 ## Chapter music
 
 HUMAN selected Buy Something! Shop Theme on Soundza. The approved 88s WAV is imported with `python tasks/CHAPTER_ONE_MUSIC_001/import_music.py` and stays gitignored to avoid standalone redistribution; it is included inside the playable game ZIP. New checkouts must import the licensed local file before building. Source verification, license, hash and QA: tasks/CHAPTER_ONE_MUSIC_001/REPORT.md. Default music volume .18; animal voices .6; no audio re-encoding. Full package+music regression: `python tasks/CHAPTER_ONE_MUSIC_001/test-export.py --build`.
+
+## UI effects
+
+Four HUMAN-approved A WAVs are mapped by operationSounds: rotate/place/invalid/complete. No generic pickup sound. Import licensed desktop originals with `python tasks/CHAPTER_ONE_UI_SFX_001/import_sounds.py`; files remain gitignored and ship inside the game ZIP. Effects mute controls animal and operation sounds independently from music. Verification: `node tasks/CHAPTER_ONE_UI_SFX_001/test-ui.cjs`, build the game, then `python tasks/CHAPTER_ONE_UI_SFX_001/test-export.py`.

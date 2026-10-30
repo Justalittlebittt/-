@@ -3,7 +3,7 @@ from pathlib import Path,PurePosixPath
 import argparse,hashlib,json,re,subprocess,sys,tempfile,zipfile,os
 ROOT=Path(__file__).resolve().parents[2]
 TASK=ROOT/'tasks/ITCH_DEMO_PACKAGING_001'
-VERSION='1.5.0'
+VERSION='1.6.0'
 SOURCE=ROOT/'experiments/chapter_preview'
 BACKGROUND='assets/backgrounds/chapter_one.png'
 DOC='https://itch.io/docs/creators/html5'
@@ -55,6 +55,15 @@ def build(sound_overrides=None):
   if not source.is_relative_to(ROOT) or source.suffix.lower() not in {'.wav','.mp3','.ogg','.m4a'}:raise ValueError('INVALID_LOCAL_AUDIO_PATH')
   exported=put(source.relative_to(ROOT).as_posix(),'audio',source.stem);sounds[key]=exported;audio_exports.append(exported)
  audio=audio[:match.start(1)]+json.dumps(sounds,ensure_ascii=False,separators=(',',':'))+audio[match.end(1):]
+ operations_match=re.search(r'const operationSounds = (\{.*?\});',audio,re.S)
+ if not operations_match:raise ValueError('OPERATION_AUDIO_CONFIG_MISSING')
+ operations=json.loads(operations_match.group(1))
+ if set(operations)!={'rotate','place','invalid','complete'}:raise ValueError('INVALID_OPERATION_EVENTS')
+ for key,src in operations.items():
+  source=(SOURCE/src).resolve()
+  if not source.is_relative_to(ROOT/'assets/audio') or source.suffix.lower()!='.wav':raise ValueError('INVALID_OPERATION_AUDIO_PATH')
+  operations[key]=put(source.relative_to(ROOT).as_posix(),'audio',source.stem)
+ audio=audio[:operations_match.start(1)]+json.dumps(operations,separators=(',',':'))+audio[operations_match.end(1):]
  music_match=re.search(r"const chapterMusicSource = '([^']+)';",audio)
  if not music_match:raise ValueError('MUSIC_CONFIG_MISSING')
  music_source=(SOURCE/music_match.group(1)).resolve()
@@ -77,6 +86,7 @@ def build(sound_overrides=None):
  build_id=sha(json.dumps({'builder':sha(Path(__file__).read_bytes().replace(b'\r\n',b'\n')),'sources':sources,'sounds':sounds,'mode':'animal-local-test'},sort_keys=True).encode())[:20]
  manifest={'builder_version':VERSION,'build_id':build_id,'entry':'index.html','mode':'ANIMAL_LOCAL_TEST_ONLY','public_animal_release':'NOT_DECLARED_LOCAL_TEST_BUILD_REQUIRES_SEPARATE_FULL_GATE_REVIEW','levels':8,'animal_images':animal_exports,'audio_files':sorted(set(audio_exports)),'audio_map':sounds,'runtime_dependencies':'self-contained; no external services/CDN/fonts required','source_files':sources,'files':{n:{'bytes':len(d),'sha256':sha(d)} for n,d in sorted(files.items())}}
  manifest['music_file']=music_file
+ manifest['operation_audio_map']=operations
  files['build-manifest.json']=(json.dumps(manifest,sort_keys=True,ensure_ascii=False,indent=2)+'\n').encode()
  return files,manifest
 def validate(data):
@@ -109,6 +119,9 @@ def validate(data):
   assert all(s in names and s.startswith('audio/') for s in manifest['audio_files'])
   music=re.search(r"const chapterMusicSource = '([^']+)';",z.read(audio_script).decode()).group(1)
   assert music==manifest['music_file'] and music in names and music.startswith('audio/')
+  operations=json.loads(re.search(r'const operationSounds = (\{.*?\});',z.read(audio_script).decode(),re.S).group(1))
+  assert operations==manifest['operation_audio_map'] and set(operations)=={'rotate','place','invalid','complete'}
+  assert all(src in names and src.startswith('audio/') for src in operations.values())
   assert not re.search(r'https?://|localhost|127\.0\.0\.1|/assets/animals/',js)
   assert '左键拖动' in html and '右键旋转' in html and 'R 重置' in html and '动物拼图试玩' in html
   return {'status':'PASS','zip_bytes':len(data),'file_count':len(names),'uncompressed_bytes':total,'longest_path_chars':max(map(len,names)),'root_index':True,'case_sensitive_dependency_closure':True,'external_runtime_dependencies':0,'animal_images_included':len(manifest['animal_images']),'audio_files_included':len(manifest['audio_files']),'manifest_hashes_match':True,'limits':LIMITS,'rules_source':DOC,'rules_checked_on':'2026-10-25','build_id':manifest['build_id'],'sha256':sha(data)}

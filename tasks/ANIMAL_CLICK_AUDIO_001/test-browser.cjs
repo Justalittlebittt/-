@@ -5,7 +5,7 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
  await page.goto(process.env.AUDIO_TEST_URL||'http://127.0.0.1:8765/experiments/chapter_preview/index.html');
  if(process.env.AUDIO_FRAME_SELECTOR)game=await(await page.locator(process.env.AUDIO_FRAME_SELECTOR).elementHandle()).contentFrame();
  await game.evaluate(()=>chapterArtReady);await game.locator('#begin').click();
- await game.evaluate(()=>{window.audioCalls=[];window.audioStarted=0;window.audioRejected=0;const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){audioCalls.push(this.src);window.lastAudio=this;const result=play.call(this);result.then(()=>audioStarted++,()=>audioRejected++);return result;};});
+ await game.evaluate(()=>{window.audioCalls=[];window.audioStarted=0;window.audioRejected=0;const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){if(this.src.includes('/ui_')||/chapter[_-]one[_-]music/.test(this.src))return play.call(this);audioCalls.push(this.src);window.lastAudio=this;const result=play.call(this);result.then(()=>audioStarted++,()=>audioRejected++);return result;};});
  const check=(n,v)=>{assert.ok(v,n);checks.push(n);};
  const move=async(x,y)=>{const r=await game.locator('canvas').boundingBox();await page.mouse.move(r.x+x*r.width/1672,r.y+y*r.height/941,{steps:5});};
  const pick=async()=>{const p=await game.evaluate(()=>{const p=pieces[0],o=pos(p),c=shape(p)[0];return {x:o.x+(c[0]+.45)*step,y:o.y+(c[1]+.45)*step};});await move(p.x,p.y);await page.mouse.down();};

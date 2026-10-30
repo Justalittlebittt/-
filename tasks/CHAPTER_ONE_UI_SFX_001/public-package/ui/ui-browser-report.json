@@ -1,0 +1,27 @@
+{
+  "status": "PASS_REAL_UI_OPERATION_AUDIO_IFRAME",
+  "checks": [
+    "pickup only requests animal voice",
+    "one effective quarter turn emits one rotation",
+    "fast second rotation not globally throttled",
+    "pointer move and draw never replay rotation",
+    "retrieval outside board emits no failure or placement",
+    "legal drop plays success once",
+    "rejected board rotation stays quiet",
+    "collision emits failure not success",
+    "cancel never emits failure",
+    "final placement emits success and completion once",
+    "redraw does not retrigger completion",
+    "retrieval and refill do not repeat same-level completion",
+    "next level stops all transient lanes",
+    "effects mute suppresses playback without blocking rotation",
+    "effects mute leaves music control independent",
+    "unmute restores valid operation audio",
+    "missing sound does not block drag or rotation",
+    "reset stops audio lanes and resets completion latch",
+    "no script errors"
+  ],
+  "errors": [],
+  "packaged": true,
+  "native_started": 8
+}

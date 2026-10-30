@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "zip_bytes": 39599333,
+  "file_count": 37,
+  "uncompressed_bytes": 42825335,
+  "longest_path_chars": 57,
+  "root_index": true,
+  "case_sensitive_dependency_closure": true,
+  "external_runtime_dependencies": 0,
+  "animal_images_included": 11,
+  "audio_files_included": 11,
+  "manifest_hashes_match": true,
+  "limits": {
+    "files": 1000,
+    "path_chars": 240,
+    "total_bytes": 500000000,
+    "file_bytes": 200000000
+  },
+  "rules_source": "https://itch.io/docs/creators/html5",
+  "rules_checked_on": "2026-10-25",
+  "build_id": "32c3dacc22020e98d569",
+  "sha256": "e65401dbd83e788bffed2da6506eb507a5d922e3c8af7fa93d0584da0a5ccfcb",
+  "two_builds_byte_identical": true
+}
