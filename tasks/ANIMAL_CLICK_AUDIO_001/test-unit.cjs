@@ -4,7 +4,8 @@ const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('nod
  class FakeAudio{constructor(src){if(src==='throw')throw Error('constructor');this.src=src;this.plays=0;this.pauses=0;created.push(this);}pause(){this.pauses++;}play(){this.plays++;return this.src==='bad'?Promise.reject(Error('decode')):Promise.resolve();}}
  const c={Audio:FakeAudio,performance:{now:()=>now}};vm.createContext(c);vm.runInContext(fs.readFileSync(path.resolve(__dirname,'../../experiments/chapter_preview/audio.js'),'utf8')+';this.api=animalAudio;this.sounds=animalClickSounds;',c);
  const {api,sounds}=c,check=(name,value)=>{assert.ok(value,name);checks.push(name);};
- check('eleven silent default mappings',Object.keys(sounds).length===11&&Object.values(sounds).every(v=>v===null));
+ check('eleven valid configurable mappings',Object.keys(sounds).length===11&&Object.values(sounds).every(v=>v===null||typeof v==='string'));
+ Object.keys(sounds).forEach(k=>sounds[k]=null);
  check('unknown and unset animal are quiet',await api.play('unknown')===false&&await api.play('I3')===false&&created.length===0);
  sounds.I3='one.wav';sounds.D2='one.wav';check('configured clip plays',await api.play('I3')===true&&created.length===1&&created[0].plays===1);
  now=50;check('rapid press limited globally',await api.play('D2')===false&&created[0].plays===1);
@@ -16,5 +17,5 @@ const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('nod
  api.stop();check('explicit stop pauses voice',created[1].pauses===1);
  now=1000;sounds.I3='bad';check('decode/play rejection handled',await api.play('I3')===false);
  now=1200;sounds.I3='throw';check('construction failure handled',await api.play('I3')===false);
- fs.writeFileSync(path.join(__dirname,'unit-report.json'),JSON.stringify({status:'PASS',checks},null,2));console.log(JSON.stringify({checks:checks.length}));
+ fs.writeFileSync(path.resolve(process.env.AUDIO_UNIT_REPORT||path.join(__dirname,'unit-report.json')),JSON.stringify({status:'PASS',checks},null,2));console.log(JSON.stringify({checks:checks.length}));
 })().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,6 +1,6 @@
 # Animal click audio
 
-No approved animal sound files have been delivered yet. The game stays silent for null mappings.
+Eleven 1.5-second desktop clips approved by HUMAN on 2026-10-30 are configured. See tasks/ANIMAL_AUDIO_INTEGRATION_001/assets.json for byte hashes and mapping. User sound approval does not establish complete public-release licensing; provenance remains UNVERIFIED for user-delivered replacements.
 
 Put approved clips here, preferably with a new versioned filename when bytes change. In `experiments/chapter_preview/audio.js`, replace the appropriate null entry inside the initial `animalClickSounds` JSON object, for example:
 

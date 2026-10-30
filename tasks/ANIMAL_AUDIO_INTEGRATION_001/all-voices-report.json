@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": [
+    "U5 trusted-click playback and 1.5s duration",
+    "S4 trusted-click playback and 1.5s duration",
+    "T4 trusted-click playback and 1.5s duration",
+    "P5 trusted-click playback and 1.5s duration",
+    "L4 trusted-click playback and 1.5s duration",
+    "L3 trusted-click playback and 1.5s duration",
+    "RECT6 trusted-click playback and 1.5s duration",
+    "O4 trusted-click playback and 1.5s duration",
+    "D2 trusted-click playback and 1.5s duration",
+    "I3 trusted-click playback and 1.5s duration",
+    "I4 trusted-click playback and 1.5s duration"
+  ],
+  "errors": []
+}

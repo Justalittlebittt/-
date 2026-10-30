@@ -1,6 +1,6 @@
 'use strict';
-// Set a relative audio URL per animal; null keeps the approved game silent.
-const animalClickSounds = {"U5":null,"S4":null,"T4":null,"P5":null,"L4":null,"L3":null,"RECT6":null,"O4":null,"D2":null,"I3":null,"I4":null};
+// Approved click clips by shape; null disables an individual animal voice.
+const animalClickSounds = {"U5":"../../assets/audio/snake_click_v1.wav","S4":"../../assets/audio/squirrel_click_v1.wav","T4":"../../assets/audio/owl_click_v1.wav","P5":"../../assets/audio/hippo_click_v1.wav","L4":"../../assets/audio/giraffe_click_v1.wav","L3":"../../assets/audio/call_duck_click_v1.wav","RECT6":"../../assets/audio/panda_click_v1.wav","O4":"../../assets/audio/rabbit_click_v1.wav","D2":"../../assets/audio/guinea_pig_click_v1.wav","I3":"../../assets/audio/otter_click_v1.wav","I4":"../../assets/audio/crocodile_click_v1.wav"};
 const animalAudio=(()=>{
  const players=new Map();let active=null,last=-Infinity;
  return {

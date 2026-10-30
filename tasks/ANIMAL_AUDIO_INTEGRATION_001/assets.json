@@ -1,0 +1,112 @@
+[
+  {
+    "shape_id": "U5",
+    "animal": "蛇",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\蛇_剪辑.wav",
+    "file": "assets/audio/snake_click_v1.wav",
+    "sha256": "b3fd188fcbedd4feb90ce455cb7bb32c9939cee1158ccc8098bb813ddaba8217",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "S4",
+    "animal": "松鼠",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\松鼠_剪辑.wav",
+    "file": "assets/audio/squirrel_click_v1.wav",
+    "sha256": "9a57998b28d007698d49211b73005663a33b7096b9cb72dacaac48fe601e32ff",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "T4",
+    "animal": "猫头鹰",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\猫头鹰_剪辑.wav",
+    "file": "assets/audio/owl_click_v1.wav",
+    "sha256": "184732a4c2a6e8640e59ef5e7106db7324068d4f61a7d66ef67f48fbaed51948",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "P5",
+    "animal": "河马",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\河马_剪辑.wav",
+    "file": "assets/audio/hippo_click_v1.wav",
+    "sha256": "bb1c09b1bc1ddc40b408c6f936a912e93086c2c8ee684242609bdb7c47c5f060",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "L4",
+    "animal": "长颈鹿",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\长颈鹿_剪辑.wav",
+    "file": "assets/audio/giraffe_click_v1.wav",
+    "sha256": "bdb6290b8beca82d85a85a414a923fae7a162082492ae3f695d131e858663fa7",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "L3",
+    "animal": "柯尔鸭",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\柯尔鸭_剪辑.wav",
+    "file": "assets/audio/call_duck_click_v1.wav",
+    "sha256": "49d10521cd045c7e3865bc0cb657797e7d6977c4b9bdc792d22cf2a235e49b32",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "RECT6",
+    "animal": "熊猫",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\熊猫_剪辑.wav",
+    "file": "assets/audio/panda_click_v1.wav",
+    "sha256": "a81ac1dddb7c28fa06519697b9eaad7c3f17ca742e2eccdfa547f669707bcf4d",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "O4",
+    "animal": "白兔",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\白兔_剪辑.wav",
+    "file": "assets/audio/rabbit_click_v1.wav",
+    "sha256": "5f4f0a17343d0e7d80c7762fb93688b3052900529b2405cb8afa684fa582054e",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "D2",
+    "animal": "豚鼠",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\豚鼠_剪辑.wav",
+    "file": "assets/audio/guinea_pig_click_v1.wav",
+    "sha256": "e8902a6fc1f6013aa62f0e245617e0940a2092f84972c8c54ffa0793f0661d3a",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "I3",
+    "animal": "水獭",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\水獭_剪辑.wav",
+    "file": "assets/audio/otter_click_v1.wav",
+    "sha256": "d058710020ec18854f8c37b3d3c1697917c184ead069f04c00c30968e431a37e",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  },
+  {
+    "shape_id": "I4",
+    "animal": "鳄鱼",
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\鳄鱼_剪辑.wav",
+    "file": "assets/audio/crocodile_click_v1.wav",
+    "sha256": "44442b2bcd5de61dbcf9e48bb29f74a32f73408709f47a310267907c43b08479",
+    "duration_seconds": 1.5,
+    "human_audio_approval": "2026-10-30 用户：剪辑后的音频通过，开始实装",
+    "license": "UNVERIFIED_USER_DELIVERY; prior web candidates do not prove provenance of user replacement files"
+  }
+]

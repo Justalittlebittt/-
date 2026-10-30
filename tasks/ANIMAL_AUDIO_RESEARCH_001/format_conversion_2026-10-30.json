@@ -1,0 +1,46 @@
+[
+  {
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\熊猫.ogg",
+    "output": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\熊猫.wav",
+    "source_sha256": "2ff6e75488c7d8986bffb6bbf790a8a249a12f2c587886446c4940cff3c1b7a0",
+    "output_sha256": "b8282d30da16922c80a7f19cdae7e595cdff69458da25ee56a93fb6e241c199f",
+    "decode": "PASS",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s24le",
+          "sample_rate": "44100",
+          "channels": 2,
+          "bits_per_sample": 24
+        }
+      ],
+      "format": {
+        "duration": "3.114671"
+      }
+    }
+  },
+  {
+    "source": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\水獭.mp3",
+    "output": "C:\\Users\\Administrator\\Desktop\\动物拼图素材\\音频\\水獭.wav",
+    "source_sha256": "87996a26e8dd8a46799b1df8604a82b03933b5baceea179f3883f92aa68da13d",
+    "output_sha256": "89b07ce8fccbe3d9f93cc7ba5cba167dee5d8d06cb7b95178c7ac4e33edefb82",
+    "decode": "PASS",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s24le",
+          "sample_rate": "44100",
+          "channels": 1,
+          "bits_per_sample": 24
+        }
+      ],
+      "format": {
+        "duration": "13.582063"
+      }
+    }
+  }
+]

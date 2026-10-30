@@ -600,3 +600,20 @@ animal_click_audio_001:
   delivered_animal_voice_files: "NONE_SUPPLIED"
   test_tone: "QA_ONLY_NOT_BOUND_OR_INCLUDED_IN_NORMAL_EXPORT"
   report: "tasks/ANIMAL_CLICK_AUDIO_001/REPORT.md"
+
+
+animal_audio_integration_001:
+  date: "2026-10-30"
+  status: "HUMAN_APPROVED_11_CLIPS_INTEGRATED_QA_PASS"
+  supersedes: "ANIMAL_REAL_VOICE_PROCESS_001 pending audio approval; ANIMAL_CLICK_AUDIO_001 silent defaults"
+  approved_audio_files: 11
+  clip_seconds: 1.5
+  audio_approval: "HUMAN: 剪辑后的音频通过，开始实装"
+  source_native_voice_checks: 11
+  unit_checks: 13
+  source_audio_interaction_checks: 10
+  extracted_audio_interaction_checks: 10
+  extracted_eight_level_checks: 370
+  pointer_level_completions: 24
+  public_release_audio_provenance: "UNVERIFIED_USER_REPLACEMENT_DELIVERY"
+  report: "tasks/ANIMAL_AUDIO_INTEGRATION_001/REPORT.md"

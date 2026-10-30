@@ -1,0 +1,128 @@
+{
+  "target_seconds": 1.5,
+  "originals_preserved": true,
+  "files": [
+    {
+      "file": "熊猫.wav",
+      "original_duration": 3.114671,
+      "selected_start": 0.86,
+      "duration": 1.5,
+      "original_sha256": "b8282d30da16922c80a7f19cdae7e595cdff69458da25ee56a93fb6e241c199f",
+      "output_sha256": "a81ac1dddb7c28fa06519697b9eaad7c3f17ca742e2eccdfa547f669707bcf4d",
+      "full_decode": "PASS",
+      "peak": 0.5678104162216187,
+      "edited_file": "熊猫_剪辑.wav"
+    },
+    {
+      "file": "水獭.wav",
+      "original_duration": 13.582063,
+      "selected_start": 6.95,
+      "duration": 1.5,
+      "original_sha256": "89b07ce8fccbe3d9f93cc7ba5cba167dee5d8d06cb7b95178c7ac4e33edefb82",
+      "output_sha256": "d058710020ec18854f8c37b3d3c1697917c184ead069f04c00c30968e431a37e",
+      "full_decode": "PASS",
+      "peak": 0.09538674354553223,
+      "edited_file": "水獭_剪辑.wav"
+    },
+    {
+      "file": "白兔.wav",
+      "original_duration": 0.965442,
+      "selected_start": 0.0,
+      "duration": 1.5,
+      "original_sha256": "620a8ace7b6e9679e68a763029df74e9e820dcac808b8db84155112397a80334",
+      "output_sha256": "5f4f0a17343d0e7d80c7762fb93688b3052900529b2405cb8afa684fa582054e",
+      "full_decode": "PASS",
+      "peak": 0.7654117345809937,
+      "edited_file": "白兔_剪辑.wav"
+    },
+    {
+      "file": "鳄鱼.wav",
+      "original_duration": 1.169615,
+      "selected_start": 0.0,
+      "duration": 1.5,
+      "original_sha256": "b307f9d9ddd573e00d39c8b17cbd1b2e5a6a3cd94da20a1168100d60f59f4223",
+      "output_sha256": "44442b2bcd5de61dbcf9e48bb29f74a32f73408709f47a310267907c43b08479",
+      "full_decode": "PASS",
+      "peak": 0.6319763660430908,
+      "edited_file": "鳄鱼_剪辑.wav"
+    },
+    {
+      "file": "河马.wav",
+      "original_duration": 0.923878,
+      "selected_start": 0.0,
+      "duration": 1.5,
+      "original_sha256": "6a03043a85f71596793d66e8b77153193441cf249128ef1821dc713587eafaa9",
+      "output_sha256": "bb1c09b1bc1ddc40b408c6f936a912e93086c2c8ee684242609bdb7c47c5f060",
+      "full_decode": "PASS",
+      "peak": 0.7252137660980225,
+      "edited_file": "河马_剪辑.wav"
+    },
+    {
+      "file": "柯尔鸭.wav",
+      "original_duration": 1.333583,
+      "selected_start": 0.0,
+      "duration": 1.5,
+      "original_sha256": "b1f40b8aefea5752e3c5051dc8a0071f9f262e8432b5b09c91bef37b233820a4",
+      "output_sha256": "49d10521cd045c7e3865bc0cb657797e7d6977c4b9bdc792d22cf2a235e49b32",
+      "full_decode": "PASS",
+      "peak": 0.7584431171417236,
+      "edited_file": "柯尔鸭_剪辑.wav"
+    },
+    {
+      "file": "猫头鹰.wav",
+      "original_duration": 1.44585,
+      "selected_start": 0.0,
+      "duration": 1.5,
+      "original_sha256": "cf38faaf7c5c32d07b22d6ebbfb91cce161ce32e63a39c266f28a61b994ab072",
+      "output_sha256": "184732a4c2a6e8640e59ef5e7106db7324068d4f61a7d66ef67f48fbaed51948",
+      "full_decode": "PASS",
+      "peak": 0.6017693281173706,
+      "edited_file": "猫头鹰_剪辑.wav"
+    },
+    {
+      "file": "蛇.wav",
+      "original_duration": 1.181519,
+      "selected_start": 0.0,
+      "duration": 1.5,
+      "original_sha256": "38a11d586cc69535c03f226fff125fe72954331dff46c1029227cd43d0be838b",
+      "output_sha256": "b3fd188fcbedd4feb90ce455cb7bb32c9939cee1158ccc8098bb813ddaba8217",
+      "full_decode": "PASS",
+      "peak": 0.8499044179916382,
+      "edited_file": "蛇_剪辑.wav"
+    },
+    {
+      "file": "松鼠.wav",
+      "original_duration": 1.478912,
+      "selected_start": 0.0,
+      "duration": 1.5,
+      "original_sha256": "efd38a20da086e9a410fee8918758cc41021b2ca1ad312adae7458d36700d116",
+      "output_sha256": "9a57998b28d007698d49211b73005663a33b7096b9cb72dacaac48fe601e32ff",
+      "full_decode": "PASS",
+      "peak": 0.8376654386520386,
+      "edited_file": "松鼠_剪辑.wav"
+    },
+    {
+      "file": "豚鼠.wav",
+      "original_duration": 1.438866,
+      "selected_start": 0.0,
+      "duration": 1.5,
+      "original_sha256": "250e0af64678eb826a1626d07ad39d54e855171fffd6d770e494f9c69416fdfb",
+      "output_sha256": "e8902a6fc1f6013aa62f0e245617e0940a2092f84972c8c54ffa0793f0661d3a",
+      "full_decode": "PASS",
+      "peak": 0.775223970413208,
+      "edited_file": "豚鼠_剪辑.wav"
+    },
+    {
+      "file": "长颈鹿.wav",
+      "original_duration": 1.303492,
+      "selected_start": 0.0,
+      "duration": 1.5,
+      "original_sha256": "149df41b0d088a1cecad2ee4fff0dfef55916a2b9e0d351bc4c43c20706581ad",
+      "output_sha256": "bdb6290b8beca82d85a85a414a923fae7a162082492ae3f695d131e858663fa7",
+      "full_decode": "PASS",
+      "peak": 0.7361782789230347,
+      "edited_file": "长颈鹿_剪辑.wav"
+    }
+  ],
+  "notes": "No time stretch or volume normalization; 10ms fade-in, 30ms fade-out; short files padded with trailing silence. Human listening review pending."
+}

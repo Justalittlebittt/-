@@ -12,7 +12,7 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
  const reset=async()=>{await page.mouse.up();await page.keyboard.press('r');};
  const configured=await game.evaluate(()=>animalClickSounds.I3);
  if(process.env.AUDIO_EXPECT_PACKAGED){check('packaged audio URL present',!!configured&&configured.startsWith('audio/'));}
- else{await pick();check('unset mapping stays quiet and allows pickup',await game.evaluate(()=>audioCalls.length===0&&!!held));await reset();}
+ else if(!configured){await pick();check('unset mapping stays quiet and allows pickup',await game.evaluate(()=>audioCalls.length===0&&!!held));await reset();}
  const clip=configured||'../../tasks/ANIMAL_CLICK_AUDIO_001/fixtures/qa-click-tone.wav';
  await game.evaluate(clip=>{animalClickSounds.I3=clip;animalAudio.cooldownMs=0;animalAudio.volume=.25;},clip);
  await pick();await game.waitForFunction(()=>audioStarted===1);
@@ -29,6 +29,6 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
  await game.evaluate(clip=>{animalClickSounds.I3=clip;},clip);await pick();await game.waitForFunction(()=>audioStarted===2);
  check('valid media works again after error',await game.evaluate(()=>!!held&&lastAudio.readyState>=2));await reset();
  check('no unhandled script errors',errors.length===0);
- const report={status:'PASS_REAL_MEDIA_CLICK_AUDIO',checks,errors,native_play_starts:await game.evaluate(()=>audioStarted),test_clip_only:true,packaged_audio:!!process.env.AUDIO_EXPECT_PACKAGED,notes:'Verified native media decode/play promises in Edge; not human sound review or delivered animal voices.'};
+ const report={status:'PASS_REAL_MEDIA_CLICK_AUDIO',checks,errors,native_play_starts:await game.evaluate(()=>audioStarted),test_clip_only:!configured,packaged_audio:!!process.env.AUDIO_EXPECT_PACKAGED,notes:'Verified native media decode/play promises in Edge; human listening approval is recorded separately.'};
  const output=path.resolve(process.env.AUDIO_REPORT_FILE||path.join(__dirname,'source-browser-report.json'));fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,JSON.stringify(report,null,2));console.log(JSON.stringify({checks:checks.length,errors}));
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
