@@ -1,0 +1,60 @@
+{
+  "commit": "f799f5a",
+  "files": [
+    {
+      "file": "assets/audio/snake_click_v1.wav",
+      "sha256": "b3fd188fcbedd4feb90ce455cb7bb32c9939cee1158ccc8098bb813ddaba8217",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/squirrel_click_v1.wav",
+      "sha256": "9a57998b28d007698d49211b73005663a33b7096b9cb72dacaac48fe601e32ff",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/owl_click_v1.wav",
+      "sha256": "184732a4c2a6e8640e59ef5e7106db7324068d4f61a7d66ef67f48fbaed51948",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/hippo_click_v1.wav",
+      "sha256": "bb1c09b1bc1ddc40b408c6f936a912e93086c2c8ee684242609bdb7c47c5f060",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/giraffe_click_v1.wav",
+      "sha256": "bdb6290b8beca82d85a85a414a923fae7a162082492ae3f695d131e858663fa7",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/call_duck_click_v1.wav",
+      "sha256": "49d10521cd045c7e3865bc0cb657797e7d6977c4b9bdc792d22cf2a235e49b32",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/panda_click_v1.wav",
+      "sha256": "a81ac1dddb7c28fa06519697b9eaad7c3f17ca742e2eccdfa547f669707bcf4d",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/rabbit_click_v1.wav",
+      "sha256": "5f4f0a17343d0e7d80c7762fb93688b3052900529b2405cb8afa684fa582054e",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/guinea_pig_click_v1.wav",
+      "sha256": "e8902a6fc1f6013aa62f0e245617e0940a2092f84972c8c54ffa0793f0661d3a",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/otter_click_v1.wav",
+      "sha256": "d058710020ec18854f8c37b3d3c1697917c184ead069f04c00c30968e431a37e",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    },
+    {
+      "file": "assets/audio/crocodile_click_v1.wav",
+      "sha256": "44442b2bcd5de61dbcf9e48bb29f74a32f73408709f47a310267907c43b08479",
+      "status": "PASS_HTTP200_EXACT_BYTES"
+    }
+  ]
+}

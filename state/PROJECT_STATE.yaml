@@ -611,9 +611,10 @@ animal_audio_integration_001:
   audio_approval: "HUMAN: 剪辑后的音频通过，开始实装"
   source_native_voice_checks: 11
   unit_checks: 13
-  source_audio_interaction_checks: 10
+  source_audio_interaction_checks: 9
   extracted_audio_interaction_checks: 10
   extracted_eight_level_checks: 370
   pointer_level_completions: 24
   public_release_audio_provenance: "UNVERIFIED_USER_REPLACEMENT_DELIVERY"
   report: "tasks/ANIMAL_AUDIO_INTEGRATION_001/REPORT.md"
+  github_audio_readback: "11_HTTP200_EXACT_BYTES_SHA256_PASS_f799f5a"
