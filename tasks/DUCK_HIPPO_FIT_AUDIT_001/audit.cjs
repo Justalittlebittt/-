@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),http=require('http'),assert=require('assert');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
-(async()=>{const root=path.resolve(__dirname,'../..');
+(async()=>{const root=path.resolve(__dirname,'../..'),out=path.resolve(process.env.FIT_REPORT_DIR||__dirname);fs.mkdirSync(out,{recursive:true});
 const server=http.createServer((req,res)=>{const p=path.resolve(root,'.'+decodeURIComponent(req.url.split('?')[0]));if(!p.startsWith(root+path.sep)||!fs.existsSync(p)){res.writeHead(404);res.end();return;}res.setHeader('Content-Type',p.endsWith('.js')?'application/javascript':p.endsWith('.css')?'text/css':p.endsWith('.html')?'text/html':'image/png');res.end(fs.readFileSync(p));});
 await new Promise(r=>server.listen(0,'127.0.0.1',r));let browser;
 try{browser=await chromium.launch({channel:'msedge',headless:true});const page=await browser.newPage();await page.goto(`http://127.0.0.1:${server.address().port}/experiments/chapter_preview/index.html`);await page.evaluate(()=>chapterArtReady);
@@ -26,5 +26,5 @@ for(const [p,target,color]of [[duck,a,'#b7471f'],[hippo,b,'#2765a5']]){const t=t
 const ap=a.getContext('2d').getImageData(0,0,a.width,a.height).data,bp=b.getContext('2d').getImageData(0,0,b.width,b.height).data;let overlap=0;for(let i=3;i<ap.length;i+=4)if(ap[i]>=32&&bp[i]>=32)overlap++;
 return {metrics,legal_adjacent_placement:legal,overlap_pixels:overlap,unit_pixels:step,poses:sheet.toDataURL(),scene:scene.toDataURL()};
 });
-assert(data.legal_adjacent_placement);for(const key of ['poses','scene']){fs.writeFileSync(path.join(__dirname,key+'.png'),Buffer.from(data[key].split(',')[1],'base64'));delete data[key];}fs.writeFileSync(path.join(__dirname,'metrics.json'),JSON.stringify(data,null,2));console.log(JSON.stringify(data));
+assert(data.legal_adjacent_placement);for(const key of ['poses','scene']){fs.writeFileSync(path.join(out,key+'.png'),Buffer.from(data[key].split(',')[1],'base64'));delete data[key];}fs.writeFileSync(path.join(out,'metrics.json'),JSON.stringify(data,null,2));console.log(JSON.stringify(data));
 }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}})().catch(e=>{console.error(e);process.exitCode=1;});

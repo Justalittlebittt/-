@@ -1,0 +1,110 @@
+{
+  "task_id": "DUCK_HIPPO_REPLACEMENT_001",
+  "date": "2026-10-30",
+  "source_root": "C:/Users/Administrator/Desktop/动物拼图素材/美术",
+  "approval_basis": "HUMAN approved desktop delivery policy + current replacement delivery",
+  "assets": [
+    {
+      "shape_id": "L3",
+      "filename": "鸭子-替换.png",
+      "repository_file": "assets/animals/call_duck_l3_replacement_001.png",
+      "asset_version": "L3_HUMAN_APPROVED_REPLACEMENT_20261030",
+      "version_assigned_by": "DEV local registration, not a claimed ART candidate ID",
+      "image_sha256": "6da65447e52a640717ae4935faa71793fe3d28a4d07245f1996e127bc0b172ac",
+      "hash_basis": "First DEV read of the single final desktop file explicitly approved in this HUMAN dispatch; no remote pre-approved hash supplied",
+      "width": 1470,
+      "height": 1070,
+      "bytes": 896734,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "baseSize": [
+        2,
+        2
+      ],
+      "sourceBounds": [
+        163,
+        14,
+        1376,
+        1070
+      ],
+      "baseRotation": 0,
+      "G3": "HUMAN_DESKTOP_APPROVED_DELIVERY_20261030",
+      "offsetCells": [
+        0,
+        0.08
+      ],
+      "G1": "PASS_FILE_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBORS_WITH_LOCAL_EDGE_PROTRUSIONS",
+      "G4": "PASS_REAL_POINTER_AND_EXTRACTED_EIGHT_LEVEL_FLOW",
+      "evidence": "tasks/CHAPTER_ONE_ART_BATCH_002/REPORT.md"
+    },
+    {
+      "shape_id": "P5",
+      "filename": "河马-替换.png",
+      "repository_file": "assets/animals/hippo_p5_replacement_001.png",
+      "asset_version": "P5_HUMAN_APPROVED_REPLACEMENT_20261030",
+      "version_assigned_by": "DEV local registration, not a claimed ART candidate ID",
+      "image_sha256": "2596907a9e3ef2e5f1fd799d880155cb39628945d15a05c2860706b5d93fb1ed",
+      "hash_basis": "First DEV read of the single final desktop file explicitly approved in this HUMAN dispatch; no remote pre-approved hash supplied",
+      "width": 1470,
+      "height": 1070,
+      "bytes": 1309905,
+      "mode": "RGBA",
+      "occupied_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "baseSize": [
+        2,
+        3
+      ],
+      "sourceBounds": [
+        15,
+        83,
+        1463,
+        1026
+      ],
+      "baseRotation": 3,
+      "G3": "HUMAN_DESKTOP_APPROVED_DELIVERY_20261030",
+      "G1": "PASS_FILE_RGBA_ALPHA_EDGE_TECHNICAL_SCOPE",
+      "G2": "PASS_FOUR_ROTATIONS_BOUNDARIES_AND_TESTED_NEIGHBORS_WITH_LOCAL_EDGE_PROTRUSIONS",
+      "G4": "PASS_REAL_POINTER_AND_EXTRACTED_EIGHT_LEVEL_FLOW",
+      "evidence": "tasks/CHAPTER_ONE_ART_BATCH_002/REPORT.md",
+      "offsetCells": [
+        0,
+        0
+      ]
+    }
+  ]
+}

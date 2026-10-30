@@ -1,0 +1,953 @@
+{
+  "status": "PASS_TESTED_INTERACTION_AND_ROTATION_WITH_LOCAL_CONTOUR_PROTRUSIONS",
+  "checks": [
+    "atomic pickup 2",
+    "drag follows pointer U50",
+    "whole art legal pose U50",
+    "no slice or opaque empty-cell center U50",
+    "atomic pickup 2",
+    "whole art retrieved U50",
+    "atomic pickup 2",
+    "drag follows pointer U51",
+    "whole art legal pose U51",
+    "no slice or opaque empty-cell center U51",
+    "atomic pickup 2",
+    "whole art retrieved U51",
+    "atomic pickup 2",
+    "drag follows pointer U52",
+    "whole art legal pose U52",
+    "no slice or opaque empty-cell center U52",
+    "atomic pickup 2",
+    "whole art retrieved U52",
+    "atomic pickup 2",
+    "drag follows pointer U53",
+    "whole art legal pose U53",
+    "no slice or opaque empty-cell center U53",
+    "atomic pickup 2",
+    "whole art retrieved U53",
+    "atomic pickup 6",
+    "drag follows pointer S40",
+    "whole art legal pose S40",
+    "no slice or opaque empty-cell center S40",
+    "atomic pickup 6",
+    "whole art retrieved S40",
+    "atomic pickup 6",
+    "drag follows pointer S41",
+    "whole art legal pose S41",
+    "no slice or opaque empty-cell center S41",
+    "atomic pickup 6",
+    "whole art retrieved S41",
+    "atomic pickup 6",
+    "drag follows pointer S42",
+    "whole art legal pose S42",
+    "no slice or opaque empty-cell center S42",
+    "atomic pickup 6",
+    "whole art retrieved S42",
+    "atomic pickup 6",
+    "drag follows pointer S43",
+    "whole art legal pose S43",
+    "no slice or opaque empty-cell center S43",
+    "atomic pickup 6",
+    "whole art retrieved S43",
+    "atomic pickup 5",
+    "drag follows pointer T40",
+    "whole art legal pose T40",
+    "no slice or opaque empty-cell center T40",
+    "atomic pickup 5",
+    "whole art retrieved T40",
+    "atomic pickup 5",
+    "drag follows pointer T41",
+    "whole art legal pose T41",
+    "no slice or opaque empty-cell center T41",
+    "atomic pickup 5",
+    "whole art retrieved T41",
+    "atomic pickup 5",
+    "drag follows pointer T42",
+    "whole art legal pose T42",
+    "no slice or opaque empty-cell center T42",
+    "atomic pickup 5",
+    "whole art retrieved T42",
+    "atomic pickup 5",
+    "drag follows pointer T43",
+    "whole art legal pose T43",
+    "no slice or opaque empty-cell center T43",
+    "atomic pickup 5",
+    "whole art retrieved T43",
+    "atomic pickup 1",
+    "drag follows pointer P50",
+    "whole art legal pose P50",
+    "no slice or opaque empty-cell center P50",
+    "atomic pickup 1",
+    "whole art retrieved P50",
+    "atomic pickup 1",
+    "drag follows pointer P51",
+    "whole art legal pose P51",
+    "no slice or opaque empty-cell center P51",
+    "atomic pickup 1",
+    "whole art retrieved P51",
+    "atomic pickup 1",
+    "drag follows pointer P52",
+    "whole art legal pose P52",
+    "no slice or opaque empty-cell center P52",
+    "atomic pickup 1",
+    "whole art retrieved P52",
+    "atomic pickup 1",
+    "drag follows pointer P53",
+    "whole art legal pose P53",
+    "no slice or opaque empty-cell center P53",
+    "atomic pickup 1",
+    "whole art retrieved P53",
+    "atomic pickup 1",
+    "drag follows pointer L40",
+    "whole art legal pose L40",
+    "no slice or opaque empty-cell center L40",
+    "atomic pickup 1",
+    "whole art retrieved L40",
+    "atomic pickup 1",
+    "drag follows pointer L41",
+    "whole art legal pose L41",
+    "no slice or opaque empty-cell center L41",
+    "atomic pickup 1",
+    "whole art retrieved L41",
+    "atomic pickup 1",
+    "drag follows pointer L42",
+    "whole art legal pose L42",
+    "no slice or opaque empty-cell center L42",
+    "atomic pickup 1",
+    "whole art retrieved L42",
+    "atomic pickup 1",
+    "drag follows pointer L43",
+    "whole art legal pose L43",
+    "no slice or opaque empty-cell center L43",
+    "atomic pickup 1",
+    "whole art retrieved L43",
+    "atomic pickup 3",
+    "drag follows pointer L30",
+    "whole art legal pose L30",
+    "no slice or opaque empty-cell center L30",
+    "atomic pickup 3",
+    "whole art retrieved L30",
+    "atomic pickup 3",
+    "drag follows pointer L31",
+    "whole art legal pose L31",
+    "no slice or opaque empty-cell center L31",
+    "atomic pickup 3",
+    "whole art retrieved L31",
+    "atomic pickup 3",
+    "drag follows pointer L32",
+    "whole art legal pose L32",
+    "no slice or opaque empty-cell center L32",
+    "atomic pickup 3",
+    "whole art retrieved L32",
+    "atomic pickup 3",
+    "drag follows pointer L33",
+    "whole art legal pose L33",
+    "no slice or opaque empty-cell center L33",
+    "atomic pickup 3",
+    "whole art retrieved L33",
+    "atomic pickup 6",
+    "drag follows pointer RECT60",
+    "whole art legal pose RECT60",
+    "no slice or opaque empty-cell center RECT60",
+    "atomic pickup 6",
+    "whole art retrieved RECT60",
+    "atomic pickup 6",
+    "drag follows pointer RECT61",
+    "whole art legal pose RECT61",
+    "no slice or opaque empty-cell center RECT61",
+    "atomic pickup 6",
+    "whole art retrieved RECT61",
+    "atomic pickup 6",
+    "drag follows pointer RECT62",
+    "whole art legal pose RECT62",
+    "no slice or opaque empty-cell center RECT62",
+    "atomic pickup 6",
+    "whole art retrieved RECT62",
+    "atomic pickup 6",
+    "drag follows pointer RECT63",
+    "whole art legal pose RECT63",
+    "no slice or opaque empty-cell center RECT63",
+    "atomic pickup 6",
+    "whole art retrieved RECT63",
+    "atomic pickup 1",
+    "drag follows pointer O40",
+    "whole art legal pose O40",
+    "no slice or opaque empty-cell center O40",
+    "atomic pickup 1",
+    "whole art retrieved O40",
+    "atomic pickup 1",
+    "drag follows pointer O41",
+    "whole art legal pose O41",
+    "no slice or opaque empty-cell center O41",
+    "atomic pickup 1",
+    "whole art retrieved O41",
+    "atomic pickup 1",
+    "drag follows pointer O42",
+    "whole art legal pose O42",
+    "no slice or opaque empty-cell center O42",
+    "atomic pickup 1",
+    "whole art retrieved O42",
+    "atomic pickup 1",
+    "drag follows pointer O43",
+    "whole art legal pose O43",
+    "no slice or opaque empty-cell center O43",
+    "atomic pickup 1",
+    "whole art retrieved O43",
+    "atomic pickup 2",
+    "drag follows pointer D20",
+    "whole art legal pose D20",
+    "no slice or opaque empty-cell center D20",
+    "atomic pickup 2",
+    "whole art retrieved D20",
+    "atomic pickup 2",
+    "drag follows pointer D21",
+    "whole art legal pose D21",
+    "no slice or opaque empty-cell center D21",
+    "atomic pickup 2",
+    "whole art retrieved D21",
+    "atomic pickup 2",
+    "drag follows pointer D22",
+    "whole art legal pose D22",
+    "no slice or opaque empty-cell center D22",
+    "atomic pickup 2",
+    "whole art retrieved D22",
+    "atomic pickup 2",
+    "drag follows pointer D23",
+    "whole art legal pose D23",
+    "no slice or opaque empty-cell center D23",
+    "atomic pickup 2",
+    "whole art retrieved D23",
+    "atomic pickup 1",
+    "drag follows pointer I30",
+    "whole art legal pose I30",
+    "no slice or opaque empty-cell center I30",
+    "atomic pickup 1",
+    "whole art retrieved I30",
+    "atomic pickup 3",
+    "drag follows pointer I31",
+    "whole art legal pose I31",
+    "no slice or opaque empty-cell center I31",
+    "atomic pickup 3",
+    "whole art retrieved I31",
+    "atomic pickup 1",
+    "drag follows pointer I32",
+    "whole art legal pose I32",
+    "no slice or opaque empty-cell center I32",
+    "atomic pickup 1",
+    "whole art retrieved I32",
+    "atomic pickup 3",
+    "drag follows pointer I33",
+    "whole art legal pose I33",
+    "no slice or opaque empty-cell center I33",
+    "atomic pickup 3",
+    "whole art retrieved I33",
+    "atomic pickup 4",
+    "drag follows pointer I40",
+    "whole art legal pose I40",
+    "no slice or opaque empty-cell center I40",
+    "atomic pickup 4",
+    "whole art retrieved I40",
+    "atomic pickup 4",
+    "drag follows pointer I41",
+    "whole art legal pose I41",
+    "no slice or opaque empty-cell center I41",
+    "atomic pickup 4",
+    "whole art retrieved I41",
+    "atomic pickup 4",
+    "drag follows pointer I42",
+    "whole art legal pose I42",
+    "no slice or opaque empty-cell center I42",
+    "atomic pickup 4",
+    "whole art retrieved I42",
+    "atomic pickup 4",
+    "drag follows pointer I43",
+    "whole art legal pose I43",
+    "no slice or opaque empty-cell center I43",
+    "atomic pickup 4",
+    "whole art retrieved I43",
+    "atomic pickup 1",
+    "atomic pickup 2",
+    "atomic pickup 3",
+    "atomic pickup 4",
+    "atomic pickup 5",
+    "atomic pickup 6",
+    "mapped animals adjacent with full legal cover",
+    "atomic pickup 4",
+    "neighbor pickup hides next 4",
+    "neighbor retrieve 4",
+    "atomic pickup 4",
+    "neighbor replace restores cover 4",
+    "atomic pickup 5",
+    "neighbor pickup hides next 5",
+    "neighbor retrieve 5",
+    "atomic pickup 5",
+    "neighbor replace restores cover 5",
+    "atomic pickup 6",
+    "neighbor pickup hides next 6",
+    "neighbor retrieve 6",
+    "atomic pickup 6",
+    "neighbor replace restores cover 6",
+    "atomic pickup 1",
+    "atomic pickup 2",
+    "atomic pickup 3",
+    "atomic pickup 4",
+    "atomic pickup 5",
+    "atomic pickup 6",
+    "neighbor board rotated 1",
+    "atomic pickup 1",
+    "atomic pickup 2",
+    "atomic pickup 3",
+    "atomic pickup 4",
+    "atomic pickup 5",
+    "atomic pickup 6",
+    "neighbor board rotated 2",
+    "atomic pickup 1",
+    "atomic pickup 2",
+    "atomic pickup 3",
+    "atomic pickup 4",
+    "atomic pickup 5",
+    "atomic pickup 6",
+    "neighbor board rotated 3",
+    "atomic pickup 4",
+    "repeated capture loss preserves held animal 0",
+    "repeated capture loss preserves held animal 1",
+    "cancel still restores original animal",
+    "atomic pickup 4",
+    "blur still cancels rotated drag",
+    "R resets all real sprites",
+    "no page errors"
+  ],
+  "rotations": [
+    {
+      "shape_id": "U5",
+      "rot": 0,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "U5",
+      "rot": 1,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "U5",
+      "rot": 2,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "U5",
+      "rot": 3,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "S4",
+      "rot": 0,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "S4",
+      "rot": 1,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "S4",
+      "rot": 2,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "S4",
+      "rot": 3,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "T4",
+      "rot": 0,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "T4",
+      "rot": 1,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "T4",
+      "rot": 2,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "T4",
+      "rot": 3,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "P5",
+      "rot": 0,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "P5",
+      "rot": 1,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "P5",
+      "rot": 2,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "P5",
+      "rot": 3,
+      "empty_cells": [
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "L4",
+      "rot": 0,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "L4",
+      "rot": 1,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "L4",
+      "rot": 2,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "L4",
+      "rot": 3,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "center_alpha": 0
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "L3",
+      "rot": 0,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "L3",
+      "rot": 1,
+      "empty_cells": [
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "L3",
+      "rot": 2,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "L3",
+      "rot": 3,
+      "empty_cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "center_alpha": 0
+        }
+      ],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 87
+    },
+    {
+      "shape_id": "RECT6",
+      "rot": 0,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 77
+    },
+    {
+      "shape_id": "RECT6",
+      "rot": 1,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 77
+    },
+    {
+      "shape_id": "RECT6",
+      "rot": 2,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 77
+    },
+    {
+      "shape_id": "RECT6",
+      "rot": 3,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 77
+    },
+    {
+      "shape_id": "O4",
+      "rot": 0,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "O4",
+      "rot": 1,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "O4",
+      "rot": 2,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "O4",
+      "rot": 3,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "D2",
+      "rot": 0,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "D2",
+      "rot": 1,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "D2",
+      "rot": 2,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "D2",
+      "rot": 3,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "I3",
+      "rot": 0,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "I3",
+      "rot": 1,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "I3",
+      "rot": 2,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "I3",
+      "rot": 3,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 133
+    },
+    {
+      "shape_id": "I4",
+      "rot": 0,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "I4",
+      "rot": 1,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "I4",
+      "rot": 2,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    },
+    {
+      "shape_id": "I4",
+      "rot": 3,
+      "empty_cells": [],
+      "whole_image_draw_calls": 1,
+      "cropped_draw_calls": 0,
+      "step": 100
+    }
+  ],
+  "adjacent_alpha_overlaps": [],
+  "errors": [],
+  "limits": "Empty-cell centers and atomic interaction checked; local edge/feather protrusions remain recorded, not claimed pixel-exact silhouette. G3 is HUMAN approval, not replaced by this test."
+}

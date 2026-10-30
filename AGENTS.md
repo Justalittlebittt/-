@@ -52,3 +52,5 @@ ITCH_DEMO_PACKAGING_001：当前可用python tools/itch/build.py --browser构建
 2026-10-27 ANIMAL_CLICK_AUDIO_001：现有chapter_preview已有简洁音效接口audio.js，取代此前“无声音接口”的历史核查结论。仅在animalClickSounds初始JSON对象中配置正式本地声音路径，默认11项null，未交付音频不得混用tasks下QA短音。animalAudio共用缓存/音量/静音/限流/单声音，左键成功选中调用一次，重置/换关stop；音频失败不影响拼图。导出器复制原始音频、哈希命名并验证闭环。正常ZIP无QA音频；测试夹具包明确仅用于实际解压iframe播放与八关回归。
 
 2026-10-30 HUMAN批准桌面「动物拼图素材/音频」11段“动物名_剪辑.wav”并授权实装，覆盖ANIMAL_REAL_VOICE_PROCESS_001待批准状态。现audio.js已映射11段1.5秒WAV，源交付哈希见tasks/ANIMAL_AUDIO_INTEGRATION_001/assets.json，声音更换使用新版本文件名并跑实际音频/导出回归。该目录为当前桌面素材根；美术原文件现置于其“美术”子目录。声音听觉批准不自动闭合来源许可。
+
+2026-10-30 DUCK_HIPPO_REPLACEMENT_001：桌面美术/鸭子-替换.png、河马-替换.png已替换chapter_preview L3/P5映射，新版本路径及哈希见assets/animals/duck_hippo_replacement_001.json。旧图保留。鸭子offset[0,0.08]、河马baseRotation=3不变。局部交叠1190→666px，仍非零，勿声称完全消除。新注册src遵循现有导出器src单引号格式，完整依赖验证通过后才交付。

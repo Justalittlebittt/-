@@ -618,3 +618,20 @@ animal_audio_integration_001:
   public_release_audio_provenance: "UNVERIFIED_USER_REPLACEMENT_DELIVERY"
   report: "tasks/ANIMAL_AUDIO_INTEGRATION_001/REPORT.md"
   github_audio_readback: "11_HTTP200_EXACT_BYTES_SHA256_PASS_f799f5a"
+
+
+duck_hippo_replacement_001:
+  date: "2026-10-30"
+  status: "REPLACEMENT_IMPORTED_TECHNICAL_QA_PASS_RESIDUAL_CONTOUR_OVERLAP_RECORDED"
+  assets: "assets/animals/duck_hippo_replacement_001.json"
+  report: "tasks/DUCK_HIPPO_REPLACEMENT_001/REPORT.md"
+  original_png_bytes: "PRESERVED_NEW_VERSION_PATHS_OLD_FILES_RETAINED"
+  human_runtime_retest: "PENDING"
+  screenshot_adjacency_overlap_before: 1190
+  screenshot_adjacency_overlap_after: 666
+  pointer_checks: 315
+  rotation_poses: 44
+  extracted_eight_level_checks: 370
+  audio_checks: 10
+  chapter_level_completions: 24
+  levels_core_background_other_animals_audio: "UNCHANGED"
