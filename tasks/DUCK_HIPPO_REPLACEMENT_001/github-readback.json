@@ -1,0 +1,15 @@
+{
+  "implementation_commit": "d8f2fbe",
+  "files": [
+    {
+      "file": "assets/animals/call_duck_l3_replacement_001.png",
+      "sha256": "6da65447e52a640717ae4935faa71793fe3d28a4d07245f1996e127bc0b172ac",
+      "status": "PASS_HTTP200_EXACT_ORIGINAL_BYTES"
+    },
+    {
+      "file": "assets/animals/hippo_p5_replacement_001.png",
+      "sha256": "2596907a9e3ef2e5f1fd799d880155cb39628945d15a05c2860706b5d93fb1ed",
+      "status": "PASS_HTTP200_EXACT_ORIGINAL_BYTES"
+    }
+  ]
+}
