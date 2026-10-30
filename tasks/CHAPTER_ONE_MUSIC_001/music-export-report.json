@@ -1,0 +1,10 @@
+{
+  "status": "PASS_EXTRACTED_APPROVED_MUSIC",
+  "music_sha256": "70433d5f18eb6f540f0e52feb203689eccf6b910a3d92753cefd612828bc1d58",
+  "archive_sha256": "b55742a3bca30901a9741fcd2dc0b95f0f4ca10187f2eccbfee542dfbe360a1c",
+  "negative_cases": [
+    "missing_music",
+    "tampered_music"
+  ],
+  "source_audio_bytes_unchanged": true
+}

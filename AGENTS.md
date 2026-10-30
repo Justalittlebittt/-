@@ -54,3 +54,5 @@ ITCH_DEMO_PACKAGING_001：当前可用python tools/itch/build.py --browser构建
 2026-10-30 HUMAN批准桌面「动物拼图素材/音频」11段“动物名_剪辑.wav”并授权实装，覆盖ANIMAL_REAL_VOICE_PROCESS_001待批准状态。现audio.js已映射11段1.5秒WAV，源交付哈希见tasks/ANIMAL_AUDIO_INTEGRATION_001/assets.json，声音更换使用新版本文件名并跑实际音频/导出回归。该目录为当前桌面素材根；美术原文件现置于其“美术”子目录。声音听觉批准不自动闭合来源许可。
 
 2026-10-30 DUCK_HIPPO_REPLACEMENT_001：桌面美术/鸭子-替换.png、河马-替换.png已替换chapter_preview L3/P5映射，新版本路径及哈希见assets/animals/duck_hippo_replacement_001.json。旧图保留。鸭子offset[0,0.08]、河马baseRotation=3不变。局部交叠1190→666px，仍非零，勿声称完全消除。新注册src遵循现有导出器src单引号格式，完整依赖验证通过后才交付。
+
+2026-10-30 CHAPTER_ONE_MUSIC_001：V1.6 §13单曲背景音乐已接入，点击开始播放，loop=true，音乐独立静音/音量控件18%默认；换关/R不重启。音乐源assets/audio/chapter_one_music_v1.wav按Soundza许可保守处理不提交独立音频，实际ZIP包含原字节；新检出先运行tasks/CHAPTER_ONE_MUSIC_001/import_music.py校验批准SHA导入，再运行test-export.py --build验证。不得假设gitignored缺失可静默跳过或用试听版替换。官方loop_seamless=false，未剪改音频；衔接听感待用户确认。许可范围见本任务报告，不扩大为所有Demo素材发行门禁已过。

@@ -1,0 +1,18 @@
+{
+  "desktop_file": "C:/Users/Administrator/Desktop/动物拼图素材/音频/背景音乐.wav",
+  "sha256": "70433d5f18eb6f540f0e52feb203689eccf6b910a3d92753cefd612828bc1d58",
+  "official_sound_id": "cmv5p16h800q306l5k0zz46go",
+  "official_original_sha256": "5fccc31e677a191879bde9e536784fd1ad40a475fa32bd731a29f68321555698",
+  "official_original_format": "OGG",
+  "desktop_format": "PCM24 WAV",
+  "raw_bytes_identical": false,
+  "pcm_sample_count": 7761600,
+  "pcm_correlation": 0.9999999999999577,
+  "linear_gain": 0.8840971436163237,
+  "rms_residual": 6.877368621199656e-08,
+  "source": "https://soundza.com/sound/buy-something-shop-theme",
+  "license": "https://soundza.com/license",
+  "license_checked": "2026-10-30",
+  "catalog_loop_seamless": false,
+  "attribution_required": false
+}

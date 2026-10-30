@@ -21,3 +21,24 @@ const animalAudio=(()=>{
   }
  };
 })();
+
+// Licensed music is shipped inside the game package, never as a standalone download.
+const chapterMusicSource = '../../assets/audio/chapter_one_music_v1.wav';
+const chapterMusic=(()=>{
+ let player=null,volume=.18,muted=false;
+ return {
+  async start(){
+   if(!player){player=new Audio(chapterMusicSource);player.loop=true;player.preload='none';}
+   player.volume=volume;player.muted=muted;
+   if(muted||!player.paused)return false;
+   try{await player.play();return true;}catch{return false;}
+  },
+  setMuted(value){muted=!!value;if(player)player.muted=muted;},
+  setVolume(value){volume=Math.max(0,Math.min(.4,Number(value)||0));if(player)player.volume=volume;},
+  stop(){if(player)player.pause();}
+ };
+})();
+const musicMute=document.getElementById('music-mute'),musicVolume=document.getElementById('music-volume');
+musicMute.onclick=()=>{const muted=musicMute.getAttribute('aria-pressed')!=='true';musicMute.setAttribute('aria-pressed',String(muted));musicMute.textContent=muted?'音乐：关':'音乐：开';chapterMusic.setMuted(muted);if(!muted&&phase!=='START')chapterMusic.start();};
+musicVolume.oninput=()=>chapterMusic.setVolume(Number(musicVolume.value)/100);
+window.addEventListener('pagehide',()=>chapterMusic.stop());

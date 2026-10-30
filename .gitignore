@@ -1,3 +1,9 @@
 builds/
 __pycache__/
 *.py[cod]
+
+# Soundza permits distribution inside games, not standalone source audio.
+/assets/audio/chapter_one_music_v1.wav
+
+# Full repeated chapter screenshots stay local; representative music screenshots are tracked.
+/tasks/CHAPTER_ONE_MUSIC_001/package/evidence/

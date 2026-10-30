@@ -635,3 +635,25 @@ duck_hippo_replacement_001:
   audio_checks: 10
   chapter_level_completions: 24
   levels_core_background_other_animals_audio: "UNCHANGED"
+
+
+chapter_one_music_001:
+  date: "2026-10-30"
+  status: "SINGLE_APPROVED_TRACK_IMPLEMENTED_SOURCE_AND_EXPORTED_IFRAME_QA_PASS"
+  track: "Buy Something! Shop Theme"
+  source: "https://soundza.com/sound/buy-something-shop-theme"
+  license: "Soundza Standard License: game use including commercial permitted; no required attribution; no standalone redistribution"
+  original_source_sha256: "70433d5f18eb6f540f0e52feb203689eccf6b910a3d92753cefd612828bc1d58"
+  audio_file: "assets/audio/chapter_one_music_v1.wav"
+  github_standalone_music: "EXCLUDED_BY_LICENSE_CONSERVATIVE_DISTRIBUTION; LOCAL_IMPORT_SCRIPT_TRACKED"
+  export_embedded_music: "PASS_ORIGINAL_BYTES"
+  music_default_volume: 0.18
+  source_music_checks: 18
+  extracted_music_checks: 18
+  extracted_chapter_checks: 370
+  real_pointer_level_completions: 24
+  extracted_animal_voice_checks: 10
+  listening_and_loop_seam_review: "PENDING_HUMAN; catalog loop_seamless=false"
+  operation_sound_effects: "SEPARATE_TODO"
+  itch_live_upload: "NOT_RUN"
+  report: "tasks/CHAPTER_ONE_MUSIC_001/REPORT.md"

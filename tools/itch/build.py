@@ -3,7 +3,7 @@ from pathlib import Path,PurePosixPath
 import argparse,hashlib,json,re,subprocess,sys,tempfile,zipfile,os
 ROOT=Path(__file__).resolve().parents[2]
 TASK=ROOT/'tasks/ITCH_DEMO_PACKAGING_001'
-VERSION='1.4.0'
+VERSION='1.5.0'
 SOURCE=ROOT/'experiments/chapter_preview'
 BACKGROUND='assets/backgrounds/chapter_one.png'
 DOC='https://itch.io/docs/creators/html5'
@@ -55,6 +55,12 @@ def build(sound_overrides=None):
   if not source.is_relative_to(ROOT) or source.suffix.lower() not in {'.wav','.mp3','.ogg','.m4a'}:raise ValueError('INVALID_LOCAL_AUDIO_PATH')
   exported=put(source.relative_to(ROOT).as_posix(),'audio',source.stem);sounds[key]=exported;audio_exports.append(exported)
  audio=audio[:match.start(1)]+json.dumps(sounds,ensure_ascii=False,separators=(',',':'))+audio[match.end(1):]
+ music_match=re.search(r"const chapterMusicSource = '([^']+)';",audio)
+ if not music_match:raise ValueError('MUSIC_CONFIG_MISSING')
+ music_source=(SOURCE/music_match.group(1)).resolve()
+ if not music_source.is_relative_to(ROOT/'assets/audio') or music_source.suffix.lower() not in {'.wav','.mp3','.ogg','.m4a'}:raise ValueError('INVALID_MUSIC_PATH')
+ music_file=put(music_source.relative_to(ROOT).as_posix(),'audio','chapter-one-music')
+ audio=audio[:music_match.start(1)]+music_file+audio[music_match.end(1):]
  audio=put('experiments/chapter_preview/audio.js','js','audio',audio)
  game=text(SOURCE/'game.js');old="../../assets/backgrounds/chapter_one.png"
  if game.count(old)!=1:raise ValueError('BUILD_TRANSFORM_MISMATCH_BACKGROUND')
@@ -70,6 +76,7 @@ def build(sound_overrides=None):
  files['index.html']=html.encode()
  build_id=sha(json.dumps({'builder':sha(Path(__file__).read_bytes().replace(b'\r\n',b'\n')),'sources':sources,'sounds':sounds,'mode':'animal-local-test'},sort_keys=True).encode())[:20]
  manifest={'builder_version':VERSION,'build_id':build_id,'entry':'index.html','mode':'ANIMAL_LOCAL_TEST_ONLY','public_animal_release':'NOT_DECLARED_LOCAL_TEST_BUILD_REQUIRES_SEPARATE_FULL_GATE_REVIEW','levels':8,'animal_images':animal_exports,'audio_files':sorted(set(audio_exports)),'audio_map':sounds,'runtime_dependencies':'self-contained; no external services/CDN/fonts required','source_files':sources,'files':{n:{'bytes':len(d),'sha256':sha(d)} for n,d in sorted(files.items())}}
+ manifest['music_file']=music_file
  files['build-manifest.json']=(json.dumps(manifest,sort_keys=True,ensure_ascii=False,indent=2)+'\n').encode()
  return files,manifest
 def validate(data):
@@ -100,6 +107,8 @@ def validate(data):
   assert audio_map==manifest['audio_map']
   assert set(manifest['audio_files'])=={s for s in audio_map.values() if s is not None}
   assert all(s in names and s.startswith('audio/') for s in manifest['audio_files'])
+  music=re.search(r"const chapterMusicSource = '([^']+)';",z.read(audio_script).decode()).group(1)
+  assert music==manifest['music_file'] and music in names and music.startswith('audio/')
   assert not re.search(r'https?://|localhost|127\.0\.0\.1|/assets/animals/',js)
   assert '左键拖动' in html and '右键旋转' in html and 'R 重置' in html and '动物拼图试玩' in html
   return {'status':'PASS','zip_bytes':len(data),'file_count':len(names),'uncompressed_bytes':total,'longest_path_chars':max(map(len,names)),'root_index':True,'case_sensitive_dependency_closure':True,'external_runtime_dependencies':0,'animal_images_included':len(manifest['animal_images']),'audio_files_included':len(manifest['audio_files']),'manifest_hashes_match':True,'limits':LIMITS,'rules_source':DOC,'rules_checked_on':'2026-10-25','build_id':manifest['build_id'],'sha256':sha(data)}

@@ -47,7 +47,7 @@ C.setPointerCapture(held.pointerId);return;}cancel();});window.addEventListener(
 C.addEventListener('wheel',e=>{if(held)return;const v=local(e),s=v.x<board.x?0:v.x>board.x+level.w*step?1:-1;if(s>=0&&maxScroll[s]){e.preventDefault();scroll[s]+=e.deltaY;layout();draw();}},{passive:false});
 function reset(){if(phase!=='PLAY')return;cancel();begin(levelIndex);}
 document.addEventListener('keydown',e=>{if(e.key.toLowerCase()==='r'&&!e.repeat){e.preventDefault();reset();}});document.getElementById('reset').onclick=reset;
-document.getElementById('begin').onclick=()=>{document.getElementById('intro').hidden=true;begin(0);};
+document.getElementById('begin').onclick=()=>{chapterMusic.start();document.getElementById('intro').hidden=true;begin(0);};
 next.onclick=()=>{if(!complete())return;if(levelIndex+1<previewLevels.length)begin(levelIndex+1);else{phase='END';next.hidden=true;document.getElementById('ending').hidden=false;document.getElementById('status').textContent='章节完成';}};
 document.getElementById('replay').onclick=()=>{document.getElementById('ending').hidden=true;document.getElementById('intro').hidden=false;begin(0);phase='START';};
 chapterArtReady.then(results=>{const missing=results.filter(r=>!r.ok).map(r=>r.id);if(missing.length)document.getElementById('geometry-note').textContent='素材加载失败：'+missing.join('、')+'（显示占格）';draw();});

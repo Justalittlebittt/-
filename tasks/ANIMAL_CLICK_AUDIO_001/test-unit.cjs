@@ -2,7 +2,7 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('node:assert/strict');
 (async()=>{let now=0;const created=[],checks=[];
  class FakeAudio{constructor(src){if(src==='throw')throw Error('constructor');this.src=src;this.plays=0;this.pauses=0;created.push(this);}pause(){this.pauses++;}play(){this.plays++;return this.src==='bad'?Promise.reject(Error('decode')):Promise.resolve();}}
- const c={Audio:FakeAudio,performance:{now:()=>now}};vm.createContext(c);vm.runInContext(fs.readFileSync(path.resolve(__dirname,'../../experiments/chapter_preview/audio.js'),'utf8')+';this.api=animalAudio;this.sounds=animalClickSounds;',c);
+ const c={document:{getElementById:()=>({})},window:{addEventListener(){}},Audio:FakeAudio,performance:{now:()=>now}};vm.createContext(c);vm.runInContext(fs.readFileSync(path.resolve(__dirname,'../../experiments/chapter_preview/audio.js'),'utf8')+';this.api=animalAudio;this.sounds=animalClickSounds;',c);
  const {api,sounds}=c,check=(name,value)=>{assert.ok(value,name);checks.push(name);};
  check('eleven valid configurable mappings',Object.keys(sounds).length===11&&Object.values(sounds).every(v=>v===null||typeof v==='string'));
  Object.keys(sounds).forEach(k=>sounds[k]=null);

@@ -1,0 +1,26 @@
+{
+  "status": "PASS_NATIVE_MUSIC_IFRAME",
+  "checks": [
+    "no music autoplay before gesture",
+    "muting before start respected",
+    "native music starts after user gesture",
+    "approved complete track duration",
+    "next level reuses playing music",
+    "R reset does not restart music",
+    "music mute keeps animal volume unchanged",
+    "unmute does not create another player",
+    "volume slider reaches zero",
+    "volume slider controls media volume",
+    "native end-to-start loop 0",
+    "native end-to-start loop 1",
+    "animal voice and music coexist",
+    "pagehide stops music",
+    "reopened page waits for begin again",
+    "reopened game plays a single track",
+    "controls remain visible at small viewport",
+    "no unhandled script errors"
+  ],
+  "errors": [],
+  "packaged": true,
+  "loop_test": "Two native end boundaries exercised by seeking near end; not two full wall-clock track durations; seamless listening remains HUMAN review."
+}
