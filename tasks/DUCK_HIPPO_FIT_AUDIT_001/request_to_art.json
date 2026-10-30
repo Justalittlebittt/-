@@ -1,0 +1,72 @@
+{
+  "task_id": "DUCK_HIPPO_FIT_AUDIT_001",
+  "status": "PROPOSED_REVISION_PENDING_HUMAN_DIRECTION",
+  "source_versions": [
+    "L3_DESKTOP_HUMAN_APPROVED_BATCH_002",
+    "P5_DESKTOP_HUMAN_APPROVED_BATCH_002"
+  ],
+  "logical_cells_unchanged": {
+    "L3": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "P5": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ]
+  },
+  "requested_local_revisions": {
+    "L3": "收紧背部进入缺角的鼓包，保留现有头部/身体/脚的完整单体造型。",
+    "P5": "收紧下颌与喉部进入缺角的轮廓，保留整体造型及P形占格。"
+  },
+  "test_arrangement": {
+    "duck": {
+      "rotation": 1,
+      "at": [
+        3,
+        0
+      ]
+    },
+    "hippo": {
+      "rotation": 2,
+      "at": [
+        3,
+        1
+      ]
+    }
+  },
+  "acceptance": "先四向与邻接视觉复验，HUMAN批准新版本后才接入；不切片、裁格、拉伸或改逻辑占格。",
+  "evidence": [
+    "poses.png",
+    "scene.png",
+    "metrics.json"
+  ]
+}
